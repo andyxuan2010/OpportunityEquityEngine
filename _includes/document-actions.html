@@ -22,24 +22,23 @@
 <div class="document-actions" aria-label="{{ actions_aria }}">
   <a class="document-action" href="{{ source_url }}" target="_blank" rel="noreferrer" aria-label="{{ markdown_label }}">
     <span class="file-icon file-icon-md" aria-hidden="true">
-      <svg viewBox="0 0 64 72" role="img" focusable="false">
-        <path d="M9 3h31l15 15v51H9z"></path>
-        <path d="M40 3v15h15"></path>
-        <rect x="9" y="43" width="46" height="18" rx="2"></rect>
-        <text x="32" y="56">MD</text>
+      <svg viewBox="0 0 24 24" role="img" focusable="false">
+        <path d="M6 2.5h8l4 4v15H6z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="1.7"></path>
+        <path d="M14 2.5v4h4" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="1.7"></path>
+        <path class="file-icon-md-accent" d="M5 13.5h14v5.5H5z"></path>
+        <text x="12" y="17.8" text-anchor="middle">MD</text>
       </svg>
     </span>
-    <span class="document-action-label">{{ markdown_short }}</span>
   </a>
   <button class="document-action" type="button" onclick="window.print()" aria-label="{{ pdf_label }}">
     <span class="file-icon file-icon-pdf" aria-hidden="true">
-      <svg viewBox="0 0 64 72" role="img" focusable="false">
-        <path d="M9 3h31l15 15v51H9z"></path>
-        <path d="M40 3v15h15"></path>
-        <rect x="9" y="43" width="46" height="18" rx="2"></rect>
-        <text x="32" y="56">PDF</text>
+      <svg viewBox="0 0 24 24" role="img" focusable="false">
+        <path d="M5 2.5h9l5 5v14H5z" fill="#ef4444" stroke="#ef4444" stroke-linejoin="round" stroke-width="1"></path>
+        <path d="M14 2.5v5h5z" fill="#b91c1c"></path>
+        <path d="M14 2.5v5h5" fill="none" stroke="#fecaca" stroke-linejoin="round" stroke-width="1"></path>
+        <path d="M7.25 12.25h9.5" fill="none" stroke="#fecaca" stroke-linecap="round" stroke-width="1.15"></path>
+        <text x="12" y="17.8" text-anchor="middle">PDF</text>
       </svg>
     </span>
-    <span class="document-action-label">{{ pdf_short }}</span>
   </button>
 </div>

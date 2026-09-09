@@ -1,0 +1,81 @@
+{% if page.locale == 'zh' %}
+  {% assign library_nav_label = '机会公平引擎' %}
+  {% assign category_start = '从这里开始' %}
+  {% assign category_initiative = '项目倡议与愿景' %}
+  {% assign category_architecture = '架构' %}
+  {% assign category_guides = '学生指南' %}
+  {% assign category_delivery = '交付计划' %}
+  {% assign category_build = '构建指南' %}
+  {% assign category_demo = '演示交付物' %}
+  {% assign category_research = '研究与验证' %}
+  {% assign category_toolkit = '学生工具箱' %}
+  {% assign category_showcase = '展示与反思' %}
+  {% assign category_sources = '机会资源' %}
+{% elsif page.locale == 'fr' %}
+  {% assign library_nav_label = 'MOTEUR D’ÉQUITÉ DES OPPORTUNITÉS' %}
+  {% assign category_start = 'Commencer ici' %}
+  {% assign category_initiative = 'Initiative et vision' %}
+  {% assign category_architecture = 'Architecture' %}
+  {% assign category_guides = 'Guides pour les élèves' %}
+  {% assign category_delivery = 'Plan de livraison' %}
+  {% assign category_build = 'Guide de construction' %}
+  {% assign category_demo = 'Livrables de démonstration' %}
+  {% assign category_research = 'Recherche et validation' %}
+  {% assign category_toolkit = 'Boîte à outils des élèves' %}
+  {% assign category_showcase = 'Présentation et réflexion' %}
+  {% assign category_sources = 'Ressources d’opportunités' %}
+{% else %}
+  {% assign library_nav_label = 'OPPORTUNITY EQUITY ENGINE' %}
+  {% assign category_start = 'Start here' %}
+  {% assign category_initiative = 'Initiative and vision' %}
+  {% assign category_architecture = 'Architecture' %}
+  {% assign category_guides = 'Student guides' %}
+  {% assign category_delivery = 'Delivery plan' %}
+  {% assign category_build = 'Build guide' %}
+  {% assign category_demo = 'Demo deliverables' %}
+  {% assign category_research = 'Research and validation' %}
+  {% assign category_toolkit = 'Student toolkit' %}
+  {% assign category_showcase = 'Showcase and reflection' %}
+  {% assign category_sources = 'Opportunity resources' %}
+{% endif %}
+{% assign category_folders = '00-start-here|01-initiative|02-architecture|03-student-guides|04-delivery|05-build|06-demo|07-research-and-validation|08-student-toolkit|09-showcase-and-reflection|10-opportunity-sources' | split: '|' %}
+{% assign docs_pages = site.pages | sort: 'path' %}
+
+<aside class="document-library-nav" aria-label="{{ library_nav_label }}">
+  <p class="document-library-nav-label">{{ library_nav_label }}</p>
+  {% for folder in category_folders %}
+    {% case folder %}
+      {% when '00-start-here' %}{% assign category_label = category_start %}
+      {% when '01-initiative' %}{% assign category_label = category_initiative %}
+      {% when '02-architecture' %}{% assign category_label = category_architecture %}
+      {% when '03-student-guides' %}{% assign category_label = category_guides %}
+      {% when '04-delivery' %}{% assign category_label = category_delivery %}
+      {% when '05-build' %}{% assign category_label = category_build %}
+      {% when '06-demo' %}{% assign category_label = category_demo %}
+      {% when '07-research-and-validation' %}{% assign category_label = category_research %}
+      {% when '08-student-toolkit' %}{% assign category_label = category_toolkit %}
+      {% when '09-showcase-and-reflection' %}{% assign category_label = category_showcase %}
+      {% when '10-opportunity-sources' %}{% assign category_label = category_sources %}
+    {% endcase %}
+    <section class="document-library-group">
+      <h2><span class="document-library-category">{{ category_label }}</span></h2>
+      {% for doc in docs_pages %}
+        {% assign show_doc = false %}
+        {% if doc.path contains 'docs/' and doc.path contains folder %}
+          {% if page.locale == 'zh' and doc.path contains '.CN.md' %}
+            {% assign show_doc = true %}
+          {% elsif page.locale == 'fr' and doc.path contains '.FR.md' %}
+            {% assign show_doc = true %}
+          {% elsif page.locale != 'zh' and page.locale != 'fr' and doc.path contains '.md' %}
+            {% unless doc.path contains '.CN.md' or doc.path contains '.FR.md' %}
+              {% assign show_doc = true %}
+            {% endunless %}
+          {% endif %}
+        {% endif %}
+        {% if show_doc %}
+          <a class="{% if page.path == doc.path %}active{% endif %}" href="{{ doc.url | relative_url }}"{% if page.path == doc.path %} aria-current="page"{% endif %}>{{ doc.title | default: doc.name }}</a>
+        {% endif %}
+      {% endfor %}
+    </section>
+  {% endfor %}
+</aside>
