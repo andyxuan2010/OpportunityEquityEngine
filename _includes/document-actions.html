@@ -17,7 +17,7 @@
   {% assign pdf_label = 'Print or save as PDF' %}
   {% assign pdf_short = 'Save as PDF' %}
 {% endif %}
-{% assign source_path = page.path | remove_first: '/' %}
+{% assign source_path = page.path %}
 {% assign source_url = site.github.repository_url | append: '/blob/main/' | append: source_path %}
 <div class="document-actions" aria-label="{{ actions_aria }}">
   <a class="document-action" href="{{ source_url }}" target="_blank" rel="noreferrer" aria-label="{{ markdown_label }}">

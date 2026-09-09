@@ -277,7 +277,9 @@ button { font: inherit; }
 .file-icon-md rect { fill: #13c7e5; }
 .file-icon-pdf rect { fill: #f2484b; }
 .document-action-label { color: currentColor; font-size: 11px; font-weight: 750; line-height: 1.2; white-space: nowrap; }
-.document-content { width: min(100%, 1050px); margin: 0; padding: clamp(30px, 6vw, 78px); border: 1px solid var(--line); border-radius: 28px; background: var(--surface); box-shadow: var(--shadow); }
+.document-content { width: min(100%, 1050px); position: relative; margin: 0; padding: clamp(30px, 6vw, 78px); border: 1px solid var(--line); border-radius: 28px; background: var(--surface); box-shadow: var(--shadow); }
+.document-content > .document-actions { position: absolute; top: clamp(30px, 6vw, 78px); right: clamp(30px, 6vw, 78px); width: auto; margin: 0; }
+.document-content > h1:first-of-type { padding-right: 220px; }
 .document-content h1 { margin: 0 0 20px; color: var(--ink); font-size: clamp(42px, 6vw, 76px); letter-spacing: -.06em; line-height: 1; }
 .document-content h2 { margin: 48px 0 16px; color: var(--navy); font-size: clamp(27px, 3vw, 40px); letter-spacing: -.045em; line-height: 1.08; }
 .document-content h3 { margin-top: 32px; }
@@ -341,6 +343,8 @@ button { font: inherit; }
   .document-shell { padding-top: 20px; }
   .document-breadcrumb { gap: 5px; margin-bottom: 16px; padding-inline: 0; font-size: 12px; }
   .document-actions { gap: 8px; margin-bottom: 14px; }
+  .document-content > .document-actions { position: static; width: 100%; margin-bottom: 20px; }
+  .document-content > h1:first-of-type { padding-right: 0; }
   .document-action { min-width: 82px; }
   .file-icon { width: 50px; height: 50px; }
   .file-icon svg { width: 27px; height: 32px; }
