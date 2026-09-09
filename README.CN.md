@@ -41,14 +41,14 @@
 - `docs/07-research-and-validation/`：学生研究、同意、来源核验和可用性测试
 - `docs/08-student-toolkit/`：GitHub 协作、可访问性、隐私、安全和排障
 - `docs/09-showcase-and-reflection/`：展示、作品集证据、致谢和学习反思
-- `docs/10-opportunity-sources/`：600 条机会来源目录、核验层级和数据质量规则
+- `docs/10-opportunity-sources/`：700 条机会来源目录、核验层级和数据质量规则
 - `docs/INDEX.CN.md`：文档索引和推荐阅读路径
 
 ## 文档
 
 完整的中文文档从 [中文项目首页](index.CN.md) 开始。英文、中文和法文版本可以通过 GitHub Pages 页面顶部的语言切换器选择。
 
-学生指南包括 [入门项目指南](docs/03-student-guides/BEGINNER_PROJECT_GUIDE.CN.md)、[Vibe Coding 指南](docs/03-student-guides/VIBE_CODING_FOR_STUDENTS.CN.md)、[学习先修知识](docs/03-student-guides/LEARNING_PREREQUISITES.CN.md) 和 [快速构建应用和网站指南](docs/03-student-guides/QUICK_APP_AND_WEBSITE_BUILD_GUIDE.CN.md)。新增的 [600 条机会来源目录](docs/10-opportunity-sources/Opportunity_Equity_Engine_600_Sources.CN.md)包含研究来源、核验级别、数据字段和质量规则。
+学生指南包括 [入门项目指南](docs/03-student-guides/BEGINNER_PROJECT_GUIDE.CN.md)、[Vibe Coding 指南](docs/03-student-guides/VIBE_CODING_FOR_STUDENTS.CN.md)、[学习先修知识](docs/03-student-guides/LEARNING_PREREQUISITES.CN.md) 和 [快速构建应用和网站指南](docs/03-student-guides/QUICK_APP_AND_WEBSITE_BUILD_GUIDE.CN.md)。新增的 [700 条机会来源目录](docs/10-opportunity-sources/Opportunity_Equity_Engine_600_Sources.CN.md)包含研究来源、核验级别、数据字段和质量规则。
 
 | 文档 | 用途 |
 |---|---|
@@ -65,7 +65,7 @@
 | [项目时间线](docs/04-delivery/PROJECT_TIMELINE.CN.md) | 预计 16 周的交付计划和里程碑 |
 | [演示交付物](docs/06-demo/DEMO_DELIVERABLES.CN.md) | 用户流程、实现目标和视觉素材 |
 | [研究与验证](docs/07-research-and-validation/RESEARCH_AND_VALIDATION.CN.md) | 访谈、来源核验、可用性测试和证据 |
-| [600 条机会来源目录](docs/10-opportunity-sources/Opportunity_Equity_Engine_600_Sources.CN.md) | 研究来源、核验级别、录入字段和数据质量规则 |
+| [700 条机会来源目录](docs/10-opportunity-sources/Opportunity_Equity_Engine_600_Sources.CN.md) | 研究来源、核验级别、录入字段和数据质量规则 |
 | [学生工具箱](docs/08-student-toolkit/STUDENT_TOOLKIT.CN.md) | 协作、可访问性、隐私、负责任的 AI 和排障 |
 | [展示与反思](docs/09-showcase-and-reflection/SHOWCASE_AND_REFLECTION.CN.md) | 展示、作品集证据、致谢和学生反思 |
 | [AI 项目方案](docs/01-initiative/Opportunity_Equity_Engine.CN.md) | 详细的产品和 AI 项目方案 |

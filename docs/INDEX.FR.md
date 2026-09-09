@@ -61,7 +61,7 @@ Voici le point de départ pour la vision du projet, l’apprentissage, la recher
 | Architecture | [Architecture](02-architecture/architecture.html) | Composants, données, correspondance, recherche, sécurité et exploitation |
 | Apprentissage | [Guide débutant](03-student-guides/BEGINNER_PROJECT_GUIDE.html), [Guide de création rapide](03-student-guides/QUICK_APP_AND_WEBSITE_BUILD_GUIDE.html), [Vibe Coding](03-student-guides/VIBE_CODING_FOR_STUDENTS.html) | Démarrage, prototypes rapides, développement assisté par IA et parcours d’apprentissage |
 | Recherche et validation | [Recherche et validation](07-research-and-validation/RESEARCH_AND_VALIDATION.html) | Entretiens, consentement, sources, tests d’utilisabilité et décisions fondées |
-| Sources d’opportunités | [Catalogue de 600 sources](10-opportunity-sources/Opportunity_Equity_Engine_600_Sources.html) | 600 sources de recherche, niveaux de vérification, champs et règles de qualité |
+| Sources d’opportunités | [Catalogue de 700 sources](10-opportunity-sources/Opportunity_Equity_Engine_600_Sources.html) | 700 sources de recherche, niveaux de vérification, champs et règles de qualité |
 | Réalisation | [Plan de gestion](04-delivery/PROJECT_MANAGEMENT_PLAN.html), [calendrier](04-delivery/PROJECT_TIMELINE.html) | Rôles, outils, coûts, risques et étapes |
 | Construction | [Guide d’implémentation](05-build/DEMO_IMPLEMENTATION_GUIDE.html) | Configuration, données, code, tests et déploiement |
 | Collaboration et sécurité | [Boîte à outils](08-student-toolkit/STUDENT_TOOLKIT.html) | GitHub, accessibilité, confidentialité, IA responsable et dépannage |
@@ -74,7 +74,7 @@ Chaque document doit avoir un objectif clair. Les nouveaux contenus doivent rest
 
 ## État actuel
 
-Le dépôt contient la charte, les plans bilingues, l’architecture, les guides pour élèves, le plan de réalisation, les documents de recherche, le catalogue de 600 sources d’opportunités, la boîte à outils, le calendrier, le guide d’implémentation et les supports de démonstration. La prochaine étape est de construire la tranche verticale décrite dans le [guide d’implémentation](05-build/DEMO_IMPLEMENTATION_GUIDE.html).
+Le dépôt contient la charte, les plans bilingues, l’architecture, les guides pour élèves, le plan de réalisation, les documents de recherche, le catalogue de 700 sources d’opportunités, la boîte à outils, le calendrier, le guide d’implémentation et les supports de démonstration. La prochaine étape est de construire la tranche verticale décrite dans le [guide d’implémentation](05-build/DEMO_IMPLEMENTATION_GUIDE.html).
 ## Référence complète synchronisée
 
 Le contenu anglais complet est inclus automatiquement ci-dessous, avec toutes les sections, exemples, liens, tableaux et ressources multimédias.

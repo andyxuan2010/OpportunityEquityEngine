@@ -61,7 +61,7 @@ translation_fr: /docs/INDEX.FR.md
 | 架构 | [系统架构](02-architecture/architecture.html) | 组件、数据、匹配、搜索、安全和运行 |
 | 学生学习 | [入门指南](03-student-guides/BEGINNER_PROJECT_GUIDE.html)、[快速构建应用和网站指南](03-student-guides/QUICK_APP_AND_WEBSITE_BUILD_GUIDE.html)、[Vibe Coding](03-student-guides/VIBE_CODING_FOR_STUDENTS.html) | 从零开始、快速原型、AI 辅助开发和学习路径 |
 | 研究与验证 | [研究与验证](07-research-and-validation/RESEARCH_AND_VALIDATION.html) | 访谈、同意、来源核验、可用性测试和证据决策 |
-| 机会来源 | [600 条机会来源目录](10-opportunity-sources/Opportunity_Equity_Engine_600_Sources.html) | 600 条研究来源、核验级别、数据字段和质量规则 |
+| 机会来源 | [700 条机会来源目录](10-opportunity-sources/Opportunity_Equity_Engine_600_Sources.html) | 700 条研究来源、核验级别、数据字段和质量规则 |
 | 项目交付 | [管理计划](04-delivery/PROJECT_MANAGEMENT_PLAN.html)、[时间线](04-delivery/PROJECT_TIMELINE.html) | 角色、工具、成本、风险和里程碑 |
 | 实现 | [演示实现指南](05-build/DEMO_IMPLEMENTATION_GUIDE.html) | 设置、数据模型、代码、测试和部署 |
 | 协作与安全 | [学生工具箱](08-student-toolkit/STUDENT_TOOLKIT.html) | GitHub、可访问性、隐私、负责任的 AI、排障和词典 |
@@ -74,7 +74,7 @@ translation_fr: /docs/INDEX.FR.md
 
 ## 当前状态
 
-仓库已经包含项目章程、双语项目方案、架构、学生指南、交付计划、研究材料、600 条机会来源目录、实现指南、学生工具箱和演示素材。下一步是按照 [演示实现指南](05-build/DEMO_IMPLEMENTATION_GUIDE.html) 完成垂直切片。
+仓库已经包含项目章程、双语项目方案、架构、学生指南、交付计划、研究材料、700 条机会来源目录、实现指南、学生工具箱和演示素材。下一步是按照 [演示实现指南](05-build/DEMO_IMPLEMENTATION_GUIDE.html) 完成垂直切片。
 ## 完整同步参考
 
 以下内容会直接同步英文原文，包含完整章节、示例、链接、表格和媒体资源。

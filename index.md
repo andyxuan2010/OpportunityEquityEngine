@@ -89,7 +89,7 @@ Choose a collection to browse the initiative, student learning path, product des
   <a class="library-card library-card-orange" href="docs/10-opportunity-sources/Opportunity_Equity_Engine_600_Sources.html">
     <span class="library-icon">◎</span>
     <strong>Opportunity resources</strong>
-    <span>Explore 600 research sources, verification tiers, and structured data fields.</span>
+    <span>Explore 700 research sources, verification tiers, and structured data fields.</span>
     <b>Explore the sources <span aria-hidden="true">↗</span></b>
   </a>
 </div>
@@ -209,7 +209,7 @@ Use [docs/INDEX.md](docs/INDEX.html) as the central index. The documentation is 
 | [07 — Research and validation](docs/07-research-and-validation/RESEARCH_AND_VALIDATION.html) | Student interviews, source verification, usability testing, and evidence-based decisions |
 | [08 — Student toolkit](docs/08-student-toolkit/STUDENT_TOOLKIT.html) | Collaboration, accessibility, privacy, safety, and troubleshooting |
 | [09 — Showcase and reflection](docs/09-showcase-and-reflection/SHOWCASE_AND_REFLECTION.html) | Presentation, portfolio evidence, credits, and learning reflection |
-| [10 — Opportunity sources](docs/10-opportunity-sources/Opportunity_Equity_Engine_600_Sources.html) | 600 research sources, verification tiers, ingestion fields, and data-quality rules |
+| [10 — Opportunity sources](docs/10-opportunity-sources/Opportunity_Equity_Engine_600_Sources.html) | 700 research sources, verification tiers, ingestion fields, and data-quality rules |
 
 ## Recommended starting paths
 

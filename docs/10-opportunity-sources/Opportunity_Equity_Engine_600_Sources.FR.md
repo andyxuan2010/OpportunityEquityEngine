@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Catalogue de 600 sources d’opportunités
+title: Catalogue de 700 sources d’opportunités
 locale: fr
 catalog: true
 translation_en: /docs/10-opportunity-sources/Opportunity_Equity_Engine_600_Sources.md
@@ -8,16 +8,16 @@ translation_zh: /docs/10-opportunity-sources/Opportunity_Equity_Engine_600_Sourc
 translation_fr: /docs/10-opportunity-sources/Opportunity_Equity_Engine_600_Sources.FR.md
 ---
 
-# Opportunity Equity Engine — Catalogue d'opportunités de 600 sources
+# Opportunity Equity Engine — Catalogue d'opportunités de 700 sources
 
 **Compilé pour :** Découverte des opportunités en 11e année et au secondaire
 **Géographie principale :** Montréal / Québec → Partout au Canada → opportunités internationales sélectionnées accessibles ou pertinentes pour les étudiants canadiens
 **Date de compilation :** 2026-09-09
-**Total des enregistrements :** 600 (100 par catégorie)
+**Total des enregistrements :** 700 (100 par catégorie)
 
 ## Comment utiliser ce fichier
 
-Il s'agit d'un **catalogue source pour un moteur d'équité d'opportunité**, et non d'une affirmation selon laquelle les 600 applications sont actuellement ouvertes.
+Il s'agit d'un **catalogue source pour un moteur d'équité d'opportunité**, et non d'une affirmation selon laquelle les 700 applications sont actuellement ouvertes.
 
 Les programmes annuels ferment et rouvrent fréquemment. Une page 2026 fermée peut toujours être une source récurrente valable pour le cycle 2027. Avant d'exposer une opportunité aux utilisateurs, l'application doit revérifier la source officielle pour connaître l'éligibilité actuelle, les dates, les frais, l'emplacement et l'état de la candidature.
 
@@ -662,6 +662,111 @@ Les programmes annuels ferment et rouvrent fréquemment. Une page 2026 fermée p
 | 98 | [MonBlueprint](https://myblueprint.ca/) | monPlan | Canada | Lycéens | C | Plateforme de planification d'éducation/de carrière |
 | 99 | [Xello](https://xello.world/en-ca/) | Xello | Canada/international | Étudiants | C | Planification universitaire/carrière |
 | 100 | [Khan Academy SAT](https://www.khanacademy.org/test-prep) | Académie Khan | En ligne | Lycéens | B | Préparation aux tests standardisés |
+
+## Emplois — 100 sources
+
+| # | Source / opportunité | Organisation | Géographie | Pertinence pour la 11e année | Niveau | Référence / événement |
+|:---:|---|---|---|---|:---:|---|
+| 1 | [Job Bank for youth](https://www.jobbank.gc.ca/youth) | Gouvernement du Canada | Canada | Élèves du secondaire | A | Recherche d’emploi et ressources de carrière pour les jeunes |
+| 2 | [Job Bank student jobs](https://www.jobbank.gc.ca/student) | Gouvernement du Canada | Canada | Étudiants | A | Recherche d’emplois étudiants |
+| 3 | [Canada Summer Jobs](https://www.canada.ca/en/employment-social-development/services/funding/canada-summer-jobs.html) | Gouvernement du Canada | Canada | 15 à 30 ans | A | Emploi d’été subventionné |
+| 4 | [Youth Employment Strategy](https://www.canada.ca/en/employment-social-development/campaigns/youth-experience.html) | Gouvernement du Canada | Canada | Jeunes | A | Programmes d’emploi pour les jeunes |
+| 5 | [Youth Digital Gateway](https://youth-jeunesse.service.canada.ca/en) | Gouvernement du Canada | Canada | Jeunes | A | Planification de l’emploi et de carrière |
+| 6 | [Jobs for students](https://www.canada.ca/en/services/jobs/training.html) | Gouvernement du Canada | Canada | Étudiants | B | Services de formation et d’emploi |
+| 7 | [Job Bank career planning](https://www.jobbank.gc.ca/career-planning) | Gouvernement du Canada | Canada | Élèves du secondaire | A | Exploration de carrière |
+| 8 | [Québec emploi](https://www.quebecemploi.gouv.qc.ca/) | Gouvernement du Québec | Québec | Étudiants et jeunes | A | Recherche d’emploi provinciale |
+| 9 | [Services Québec employment services](https://www.quebec.ca/en/employment-and-work) | Gouvernement du Québec | Québec | Jeunes | A | Soutien à l’emploi et à la formation |
+| 10 | [Emploi-Québec youth services](https://www.quebec.ca/en/employment-and-work/help-finding-a-job) | Gouvernement du Québec | Québec | Jeunes | A | Aide à la recherche d’emploi |
+| 11 | [YES Montreal](https://yesmontreal.org/) | Youth Employment Services | Montréal, QC | Jeunes et jeunes adultes | B | Conseil et placement professionnel |
+| 12 | [Carrefour jeunesse-emploi Montréal Centre](https://cjemontreal.org/) | Carrefour jeunesse-emploi | Montréal, QC | Jeunes | B | Soutien à la carrière et à l’emploi |
+| 13 | [LOJIQ internships and mobility](https://www.lojiq.org/en/) | Offices jeunesse internationaux du Québec | Québec / international | Jeunes de 18 à 35 ans | B | Expériences professionnelles internationales |
+| 14 | [CJE de Laval](https://www.cjelaval.qc.ca/) | Carrefour jeunesse-emploi de Laval | Laval, QC | Jeunes | B | Soutien local à l’emploi |
+| 15 | [CJE de l'Outaouais](https://www.cjeo.qc.ca/) | Carrefour jeunesse-emploi de l’Outaouais | Outaouais, QC | Jeunes | B | Soutien à la carrière et à l’emploi |
+| 16 | [CJE de la Montérégie](https://www.cjemonteregie.org/) | Carrefour jeunesse-emploi | Montérégie, QC | Jeunes | B | Soutien local à l’emploi |
+| 17 | [CJE de l'Estrie](https://cjeestrie.org/) | Carrefour jeunesse-emploi | Estrie, QC | Jeunes | B | Soutien local à l’emploi |
+| 18 | [CJE de Québec](https://www.cjequebec.org/) | Carrefour jeunesse-emploi | Québec, QC | Jeunes | B | Soutien à la carrière et à l’emploi |
+| 19 | [YMCA employment programs](https://www.ymcagta.org/employment-services) | YMCA of Greater Toronto | Toronto, ON | Jeunes | B | Emploi et développement des compétences |
+| 20 | [YMCA Quebec employment services](https://www.ymcaquebec.org/en/) | YMCA Québec | Québec | Jeunes | B | Services d’emploi et communautaires |
+| 21 | [YWCA Montreal](https://www.ywcamountall.org/en/) | YWCA Montréal | Montréal, QC | Jeunes et femmes | B | Emploi et leadership |
+| 22 | [ProYouth employment programs](https://proyouth.ca/) | ProYouth | Canada | Jeunes | C | Découverte d’emplois pour les jeunes |
+| 23 | [JVS Toronto youth employment](https://www.jvstoronto.org/) | JVS Toronto | Toronto, ON | Jeunes | B | Services d’emploi et de formation |
+| 24 | [Youth Employment Ontario](https://www.ontario.ca/page/employment-ontario) | Gouvernement de l’Ontario | Ontario | Jeunes | A | Services Emploi Ontario |
+| 25 | [Youth Job Connection](https://www.ontario.ca/page/get-help-with-your-job-search) | Gouvernement de l’Ontario | Ontario | Jeunes confrontés à des obstacles | A | Jumelage et placements rémunérés |
+| 26 | [Ontario Summer Jobs](https://www.ontario.ca/page/summer-jobs-service) | Gouvernement de l’Ontario | Ontario | Étudiants et jeunes | A | Soutien à l’emploi d’été |
+| 27 | [Magnet youth jobs](https://magnet.today/) | Magnet | Ontario / Canada | Jeunes | C | Plateforme de jumelage d’emploi |
+| 28 | [City of Toronto youth jobs](https://www.toronto.ca/community-people/get-involved/youth/toronto-youth-jobs/) | Ville de Toronto | Toronto, ON | Jeunes | A | Emploi municipal pour les jeunes |
+| 29 | [City of Toronto student jobs](https://www.toronto.ca/home/jobs/) | Ville de Toronto | Toronto, ON | Étudiants | A | Emploi étudiant municipal |
+| 30 | [City of Montreal jobs](https://montreal.ca/en/topics/jobs) | Ville de Montréal | Montréal, QC | Étudiants et jeunes | A | Emploi municipal |
+| 31 | [City of Laval jobs](https://www.laval.ca/Pages/Fr/Citoyens/emplois.aspx) | Ville de Laval | Laval, QC | Étudiants et jeunes | B | Emploi municipal |
+| 32 | [City of Longueuil jobs](https://www.longueuil.quebec/fr/emplois) | Ville de Longueuil | Longueuil, QC | Étudiants et jeunes | B | Emploi municipal |
+| 33 | [Parks Canada student jobs](https://parks.canada.ca/agence-agency/emplois-jobs) | Parcs Canada | Canada | Étudiants | A | Emploi étudiant et saisonnier |
+| 34 | [Federal Student Work Experience Program](https://www.canada.ca/en/public-service-commission/services/recruitment/students/federal-student-work-experience-program.html) | Gouvernement du Canada | Canada | Étudiants | A | Emplois étudiants fédéraux |
+| 35 | [Canada Revenue Agency student jobs](https://www.canada.ca/en/revenue-agency/corporate/careers-cra.html) | Agence du revenu du Canada | Canada | Étudiants | B | Emploi étudiant gouvernemental |
+| 36 | [Government of Quebec student jobs](https://www.quebec.ca/en/government/work-government) | Gouvernement du Québec | Québec | Étudiants | B | Emploi étudiant provincial |
+| 37 | [Parliament of Canada careers](https://www.ourcommons.ca/About/OurPrograms/Students-e.html) | Parlement du Canada | Ottawa, ON | Étudiants | B | Programmes d’emploi étudiant |
+| 38 | [Canadian Armed Forces youth opportunities](https://forces.ca/en/careers/) | Forces armées canadiennes | Canada | Jeunes et étudiants | B | Carrières et formation rémunérée |
+| 39 | [RCMP careers](https://www.rcmp-grc.gc.ca/en/careers) | Gendarmerie royale du Canada | Canada | Parcours futur | B | Exploration de carrière |
+| 40 | [National Research Council student employment](https://nrc.canada.ca/en/corporate-careers) | Conseil national de recherches du Canada | Canada | Étudiants | B | Parcours de carrière en recherche |
+| 41 | [Natural Resources Canada student jobs](https://natural-resources.canada.ca/corporate-careers) | Gouvernement du Canada | Canada | Étudiants | B | Carrières scientifiques et politiques |
+| 42 | [Agriculture and Agri-Food Canada careers](https://agriculture.canada.ca/en/about-our-department/careers) | Gouvernement du Canada | Canada | Étudiants | B | Carrières en agriculture et en sciences |
+| 43 | [Environment and Climate Change Canada careers](https://www.canada.ca/en/environment-climate-change/corporate/careers.html) | Gouvernement du Canada | Canada | Étudiants | B | Carrières environnementales |
+| 44 | [Canada Border Services Agency student jobs](https://www.cbsa-asfc.gc.ca/job-emploi/menu-eng.html) | Agence des services frontaliers du Canada | Canada | Étudiants | B | Carrières dans la fonction publique |
+| 45 | [Public Service Commission student programs](https://www.canada.ca/en/public-service-commission/services/recruitment/students.html) | Commission de la fonction publique | Canada | Étudiants | A | Recrutement étudiant fédéral |
+| 46 | [Library and Archives Canada careers](https://library-archives.canada.ca/eng/corporate/careers/) | Bibliothèque et Archives Canada | Canada | Étudiants | B | Carrières du patrimoine et de l’information |
+| 47 | [National Film Board careers](https://www.nfb.ca/about/careers/) | Office national du film du Canada | Canada | Étudiants | B | Carrières dans les médias et la création |
+| 48 | [CBC careers](https://cbc.radio-canada.ca/en/working-us) | CBC/Radio-Canada | Canada | Étudiants et jeunes | B | Carrières dans les médias |
+| 49 | [Radio-Canada careers](https://ici.radio-canada.ca/emplois) | Radio-Canada | Québec / Canada | Étudiants et jeunes | B | Médias et communications |
+| 50 | [National Gallery of Canada careers](https://www.gallery.ca/about/careers) | Musée des beaux-arts du Canada | Ottawa, ON | Étudiants | B | Carrières dans les arts et les musées |
+| 51 | [Montreal Museum of Fine Arts careers](https://www.mbam.qc.ca/en/careers/) | Musée des beaux-arts de Montréal | Montréal, QC | Étudiants | B | Carrières dans les musées et les arts |
+| 52 | [BAnQ careers](https://www.banq.qc.ca/carrieres/) | Bibliothèque et Archives nationales du Québec | Québec | Étudiants | B | Carrières en bibliothèque et archives |
+| 53 | [Musée de la civilisation careers](https://www.mcq.org/en/careers) | Musée de la civilisation | Québec, QC | Étudiants | B | Carrières muséales |
+| 54 | [Montreal Science Centre careers](https://www.montrealsciencecentre.com/about-us/careers) | Centre des sciences de Montréal | Montréal, QC | Étudiants | B | Médiation scientifique et carrières |
+| 55 | [Espace pour la vie jobs](https://espacepourlavie.ca/en/jobs) | Espace pour la vie | Montréal, QC | Étudiants et jeunes | B | Emplois en nature et en sciences |
+| 56 | [Nature Conservancy of Canada careers](https://www.natureconservancy.ca/en/about-us/careers/) | Conservation de la nature Canada | Canada | Étudiants | B | Carrières en conservation |
+| 57 | [WWF-Canada careers](https://wwf.ca/about-us/careers/) | WWF-Canada | Canada | Étudiants | B | Carrières environnementales |
+| 58 | [Ocean Wise careers](https://ocean.org/about-us/careers/) | Ocean Wise | Canada | Jeunes et étudiants | B | Carrières en océans et éducation |
+| 59 | [David Suzuki Foundation careers](https://davidsuzuki.org/about/careers/) | Fondation David Suzuki | Canada | Étudiants | B | Climat et défense des intérêts |
+| 60 | [Canadian Red Cross careers](https://www.redcross.ca/about-us/careers) | Croix-Rouge canadienne | Canada | Étudiants et jeunes | B | Services communautaires et d’urgence |
+| 61 | [St. John Ambulance careers](https://sja.ca/en/careers) | Ambulance Saint-Jean Canada | Canada | Jeunes et étudiants | B | Santé et travail communautaire |
+| 62 | [Food Banks Canada careers](https://foodbankscanada.ca/about-us/careers/) | Banques alimentaires Canada | Canada | Étudiants | B | Carrières dans les services communautaires |
+| 63 | [United Way Centraide careers](https://www.unitedway.ca/about-us/careers/) | Centraide United Way Canada | Canada | Étudiants | B | Carrières communautaires et sans but lucratif |
+| 64 | [Big Brothers Big Sisters careers](https://bigbrothersbigsisters.ca/careers/) | Grands Frères Grandes Sœurs du Canada | Canada | Étudiants et jeunes | B | Mentorat et communauté |
+| 65 | [Boys and Girls Clubs careers](https://www.bgccan.com/careers/) | BGC Canada | Canada | Étudiants et jeunes | B | Travail auprès des jeunes |
+| 66 | [Canadian Cancer Society careers](https://cancer.ca/en/about-us/careers) | Société canadienne du cancer | Canada | Étudiants | B | Santé et carrières sans but lucratif |
+| 67 | [Heart & Stroke careers](https://www.heartandstroke.ca/about-us/careers) | Cœur + AVC | Canada | Étudiants | B | Santé et carrières sans but lucratif |
+| 68 | [McGill student jobs](https://www.mcgill.ca/students/campus-life/student-employment) | Université McGill | Montréal, QC | Étudiants | B | Parcours d’emploi sur campus |
+| 69 | [Concordia student jobs](https://www.concordia.ca/students/success/career-planning.html) | Université Concordia | Montréal, QC | Étudiants | B | Carrière et travail sur campus |
+| 70 | [Université de Montréal jobs](https://carriere.umontreal.ca/) | Université de Montréal | Montréal, QC | Étudiants | B | Emploi universitaire |
+| 71 | [UQAM student employment](https://etudier.uqam.ca/emploi) | UQAM | Montréal, QC | Étudiants | B | Travail sur campus et carrières |
+| 72 | [Dawson College jobs](https://www.dawsoncollege.qc.ca/career-development/) | Collège Dawson | Montréal, QC | Étudiants du cégep | B | Développement de carrière |
+| 73 | [Vanier College career services](https://www.vaniercollege.qc.ca/career/) | Collège Vanier | Montréal, QC | Étudiants du cégep | B | Services de carrière |
+| 74 | [John Abbott College careers](https://www.johnabbott.qc.ca/student-services/career-information/) | Collège John Abbott | Sainte-Anne-de-Bellevue, QC | Étudiants du cégep | B | Information professionnelle |
+| 75 | [Workopolis](https://www.workopolis.com/) | Workopolis | Canada | Étudiants et jeunes | C | Plateforme de découverte d’emplois |
+| 76 | [Indeed Canada](https://ca.indeed.com/) | Indeed | Canada | Étudiants et jeunes | C | Plateforme de découverte d’emplois |
+| 77 | [LinkedIn Jobs Canada](https://www.linkedin.com/jobs/) | LinkedIn | Canada / international | Étudiants et jeunes | C | Plateforme de découverte d’emplois |
+| 78 | [Glassdoor Canada](https://www.glassdoor.ca/Job/index.htm) | Glassdoor | Canada | Étudiants et jeunes | C | Emplois et recherche d’employeurs |
+| 79 | [CharityVillage jobs](https://charityvillage.com/jobs/) | CharityVillage | Canada | Étudiants et jeunes | C | Emplois dans le secteur sans but lucratif |
+| 80 | [ECO Canada jobs](https://eco.ca/career-centre/) | ECO Canada | Canada | Étudiants | B | Carrières environnementales |
+| 81 | [TalentEgg](https://talentegg.ca/en/) | TalentEgg | Canada | Étudiants et nouveaux diplômés | C | Découverte d’emplois étudiants |
+| 82 | [Jobboom](https://www.jobboom.com/) | Jobboom | Québec / Canada | Étudiants et jeunes | C | Découverte d’emplois au Québec |
+| 83 | [Jobillico](https://www.jobillico.com/) | Jobillico | Québec / Canada | Étudiants et jeunes | C | Plateforme de découverte d’emplois |
+| 84 | [CareerBeacon](https://www.careerbeacon.com/) | CareerBeacon | Canada atlantique / Canada | Étudiants et jeunes | C | Plateforme de découverte d’emplois |
+| 85 | [WorkBC youth jobs](https://www.workbc.ca/find-a-job) | Gouvernement de la Colombie-Britannique | Colombie-Britannique | Jeunes | A | Recherche d’emploi provinciale |
+| 86 | [Alberta youth employment](https://www.alberta.ca/jobs) | Gouvernement de l’Alberta | Alberta | Jeunes | A | Recherche d’emploi provinciale |
+| 87 | [ALIS student jobs](https://alis.alberta.ca/look-for-work/) | Gouvernement de l’Alberta | Alberta | Étudiants | A | Planification de carrière et d’emploi |
+| 88 | [Saskatchewan employment services](https://www.saskatchewan.ca/residents/jobs-working-and-training) | Gouvernement de la Saskatchewan | Saskatchewan | Jeunes | A | Emploi et formation |
+| 89 | [Manitoba youth employment](https://www.gov.mb.ca/jec/) | Gouvernement du Manitoba | Manitoba | Jeunes | A | Emploi et formation |
+| 90 | [New Brunswick jobs](https://www2.gnb.ca/content/gnb/en/departments/post-secondary_education_training_and_labour/Jobs.html) | Gouvernement du Nouveau-Brunswick | Nouveau-Brunswick | Jeunes | A | Recherche d’emploi provinciale |
+| 91 | [Nova Scotia youth employment](https://novascotia.ca/employmentnovascotia/) | Gouvernement de la Nouvelle-Écosse | Nouvelle-Écosse | Jeunes | A | Emploi et formation |
+| 92 | [PEI employment services](https://www.princeedwardisland.ca/en/topic/employment) | Gouvernement de l’Île-du-Prince-Édouard | Î.-P.-É. | Jeunes | A | Soutien à l’emploi |
+| 93 | [Newfoundland and Labrador jobs](https://www.gov.nl.ca/iet/) | Gouvernement de Terre-Neuve-et-Labrador | Terre-Neuve-et-Labrador | Jeunes | A | Emploi et formation |
+| 94 | [Student Energy careers](https://studentenergy.org/jobs/) | Student Energy | Canada / international | Étudiants | B | Carrières dans l’énergie et le climat |
+| 95 | [Engineers Canada career resources](https://engineerscanada.ca/be-an-engineer/careers) | Ingénieurs Canada | Canada | Futurs étudiants en ingénierie | B | Parcours de carrière en ingénierie |
+| 96 | [ICTC career resources](https://ictc-ctic.ca/) | Conseil des technologies de l’information et des communications | Canada | Étudiants | B | Parcours de carrière technologique |
+| 97 | [Creative Pathways](https://creativepathwayscanada.com/) | Creative Pathways Canada | Canada | Jeunes | C | Découverte des carrières créatives |
+| 98 | [TechTO jobs and community](https://www.techto.org/) | TechTO | Toronto / Canada | Étudiants et jeunes | C | Communauté professionnelle technologique |
+| 99 | [Youth Employment Canada](https://www.youthemployment.ca/) | Youth Employment Canada | Canada | Jeunes | C | Découverte d’emplois pour les jeunes |
+| 100 | [Canada Job Search](https://www.canada.ca/en/services/jobs/opportunities.html) | Gouvernement du Canada | Canada | Étudiants et jeunes | A | Répertoire gouvernemental des emplois et de la formation |
 
 ## Règles de qualité des données pour Opportunity Equity Engine
 

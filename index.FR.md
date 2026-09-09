@@ -26,7 +26,7 @@ Choisissez une collection pour découvrir la vision du projet, le parcours d’a
 | [Recherche et validation](docs/07-research-and-validation/RESEARCH_AND_VALIDATION.html) | Entretiens, sources, tests d’utilisabilité et décisions fondées |
 | [Boîte à outils](docs/08-student-toolkit/STUDENT_TOOLKIT.html) | Collaboration GitHub, accessibilité, confidentialité et dépannage |
 | [Présentation et réflexion](docs/09-showcase-and-reflection/SHOWCASE_AND_REFLECTION.html) | Démonstration, preuves, crédits et apprentissages |
-| [Ressources sur les opportunités](docs/10-opportunity-sources/Opportunity_Equity_Engine_600_Sources.html) | 600 sources de recherche, niveaux de vérification, champs structurés et règles de qualité |
+| [Ressources sur les opportunités](docs/10-opportunity-sources/Opportunity_Equity_Engine_600_Sources.html) | 700 sources de recherche, niveaux de vérification, champs structurés et règles de qualité |
 {% endcomment %}
 
 ## Plus d’opportunités. Un chemin plus clair.
@@ -147,7 +147,7 @@ Utilisez l’[index de la documentation](docs/INDEX.FR.html) comme point d’ent
 | [07 — Recherche et validation](docs/07-research-and-validation/RESEARCH_AND_VALIDATION.FR.html) | Entretiens, vérification des sources, tests et décisions fondées |
 | [08 — Boîte à outils](docs/08-student-toolkit/STUDENT_TOOLKIT.FR.html) | Collaboration, accessibilité, confidentialité, sécurité et dépannage |
 | [09 — Présentation et réflexion](docs/09-showcase-and-reflection/SHOWCASE_AND_REFLECTION.FR.html) | Présentation, preuves de portfolio, crédits et réflexion |
-| [10 — Sources d’opportunités](docs/10-opportunity-sources/Opportunity_Equity_Engine_600_Sources.FR.html) | 600 sources, niveaux de vérification, champs et règles de qualité |
+| [10 — Sources d’opportunités](docs/10-opportunity-sources/Opportunity_Equity_Engine_600_Sources.FR.html) | 700 sources, niveaux de vérification, champs et règles de qualité |
 
 ## Parcours recommandés
 

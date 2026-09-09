@@ -61,7 +61,7 @@ This index is the starting point for the project's initiative, product design, s
 | Architecture | [Architecture](02-architecture/architecture.html) | End-to-end components, data model, matching, search, security, and operations |
 | Student learning | [Beginner guide](03-student-guides/BEGINNER_PROJECT_GUIDE.html), [Quick app and website build](03-student-guides/QUICK_APP_AND_WEBSITE_BUILD_GUIDE.html), [Vibe coding](03-student-guides/VIBE_CODING_FOR_STUDENTS.html), [Prerequisites](03-student-guides/LEARNING_PREREQUISITES.html) | Starting from zero, quick prototypes, AI-assisted development, knowledge gaps, and learning sequence |
 | Research and validation | [Research and validation](07-research-and-validation/RESEARCH_AND_VALIDATION.html) | Interviews, consent, source verification, usability testing, and evidence-based decisions |
-| Opportunity sources | [600-source opportunity catalog](10-opportunity-sources/Opportunity_Equity_Engine_600_Sources.html) | 600 research sources, verification tiers, ingestion fields, and data-quality rules |
+| Opportunity sources | [700-source opportunity catalog](10-opportunity-sources/Opportunity_Equity_Engine_600_Sources.html) | 700 research sources, verification tiers, ingestion fields, and data-quality rules |
 | Project delivery | [Management plan](04-delivery/PROJECT_MANAGEMENT_PLAN.html), [Timeline](04-delivery/PROJECT_TIMELINE.html) | Roles, tools, cost, risks, team process, milestones, and definition of done |
 | Implementation | [Demo implementation guide](05-build/DEMO_IMPLEMENTATION_GUIDE.html) | Beginner-friendly tasks, setup, schema, code examples, testing, and deployment |
 | Collaboration and safety | [Student toolkit](08-student-toolkit/STUDENT_TOOLKIT.html) | GitHub workflow, accessibility, privacy, responsible AI, troubleshooting, and glossary |
@@ -85,7 +85,7 @@ docs/
 ├── 07-research-and-validation/  Research, consent, and usability testing
 ├── 08-student-toolkit/   Collaboration, safety, and troubleshooting
 ├── 09-showcase-and-reflection/  Presentation, portfolio, and reflection
-└── 10-opportunity-sources/  600-source opportunity catalog and data-quality rules
+└── 10-opportunity-sources/  700-source opportunity catalog and data-quality rules
 ```
 
 ## Documentation standards
@@ -101,4 +101,4 @@ docs/
 
 ## Current project status
 
-The repository currently contains the initiative charter, bilingual product plans, architecture, student guides, delivery plan, research materials, the 600-source opportunity catalog, implementation guide, toolkit, and visual demo deliverables. The next practical milestone is the vertical-slice application described in [DEMO_IMPLEMENTATION_GUIDE.md](05-build/DEMO_IMPLEMENTATION_GUIDE.html).
+The repository currently contains the initiative charter, bilingual product plans, architecture, student guides, delivery plan, research materials, the 700-source opportunity catalog, implementation guide, toolkit, and visual demo deliverables. The next practical milestone is the vertical-slice application described in [DEMO_IMPLEMENTATION_GUIDE.md](05-build/DEMO_IMPLEMENTATION_GUIDE.html).

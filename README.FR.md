@@ -41,14 +41,14 @@ Le projet est actuellement au stade de la planification et de la conception de l
 - `docs/07-research-and-validation/` : recherche, consentement, sources et utilisabilité
 - `docs/08-student-toolkit/` : collaboration GitHub, accessibilité, confidentialité et dépannage
 - `docs/09-showcase-and-reflection/` : présentation, portfolio, crédits et réflexion
-- `docs/10-opportunity-sources/` : catalogue de 600 sources, vérification et qualité des données
+- `docs/10-opportunity-sources/` : catalogue de 700 sources, vérification et qualité des données
 - `docs/INDEX.FR.md` : index de la documentation et parcours recommandés
 
 ## Documentation
 
 Commencez par [l’accueil français](index.FR.md). Les versions anglaise, chinoise et française sont disponibles avec le sélecteur de langue en haut du site GitHub Pages.
 
-Les guides pour les élèves comprennent le [guide de projet pour débutants](docs/03-student-guides/BEGINNER_PROJECT_GUIDE.FR.md), le [guide Vibe Coding](docs/03-student-guides/VIBE_CODING_FOR_STUDENTS.FR.md), les [prérequis d’apprentissage](docs/03-student-guides/LEARNING_PREREQUISITES.FR.md) et le [guide de création rapide d’une application ou d’un site web](docs/03-student-guides/QUICK_APP_AND_WEBSITE_BUILD_GUIDE.FR.md). Le nouveau [catalogue de 600 sources d’opportunités](docs/10-opportunity-sources/Opportunity_Equity_Engine_600_Sources.FR.md) contient les sources de recherche, les niveaux de vérification, les champs et les règles de qualité.
+Les guides pour les élèves comprennent le [guide de projet pour débutants](docs/03-student-guides/BEGINNER_PROJECT_GUIDE.FR.md), le [guide Vibe Coding](docs/03-student-guides/VIBE_CODING_FOR_STUDENTS.FR.md), les [prérequis d’apprentissage](docs/03-student-guides/LEARNING_PREREQUISITES.FR.md) et le [guide de création rapide d’une application ou d’un site web](docs/03-student-guides/QUICK_APP_AND_WEBSITE_BUILD_GUIDE.FR.md). Le nouveau [catalogue de 700 sources d’opportunités](docs/10-opportunity-sources/Opportunity_Equity_Engine_600_Sources.FR.md) contient les sources de recherche, les niveaux de vérification, les champs et les règles de qualité.
 
 | Document | Utilité |
 |---|---|
@@ -65,7 +65,7 @@ Les guides pour les élèves comprennent le [guide de projet pour débutants](do
 | [Calendrier du projet](docs/04-delivery/PROJECT_TIMELINE.FR.md) | Plan de livraison et jalons sur 16 semaines |
 | [Livrables de démonstration](docs/06-demo/DEMO_DELIVERABLES.FR.md) | Parcours, objectifs d’implémentation et visuels |
 | [Recherche et validation](docs/07-research-and-validation/RESEARCH_AND_VALIDATION.FR.md) | Entretiens, sources, utilisabilité et preuves |
-| [Catalogue de 600 sources](docs/10-opportunity-sources/Opportunity_Equity_Engine_600_Sources.FR.md) | Sources, niveaux, champs et règles de qualité |
+| [Catalogue de 700 sources](docs/10-opportunity-sources/Opportunity_Equity_Engine_600_Sources.FR.md) | Sources, niveaux, champs et règles de qualité |
 | [Boîte à outils](docs/08-student-toolkit/STUDENT_TOOLKIT.FR.md) | Collaboration, accessibilité, confidentialité, IA responsable et dépannage |
 | [Présentation et réflexion](docs/09-showcase-and-reflection/SHOWCASE_AND_REFLECTION.FR.md) | Présentation, portfolio, crédits et réflexion |
 | [Plan de projet IA](docs/01-initiative/Opportunity_Equity_Engine.FR.md) | Plan détaillé du produit et de l’IA |
