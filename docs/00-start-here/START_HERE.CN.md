@@ -62,6 +62,6 @@ translation_fr: /docs/00-start-here/START_HERE.FR.md
 <summary>打开完整英文参考</summary>
 
 {% capture canonical_source %}{% include_relative START_HERE.md %}{% endcapture %}
-{{ canonical_source | split: "\n" | slice: 7, 9999 | join: "\n" }}
+{{ canonical_source | split: 'translation_fr: /docs/00-start-here/START_HERE.FR.md' | last }}
 
 </details>

@@ -63,6 +63,6 @@ translation_fr: /index.FR.md
 <summary>打开完整英文参考</summary>
 
 {% capture canonical_source %}{% include_relative index.md %}{% endcapture %}
-{{ canonical_source | remove_first: '---' | remove_first: '---' }}
+{{ canonical_source | split: 'translation_fr: /index.FR.md' | last }}
 
 </details>

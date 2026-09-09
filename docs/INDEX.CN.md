@@ -69,6 +69,6 @@ translation_fr: /docs/INDEX.FR.md
 <summary>打开完整英文参考</summary>
 
 {% capture canonical_source %}{% include_relative INDEX.md %}{% endcapture %}
-{{ canonical_source | split: "\n" | slice: 7, 9999 | join: "\n" }}
+{{ canonical_source | split: 'translation_fr: /docs/INDEX.FR.md' | last }}
 
 </details>

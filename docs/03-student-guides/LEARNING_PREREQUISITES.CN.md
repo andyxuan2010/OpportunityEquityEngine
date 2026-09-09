@@ -44,6 +44,6 @@ translation_fr: /docs/03-student-guides/LEARNING_PREREQUISITES.FR.md
 <summary>打开完整英文参考</summary>
 
 {% capture canonical_source %}{% include_relative LEARNING_PREREQUISITES.md %}{% endcapture %}
-{{ canonical_source | split: "\n" | slice: 7, 9999 | join: "\n" }}
+{{ canonical_source | split: 'translation_fr: /docs/03-student-guides/LEARNING_PREREQUISITES.FR.md' | last }}
 
 </details>

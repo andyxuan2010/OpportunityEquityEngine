@@ -51,6 +51,6 @@ translation_fr: /docs/03-student-guides/BEGINNER_PROJECT_GUIDE.FR.md
 <summary>打开完整英文参考</summary>
 
 {% capture canonical_source %}{% include_relative BEGINNER_PROJECT_GUIDE.md %}{% endcapture %}
-{{ canonical_source | split: "\n" | slice: 7, 9999 | join: "\n" }}
+{{ canonical_source | split: 'translation_fr: /docs/03-student-guides/BEGINNER_PROJECT_GUIDE.FR.md' | last }}
 
 </details>
