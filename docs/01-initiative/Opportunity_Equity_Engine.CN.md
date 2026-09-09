@@ -190,34 +190,34 @@ Web App
 
 ### Frontend
 
-- Next.js
-- React
+- [Next.js](https://nextjs.org/docs)
+- [React](https://react.dev/)
 
 ### Backend
 
-- Python
-- FastAPI
+- [Python](https://docs.python.org/3/)
+- [FastAPI](https://fastapi.tiangolo.com/)
 
 ### Database
 
-- PostgreSQL
-- Supabase
+- [PostgreSQL](https://www.postgresql.org/docs/)
+- [Supabase](https://supabase.com/docs)
 
 ### AI
 
-- OpenAI API
-- Gemini API
+- [OpenAI API](https://platform.openai.com/docs/)
+- [Gemini API](https://ai.google.dev/gemini-api/docs)
 - 其他适合结构化提取和文本理解的 LLM
 
 ### Semantic Search
 
-- pgvector
-- Embeddings
+- [pgvector](https://github.com/pgvector/pgvector)
+- [Embeddings](https://platform.openai.com/docs/guides/embeddings)
 
 ### Deployment
 
-- Vercel
-- Supabase
+- [Vercel](https://vercel.com/docs)
+- [Supabase](https://supabase.com/docs)
 
 第一版完全没有必要自己训练大型模型。
 

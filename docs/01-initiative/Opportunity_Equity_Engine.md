@@ -190,34 +190,34 @@ Web App
 
 ### Frontend
 
-- Next.js
-- React
+- [Next.js](https://nextjs.org/docs)
+- [React](https://react.dev/)
 
 ### Backend
 
-- Python
-- FastAPI
+- [Python](https://docs.python.org/3/)
+- [FastAPI](https://fastapi.tiangolo.com/)
 
 ### Database
 
-- PostgreSQL
-- Supabase
+- [PostgreSQL](https://www.postgresql.org/docs/)
+- [Supabase](https://supabase.com/docs)
 
 ### AI
 
-- OpenAI API
-- Gemini API
+- [OpenAI API](https://platform.openai.com/docs/)
+- [Gemini API](https://ai.google.dev/gemini-api/docs)
 - Other LLMs suitable for structured extraction and text understanding
 
 ### Semantic Search
 
-- pgvector
-- Embeddings
+- [pgvector](https://github.com/pgvector/pgvector)
+- [Embeddings](https://platform.openai.com/docs/guides/embeddings)
 
 ### Deployment
 
-- Vercel
-- Supabase
+- [Vercel](https://vercel.com/docs)
+- [Supabase](https://supabase.com/docs)
 
 There is no need to train a large model from scratch for the first version.
 
