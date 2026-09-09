@@ -15,7 +15,7 @@ translation_fr: /index.FR.md
 |---|---|
 | [从这里开始](docs/00-start-here/START_HERE.html) | 选择角色、配置工具并完成第一次贡献 |
 | [项目愿景](docs/01-initiative/initiative.html) | 目标用户、问题、产品定位和长期影响 |
-| [学生指南](docs/03-student-guides/BEGINNER_PROJECT_GUIDE.html) | 入门学习、Vibe Coding 和先修知识 |
+| [学生指南](docs/03-student-guides/BEGINNER_PROJECT_GUIDE.html)、[Vibe Coding](docs/03-student-guides/VIBE_CODING_FOR_STUDENTS.html)、[学习先修知识](docs/03-student-guides/LEARNING_PREREQUISITES.html)、[快速构建应用和网站指南](docs/03-student-guides/QUICK_APP_AND_WEBSITE_BUILD_GUIDE.html) | 入门学习、快速原型、Vibe Coding 和先修知识 |
 | [系统架构](docs/02-architecture/architecture.html) | 数据、匹配规则、安全和运行方式 |
 | [管理计划](docs/04-delivery/PROJECT_MANAGEMENT_PLAN.html)、[项目时间线](docs/04-delivery/PROJECT_TIMELINE.html) | 角色、风险、里程碑和团队流程 |
 | [构建指南](docs/05-build/DEMO_IMPLEMENTATION_GUIDE.html) | 从样例数据到可运行垂直切片的步骤 |

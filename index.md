@@ -24,12 +24,17 @@ Choose a collection to browse the initiative, student learning path, product des
     <span>Purpose, audience, problem, and the long-term goal.</span>
     <b>Explore initiative <span aria-hidden="true">↗</span></b>
   </a>
-  <a class="library-card library-card-purple" href="docs/03-student-guides/BEGINNER_PROJECT_GUIDE.html">
+  <div class="library-card library-card-purple library-card-student-guides">
     <span class="library-icon">▦</span>
     <strong>Student guides</strong>
     <span>Beginner-friendly learning, vibe coding, and prerequisites.</span>
-    <b>Start learning <span aria-hidden="true">↗</span></b>
-  </a>
+    <div class="library-card-links" aria-label="Student guide links">
+      <a href="docs/03-student-guides/BEGINNER_PROJECT_GUIDE.html">Beginner project guide <span aria-hidden="true">↗</span></a>
+      <a href="docs/03-student-guides/VIBE_CODING_FOR_STUDENTS.html">Vibe coding for students <span aria-hidden="true">↗</span></a>
+      <a href="docs/03-student-guides/LEARNING_PREREQUISITES.html">Learning prerequisites <span aria-hidden="true">↗</span></a>
+      <a href="docs/03-student-guides/QUICK_APP_AND_WEBSITE_BUILD_GUIDE.html">Quick app and website guide <span aria-hidden="true">↗</span></a>
+    </div>
+  </div>
   <a class="library-card library-card-teal" href="docs/02-architecture/architecture.html">
     <span class="library-icon">⌁</span>
     <strong>Architecture</strong>
@@ -181,7 +186,7 @@ Use [docs/INDEX.md](docs/INDEX.html) as the central index. The documentation is 
 |---|---|
 | [01 — Initiative](docs/01-initiative/initiative.html) | Purpose, audience, problem, goal, product vision, and bilingual plans |
 | [02 — Architecture](docs/02-architecture/architecture.html) | System components, data model, matching, search, security, and operations |
-| [03 — Student guides](docs/03-student-guides/BEGINNER_PROJECT_GUIDE.html) | Beginner path, vibe coding, prerequisites, and knowledge gaps |
+| [03 — Student guides](docs/03-student-guides/BEGINNER_PROJECT_GUIDE.html), [Vibe coding](docs/03-student-guides/VIBE_CODING_FOR_STUDENTS.html), [Prerequisites](docs/03-student-guides/LEARNING_PREREQUISITES.html), [Quick app and website guide](docs/03-student-guides/QUICK_APP_AND_WEBSITE_BUILD_GUIDE.html) | Beginner path, quick prototypes, vibe coding, prerequisites, and knowledge gaps |
 | [04 — Delivery](docs/04-delivery/PROJECT_MANAGEMENT_PLAN.html) | Roles, tools, cost, risks, team process, and 16-week timeline |
 | [05 — Build](docs/05-build/DEMO_IMPLEMENTATION_GUIDE.html) | Step-by-step implementation, code examples, testing, and deployment |
 | [06 — Demo](docs/06-demo/DEMO_DELIVERABLES.html) | End-user screens, presentation flow, and visual product deliverables |
