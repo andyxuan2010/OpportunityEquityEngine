@@ -3,24 +3,18 @@
   {% assign nav_projects = '项目' %}
   {% assign nav_docs = '文档' %}
   {% assign nav_github = 'GitHub' %}
-  {% assign portal_label = '文档门户' %}
-  {% assign language_label = '语言' %}
   {% assign brand_subtitle = '学生机会文档' %}
 {% elsif page.locale == 'fr' %}
   {% assign nav_home = 'Accueil' %}
   {% assign nav_projects = 'Projets' %}
   {% assign nav_docs = 'Documentation' %}
   {% assign nav_github = 'GitHub' %}
-  {% assign portal_label = 'Portail documentaire' %}
-  {% assign language_label = 'Langue' %}
   {% assign brand_subtitle = 'DOCUMENTATION DES OPPORTUNITÉS ÉTUDIANTES' %}
 {% else %}
   {% assign nav_home = 'Home' %}
   {% assign nav_projects = 'Projects' %}
   {% assign nav_docs = 'Documentation' %}
   {% assign nav_github = 'GitHub' %}
-  {% assign portal_label = 'Documentation portal' %}
-  {% assign language_label = 'Language' %}
   {% assign brand_subtitle = 'STUDENT OPPORTUNITY DOCUMENTATION' %}
 {% endif %}
 {% assign language_en = page.translation_en | default: page.url | replace: '.md', '.html' %}
@@ -39,14 +33,11 @@
       <span class="brand-copy"><strong>Opportunity Equity</strong><small>{{ brand_subtitle }}</small></span>
     </a>
     <div class="nav-secondary">
-      <span class="portal-label">{{ portal_label }}</span>
       <div class="language-switcher" aria-label="Choose language">
-        <span class="language-label">{{ language_label }}</span>
         <a class="language-option{% if page.locale == nil or page.locale == 'en' %} active{% endif %}" href="{{ language_en | replace: '.md', '.html' | relative_url }}" lang="en">EN</a>
         <a class="language-option{% if page.locale == 'fr' %} active{% endif %}" href="{{ language_fr | replace: '.md', '.html' | relative_url }}" lang="fr">FR</a>
         <a class="language-option{% if page.locale == 'zh' %} active{% endif %}" href="{{ language_zh | replace: '.md', '.html' | relative_url }}" lang="zh-CN">中文</a>
       </div>
-      <button class="theme-button" type="button" data-theme-toggle aria-label="Toggle color theme"><span aria-hidden="true">◐</span><span class="theme-button-label">Theme</span></button>
     </div>
   </div>
 </header>
