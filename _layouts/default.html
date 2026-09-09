@@ -33,7 +33,6 @@
           <span class="document-breadcrumb-separator" aria-hidden="true">/</span>
           <span class="document-breadcrumb-current" aria-current="page">{{ page.title }}</span>
         </nav>
-        <div class="document-kicker"><span class="kicker-dot"></span>{% if page.locale == 'zh' %}项目文档{% elsif page.locale == 'fr' %}Documentation du projet{% else %}Project documentation{% endif %}</div>
         <div class="document-reader">
           {% include document-toc.html %}
           <article class="document-content">
