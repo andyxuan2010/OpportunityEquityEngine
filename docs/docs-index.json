@@ -1,0 +1,981 @@
+{
+  "generatedBy": "scripts/generate-oee-docs-index.mjs",
+  "categories": [
+    {
+      "folder": "00-start-here",
+      "title": "Start here",
+      "order": 1,
+      "count": 1
+    },
+    {
+      "folder": "01-initiative",
+      "title": "Initiative and vision",
+      "order": 2,
+      "count": 2
+    },
+    {
+      "folder": "02-architecture",
+      "title": "Architecture",
+      "order": 3,
+      "count": 1
+    },
+    {
+      "folder": "03-student-guides",
+      "title": "Student guides",
+      "order": 4,
+      "count": 4
+    },
+    {
+      "folder": "04-delivery",
+      "title": "Delivery plan",
+      "order": 5,
+      "count": 2
+    },
+    {
+      "folder": "05-build",
+      "title": "Build guide",
+      "order": 6,
+      "count": 1
+    },
+    {
+      "folder": "06-demo",
+      "title": "Demo deliverables",
+      "order": 7,
+      "count": 1
+    },
+    {
+      "folder": "07-research-and-validation",
+      "title": "Research and validation",
+      "order": 8,
+      "count": 1
+    },
+    {
+      "folder": "08-student-toolkit",
+      "title": "Student toolkit",
+      "order": 9,
+      "count": 1
+    },
+    {
+      "folder": "09-showcase-and-reflection",
+      "title": "Showcase and reflection",
+      "order": 10,
+      "count": 1
+    },
+    {
+      "folder": "10-opportunity-sources",
+      "title": "Opportunity resources",
+      "order": 11,
+      "count": 1
+    }
+  ],
+  "articles": [
+    {
+      "slug": "showcase-and-reflection",
+      "legacySlugs": [],
+      "title": "Showcase and Reflection",
+      "summary": "A strong student project is more than a working screen. It shows the problem, the decisions, the evidence, the limits, and what the team learned.",
+      "tags": [
+        "showcase",
+        "reflection"
+      ],
+      "articleType": "guide",
+      "articleTypeLabel": "Guide",
+      "documentId": "OEE-01",
+      "lastUpdated": "2026-09-09",
+      "reviewStatus": "machine-validated",
+      "reviewCadence": "annual",
+      "reviewDate": "",
+      "decisionStatus": "active",
+      "supersedes": [],
+      "relatedDocumentIds": [],
+      "readMinutes": 2,
+      "searchText": "Showcase and Reflection Showcase and Reflection: Prove What You Learned A strong student project is more than a working screen. It shows the problem, the decisions, the evidence, the limits, and what the team learned. A five-minute demo 1. Problem (45 seconds): Who struggles today, and why does it matter? 2. User (30 seconds): Introduce one realistic student scenario. 3. Journey (2 minutes): Profile → search → match → evidence → saved next step. 4. Build choices (1 minute): Explain one data, design, architecture, or AI decision. 5. Evidence and next step (45 seconds): Show testing evidence, limitations, and the next improvement. Keep a backup recording or screenshots. A demo should not depend on a live service, private account, or unverified claim. What to include in the project record - Problem statement and target audience. - Before-and-after user journey. - Architecture or data-flow diagram. - Source and verification log for sample opportunities. - Test cases, usability findings, and changes made because of them. - Known limitations, risks, and out-of-scope features. - Each teammate’s contribution and review evidence. Reflection prompts Answer these individually, using specific examples: - What did I make, test, explain, or improve? - Which decision changed after evidence or feedback? - What did I understand only after something failed? - How did I use AI, and how did I verify its output? - What would I do differently with one more week? - What is one skill I can now teach another student? Honest claims Say “our prototype suggests” rather than “we proved” when the sample is small. Distinguish a mockup from a deployed feature, sample data from verified production data, and a match explanation from an admission prediction. Credit sources, libraries, teammates, and AI assistance. Portfolio checklist Before sharing publicly, remove secrets and private data, check that screenshots show no personal information, link to the repository and live demo, explain how to run it, include accessibility and privacy decisions, and state what is unfinished. The goal is to make the work understandable and reusable by the next student.",
+      "relatedSlugs": [],
+      "backlinkSlugs": [],
+      "status": "published",
+      "order": 10,
+      "category": "Showcase and reflection",
+      "categoryFolder": "09-showcase-and-reflection",
+      "path": "09-showcase-and-reflection/SHOWCASE_AND_REFLECTION.md",
+      "localized": {
+        "zh": {
+          "path": "09-showcase-and-reflection/SHOWCASE_AND_REFLECTION.CN.md",
+          "title": "展示与反思",
+          "summary": "好的学生项目不只是一个能运行的页面，还应展示问题、决定、证据、限制和团队学到的内容。",
+          "tags": [
+            "showcase",
+            "reflection"
+          ],
+          "readMinutes": 1
+        },
+        "fr": {
+          "path": "09-showcase-and-reflection/SHOWCASE_AND_REFLECTION.FR.md",
+          "title": "Présentation et réflexion",
+          "summary": "Un bon projet étudiant ne se limite pas à un écran fonctionnel. Il montre le problème, les décisions, les preuves, les limites et les apprentissages de l’équipe.",
+          "tags": [
+            "showcase",
+            "reflection",
+            "sentation",
+            "flexion"
+          ],
+          "readMinutes": 2
+        }
+      }
+    },
+    {
+      "slug": "student-toolkit",
+      "legacySlugs": [],
+      "title": "Student Toolkit",
+      "summary": "This is the practical reference for the habits that make a student project healthy: collaboration, accessibility, privacy, troubleshooting, and clear communication.",
+      "tags": [
+        "student",
+        "toolkit"
+      ],
+      "articleType": "guide",
+      "articleTypeLabel": "Guide",
+      "documentId": "OEE-02",
+      "lastUpdated": "2026-09-09",
+      "reviewStatus": "machine-validated",
+      "reviewCadence": "annual",
+      "reviewDate": "",
+      "decisionStatus": "active",
+      "supersedes": [],
+      "relatedDocumentIds": [],
+      "readMinutes": 9,
+      "searchText": "Student Toolkit Student Toolkit: Collaborate, Stay Safe, Keep Going This is the practical reference for the habits that make a student project healthy: collaboration, accessibility, privacy, troubleshooting, and clear communication. A simple GitHub workflow 1. Create or choose an issue with a clear outcome and acceptance check. 2. Create a branch such as docs/add-research-guide or feature/save-opportunity. 3. Make a small change and commit it with a meaningful message. 4. Test locally and open a pull request that explains what changed, how it was tested, and what remains. 5. Ask for review. Respond to feedback by improving the work, not by hiding the problem. 6. Merge only when the checks and review are complete. Never work directly on main unless the team explicitly agrees for a tiny documentation correction. Issue template Pull request checklist - The change has one clear purpose. - The page works on a phone and desktop. - Links, images, translations, and headings were checked. - No secrets or unnecessary personal information were added. - AI-generated code or text was reviewed and understood. - The description tells the reviewer how to reproduce the result. Accessibility is part of quality Use meaningful headings, readable contrast, descriptive link text, alt text for informative images, labels for form fields, keyboard-friendly controls, and captions or transcripts for important media. Do not use color alone to communicate a status or match result. Test with zoom and a keyboard before asking a student to try the feature. Privacy and responsible AI Collect the smallest amount of student information needed. Avoid real personal data in development; use synthetic examples. Keep API keys on the server or in approved secret storage. Show the source and verification date for opportunity facts. AI may help summarize or explain, but deterministic rules and human review must protect eligibility, deadlines, costs, and safety claims. Tools and services that can help There is no single “correct” technology stack. Pick the smallest set of tools that lets the team research a real need, build a working vertical slice, test it, and explain its limits. A student team should normally choose one tool from each required row instead of signing up for every service in this list. Required foundation Need Good starting choices What it is for --------- Source control and review Git, GitHub, GitHub Issues and Projects History, teamwork, tasks, decisions, and reviewable changes Website and documentation hosting GitHub Pages, Jekyll, GitHub Actions Publish the documentation and automatically test or deploy it Coding environment Visual Studio Code, GitHub Codespaces, Node.js, Python Edit, run, and debug the project locally or in the cloud Browser inspection Chrome DevTools, Firefox Developer Tools Inspect layout, console errors, network requests, storage, and performance Design and user flows Figma, Canva Wireframes, prototypes, icons, presentation graphics, and usability discussions Data, research, and opportunity sources Need Possible tools or services Use them for --------- Small datasets CSV, Google Sheets API, Microsoft Graph Excel API, Airtable Web API A manageable opportunity catalog that students can inspect and correct Data cleaning OpenRefine, spreadsheet formulas, Python with pandas Normalize names, dates, locations, categories, and missing values Public and official data Government open-data portals, CKAN, Socrata APIs, official organization APIs, RSS/Atom feeds Import current opportunities with a source URL and verification date Research and interviews Google Forms API, Microsoft Forms, interviews, observation notes, Miro Learn what students actually need before building features Data storage Supabase/Postgres, Firebase, Azure, Cloudflare D1, Neon Store opportunities, profiles, saved items, feedback, and audit fields For every opportunity record, keep at least: title, provider, description, eligibility, location, cost, deadline, sourceurl, lastverifiedat, and status. Do not silently turn missing information into “eligible,” “free,” or “still open.” Frontend and interaction choices Need Possible tools Choose this when --------- Simple site Semantic HTML, CSS, JavaScript, MDN Web Docs The project is mostly content, search, filters, and a small amount of state Component-based web app React, Vue, Svelte Several screens share reusable components and interactions Full-stack or server-rendered app Next.js, Nuxt, SvelteKit, Astro Search, authentication, server-side data access, or structured pages matter Styling Tailwind CSS, Bootstrap, CSS custom properties The team needs consistent responsive layouts quickly Charts and dashboards Chart.js, D3, Recharts Show opportunity counts, deadlines, outcomes, or equity indicators Maps and location Leaflet, Mapbox, OpenStreetMap Location helps students discover nearby opportunities; respect tile and geocoding usage policies Hosting, backend, and identity Need Possible choices Important decision --------- Static deployment GitHub Pages, Cloudflare Pages, Netlify, Vercel, Azure Static Web Apps Best for a public prototype without private student data Server-side API Cloudflare Workers, Azure Functions, Vercel Functions, Netlify Functions, Firebase Cloud Functions, Supabase Edge Functions Keep API keys, matching logic, and privileged database access off the browser Authentication Supabase Auth, Firebase Authentication, Auth0, Clerk, Microsoft Entra External ID Use only if the project truly needs accounts; do not collect passwords yourself Search Database filters first; Algolia, Typesense, Meilisearch, OpenSearch Add a search service only when the dataset is too large or slow for the database Email and reminders Resend, SendGrid, Twilio, Firebase Cloud Messaging Send opt-in confirmations, deadline reminders, or admin notifications; provide unsubscribe and failure handling APIs and LLMs Use an LLM for explanation, drafting, classification assistance, semantic matching, trans",
+      "relatedSlugs": [],
+      "backlinkSlugs": [],
+      "status": "published",
+      "order": 10,
+      "category": "Student toolkit",
+      "categoryFolder": "08-student-toolkit",
+      "path": "08-student-toolkit/STUDENT_TOOLKIT.md",
+      "localized": {
+        "zh": {
+          "path": "08-student-toolkit/STUDENT_TOOLKIT.CN.md",
+          "title": "学生工具箱",
+          "summary": "这是帮助学生项目健康运行的实用参考，涵盖协作、可访问性、隐私、故障排除和清晰沟通。",
+          "tags": [
+            "student",
+            "toolkit"
+          ],
+          "readMinutes": 3
+        },
+        "fr": {
+          "path": "08-student-toolkit/STUDENT_TOOLKIT.FR.md",
+          "title": "Boîte à outils des élèves",
+          "summary": "Cette référence pratique couvre les habitudes qui rendent un projet étudiant sain : collaboration, accessibilité, confidentialité, dépannage et communication claire.",
+          "tags": [
+            "student",
+            "toolkit",
+            "outils",
+            "des",
+            "ves"
+          ],
+          "readMinutes": 11
+        }
+      }
+    },
+    {
+      "slug": "architecture",
+      "legacySlugs": [],
+      "title": "High-Level Architecture",
+      "summary": "The system combines large language models with structured data, deterministic eligibility rules, semantic search, and transparent ranking. The LLM interprets unstructured information; application code makes…",
+      "tags": [
+        "architecture",
+        "high",
+        "level"
+      ],
+      "articleType": "architecture",
+      "articleTypeLabel": "Architecture",
+      "documentId": "OEE-03",
+      "lastUpdated": "2026-09-09",
+      "reviewStatus": "machine-validated",
+      "reviewCadence": "annual",
+      "reviewDate": "",
+      "decisionStatus": "active",
+      "supersedes": [],
+      "relatedDocumentIds": [],
+      "readMinutes": 4,
+      "searchText": "High-Level Architecture Opportunity Equity Engine — High-Level Architecture 1. System overview The system combines large language models with structured data, deterministic eligibility rules, semantic search, and transparent ranking. The LLM interprets unstructured information; application code makes deterministic decisions. 2. Main components Student web application Built with Next.js, React, and TypeScript. Responsibilities: - Student onboarding and profile editing - Opportunity search and filtering - Personalized recommendations - Match explanations - Saved opportunities - Deadline tracking - Feedback such as “relevant” or “not relevant” The first version should not require sensitive information such as family income, medical information, immigration documents, or an exact address. Backend API Built with Python and FastAPI. Responsibilities: - Authentication and authorization - Student profile management - Opportunity search - Eligibility evaluation - Ranking and recommendation generation - Saved opportunities and feedback - Administrative workflows Example endpoints: Opportunity ingestion pipeline A scheduled worker collects data from approved sources. Pipeline stages: 1. Fetch webpages, PDFs, or API data. 2. Store the original source and retrieval timestamp. 3. Extract text using HTML parsing or PDF extraction. 4. Ask an LLM to convert the text into structured JSON. 5. Validate fields and normalize dates, locations, grades, costs, and categories. 6. Send uncertain records to a human review queue. 7. Generate embeddings for semantic search. 8. Publish approved opportunities. The original source URL, evidence text, extraction version, and verification timestamp should always be retained. 3. Core data model Primary tables: An opportunity should contain fields such as: A student profile should contain only information required for matching: 4. Matching and ranking Stage 1: Hard eligibility filtering Traditional code evaluates deterministic requirements: - Grade and age requirements - Location requirements - Deadline status - Cost limits - Required citizenship or residency category If a hard requirement fails, the opportunity should not be presented as eligible. Stage 2: Semantic matching Embeddings compare a student's interests with opportunity descriptions. For example, “AI and medicine” can match an opportunity described as “biomedical research, machine learning, and health technology.” Stage 3: Ranking An initial transparent score can use the following weights: Stage 4: Explanation The LLM generates an evidence-based explanation using only verified database fields: Strong match because you are a Grade 11 student in Montreal interested in AI and biomedical research. The program is local and within your budget. The explanation must not invent requirements, deadlines, costs, or program benefits. 5. Search architecture Use PostgreSQL with pgvector. Search should combine: - Structured filters for grade, location, cost, deadline, and category - Full-text keyword search - Vector similarity for interests and descriptions - The calculated ranking score This hybrid approach is more reliable than relying only on an LLM or only on keyword search. 6. Administrative tools A small admin dashboard is essential for data quality. Administrators should be able to: - Review extracted opportunities - Correct eligibility fields - Approve or reject records - Mark sources as outdated - Identify missing deadlines or application URLs - Track ingestion failures - Re-verify opportunities 7. Recommended technology stack 8. Security and privacy - Use Supabase Authentication and row-level security. - Store API keys only on the server. - Avoid collecting unnecessary sensitive data. - Encrypt data in transit and at rest. - Rate-limit public APIs and administrative endpoints. - Validate all LLM-generated structured data before persistence. - Show source URLs and verification dates. - Label recommendations as guidance, not guaranteed eligibility. - Allow students to delete profiles and saved opportunities. 9. End-to-end user flow 10. Operations and observability Track the following metrics: - Ingestion success and failure rates - Number of opportunities awaiting review - Stale or expired opportunities - Extraction validation failures - Search latency - Recommendation click-through and save rates - User feedback by category - LLM cost and error rates Every recommendation should be traceable to the opportunity version, source evidence, rule results, ranking inputs, and model version used to generate it. 11. MVP boundary Start with: - Approximately 400 verified opportunities - One focused geography: Montreal and Quebec - English and Chinese or French support - Profile-based recommendations - Deterministic eligibility checks - Basic semantic search - An admin review dashboard Defer mobile apps, automated application submission, complex recommendation models, extensive personalization, large-scale crawling, and sensitive financial or demographic profiling. The central architectural principle is: LLMs interpret unstructured opportunity information; structured databases and deterministic code evaluate eligibility; ranking algorithms personalize results; the LLM explains the result.",
+      "relatedSlugs": [],
+      "backlinkSlugs": [],
+      "status": "published",
+      "order": 10,
+      "category": "Architecture",
+      "categoryFolder": "02-architecture",
+      "path": "02-architecture/architecture.md",
+      "localized": {
+        "zh": {
+          "path": "02-architecture/architecture.CN.md",
+          "title": "高层架构",
+          "summary": "系统由学生体验、机会目录、匹配引擎、搜索、管理员审核和基础设施组成。第一版可以使用简单的 Web 应用和托管数据库，保持组件边界清晰，便于学生逐步学习。",
+          "tags": [
+            "architecture",
+            "opportunity",
+            "students"
+          ],
+          "readMinutes": 1
+        },
+        "fr": {
+          "path": "02-architecture/architecture.FR.md",
+          "title": "Architecture de haut niveau",
+          "summary": "Le système comprend l’expérience élève, le catalogue d’opportunités, le moteur de correspondance, la recherche, la revue administrative et l’infrastructure. La première version peut être une petite application Web…",
+          "tags": [
+            "architecture",
+            "haut",
+            "niveau"
+          ],
+          "readMinutes": 2
+        }
+      }
+    },
+    {
+      "slug": "opportunity-equity-engine",
+      "legacySlugs": [],
+      "title": "AI Project Plan",
+      "summary": "The Opportunity Equity Engine is highly suitable for a team of 3–5 Grade 11 students.",
+      "tags": [
+        "initiative",
+        "project",
+        "plan"
+      ],
+      "articleType": "guide",
+      "articleTypeLabel": "Guide",
+      "documentId": "OEE-04",
+      "lastUpdated": "2026-09-09",
+      "reviewStatus": "machine-validated",
+      "reviewCadence": "annual",
+      "reviewDate": "",
+      "decisionStatus": "active",
+      "supersedes": [],
+      "relatedDocumentIds": [],
+      "readMinutes": 7,
+      "searchText": "AI Project Plan Opportunity Equity Engine: AI Project Plan for High School Students Project Overview The Opportunity Equity Engine is highly suitable for a team of 3–5 Grade 11 students. The key constraint is scope. Do not start by trying to cover every scholarship, competition, research program, volunteer opportunity, and summer program in Canada. A much more realistic first version is a narrow but complete MVP, for example: An AI-powered opportunity matching platform for Montreal / Quebec high school students focused on STEM, university preparation, scholarships, research, and volunteering. The real value of the project is not simply listing opportunities. It solves a specific problem: Many students are capable of succeeding in strong programs, but they do not know which opportunities exist, whether they are eligible, when the deadlines are, or which opportunities are worth prioritizing. If built properly, this becomes an AI Opportunity Matching Engine, not just another activity directory. --- Core Product Experience Suppose a student enters: - Grade 11 - Montreal - Interested in medicine / AI - French + English - Available weekends - Budget < $300 - Wants research / volunteering - GPA / subjects - Age 16 The system could return: Opportunity Match Deadline Why ------:------ Local AI Competition 94% Oct 18 Grade 9–12, AI interest, team eligible Hospital Volunteering 88% Rolling Age requirement met, local Research Summer Program 82% Feb 1 Strong STEM profile Scholarship X 76% Mar 15 Academic eligibility met Program Y 12% Jan 30 Requires Grade 12 That is already a complete, testable, demonstrable product. --- What the AI Should Actually Do The project should not be a basic database and should not be a ChatGPT wrapper. AI should handle the parts that genuinely require language understanding. 1. Information Extraction Opportunity information is often scattered across websites, PDFs, school announcements, and organization pages. For example: Applicants must currently be enrolled in Grade 10 or 11 at a Canadian secondary school and demonstrate an interest in STEM. Applicants must be Canadian citizens or permanent residents. An AI model can convert this into structured data: This becomes the first meaningful AI layer of the system. --- 2. Eligibility Matching Student profile: The system evaluates: Then returns: Eligible — high confidence. Eligibility should not be delegated entirely to an LLM. For example: Clear deterministic rules should be handled by code. A more credible architecture is: LLMs interpret unstructured language; traditional code enforces deterministic eligibility logic. That is much closer to how a real AI product should be designed. --- 3. Opportunity Ranking Eligibility alone is not enough. The system should also determine which opportunities deserve the highest priority. For example: The output could be: The AI can then explain: Strong match because you are a Grade 11 Montreal student interested in biomedical research. The program is local and meets your stated budget constraint. The system would therefore combine: - Eligibility - Ranking - Personalization - Explainability --- Recommended System Architecture --- Recommended Technology Stack Frontend - Next.js - React Backend - Python - FastAPI Database - PostgreSQL - Supabase AI - OpenAI API - Gemini API - Other LLMs suitable for structured extraction and text understanding Semantic Search - pgvector - Embeddings Deployment - Vercel - Supabase There is no need to train a large model from scratch for the first version. For a high school project, the more technically credible approach is: LLM + Structured Data + Deterministic Rules + Ranking Algorithm rather than trying to build an LLM from scratch. --- Recommended MVP Scope A reasonable first version could contain: - 100 scholarships - 100 competitions - 75 volunteering opportunities - 75 summer programs - 50 research opportunities Total: Approximately 400 high-quality opportunities That is already sufficient for a serious product. Do not begin by chasing 10,000 or 20,000 entries. Accuracy, relevance, and verifiability matter more than volume. --- Suggested Team Structure for 4 Students 1. Product / Research Lead Responsibilities: - Research the actual student problem - Interview students, teachers, and guidance counsellors - Define product requirements - Define the data model - Design user testing 2. AI / Data Lead Responsibilities: - Python - LLM APIs - Embeddings - Information extraction - Matching algorithm - Evaluation 3. Full-Stack Developer Responsibilities: - React / Next.js - Backend integration - Database - Authentication - Dashboard 4. Data / Community Lead Responsibilities: - Collect opportunities - Verify information - Contact schools and community organizations - Run user testing - Collect feedback - Track real-world usage If there is a fifth team member, they can focus on: - UI / UX - Visual design - Outreach - Presentation - Competition pitch --- How to Make the Project Strong for University Applications The valuable outcome is not: Built an AI website. The stronger story is: For example, the project could eventually report: - 214 students created profiles - 1,800 opportunity matches generated - 67% of users discovered at least one opportunity they had never heard of - 43 students submitted applications through opportunities discovered on the platform Those numbers are much stronger than simply saying, “We built an AI app.” --- Add a Research Component This project can also be turned into a formal research study. For example, recruit 60 students. Group A Uses normal Google search to find opportunities. Group B Uses the Opportunity Equity Engine. Test: How many genuinely eligible opportunities can each student find within 20 minutes? Example result: You could also investigate: Do students with weaker access to extracurricular information benefit more from AI-based recommendation? That leads to a legitimate research question: Can AI-driven opportunity recommenda",
+      "relatedSlugs": [
+        "initiative"
+      ],
+      "backlinkSlugs": [],
+      "status": "published",
+      "order": 10,
+      "category": "Initiative and vision",
+      "categoryFolder": "01-initiative",
+      "path": "01-initiative/Opportunity_Equity_Engine.md",
+      "localized": {
+        "zh": {
+          "path": "01-initiative/Opportunity_Equity_Engine.CN.md",
+          "title": "项目方案",
+          "summary": "Opportunity Equity Engine 非常适合由 3–5 名 Grade 11 学生组队完成。",
+          "tags": [
+            "initiative",
+            "opportunity",
+            "students"
+          ],
+          "readMinutes": 4
+        },
+        "fr": {
+          "path": "01-initiative/Opportunity_Equity_Engine.FR.md",
+          "title": "Plan de projet IA",
+          "summary": "Le Moteur d’équité des opportunités aide les élèves à trouver des possibilités adaptées à leur situation et à transformer la découverte en action. Le projet commence à Montréal et au Québec, avec une conception assez…",
+          "tags": [
+            "initiative",
+            "plan",
+            "projet"
+          ],
+          "readMinutes": 2
+        }
+      }
+    },
+    {
+      "slug": "initiative",
+      "legacySlugs": [],
+      "title": "Initiative",
+      "summary": "The Opportunity Equity Engine is a student-centered platform that helps high school students discover, understand, and prioritize educational, career, volunteer, research, competition, scholarship, and summer…",
+      "tags": [
+        "initiative"
+      ],
+      "articleType": "guide",
+      "articleTypeLabel": "Guide",
+      "documentId": "OEE-05",
+      "lastUpdated": "2026-09-09",
+      "reviewStatus": "machine-validated",
+      "reviewCadence": "annual",
+      "reviewDate": "",
+      "decisionStatus": "active",
+      "supersedes": [],
+      "relatedDocumentIds": [],
+      "readMinutes": 7,
+      "searchText": "Initiative Opportunity Equity Engine — Initiative 1. Initiative statement The Opportunity Equity Engine is a student-centered platform that helps high school students discover, understand, and prioritize educational, career, volunteer, research, competition, scholarship, and summer opportunities. It uses structured information, deterministic eligibility checks, search, ranking, and carefully grounded AI assistance to make scattered opportunity information easier to use. 2. Purpose The purpose of this initiative is to reduce the information and confidence gap that prevents capable students from finding opportunities that could help them grow. Many students do not lack ambition. They lack: - A clear place to start. - Time to search many websites and PDFs. - Confidence that an opportunity fits their grade or location. - A simple way to compare costs, deadlines, and requirements. - Guidance about what action to take next. The platform turns scattered information into a more understandable and actionable set of possibilities. 3. Ultimate goal The ultimate goal is: To give every student a clearer and more equitable path from curiosity to opportunity. The project should help students move through four stages: The system is not intended to guarantee admission or decide a student's future. Its purpose is to make relevant possibilities easier to find and informed next steps easier to take. 4. Problem being resolved Opportunity information is often fragmented across: - Organization websites. - School announcements. - Scholarship pages. - Competition portals. - Research program pages. - Volunteer listings. - PDFs and application documents. - Social media posts and newsletters. This creates several problems: 1. Discovery problem: students never hear about many opportunities. 2. Eligibility problem: requirements are difficult to interpret or compare. 3. Prioritization problem: students cannot easily decide which opportunities deserve attention first. 4. Deadline problem: important dates are easy to miss. 5. Access problem: students with less guidance or fewer connections may be disadvantaged. 6. Trust problem: old, incomplete, or unclear information can lead students to waste time. The Opportunity Equity Engine addresses these problems by organizing verified information, applying clear rules, ranking relevant options, and showing the evidence behind recommendations. 5. Target audience and end users Primary users High school students, initially focused on students in Montreal and Quebec. Typical users may be: - Grade 9–12 students. - Students exploring STEM, medicine, technology, arts, leadership, research, or community service. - Students who do not yet know which opportunities exist. - Students who need affordable, local, online, or language-accessible options. - Students who want to explore without sharing unnecessary sensitive information. Secondary users - School counselors. - Teachers and mentors. - Parents or guardians supporting opportunity exploration. - Community organizations serving high school students. - Administrators who verify and maintain opportunity information. Not the primary audience initially - Universities managing their own admissions. - Employers running professional recruiting systems. - Users seeking automated application completion. - Organizations that want unverified promotional placement. 6. Value proposition For students Find opportunities that may fit you, understand why, and know what to do next. For counselors and mentors Give students a structured starting point for opportunity conversations and planning. For opportunity providers Make accurate program information easier for eligible students to discover. For the student team Learn how to turn a real social problem into a useful, tested, and responsibly deployed AI product. 7. How the product creates value The product combines AI with traditional software: - AI interprets unstructured language. - Code enforces deterministic eligibility rules. - Search and ranking organize results. - Human review protects data quality. - The student makes the final decision. 8. Initial product scope The first release should include: - A simple student profile. - A curated opportunity database. - Grade, location, interest, cost, language, and deadline fields. - Search and structured filters. - Basic deterministic eligibility checks. - Transparent match scores. - Source links and verification dates. - Grounded explanations. - Saved opportunities and deadline reminders. - An administrative review workflow. The initial focus should be one geography and a limited number of opportunity categories. Quality, relevance, and verifiability matter more than the number of records. 9. What the initiative will not do The initiative will not: - Guarantee acceptance into any program. - Replace official organization eligibility decisions. - Collect unnecessary sensitive personal information. - Invent deadlines, requirements, costs, or program benefits. - Become an AI essay-writing service. - Submit applications automatically in the MVP. - Promote paid opportunities without clear labeling. - Pretend that a match score is an objective measure of a student's potential. 10. Guiding principles Equity before popularity The platform should help students discover relevant options, not only the most famous programs. Clarity before complexity Students should understand why a result appears and what action is possible next. Evidence before confidence Every important recommendation should be connected to a source and a verification date. Code for rules, AI for language Hard eligibility decisions should be deterministic and testable. AI should assist with interpretation, extraction, and explanation. Privacy by design Collect the minimum information needed for matching and make deletion possible. Human review matters AI-extracted information should be checked before it becomes student-facing data. Creativity is encouraged Students should use vibe coding and AI tool",
+      "relatedSlugs": [
+        "opportunity-equity-engine"
+      ],
+      "backlinkSlugs": [],
+      "status": "published",
+      "order": 20,
+      "category": "Initiative and vision",
+      "categoryFolder": "01-initiative",
+      "path": "01-initiative/initiative.md",
+      "localized": {
+        "zh": {
+          "path": "01-initiative/initiative.CN.md",
+          "title": "项目倡议",
+          "summary": "机会公平引擎帮助高中生发现、理解并优先选择适合自己的奖学金、竞赛、科研、志愿服务、暑期项目和大学准备机会。",
+          "tags": [
+            "initiative",
+            "opportunity",
+            "students"
+          ],
+          "readMinutes": 1
+        },
+        "fr": {
+          "path": "01-initiative/initiative.FR.md",
+          "title": "Initiative",
+          "summary": "Le Moteur d’équité des opportunités aide les élèves du secondaire à découvrir, comprendre et prioriser les bourses, concours, projets de recherche, activités bénévoles, programmes d’été et possibilités de préparation…",
+          "tags": [
+            "initiative"
+          ],
+          "readMinutes": 2
+        }
+      }
+    },
+    {
+      "slug": "demo-deliverables",
+      "legacySlugs": [],
+      "title": "Demo Deliverables",
+      "summary": "This document gives the student team a concrete picture of what the finished product should feel like. The images are high-fidelity concept mockups, not screenshots of a completed production application. They show…",
+      "tags": [
+        "demo",
+        "deliverables"
+      ],
+      "articleType": "guide",
+      "articleTypeLabel": "Guide",
+      "documentId": "OEE-06",
+      "lastUpdated": "2026-09-09",
+      "reviewStatus": "machine-validated",
+      "reviewCadence": "annual",
+      "reviewDate": "",
+      "decisionStatus": "active",
+      "supersedes": [],
+      "relatedDocumentIds": [],
+      "readMinutes": 10,
+      "searchText": "Demo Deliverables Opportunity Equity Engine — Demo Deliverables Purpose of this document This document gives the student team a concrete picture of what the finished product should feel like. The images are high-fidelity concept mockups, not screenshots of a completed production application. They show the target user experience, the problems the product should solve, and the screens the team can build step by step. The pictures use sample names, dates, organizations, and source content. Before a public pilot, replace all sample information with verified opportunity data. The product in one sentence A student tells the Opportunity Equity Engine who they are and what interests them; the app helps them discover, understand, and prioritize opportunities that may fit. Final product journey Deliverable 1 — The problem and the promise Before and after: scattered information becomes one clear path What this picture communicates On the left, students face scattered webpages, PDFs, flyers, deadlines, and application forms. They may not know: - Which opportunities are real and current. - Which ones fit their grade. - Which ones are local or online. - Which ones fit their interests or budget. - Where to begin. On the right, the platform turns that confusion into one organized path. Product problem resolved The product does not create more information. It organizes existing information into a clearer starting point. Student implementation target - Create a simple home page that explains the problem. - Show three example opportunity categories. - Include one clear call to action: “Find opportunities that fit you.” - Explain that recommendations are guidance, not a guarantee of acceptance. Done when - A new visitor understands the problem in less than 30 seconds. - The visitor knows what information the app needs. - The visitor can start the profile flow without reading a long manual. Deliverable 2 — Student dashboard Student dashboard with profile summary and recommendations What the student sees The dashboard gives the student a friendly home base: - A short greeting. - Their profile summary. - A search box. - Recommended opportunities. - Match scores. - Deadlines and costs. - A “Why this matches” explanation. - Navigation to Explore, Saved, Resources, and Profile. User experience goal The student should feel that the app understands their starting point without feeling judged. The screen should answer: 1. What can I explore? 2. Why are these results shown to me? 3. What can I do next? Student implementation target - Build a dashboard layout with responsive cards. - Display a profile such as “Grade 11 · Montreal · AI + Medicine.” - Display three ranked opportunities. - Make the score visible but explain that it is a guide. - Add working links to the detail page. Done when - A student can understand the top recommendation without assistance. - Cards remain readable on a small screen. - Every displayed opportunity has a deadline status and source link. Deliverable 3 — Student onboarding Student onboarding form What the student sees The onboarding screen asks only for information needed for matching: - Interests. - City or region. - Grade. - Maximum budget. - Preferred language, if needed. It also explains privacy in friendly language. User experience goal The student should be able to complete the form quickly without feeling that they are filling out a complicated official application. Student implementation target - Add selectable interest chips. - Add a location selector. - Add grade selection. - Add a budget selector or number field. - Validate missing or invalid values. - Keep the first version in browser memory rather than storing a permanent profile. Done when - A student can complete onboarding in under two minutes. - Blank, invalid, and unusual input produces a helpful message. - The app explains what it does not collect. Deliverable 4 — Explore and search Explore page with search and filters What the student sees The Explore page allows the student to search broadly and then narrow the list: - Search text such as “AI and medicine.” - Grade filter. - Location filter. - Budget filter. - Category filters. - Verified status. - Match scores. - Deadline and cost. - Optional comparison selection. User experience goal Recommendations answer “What might fit me?” Explore answers “What else is available?” Student implementation target Implement filters in this order: 1. Category. 2. Location. 3. Maximum cost. 4. Grade. 5. Deadline status. 6. Keyword search. Use normal code or SQL for these filters. Do not ask an LLM to filter records that can be filtered predictably. Done when - Filters can be combined. - “Clear filters” works. - The number of results is visible. - An empty result has a helpful message and a way to broaden the search. - Search results show how recently information was verified. Deliverable 5 — Opportunity detail page Opportunity detail page with match explanation What the student sees The detail page is where trust is built. It should show: - Opportunity title and organization. - Category and location. - Match score. - Why the opportunity matches the student. - Overview of the activity. - What the student may do. - Eligibility information. - Deadline. - Cost. - Source evidence and verification date. - Save and application buttons. User experience goal The student should be able to make an informed decision without guessing where the result came from. Student implementation target - Create a detail route such as /opportunities/[id]. - Load one opportunity by ID. - Display rule results such as grade, location, and budget. - Link to the official source and application page. - Add a clear warning if information is old, incomplete, or not confirmed. Important rule The app may say: “This appears to be a strong match based on the information provided.” It must not say: “You will be accepted.” Done when - The source and application links work. - The match explanation can be traced to stored fie",
+      "relatedSlugs": [],
+      "backlinkSlugs": [],
+      "status": "published",
+      "order": 10,
+      "category": "Demo deliverables",
+      "categoryFolder": "06-demo",
+      "path": "06-demo/DEMO_DELIVERABLES.md",
+      "localized": {
+        "zh": {
+          "path": "06-demo/DEMO_DELIVERABLES.CN.md",
+          "title": "演示交付物",
+          "summary": "演示应让观众看到一个学生如何从不确定开始，找到适合自己的机会，理解推荐理由，并采取一个明确的下一步。",
+          "tags": [
+            "demo",
+            "opportunity",
+            "students"
+          ],
+          "readMinutes": 1
+        },
+        "fr": {
+          "path": "06-demo/DEMO_DELIVERABLES.FR.md",
+          "title": "Livrables de démonstration",
+          "summary": "La démonstration doit montrer comment un élève passe de l’incertitude à une possibilité pertinente, comprend la recommandation et choisit une prochaine action.",
+          "tags": [
+            "demo",
+            "livrables",
+            "monstration"
+          ],
+          "readMinutes": 2
+        }
+      }
+    },
+    {
+      "slug": "project-timeline",
+      "legacySlugs": [],
+      "title": "Project Timeline",
+      "summary": "- A small team of four Grade 11 students. - Approximately 8–12 hours per student per week. - Vibe coding with an AI coding assistant. - Managed services such as Vercel, Supabase, and a hosted AI API. - A focused MVP…",
+      "tags": [
+        "delivery",
+        "project",
+        "timeline"
+      ],
+      "articleType": "guide",
+      "articleTypeLabel": "Guide",
+      "documentId": "OEE-07",
+      "lastUpdated": "2026-09-09",
+      "reviewStatus": "machine-validated",
+      "reviewCadence": "annual",
+      "reviewDate": "",
+      "decisionStatus": "active",
+      "supersedes": [],
+      "relatedDocumentIds": [],
+      "readMinutes": 8,
+      "searchText": "Project Timeline Opportunity Equity Engine — Estimated Project Timeline Planning assumptions This timeline assumes: - A small team of four Grade 11 students. - Approximately 8–12 hours per student per week. - Vibe coding with an AI coding assistant. - Managed services such as Vercel, Supabase, and a hosted AI API. - A focused MVP for Montreal and Quebec students. - English plus Chinese or French support. - Approximately 100–200 verified opportunities for the first public pilot, with 400 as a later target. The estimated delivery time is 16 weeks, or approximately one school semester. A smaller private demo can be completed in 8–10 weeks. A reliable public pilot should reserve the full 16 weeks. Overall timeline Team roles Role Main responsibility ------ Product and research lead User interviews, requirements, source quality, scope, evaluation Data and AI lead Opportunity collection, extraction prompts, validation, embeddings Full-stack lead Frontend, backend API, database integration, tests Platform and community lead Deployment, authentication, monitoring, pilot users, documentation With vibe coding, roles are ownership areas rather than strict silos. Every important feature should have one owner and one reviewer. Detailed 16-week plan Weeks 1–2 — Discovery and setup Goals - Confirm the target user and geography. - Define the MVP and explicitly list features that will not be built. - Select 10–20 authoritative opportunity sources. - Decide which languages the first release supports. - Create the repository workflow and development environment. Work items - Interview or survey students and at least one educator or counselor. - Define the student profile fields. - Define the opportunity schema and eligibility vocabulary. - Set up the Next.js frontend, backend API, Supabase project, and environment variables. - Create a shared issue board and branch/commit conventions. - Write the first 10 acceptance tests in plain language. Milestone: approved MVP scope, architecture, data schema, source list, and working local repositories. Weeks 3–4 — First vertical slice Goals Build the smallest complete user journey: Work items - Create the student profile form. - Create the opportunity table and seed 10 manually verified opportunities. - Implement one backend endpoint. - Display results with title, category, location, deadline, and source link. - Add loading, empty, and error states. - Use AI to generate boilerplate, but review every generated change. Milestone: a student can submit a profile and see real opportunities in a local browser. Weeks 5–6 — Data model and review workflow Goals - Make opportunity records consistent and reviewable. - Establish the data-quality process before adding AI automation. Work items - Add source records, verification dates, statuses, and application URLs. - Add categories, grades, locations, costs, languages, and deadlines. - Add duplicate detection and expired-record handling. - Build a basic admin review page or a controlled review table. - Expand to 30–50 manually verified opportunities. - Add database migrations and validation tests. Milestone: an administrator can review, correct, approve, and retire an opportunity. Weeks 7–8 — AI extraction pipeline Goals - Convert one permitted webpage or PDF format into structured opportunity data. - Measure extraction quality before scaling. Work items - Build one ingestion adapter. - Store raw source text and retrieval timestamps. - Create a structured-output extraction prompt and schema. - Validate dates, URLs, grades, costs, and required fields. - Preserve evidence text for each important extracted field. - Add confidence or review flags for ambiguous records. - Compare AI output with manually labeled examples. Milestone: the system can extract records from one source type and route uncertain results to human review. Weeks 9–10 — Eligibility, ranking, and explanations Goals - Produce trustworthy recommendations rather than generic AI suggestions. Work items - Implement deterministic hard eligibility rules. - Add unit tests for passing, failing, missing, and ambiguous requirements. - Implement the transparent weighted ranking formula. - Add interest and preference matching. - Generate explanations grounded in verified database fields. - Display why a student is or is not a strong match. - Add a “not enough information” state instead of guessing. Milestone: the system produces ranked recommendations with tested eligibility results and source-backed explanations. Weeks 11–12 — Search, bilingual support, and UX Goals - Make the product easy to explore and useful beyond the demo path. Work items - Add structured filters for category, grade, location, cost, and deadline. - Add keyword search. - Add embeddings and hybrid vector search if the evaluation set supports it. - Add saved opportunities. - Add language selection and review translated labels/content. - Improve mobile layout and accessibility. - Add clear warnings for expired or unverified information. Milestone: a pilot user can search, filter, compare, save, and understand opportunities in the supported languages. Weeks 13–14 — Production readiness Goals - Make the system safe and stable enough for external pilot users. Work items - Deploy frontend, backend, database, and scheduled jobs. - Configure production secrets without committing them to Git. - Add authentication and database access controls. - Add rate limits to expensive AI endpoints. - Add health checks, error logs, and ingestion failure alerts. - Add backups and document recovery steps. - Test broken URLs, expired deadlines, malformed source data, API failures, and empty results. - Run a dependency and secret scan. Milestone: the deployed MVP is observable, access-controlled, and able to recover from common failures. Week 15 — Pilot testing Goals - Find real usability and recommendation problems before release. Work items - Test with 5–15 students and at least one adult reviewer. - Record false eligible results,",
+      "relatedSlugs": [
+        "project-management-plan"
+      ],
+      "backlinkSlugs": [],
+      "status": "published",
+      "order": 10,
+      "category": "Delivery plan",
+      "categoryFolder": "04-delivery",
+      "path": "04-delivery/PROJECT_TIMELINE.md",
+      "localized": {
+        "zh": {
+          "path": "04-delivery/PROJECT_TIMELINE.CN.md",
+          "title": "项目时间线",
+          "summary": "时间线按一个学期、每周有固定协作时间、以演示型 MVP 为目标来安排。它可以因团队规模、学校日程和用户反馈调整。",
+          "tags": [
+            "delivery",
+            "opportunity",
+            "students"
+          ],
+          "readMinutes": 1
+        },
+        "fr": {
+          "path": "04-delivery/PROJECT_TIMELINE.FR.md",
+          "title": "Calendrier du projet",
+          "summary": "Le calendrier suppose un semestre, un temps de collaboration régulier et un MVP destiné à une démonstration. Il peut être ajusté selon la taille de l’équipe, l’horaire scolaire et les retours des utilisateurs.",
+          "tags": [
+            "delivery",
+            "calendrier",
+            "projet"
+          ],
+          "readMinutes": 2
+        }
+      }
+    },
+    {
+      "slug": "project-management-plan",
+      "legacySlugs": [],
+      "title": "Project Management Plan",
+      "summary": "The Opportunity Equity Engine should be managed as a focused, evidence-based MVP for high school students in Montreal and Quebec. Its purpose is to help students discover opportunities, understand eligibility, and…",
+      "tags": [
+        "delivery",
+        "project",
+        "management",
+        "plan"
+      ],
+      "articleType": "guide",
+      "articleTypeLabel": "Guide",
+      "documentId": "OEE-08",
+      "lastUpdated": "2026-09-09",
+      "reviewStatus": "machine-validated",
+      "reviewCadence": "annual",
+      "reviewDate": "",
+      "decisionStatus": "active",
+      "supersedes": [],
+      "relatedDocumentIds": [],
+      "readMinutes": 12,
+      "searchText": "Project Management Plan Opportunity Equity Engine — Project Management Plan 1. Executive proposal The Opportunity Equity Engine should be managed as a focused, evidence-based MVP for high school students in Montreal and Quebec. Its purpose is to help students discover opportunities, understand eligibility, and prioritize programs such as STEM activities, research, volunteering, scholarships, and university preparation. The team should optimize for trust, learning, and a working pilot, not for the largest number of features. Vibe coding and AI-assisted development can dramatically reduce the amount of code students need to write manually, but the team must still own the product decisions, data quality, testing, privacy, and final verification. Proposed MVP - A web application accessible on desktop and mobile. - A simple student profile: grade, region, interests, language, budget, and availability. - A curated database of 100–200 verified opportunities for the first pilot. - Search and filters for category, grade, location, cost, language, and deadline. - Deterministic eligibility checks. - Transparent match scoring. - AI-generated explanations grounded in verified source fields. - Saved opportunities and basic feedback. - An admin review workflow for correcting or retiring records. Out of scope for the first release - Automated application submission. - AI essay writing. - A mobile application. - Coverage of every Canadian opportunity. - Custom model training. - Complex machine-learned recommendations. - Collection of sensitive financial, medical, immigration, or exact-address data. 2. Project objectives and success measures Objectives 1. Help students find opportunities they would not easily discover themselves. 2. Make eligibility reasoning visible and understandable. 3. Preserve source evidence and verification dates. 4. Give students a real deployed product to test. 5. Teach the team product design, AI use, data quality, software delivery, and teamwork. Success measures Measure Initial target ------: Manually verified opportunities 100–200 for pilot; 20–30 before automation Pilot students 5–15 Adult reviewers At least 1 educator, counselor, or knowledgeable mentor Recommendations with source links 100% Hard eligibility rules with tests 100% of implemented rules Unverified or expired records clearly labeled 100% Main user flow completion A new user can complete it without team assistance Deployment recovery documentation Available before pilot 3. Delivery model for high school students Recommended team size Four students is ideal. Three students can deliver the MVP by reducing scope. Five students can add stronger research, content review, or user testing, but only if ownership is clear. Time commitment Plan for: - 8–12 hours per student per week. - 16 weeks for a reliable public or invited pilot. - Approximately 512–768 total student-hours for a four-person team. An 8–10 week demo is possible, but it should use manual data, one language, fewer features, and no complex ingestion automation. Vibe coding workflow The team should use AI coding assistants to: - Scaffold application pages and API endpoints. - Explain unfamiliar code and errors. - Generate database migrations and test cases. - Refactor repetitive code. - Suggest UI improvements. - Draft documentation. Every AI-assisted change should follow this loop: Vibe coding removes syntax and boilerplate as major barriers. It does not remove the need to understand the data flow, check security, test rules, and verify opportunity information. 4. Team roles and responsibilities Each role has a primary owner and a backup reviewer. Students should rotate responsibilities when possible so that no one becomes the only person who understands a critical system. Role 1 — Product and research lead Owns: user problem, scope, requirements, and evaluation. Responsibilities: - Interview students, educators, or counselors. - Write user stories and acceptance criteria. - Maintain the MVP and “later” backlogs. - Define what makes a recommendation useful. - Coordinate pilot testing and feedback. - Ensure the team is solving a real problem rather than adding random features. Skills to develop: - Research and interviewing. - Product thinking. - Writing clear requirements. - Presentation and communication. - Basic usability testing. Role 2 — Data and AI lead Owns: opportunity data, extraction, validation, and matching quality. Responsibilities: - Identify permitted and authoritative sources. - Define the opportunity schema. - Build or coordinate the ingestion workflow. - Create structured-output prompts. - Preserve source evidence and retrieval dates. - Review extraction errors and ambiguous requirements. - Maintain test cases for extraction and recommendation quality. Skills to develop: - Python or AI-assisted scripting. - JSON and schemas. - Prompt design. - Embeddings and semantic search. - Data cleaning and evaluation. Role 3 — Full-stack lead Owns: user interface, backend API, database integration, and automated tests. Responsibilities: - Build the profile, search, results, and saved-opportunity experiences. - Implement API endpoints and validation. - Implement deterministic eligibility rules. - Maintain database migrations. - Write unit, API, and end-to-end tests. - Review AI-generated code for correctness and maintainability. Skills to develop: - React/Next.js concepts. - HTTP and REST APIs. - SQL and relational data modeling. - Debugging and testing. - Accessibility and responsive design. Role 4 — Platform and community lead Owns: deployment, security, operations, documentation, and pilot coordination. Responsibilities: - Manage development and production environments. - Configure secrets and access control. - Set up logs, health checks, and alerts. - Maintain deployment and recovery instructions. - Coordinate user onboarding and feedback collection. - Track project risks, decisions, and release readiness. Skills to develop: - Git and GitHub workflo",
+      "relatedSlugs": [
+        "project-timeline"
+      ],
+      "backlinkSlugs": [],
+      "status": "published",
+      "order": 20,
+      "category": "Delivery plan",
+      "categoryFolder": "04-delivery",
+      "path": "04-delivery/PROJECT_MANAGEMENT_PLAN.md",
+      "localized": {
+        "zh": {
+          "path": "04-delivery/PROJECT_MANAGEMENT_PLAN.CN.md",
+          "title": "项目管理计划",
+          "summary": "团队将在一个学期内构建一个聚焦的学生机会发现演示。重点是可信数据、清晰匹配和可理解的下一步，而不是追求庞大的功能清单。",
+          "tags": [
+            "delivery",
+            "opportunity",
+            "students"
+          ],
+          "readMinutes": 1
+        },
+        "fr": {
+          "path": "04-delivery/PROJECT_MANAGEMENT_PLAN.FR.md",
+          "title": "Plan de gestion du projet",
+          "summary": "En un semestre, l’équipe construira une démonstration ciblée de découverte d’opportunités. La priorité est donnée aux données fiables, à une correspondance claire et à une prochaine étape compréhensible plutôt qu’à…",
+          "tags": [
+            "delivery",
+            "plan",
+            "gestion",
+            "projet"
+          ],
+          "readMinutes": 2
+        }
+      }
+    },
+    {
+      "slug": "opportunity-equity-engine-600-sources",
+      "legacySlugs": [],
+      "title": "600-Source Opportunity Catalog",
+      "summary": "Compiled for: Grade 11 / secondary-school opportunity discovery Primary geography: Montreal / Quebec → Canada-wide → selected international opportunities accessible or relevant to Canadian students Compilation date:…",
+      "tags": [
+        "opportunity",
+        "sources",
+        "600",
+        "source",
+        "catalog"
+      ],
+      "articleType": "reference",
+      "articleTypeLabel": "Reference",
+      "documentId": "OEE-09",
+      "lastUpdated": "2026-09-09",
+      "reviewStatus": "machine-validated",
+      "reviewCadence": "annual",
+      "reviewDate": "",
+      "decisionStatus": "active",
+      "supersedes": [],
+      "relatedDocumentIds": [],
+      "readMinutes": 46,
+      "searchText": "600-Source Opportunity Catalog Opportunity Equity Engine — 600-Source Opportunity Catalog Compiled for: Grade 11 / secondary-school opportunity discovery Primary geography: Montreal / Quebec → Canada-wide → selected international opportunities accessible or relevant to Canadian students Compilation date: 2026-09-09 Total records: 600 (100 per category) How to use this file This is a source catalog for an Opportunity Equity Engine, not a claim that all 600 applications are currently open. Annual programs frequently close and reopen. A closed 2026 page can still be a valid recurring source for the 2027 cycle. Before exposing an opportunity to users, the app should re-check the official source for current eligibility, dates, fees, location, and application status. Verification tiers - A — Live-checked direct source: the specific page or current-cycle source was checked during this research pass. - B — Official source / institutional hub: official university, government, nonprofit, hospital, or organizer source. The exact annual event or application cycle must be re-checked. - C — Discovery source: reputable directory, aggregator, or broad source. Do not treat it as authoritative until the system resolves and validates the official organizer page. Recommended ingestion fields category, opportunityname, organization, geography, audience, sourceurl, verificationtier, referenceevent, lastverified, deadline, status, cost, eligibilityrules, officialsourceurl. --- Scholarships — 100 sources Source / opportunity Organization Geography Grade 11 relevance Source URL Tier Reference / event ---:---------------:---:--- 1 McGill Entrance Scholarships McGill University Montreal, QC Entering undergrad https://www.mcgill.ca/studentaid/scholarships-aid/future-undergrads/entrance-scholarships A One-year and Major Entrance Scholarships 2 McGill Major Entrance Scholarship application instructions McGill University Montreal, QC Entering undergrad https://www.mcgill.ca/studentaid/scholarships-aid/future-undergrads/entrance-scholarships/application-instructions A Major entrance scholarship application 3 McGill Undergraduate Scholarships & Awards Calendar McGill University Montreal, QC Entering/current undergrad https://www.mcgill.ca/studentawards/undergraduate-scholarships-and-awards A Official awards calendar 4 McGill Entrance Bursary Program McGill University Montreal, QC Entering undergrad https://www.mcgill.ca/studentaid/scholarships-aid/future-undergrads/need A Need-based entrance bursary 5 University of Toronto National Scholarship University of Toronto Toronto, ON Canadian high-school applicants https://future.utoronto.ca/national-scholarships A National Scholarship Program 6 U of T Scholarships – Scarborough University of Toronto Scarborough Toronto, ON Entering undergrad https://utsc.utoronto.ca/admissions/scholarships A Automatic and application scholarships 7 U of T Mississauga Entrance Scholarships University of Toronto Mississauga Mississauga, ON Entering undergrad https://www.utm.utoronto.ca/future-students/finances/entrance-scholarships A Automatic entrance awards 8 Waterloo Entrance Scholarships University of Waterloo Waterloo, ON Entering undergrad https://uwaterloo.ca/future-students/financing/scholarships A President's, Merit and faculty awards 9 McMaster Entrance Awards McMaster University Hamilton, ON Entering undergrad https://registrar.mcmaster.ca/entrance-awards/ A Automatic and faculty entrance awards 10 Dalhousie Future Undergraduate Awards Dalhousie University Halifax, NS Entering undergrad https://www.dal.ca/admissions/scholarships-financial-aid/scholarships/future-undergraduate-student-awards.html A General Entrance Award 11 UBC Centennial Scholars Entrance Awards University of British Columbia Vancouver/Kelowna, BC Entering undergrad https://you.ubc.ca/financial-planning/scholarships-awards-canadian-students/entrance-award/ A Centennial Scholars Entrance Awards 12 Horatio Alger Canada Scholarships Horatio Alger Association of Canada Canada Grade 11 / Quebec Grade 12 https://horatioalger.ca/scholarships-and-services/scholarships/ A Canadian and entrepreneurial scholarships 13 Horatio Alger Undergraduate Scholarships Horatio Alger Association of Canada Canada Grade 11 / Quebec Grade 12 https://horatioalger.ca/scholarships-and-services/undergraduate-scholarships/ A Need-based national scholarships 14 Indspire Building Brighter Futures Indspire Canada Indigenous students entering post-secondary https://indspire.ca/programs/students/bursaries-scholarships/ B Scholarships, bursaries and awards 15 Loran Award Loran Scholars Foundation Canada Grade 12 / CEGEP https://loranscholar.ca/ B Loran Award 16 TD Scholarships for Community Leadership TD Bank Group Canada Final-year high-school / CEGEP https://www.td.com/ca/en/personal-banking/solutions/student-banking/community-leadership-scholarship-for-canadians B Community leadership scholarship 17 Schulich Leader Scholarships Schulich Foundation Canada Grade 12 / CEGEP STEM https://schulichleaders.com/ B STEM leadership scholarships 18 Terry Fox Humanitarian Award Terry Fox Humanitarian Award Program Canada Grade 12 / CEGEP https://terryfoxawards.ca/ B Humanitarian service award 19 RBC Future Launch Scholarships RBC Canada Youth / entering post-secondary https://www.rbc.com/dms/enterprise/futurelaunch/ B Future Launch funding and scholarships 20 RBC Future Launch Scholarship for Indigenous Youth RBC Canada Indigenous youth https://www.rbc.com/dms/enterprise/futurelaunch/ B Indigenous youth scholarship 21 ScholarshipsCanada SchoolFinder Group Canada Varies https://www.scholarshipscanada.com/Index.aspx C Canadian scholarship discovery database 22 Yconic Scholarships Yconic Canada Varies https://yconic.com/ C Scholarship and student-resource database 23 ScholarTree ScholarTree Canada Varies https://scholartree.ca/ C Scholarship matching database 24 Pathways to Jobs Awards Pathways to Jobs Canada High school / post-secondary https://www.pathwaystojobs.",
+      "relatedSlugs": [],
+      "backlinkSlugs": [],
+      "status": "published",
+      "order": 10,
+      "category": "Opportunity resources",
+      "categoryFolder": "10-opportunity-sources",
+      "path": "10-opportunity-sources/Opportunity_Equity_Engine_600_Sources.md",
+      "localized": {
+        "zh": {
+          "path": "10-opportunity-sources/Opportunity_Equity_Engine_600_Sources.CN.md",
+          "title": "600 条机会来源目录",
+          "summary": "这是面向 11 年级学生机会发现项目的研究种子目录，覆盖奖学金、竞赛、科研、志愿服务、暑期项目和大学准备等类别。目录用于帮助团队构建和测试 Opportunity Equity Engine，不代表所有项目当前都开放申请。",
+          "tags": [
+            "opportunity",
+            "sources",
+            "600"
+          ],
+          "readMinutes": 1
+        },
+        "fr": {
+          "path": "10-opportunity-sources/Opportunity_Equity_Engine_600_Sources.FR.md",
+          "title": "Catalogue de 600 sources d’opportunités",
+          "summary": "Ce catalogue de recherche sert au projet de découverte d’opportunités pour les élèves de 11e année. Il couvre les bourses, concours, projets de recherche, activités bénévoles, programmes d’été et ressources de…",
+          "tags": [
+            "opportunity",
+            "sources",
+            "catalogue",
+            "600",
+            "opportunit"
+          ],
+          "readMinutes": 2
+        }
+      }
+    },
+    {
+      "slug": "demo-implementation-guide",
+      "legacySlugs": [],
+      "title": "Demo Implementation Guide",
+      "summary": "This guide shows how a small team of high school students can build a working demo from zero. It is intentionally small: the goal is to prove the complete user journey before adding advanced crawling, authentication,…",
+      "tags": [
+        "build",
+        "demo",
+        "implementation",
+        "guide"
+      ],
+      "articleType": "guide",
+      "articleTypeLabel": "Guide",
+      "documentId": "OEE-10",
+      "lastUpdated": "2026-09-09",
+      "reviewStatus": "machine-validated",
+      "reviewCadence": "annual",
+      "reviewDate": "",
+      "decisionStatus": "active",
+      "supersedes": [],
+      "relatedDocumentIds": [],
+      "readMinutes": 10,
+      "searchText": "Demo Implementation Guide Opportunity Equity Engine — Beginner Demo Implementation This guide shows how a small team of high school students can build a working demo from zero. It is intentionally small: the goal is to prove the complete user journey before adding advanced crawling, authentication, vector search, or a large AI system. What the demo will do The first demo should answer one question: Can a Grade 11 student in Montreal discover a few relevant opportunities and understand why they were recommended? Recommended beginner architecture For the first demo, keep the architecture simple: A separate FastAPI service can be introduced later. It is not needed to prove the first user journey. Tools - GitHub repository and Issues or Projects. - An AI coding assistant for vibe coding. - Node.js and npm. - Next.js, React, and TypeScript. - Supabase PostgreSQL. - A browser and browser developer tools. - Optional: Figma for a quick wireframe. The official Next.js App Router guide and Supabase Next.js quickstart are useful references for setup. Commands and package behavior can change, so check those guides if a command differs on your computer. Team task split Student First ownership area Backup area --------- A Product flow and user testing Documentation B Database and sample opportunity data Data validation C Frontend pages and components Accessibility D Matching logic, API, and deployment Testing Use one owner and one reviewer for every task. Students do not need to know the entire technology stack before beginning; use AI to explain unfamiliar code and learn one small part at a time. Step 0 — Agree on the smallest demo Write this in a GitHub Issue before coding: Demo user story As a Grade 11 student in Montreal interested in AI, I want to see opportunities that fit my grade, location, interests, and budget, together with a clear reason and a source link. Demo acceptance criteria - A student can enter a grade, location, interest, and maximum budget. - The app displays at least three sample opportunities. - Grade and location rules work. - Results are sorted by a visible match score. - Each result shows a deadline, reason, and source URL. - The app has loading, empty, and error states. - The demo uses fictional or manually verified records and clearly labels them. Do not add login, automated scraping, chat, or a mobile app until this flow works. Step 1 — Create the web application From the repository root, ask the AI assistant to explain the command before running it. A current Next.js starter command is: Open http://localhost:3000 in a browser. If the team wants Supabase authentication and server-side helpers from the beginning, the official Supabase quickstart also provides a with-supabase starter template. For this first demo, authentication can be postponed. First task checklist - [ ] The app starts locally. - [ ] The team knows how to stop and restart the development server. - [ ] Each student can make a branch. - [ ] The team can create a pull request. - [ ] The first change has been reviewed by another student. Step 2 — Create the database Create a Supabase project and open its SQL Editor. Start with one table. Do not design the entire future database yet. Run this SQL: Why these fields exist Field Purpose ------ mingrade, maxgrade Deterministic grade eligibility locations Location matching without an exact address interests Simple interest matching before embeddings cost Budget filtering deadline Deadline display and urgency scoring sourceurl Evidence and user verification verifiedat Data freshness published Hide records without deleting them The public read policy is acceptable for fictional demo records. Before collecting real student profiles or adding admin writes, review Row Level Security policies carefully and keep write operations server-side. Step 3 — Add safe demo data Use fictional names and URLs for a classroom demo, or use real opportunities only after checking the source and recording the source URL. Never invent a real deadline or requirement. Step 4 — Connect Next.js to Supabase Install the client library inside web: Create web/.env.local: Do not commit .env.local. Confirm that .gitignore includes it. Create web/lib/supabase.ts: For a more complete authenticated application, use the server and browser client pattern from the official Supabase Next.js guide. Do not use a Supabase service-role key in browser code. Step 5 — Define shared types Create web/lib/types.ts: Ask the AI assistant to explain why database column names use underscores while TypeScript properties use camel case. Understanding small inconsistencies prevents confusing bugs later. Step 6 — Build deterministic matching logic Create web/lib/matching.ts: Important design rule The matching function must be predictable. Given the same student and opportunity, it should return the same result every time. Write tests for it before adding AI explanations. Step 7 — Add a recommendation API route Create web/app/api/recommendations/route.ts: Ask the AI assistant to explain each block. Do not accept code that the team cannot explain at a high level. Step 8 — Build the student profile page Create a simple client component in web/app/page.tsx. The first version can keep the profile in browser memory and send it only when the student clicks the recommendation button. This is intentionally a simple starting point. Ask the AI assistant to improve the visual design only after the data flow works. Step 9 — Add tests before adding more AI Create at least these test cases: Case Expected result ------ Grade 11, Montreal, AI, budget 300 AI challenge and research demo are eligible Grade 8, Montreal, AI Grade 10–11 research demo is not eligible Grade 11, Toronto, AI Montreal-only opportunity is not eligible Grade 11, Montreal, budget 50 100-dollar opportunity is not eligible Grade 11, Montreal, teaching interest Volunteering demo ranks higher No opportunities returned Friendly empty state, not a crash Database unavailable He",
+      "relatedSlugs": [],
+      "backlinkSlugs": [],
+      "status": "published",
+      "order": 10,
+      "category": "Build guide",
+      "categoryFolder": "05-build",
+      "path": "05-build/DEMO_IMPLEMENTATION_GUIDE.md",
+      "localized": {
+        "zh": {
+          "path": "05-build/DEMO_IMPLEMENTATION_GUIDE.CN.md",
+          "title": "演示实现指南",
+          "summary": "实现一个小型、可运行、可解释的端到端演示：学生填写档案，系统读取已核验样例数据，应用资格规则，计算匹配分数，并解释推荐原因。",
+          "tags": [
+            "build",
+            "opportunity",
+            "students"
+          ],
+          "readMinutes": 1
+        },
+        "fr": {
+          "path": "05-build/DEMO_IMPLEMENTATION_GUIDE.FR.md",
+          "title": "Guide d’implémentation de la démonstration",
+          "summary": "Construire une démonstration complète, petite et explicable : l’élève remplit un profil, l’application lit des données vérifiées, applique des règles, calcule un score et explique les recommandations.",
+          "tags": [
+            "build",
+            "guide",
+            "impl",
+            "mentation",
+            "monstration"
+          ],
+          "readMinutes": 2
+        }
+      }
+    },
+    {
+      "slug": "research-and-validation",
+      "legacySlugs": [],
+      "title": "Research and Validation",
+      "summary": "Students should not build from guesses. Research turns an interesting idea into a useful product and gives the team evidence for each important decision.",
+      "tags": [
+        "research",
+        "validation"
+      ],
+      "articleType": "guide",
+      "articleTypeLabel": "Guide",
+      "documentId": "OEE-11",
+      "lastUpdated": "2026-09-09",
+      "reviewStatus": "machine-validated",
+      "reviewCadence": "annual",
+      "reviewDate": "",
+      "decisionStatus": "active",
+      "supersedes": [],
+      "relatedDocumentIds": [],
+      "readMinutes": 2,
+      "searchText": "Research and Validation Research and Validation: Learn Before You Scale Students should not build from guesses. Research turns an interesting idea into a useful product and gives the team evidence for each important decision. What to validate first Start with five questions: 1. Can students currently find the opportunities they care about? 2. Which filters and explanations help them decide? 3. What information makes them distrust a recommendation? 4. Can a student complete the main task without adult coaching? 5. Does the product improve clarity, or merely add another place to search? A safe student interview - Ask for permission before taking notes or recording. Recording is optional. - Explain the purpose, the time required, and that participation is voluntary. - Ask about recent behavior, not only opinions: “Show me how you look for programs.” - Do not ask for grades, immigration status, financial details, or other sensitive information unless it is essential and approved. - Remove names and identifying details from notes. Store notes only where the team agreed. - Never promise admission, funding, or a particular product outcome. A practical research note Record the date, participant type (not their name), question, observed behavior, quote or evidence, interpretation, and the decision it supports. Separate what you observed from what you inferred. Verify opportunity data For every opportunity, keep the official source URL, page title, verification date, location, eligibility, cost, deadline, language, and a short evidence note. Prefer the official program page. If a detail is unclear, show “needs verification” instead of guessing. Usability test script Give a student this task: “Find one opportunity that fits your interests, confirm why it fits, save it, and identify the next action.” Do not teach the interface during the first attempt. Observe where they hesitate, what they misunderstand, and whether they can explain the recommendation in their own words. Afterward ask: - What did you expect to happen? - What was confusing or missing? - Which information helped you trust the result? - What would you do next outside the product? Useful measures Track task completion, time to first relevant result, incorrect interpretations, source verification success, and confidence before versus after the task. A smaller number of trustworthy recommendations is better than a larger number of noisy results. Research decision log Do not treat a small student sample as universal truth. State who participated, what was tested, and what remains unknown.",
+      "relatedSlugs": [],
+      "backlinkSlugs": [],
+      "status": "published",
+      "order": 10,
+      "category": "Research and validation",
+      "categoryFolder": "07-research-and-validation",
+      "path": "07-research-and-validation/RESEARCH_AND_VALIDATION.md",
+      "localized": {
+        "zh": {
+          "path": "07-research-and-validation/RESEARCH_AND_VALIDATION.CN.md",
+          "title": "研究与验证",
+          "summary": "学生不应该基于猜测构建产品。研究可以把有趣的想法变成有用的产品，并为重要决定提供证据。",
+          "tags": [
+            "research",
+            "validation"
+          ],
+          "readMinutes": 1
+        },
+        "fr": {
+          "path": "07-research-and-validation/RESEARCH_AND_VALIDATION.FR.md",
+          "title": "Recherche et validation",
+          "summary": "Les élèves ne devraient pas construire à partir de suppositions. La recherche transforme une idée intéressante en produit utile et donne des preuves pour les décisions importantes.",
+          "tags": [
+            "research",
+            "validation",
+            "recherche"
+          ],
+          "readMinutes": 2
+        }
+      }
+    },
+    {
+      "slug": "vibe-coding-for-students",
+      "legacySlugs": [],
+      "title": "Vibe Coding for Students",
+      "summary": "Many students see programming as a locked door. They may think they need to spend years memorizing syntax before they are allowed to build something meaningful.",
+      "tags": [
+        "student",
+        "guides",
+        "vibe",
+        "coding",
+        "students"
+      ],
+      "articleType": "guide",
+      "articleTypeLabel": "Guide",
+      "documentId": "OEE-12",
+      "lastUpdated": "2026-09-09",
+      "reviewStatus": "machine-validated",
+      "reviewCadence": "annual",
+      "reviewDate": "",
+      "decisionStatus": "active",
+      "supersedes": [],
+      "relatedDocumentIds": [],
+      "readMinutes": 8,
+      "searchText": "Vibe Coding for Students Vibe Coding for High School Students You do not need to be afraid of coding Many students see programming as a locked door. They may think they need to spend years memorizing syntax before they are allowed to build something meaningful. That is no longer the only way to begin. With vibe coding, you describe what you want to build in ordinary language and work with an AI coding assistant to turn the idea into software. You can ask the assistant to create a page, explain an error, design a database table, write a test, or suggest a better approach. You are not disqualified because you do not already know Python, JavaScript, SQL, React, or cloud deployment. You can learn those pieces as they become useful. The important starting skills are: - Curiosity about how things work. - A willingness to try small experiments. - The ability to describe an idea clearly. - Patience when the first version is imperfect. - The habit of checking whether the result is actually correct. What vibe coding means Vibe coding is a creative building loop: The AI can help write code, but you provide the direction. You decide what problem is worth solving, who it helps, what it should feel like, and what “good” means. What vibe coding is good at Vibe coding is especially useful when you have a clear goal but do not yet know the syntax or framework: Good use Example request What you still do --------- Create a first interface “Build a mobile-friendly opportunity card with a title, deadline, cost, source link, and save button.” Decide which information a student needs, then check the layout on a phone. Turn an idea into a data shape “Suggest a JSON structure for an opportunity and explain each field.” Decide which fields are necessary and verify them against official sources. Explore a rule “Write a function that matches a student’s grade to an opportunity’s minimum and maximum grade.” Define edge cases, test boundary values, and confirm the rule is fair. Understand an error “Explain this error, identify the likely file, and give me the smallest safe fix.” Reproduce the problem, apply the fix, and check what else could have changed. Create tests and documentation “Write tests for an empty result, an expired deadline, and a matching opportunity.” Read every test and confirm it represents real user behavior. It is less reliable at deciding what students truly need, knowing whether a deadline or eligibility requirement is current, protecting private data, or judging whether a product is fair and safe. Those responsibilities stay with the team. Three concrete examples Example 1: From a student story to a screen Start with a small story: As a student in Grade 10 who likes biology, I want to see opportunities I can still apply for and understand why each one matches me. Ask the AI to create only the first screen: Run it, resize the browser, and ask a classmate to find one relevant opportunity. If they cannot tell why a result appeared, improve the wording or data—not just the colors. Example 2: From a policy to a tested rule Suppose the team agrees that an opportunity is eligible when the student’s grade is between minimumgrade and maximumgrade, inclusive. Ask for a small function and tests: You decide whether “inclusive” is correct, inspect the code, run the tests, and add a source note to the requirement. The AI helps express the rule; it does not invent the policy. Example 3: From an error to a learning loop When a page breaks, give the assistant the exact error and the smallest relevant code sample: This keeps you in control. You learn whether the problem is the request, the data shape, the filter, or the display instead of accepting a large unexplained rewrite. A useful prompt pattern Good prompts provide context, a small goal, constraints, and a way to verify the result: If the answer is too large, ask for a plan or a smaller step. If you cannot explain what changed, you are not ready to merge it. Your creativity is the main advantage Vibe coding is not about making every student produce the same application. It makes it faster to explore original ideas. You can ask: - “What if students could discover opportunities that are normally hard to find?” - “What if the application explained why a program fits someone instead of only showing a search result?” - “What if the interface worked equally well for English, French, and Chinese users?” - “What if a counselor could correct inaccurate opportunity information?” - “What if the system showed students several realistic paths instead of only the most famous programs?” These product ideas are more important than whether you can write a loop from memory. Coding is the material. Your imagination, empathy, questions, and judgment shape the product. What a high school student can build Using vibe coding and managed services, a small team can build a real working MVP such as the Opportunity Equity Engine: - A polished web interface. - A student profile form. - A database containing real opportunities. - Search and filters for grade, location, cost, category, and deadline. - Deterministic eligibility checks. - AI-assisted extraction of requirements from webpages and PDFs. - Semantic matching between interests and opportunities. - Explainable recommendation scores. - An administrator review screen. - A deployed website that other students can use. This is not merely a mockup. It can be a functioning system with users, data, APIs, AI services, tests, and a public deployment. You are the builder, not just the prompter Vibe coding does not mean typing one vague sentence and accepting whatever appears. Strong vibe coding looks like product engineering: 1. Start with a small outcome. 2. Explain the context and constraints. 3. Ask the AI to propose a plan before changing many files. 4. Review the generated code and ask questions about unfamiliar parts. 5. Run the application and inspect the result. 6. Test normal cases and failure cases. 7. Improve the experience b",
+      "relatedSlugs": [
+        "quick-app-and-website-build-guide",
+        "beginner-project-guide",
+        "learning-prerequisites"
+      ],
+      "backlinkSlugs": [],
+      "status": "published",
+      "order": 10,
+      "category": "Student guides",
+      "categoryFolder": "03-student-guides",
+      "path": "03-student-guides/VIBE_CODING_FOR_STUDENTS.md",
+      "localized": {
+        "zh": {
+          "path": "03-student-guides/VIBE_CODING_FOR_STUDENTS.CN.md",
+          "title": "学生 Vibe Coding 指南",
+          "summary": "Vibe Coding 是一种用自然语言描述目标、让 AI 协助生成小段代码、运行结果、阅读错误并持续改进的工作方式。它降低了开始编程的门槛，但不会替你做产品判断。",
+          "tags": [
+            "student",
+            "guides",
+            "vibe",
+            "coding"
+          ],
+          "readMinutes": 1
+        },
+        "fr": {
+          "path": "03-student-guides/VIBE_CODING_FOR_STUDENTS.FR.md",
+          "title": "Vibe Coding pour les élèves",
+          "summary": "Le Vibe Coding consiste à décrire un objectif en langage naturel, demander à l’IA de proposer un petit changement, exécuter le résultat, lire les erreurs et améliorer progressivement. Cela facilite le début, mais ne…",
+          "tags": [
+            "student",
+            "guides",
+            "vibe",
+            "coding",
+            "pour",
+            "les",
+            "ves"
+          ],
+          "readMinutes": 4
+        }
+      }
+    },
+    {
+      "slug": "quick-app-and-website-build-guide",
+      "legacySlugs": [],
+      "title": "Quick App and Website Build Guide",
+      "summary": "This guide shows students how to turn a small idea into a working website, phone-friendly web app, or early iPhone prototype quickly. The goal is not to build every feature at once. The goal is to create one useful…",
+      "tags": [
+        "student",
+        "guides",
+        "quick",
+        "app",
+        "website",
+        "build",
+        "guide"
+      ],
+      "articleType": "guide",
+      "articleTypeLabel": "Guide",
+      "documentId": "OEE-13",
+      "lastUpdated": "2026-09-09",
+      "reviewStatus": "machine-validated",
+      "reviewCadence": "annual",
+      "reviewDate": "",
+      "decisionStatus": "active",
+      "supersedes": [],
+      "relatedDocumentIds": [],
+      "readMinutes": 5,
+      "searchText": "Quick App and Website Build Guide Opportunity Equity Engine — Quick App and Website Build Guide This guide shows students how to turn a small idea into a working website, phone-friendly web app, or early iPhone prototype quickly. The goal is not to build every feature at once. The goal is to create one useful path, test it with people, and improve it. Choose the smallest useful path What you want to make Fast starting path What you can demonstrate --------- A public website HTML, CSS, and JavaScript A polished page with real content and links A phone-friendly app Responsive website or PWA An app-like experience in a phone browser An iPhone prototype SwiftUI in Xcode or Expo A few screens and a working interaction A data-backed demo Website plus a simple API or hosted database Search, filters, saved items, or recommendations Start with the path that lets your team test the idea soonest. A responsive website is often the best first version because it works on computers and phones without waiting for an app-store release. The fastest website path For a first version, create three small files: Use index.html for structure, style.css for visual design, and app.js for interactions. Ask an AI coding assistant to create one small feature at a time, then open the page in a browser and test it yourself. Good first features include: - A search box that filters a list of opportunities. - A form that collects grade, interests, location, and budget. - A result card that explains why an opportunity may fit. - A save button that stores a short list in the browser. - A clear “apply” link that opens the original source. You can publish a static website with GitHub Pages or another static hosting service. Add real data only after the screen and user flow make sense with sample data. Make it feel like a phone app Before building a native app, make the website comfortable on a small screen: 1. Use a single-column layout below about 700 pixels wide. 2. Make buttons and form fields easy to tap. 3. Keep important actions near the bottom of the screen. 4. Test with a real phone, not only a resized desktop window. 5. Add a web-app manifest and icon only after the basic experience works. A phone-friendly website can be shared with a link and added to a phone’s home screen. This is a useful product demo because students can test the experience with classmates immediately. Three practical iPhone paths SwiftUI and Xcode Use SwiftUI when the team wants to learn Apple’s native tools and build an iPhone-specific prototype. Design a few screens, use sample data first, and connect real services later. Native iPhone development generally uses Xcode on a Mac, so confirm that the team has access to the required hardware and Apple developer setup. Expo and React Native Use Expo when the team already knows JavaScript or wants one codebase that can grow toward more than one mobile platform. Students can begin with a small screen, a list, and one interaction. Keep the first prototype independent of complex authentication, payments, or background services. A progressive web app Use a responsive website when the priority is speed, access, and easy sharing. A PWA can provide an app-like shell while keeping deployment simple. It is usually the most practical choice for this project’s first student demo. A 60-minute build plan 1. Choose one user: for example, a Grade 11 student looking for low-cost summer programs. 2. Choose one action: search, filter, compare, or save an opportunity. 3. Sketch three screens: start, results, and details. 4. Create sample data: begin with five believable records and label them as examples. 5. Build the happy path: make one complete interaction work before adding options. 6. Test with two people: watch where they hesitate and write down their questions. 7. Fix the biggest issue: improve clarity before adding another feature. A useful AI coding prompt Give the assistant a narrow request with context, constraints, and a test: Then ask for one change at a time: “Add an empty state,” “Explain this function,” or “Make the button keyboard accessible.” Review every change and test it before asking for more. Small project examples - Opportunity finder: filter five sample programs and explain each match. - Application planner: turn deadlines into a checklist with status labels. - Student resource map: show resources by location and category. - Team showcase: present the problem, prototype, evidence, and next step. Each example is enough for a first demo. A convincing small flow is better than a large app with unfinished screens. Test before sharing - Check the page on a narrow phone screen and a wider screen. - Use the keyboard to reach every control. - Try an empty search and an invalid form value. - Confirm links open the intended source. - Do not place API keys, passwords, or private student information in browser code. - Label sample records, AI-generated content, and future features honestly. - Ask a student who did not build the page to complete the main task. What students own AI can suggest code, layouts, test cases, and explanations. Students still own the problem choice, data quality, privacy decisions, visual communication, testing, and the decision about what is ready to show. Build quickly, but keep the project understandable enough that every team member can explain it. Recommended path for this project Start with a responsive static website using sample opportunity data. Add filtering, a clear explanation of each recommendation, and a source link. When that flow works on a phone, decide whether a simple API, hosted database, PWA install prompt, or native iPhone prototype adds enough value to justify the extra complexity.",
+      "relatedSlugs": [
+        "vibe-coding-for-students",
+        "beginner-project-guide",
+        "learning-prerequisites"
+      ],
+      "backlinkSlugs": [],
+      "status": "published",
+      "order": 20,
+      "category": "Student guides",
+      "categoryFolder": "03-student-guides",
+      "path": "03-student-guides/QUICK_APP_AND_WEBSITE_BUILD_GUIDE.md",
+      "localized": {
+        "zh": {
+          "path": "03-student-guides/QUICK_APP_AND_WEBSITE_BUILD_GUIDE.CN.md",
+          "title": "快速构建应用和网站指南",
+          "summary": "本指南说明学生如何快速把一个小想法变成可运行的网站、适合手机使用的 Web 应用或早期 iPhone 原型。目标不是一次完成所有功能，而是先完成一条有用的流程，让真实用户测试，再持续改进。",
+          "tags": [
+            "student",
+            "guides"
+          ],
+          "readMinutes": 1
+        },
+        "fr": {
+          "path": "03-student-guides/QUICK_APP_AND_WEBSITE_BUILD_GUIDE.FR.md",
+          "title": "Guide pour créer rapidement une application ou un site web",
+          "summary": "Ce guide montre aux élèves comment transformer rapidement une petite idée en site web fonctionnel, application web adaptée au téléphone ou premier prototype iPhone. Le but n’est pas de tout construire en une seule…",
+          "tags": [
+            "student",
+            "guides",
+            "guide",
+            "pour",
+            "rapidement",
+            "une",
+            "application",
+            "site"
+          ],
+          "readMinutes": 5
+        }
+      }
+    },
+    {
+      "slug": "beginner-project-guide",
+      "legacySlugs": [],
+      "title": "Beginner Project Guide",
+      "summary": "This guide is for a high school student who has never built a website, used an AI API, designed a database, or deployed an application before.",
+      "tags": [
+        "student",
+        "guides",
+        "beginner",
+        "project",
+        "guide"
+      ],
+      "articleType": "guide",
+      "articleTypeLabel": "Guide",
+      "documentId": "OEE-14",
+      "lastUpdated": "2026-09-09",
+      "reviewStatus": "machine-validated",
+      "reviewCadence": "annual",
+      "reviewDate": "",
+      "decisionStatus": "active",
+      "supersedes": [],
+      "relatedDocumentIds": [],
+      "readMinutes": 12,
+      "searchText": "Beginner Project Guide Opportunity Equity Engine — Beginner Project Guide Welcome This guide is for a high school student who has never built a website, used an AI API, designed a database, or deployed an application before. You do not need to know everything before you start. You do not need to be a professional programmer. You do not need to memorize a programming language. You need a real problem, a willingness to experiment, and a team habit of checking whether your work is correct. The team will use vibe coding: explain a small goal to an AI coding assistant, let it help create the code, run the result, ask questions, and improve it. The AI helps with technical details. The students provide the idea, decisions, creativity, testing, and responsibility. 1. What are we building? Students often miss scholarships, competitions, research programs, volunteering, and summer opportunities because the information is scattered across many websites and documents. The Opportunity Equity Engine helps a student: 1. Enter a few details such as grade, location, interests, and budget. 2. See opportunities that may fit. 3. Understand why each opportunity was recommended. 4. Open the original source and application link. 5. Save promising opportunities for later. Example The system should help students discover possibilities. It should not promise acceptance or replace the official eligibility decision made by an organization. 2. The first rule: build a very small version Do not try to build a complete Canadian opportunity platform on the first day. The first demo only needs: - One web page. - One student profile form. - Three to ten clearly labeled opportunity records. - Grade, location, budget, and interest matching. - A match score and a short explanation. - A source link. After that works, add more data and features one at a time. 3. What you need to learn Learn each topic only when the project needs it. Computer basics - How to create, rename, and find files. - How folders and file paths work. - How to use a browser and browser developer tools. - How to open a terminal and run a command. - How to read an error message. - How to save work and make a backup. Software basics - What a web page is. - What a server does. - What an API is. - What a database stores. - What JSON looks like. - What a test checks. - What Git saves and why commits are useful. AI basics - What an LLM can and cannot do. - Why an AI answer may sound correct but be wrong. - How to ask for structured output. - How to provide source information to an AI. - Why important facts must be checked by a person. Cloud basics - The difference between your computer and an online server. - What a deployment is. - What a domain name and HTTPS are. - What an environment variable is. - Why passwords and API keys must stay secret. You can use AI to explain all of these topics with examples. Ask for one concept at a time and repeat it in your own words. 4. How to use vibe coding safely The basic loop Good prompts Vibe coding rules - Ask for small changes instead of an entire app in one prompt. - Do not accept code that nobody on the team can explain at a high level. - Run the app after each meaningful change. - Review the Git diff before committing. - Never paste passwords, API keys, or private student information into an AI assistant. - Do not let an LLM make final eligibility decisions when a rule can be written in code. - Treat generated code and generated data as a draft until tested. - Keep your own design ideas. AI should expand your creativity, not replace it. 5. The project path Follow these phases in order. Each phase has a clear finish line. Phase 0 — Form the team and choose the problem Tasks - Choose three or four students. - Choose one project coordinator for the first two weeks. - Decide who the first users are: for example, Montreal Grade 10–12 students. - Interview at least three students about how they find opportunities. - Write down the top three problems they describe. - Choose one problem for the first demo. Finish line: the team can explain who the product helps and what the first demo will do in one minute. Phase 1 — Draw the idea before coding On paper or in Figma, draw: 1. The profile form. 2. The recommendation results page. 3. One opportunity detail card. 4. The path from the form to the results. Write the fields the student will enter: Do not collect exact addresses, family income, health information, immigration documents, or other information that is not needed for the demo. Finish line: another student can understand the user journey by looking at the drawing. Phase 2 — Set up the workspace Tasks - Create or use the GitHub repository. - Install Node.js and a code editor. - Create a project board with To Do, In Progress, Review, and Done columns. - Create a web application folder. - Ask the AI assistant to explain the generated folders. - Run the starter application locally. A typical Next.js starter command is: If the command behaves differently, check the current Next.js documentation and ask the AI assistant to explain the difference. Finish line: the team can open a page at http://localhost:3000 and knows how to restart it. Phase 3 — Make a page with fake data Before connecting a database, place three opportunities in a simple local array. Example: Build an opportunity card that shows: - Title. - Organization. - Category. - Location. - Cost. - Deadline. - A reason for the match. Use “Demo” or “Sample” for fictional opportunities. Never present invented data as a real program. Finish line: the homepage displays opportunity cards with readable design on a phone and desktop. Phase 4 — Add the profile form Add inputs for: - Grade. - City or region. - Interests as comma-separated words. - Maximum budget. Start with browser memory. Do not add accounts or save personal profiles yet. Example profile object: Validate the form: - Grade must be a number. - Budget cannot be negative. - Location cannot be blank. - At least one",
+      "relatedSlugs": [
+        "vibe-coding-for-students",
+        "quick-app-and-website-build-guide",
+        "learning-prerequisites"
+      ],
+      "backlinkSlugs": [],
+      "status": "published",
+      "order": 30,
+      "category": "Student guides",
+      "categoryFolder": "03-student-guides",
+      "path": "03-student-guides/BEGINNER_PROJECT_GUIDE.md",
+      "localized": {
+        "zh": {
+          "path": "03-student-guides/BEGINNER_PROJECT_GUIDE.CN.md",
+          "title": "入门项目指南",
+          "summary": "你不需要先成为专业程序员。这个项目把产品思考、研究、设计、测试和小步实现结合起来。AI 可以帮助解释代码和生成起点，但你仍然负责判断需求是否正确、数据是否真实、体验是否有用。",
+          "tags": [
+            "student",
+            "guides"
+          ],
+          "readMinutes": 1
+        },
+        "fr": {
+          "path": "03-student-guides/BEGINNER_PROJECT_GUIDE.FR.md",
+          "title": "Guide de projet pour débutants",
+          "summary": "Il n’est pas nécessaire d’être programmeur avant de commencer. Le projet combine réflexion produit, recherche, design, tests et petites étapes de développement. L’IA peut expliquer du code et proposer un point de…",
+          "tags": [
+            "student",
+            "guides",
+            "guide",
+            "projet",
+            "pour",
+            "butants"
+          ],
+          "readMinutes": 2
+        }
+      }
+    },
+    {
+      "slug": "learning-prerequisites",
+      "legacySlugs": [],
+      "title": "Learning Prerequisites",
+      "summary": "This document describes what a Grade 11 student should learn to deliver the Opportunity Equity Engine successfully. It is not necessary to master every topic before starting. The recommended approach is vibe coding:…",
+      "tags": [
+        "student",
+        "guides",
+        "learning",
+        "prerequisites"
+      ],
+      "articleType": "guide",
+      "articleTypeLabel": "Guide",
+      "documentId": "OEE-15",
+      "lastUpdated": "2026-09-09",
+      "reviewStatus": "machine-validated",
+      "reviewCadence": "annual",
+      "reviewDate": "",
+      "decisionStatus": "active",
+      "supersedes": [],
+      "relatedDocumentIds": [],
+      "readMinutes": 12,
+      "searchText": "Learning Prerequisites Learning Prerequisites and Delivery Roadmap This document describes what a Grade 11 student should learn to deliver the Opportunity Equity Engine successfully. It is not necessary to master every topic before starting. The recommended approach is vibe coding: use AI tools to translate clear product requirements into working code, then inspect, test, debug, and improve that code. The student does not need to memorize a programming language before beginning. 1. What “successfully deliver” means For the first release, success means being able to: - Collect a small, verifiable set of opportunities. - Store them in a structured database. - Accept a simple student profile. - Apply deterministic eligibility rules. - Search and rank relevant opportunities. - Explain recommendations using verified source information. - Deploy the application so another person can use it. - Monitor errors, correct bad data, and document limitations. The target is a reliable MVP, not a production-scale platform used by millions of students. 2. Vibe coding changes the prerequisite Vibe coding means developing through a tight collaboration loop with an AI coding assistant: For this project, the student does not need to be an expert in Python, TypeScript, React, or SQL before starting. AI can generate boilerplate, explain unfamiliar syntax, create UI components, write queries, and help debug errors. However, vibe coding does not remove the need for technical understanding. The student remains responsible for deciding: - What the product should do. - Which data should be collected and why. - Whether an eligibility rule is correct. - Whether an AI-generated answer is supported by a source. - Whether code is secure, tested, and maintainable. - Whether the deployed application actually works. The most important coding skill is therefore code literacy, not language memorization: the ability to read a change, explain its purpose, run it, recognize a bad result, and ask the AI to correct it. Vibe coding guardrails - Ask AI to change one small feature at a time. - Ask for an explanation of unfamiliar code before accepting it. - Review the full diff before committing. - Never paste API keys, passwords, or private student data into an AI tool. - Run tests after every meaningful change. - Ask AI to write tests for eligibility and ranking logic. - Treat generated code and generated opportunity data as untrusted until verified. 3. Recommended learning priority Priority Area Why it matters --------- Must learn AI-assisted development, Git, HTTP, basic SQL, debugging Required to direct and verify the application build Must learn How a frontend, backend, database, and API connect More important than mastering a specific framework Must learn Relational data modeling and validation Opportunity and eligibility data must be consistent and searchable Must learn LLM API usage and structured JSON output Required for extracting information from webpages and PDFs Must learn Deployment, environment variables, and logs A working local demo is not the same as a usable online product Should learn Embeddings, vector search, evaluation, and prompt design Improves interest matching and makes the AI component credible Should learn Authentication, authorization, privacy, and rate limiting Student data must be protected Later Queues, advanced MLOps, Kubernetes, model training, microservices Useful at larger scale but unnecessary for the first MVP 4. Computer and software knowledge Essential foundations The student should understand enough to direct and review AI-generated code: - Files, folders, paths, processes, and command-line basics. - How a web browser communicates with a server. - HTML, CSS, JavaScript, and JSON. - Variables, functions, conditionals, loops, arrays, objects, and modules at a conceptual level. - Exceptions, logging, debugging, and reading error messages. - Basic object-oriented or data-oriented design. - Git commits, branches, pull requests, merge conflicts, and .gitignore. - How to read API documentation and test an endpoint. Python is a good choice for the backend and data pipeline, while TypeScript is a good choice for the frontend. Either language can be generated and taught incrementally by an AI assistant. Start with the stack that produces the fastest working prototype; learn enough syntax to read, test, and modify the generated code. Switching languages or frameworks is not a prerequisite for success. Web application knowledge Learn the following concepts: - Components, props, state, forms, and client/server rendering. - Routing and page layouts in Next.js. - REST APIs and HTTP methods: GET, POST, PUT, and DELETE. - Status codes, request validation, pagination, and error responses. - CORS, cookies, sessions, and authentication basics. - Responsive design and basic accessibility. - Loading, empty, and error states in the user interface. Database knowledge The student should be able to: - Design tables, primary keys, foreign keys, and indexes. - Write basic SQL queries and joins. - Understand one-to-many and many-to-many relationships. - Use migrations rather than manually changing production tables. - Validate dates, URLs, enumerated values, and required fields. - Explain why opportunity requirements should be stored as structured fields instead of only as free text. Recommended starting database: Supabase PostgreSQL. Testing and quality Learn to write and run: - Unit tests for eligibility rules and scoring calculations. - API tests for profile and opportunity endpoints. - A small set of end-to-end browser tests for the main user flow. - Data validation checks for missing deadlines, broken URLs, and impossible values. - Manual test cases for English and Chinese or French content. The matching rules should be testable without calling an LLM. 5. AI knowledge Essential AI concepts The student should understand: - The difference between an LLM, an embedding model, and a traditional program. - Tokens, conte",
+      "relatedSlugs": [
+        "vibe-coding-for-students",
+        "quick-app-and-website-build-guide",
+        "beginner-project-guide"
+      ],
+      "backlinkSlugs": [],
+      "status": "published",
+      "order": 40,
+      "category": "Student guides",
+      "categoryFolder": "03-student-guides",
+      "path": "03-student-guides/LEARNING_PREREQUISITES.md",
+      "localized": {
+        "zh": {
+          "path": "03-student-guides/LEARNING_PREREQUISITES.CN.md",
+          "title": "学习先修知识",
+          "summary": "不必在开始前掌握所有技术。边做边学，每次只学习完成下一个可验证任务所需的知识。AI 是解释和协作工具，不是替代理解、测试和责任的黑箱。",
+          "tags": [
+            "student",
+            "guides"
+          ],
+          "readMinutes": 1
+        },
+        "fr": {
+          "path": "03-student-guides/LEARNING_PREREQUISITES.FR.md",
+          "title": "Prérequis d’apprentissage",
+          "summary": "Il n’est pas nécessaire de tout maîtriser avant de commencer. Apprenez juste ce qui est nécessaire pour réaliser la prochaine tâche vérifiable. L’IA est un outil d’explication et de collaboration, pas une boîte noire…",
+          "tags": [
+            "student",
+            "guides",
+            "requis",
+            "apprentissage"
+          ],
+          "readMinutes": 2
+        }
+      }
+    },
+    {
+      "slug": "start-here",
+      "legacySlugs": [],
+      "title": "Start Here",
+      "summary": "This is the shortest path from “I want to help” to a useful, reviewable contribution. You do not need to know everything before you begin.",
+      "tags": [
+        "start",
+        "here"
+      ],
+      "articleType": "guide",
+      "articleTypeLabel": "Guide",
+      "documentId": "OEE-16",
+      "lastUpdated": "2026-09-09",
+      "reviewStatus": "machine-validated",
+      "reviewCadence": "annual",
+      "reviewDate": "",
+      "decisionStatus": "active",
+      "supersedes": [],
+      "relatedDocumentIds": [],
+      "readMinutes": 2,
+      "searchText": "Start Here Start Here: Your First Contribution This is the shortest path from “I want to help” to a useful, reviewable contribution. You do not need to know everything before you begin. The project in one minute The Opportunity Equity Engine helps high school students discover, understand, and prioritize meaningful opportunities. We are building a small, trustworthy vertical slice first: Your first 60 minutes 1. Read the documentation index and the beginner project guide. 2. Choose one role for your first task: researcher, product designer, developer, tester, data reviewer, or presenter. 3. Read the learning prerequisites and the student toolkit. 4. Set up Git, your editor, and the tools described in the implementation guide. 5. Open one GitHub issue that describes a small outcome, not a vague activity. 6. Make one small change, test it, and record what you learned in the issue or pull request. Choose a starting lane If you enjoy... Start with... Your first useful output --------- Asking questions and listening Research and validation Interview notes and a tested assumption Explaining ideas visually Initiative and demo deliverables A user journey or wireframe Organizing information Architecture A data field or flow proposal Writing code Demo implementation A small tested feature Helping a team work well Student toolkit An issue, checklist, or pull request review Working agreement - Make the smallest useful change first. - Ask for clarification in writing when a requirement is unclear. - Treat AI output as a draft; understand, test, and review it before using it. - Never commit passwords, API keys, private student information, or copied work without permission. - Cite sources and mark sample data, assumptions, and future ideas clearly. - Give feedback about the work, not about the person. Definition of ready Before starting, you can answer: Who benefits? What will change? What is out of scope? How will we test it? What evidence or source supports the decision? Definition of done - The change works on the intended screen or document. - A beginner can follow the instructions or reproduce the result. - Tests, screenshots, source links, or review notes are included when relevant. - Accessibility, privacy, and security risks were considered. - Another teammate reviewed the result, or the issue explains why review is pending. When you are stuck Spend 15 minutes trying to understand the error. Copy the exact message, describe what you expected, list what you tried, and ask one focused question in the issue. A clear question is a contribution because it makes the next attempt easier for everyone.",
+      "relatedSlugs": [],
+      "backlinkSlugs": [],
+      "status": "published",
+      "order": 10,
+      "category": "Start here",
+      "categoryFolder": "00-start-here",
+      "path": "00-start-here/START_HERE.md",
+      "localized": {
+        "zh": {
+          "path": "00-start-here/START_HERE.CN.md",
+          "title": "从这里开始",
+          "summary": "这是从“我想帮忙”到完成一个可审查贡献的最短路径。你不需要在开始前学会所有内容。",
+          "tags": [
+            "start",
+            "here"
+          ],
+          "readMinutes": 1
+        },
+        "fr": {
+          "path": "00-start-here/START_HERE.FR.md",
+          "title": "Commencer ici",
+          "summary": "Voici le chemin le plus court entre « je veux aider » et une contribution utile et révisable. Il n’est pas nécessaire de tout savoir avant de commencer.",
+          "tags": [
+            "start",
+            "here",
+            "commencer",
+            "ici"
+          ],
+          "readMinutes": 2
+        }
+      }
+    }
+  ]
+}
