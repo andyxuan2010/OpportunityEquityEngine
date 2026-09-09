@@ -237,6 +237,46 @@ button { font: inherit; }
 .document-breadcrumb-current { color: #68736f; }
 .document-kicker { width: min(100%, 1050px); margin: 0 0 18px; color: var(--blue); font-size: 12px; font-weight: 850; letter-spacing: .17em; text-transform: uppercase; }
 .kicker-dot { display: inline-block; width: 8px; height: 8px; margin-right: 8px; border-radius: 50%; background: var(--teal); box-shadow: 0 0 0 5px rgba(20, 141, 128, .12); }
+.document-actions {
+  width: min(100%, 1050px);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 0 0 18px;
+}
+.document-action {
+  min-width: 92px;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding: 0;
+  border: 0;
+  color: var(--muted);
+  background: transparent;
+  cursor: pointer;
+  font: inherit;
+}
+.document-action:hover, .document-action:focus-visible { color: var(--blue); }
+.file-icon {
+  width: 58px;
+  height: 58px;
+  display: grid;
+  place-items: center;
+  border: 2px solid #dedbd2;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, .72);
+  transition: transform .2s ease, border-color .2s ease, box-shadow .2s ease;
+}
+.document-action:hover .file-icon, .document-action:focus-visible .file-icon { transform: translateY(-2px); border-color: currentColor; box-shadow: 0 8px 18px rgba(31, 57, 88, .12); }
+.file-icon svg { width: 31px; height: 36px; overflow: visible; }
+.file-icon path { fill: white; stroke: #1d2927; stroke-width: 3; stroke-linejoin: round; }
+.file-icon path + path { fill: none; }
+.file-icon rect { stroke: none; }
+.file-icon text { fill: white; font-family: Arial, sans-serif; font-size: 10px; font-weight: 800; text-anchor: middle; }
+.file-icon-md rect { fill: #13c7e5; }
+.file-icon-pdf rect { fill: #f2484b; }
+.document-action-label { color: currentColor; font-size: 11px; font-weight: 750; line-height: 1.2; white-space: nowrap; }
 .document-content { width: min(100%, 1050px); margin: 0; padding: clamp(30px, 6vw, 78px); border: 1px solid var(--line); border-radius: 28px; background: var(--surface); box-shadow: var(--shadow); }
 .document-content h1 { margin: 0 0 20px; color: var(--ink); font-size: clamp(42px, 6vw, 76px); letter-spacing: -.06em; line-height: 1; }
 .document-content h2 { margin: 48px 0 16px; color: var(--navy); font-size: clamp(27px, 3vw, 40px); letter-spacing: -.045em; line-height: 1.08; }
@@ -260,6 +300,7 @@ button { font: inherit; }
 [data-theme="dark"] .home-content h2, [data-theme="dark"] .document-content h1, [data-theme="dark"] .document-content h2, [data-theme="dark"] .home-content h3, [data-theme="dark"] .document-content h3 { color: #e7effa; }
 [data-theme="dark"] .home-content > h2:nth-of-type(2) ~ h3 { border-color: var(--line); background: var(--surface); }
 [data-theme="dark"] .library-card { border-color: var(--line); background: var(--surface); }
+[data-theme="dark"] .file-icon { border-color: #526276; background: rgba(13, 31, 55, .8); }
 
 @media (max-width: 1180px) {
   .nav-inner { grid-template-columns: auto 1fr auto; }
@@ -299,6 +340,11 @@ button { font: inherit; }
   .home-content table, .document-content table { display: block; overflow-x: auto; }
   .document-shell { padding-top: 20px; }
   .document-breadcrumb { gap: 5px; margin-bottom: 16px; padding-inline: 0; font-size: 12px; }
+  .document-actions { gap: 8px; margin-bottom: 14px; }
+  .document-action { min-width: 82px; }
+  .file-icon { width: 50px; height: 50px; }
+  .file-icon svg { width: 27px; height: 32px; }
+  .document-action-label { font-size: 10px; }
   .document-content { padding: 28px 22px; border-radius: 20px; }
   .document-content p, .document-content li { font-size: 15px; }
   .footer-inner { min-height: 70px; }
@@ -316,3 +362,12 @@ button { font: inherit; }
   .theme-button { min-width: 36px; padding: 0 7px; }
 }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+@media print {
+  body { background: white; }
+  .site-nav, .site-footer, .document-breadcrumb, .document-kicker, .document-actions { display: none !important; }
+  .site-main { min-height: 0; padding: 0; }
+  .content-shell, .document-content { width: 100%; max-width: none; }
+  .document-shell { padding: 0; }
+  .document-content { padding: 0; border: 0; border-radius: 0; box-shadow: none; }
+}

@@ -1,0 +1,45 @@
+{% if page.locale == 'zh' %}
+  {% assign actions_aria = '文档操作' %}
+  {% assign markdown_label = '查看 Markdown 源文件' %}
+  {% assign markdown_short = 'Markdown 源文件' %}
+  {% assign pdf_label = '打印或保存为 PDF' %}
+  {% assign pdf_short = '保存为 PDF' %}
+{% elsif page.locale == 'fr' %}
+  {% assign actions_aria = 'Actions du document' %}
+  {% assign markdown_label = 'Voir le fichier source Markdown' %}
+  {% assign markdown_short = 'Source Markdown' %}
+  {% assign pdf_label = 'Imprimer ou enregistrer en PDF' %}
+  {% assign pdf_short = 'Enregistrer en PDF' %}
+{% else %}
+  {% assign actions_aria = 'Document actions' %}
+  {% assign markdown_label = 'View the Markdown source file' %}
+  {% assign markdown_short = 'Markdown source' %}
+  {% assign pdf_label = 'Print or save as PDF' %}
+  {% assign pdf_short = 'Save as PDF' %}
+{% endif %}
+{% assign source_path = page.path | remove_first: '/' %}
+{% assign source_url = site.github.repository_url | append: '/blob/main/' | append: source_path %}
+<div class="document-actions" aria-label="{{ actions_aria }}">
+  <a class="document-action" href="{{ source_url }}" target="_blank" rel="noreferrer" aria-label="{{ markdown_label }}">
+    <span class="file-icon file-icon-md" aria-hidden="true">
+      <svg viewBox="0 0 64 72" role="img" focusable="false">
+        <path d="M9 3h31l15 15v51H9z"></path>
+        <path d="M40 3v15h15"></path>
+        <rect x="9" y="43" width="46" height="18" rx="2"></rect>
+        <text x="32" y="56">MD</text>
+      </svg>
+    </span>
+    <span class="document-action-label">{{ markdown_short }}</span>
+  </a>
+  <button class="document-action" type="button" onclick="window.print()" aria-label="{{ pdf_label }}">
+    <span class="file-icon file-icon-pdf" aria-hidden="true">
+      <svg viewBox="0 0 64 72" role="img" focusable="false">
+        <path d="M9 3h31l15 15v51H9z"></path>
+        <path d="M40 3v15h15"></path>
+        <rect x="9" y="43" width="46" height="18" rx="2"></rect>
+        <text x="32" y="56">PDF</text>
+      </svg>
+    </span>
+    <span class="document-action-label">{{ pdf_short }}</span>
+  </button>
+</div>
