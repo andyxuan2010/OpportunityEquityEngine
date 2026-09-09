@@ -23,6 +23,7 @@ Choisissez une collection pour découvrir la vision du projet, le parcours d’a
 | [Recherche et validation](docs/07-research-and-validation/RESEARCH_AND_VALIDATION.html) | Entretiens, sources, tests d’utilisabilité et décisions fondées |
 | [Boîte à outils](docs/08-student-toolkit/STUDENT_TOOLKIT.html) | Collaboration GitHub, accessibilité, confidentialité et dépannage |
 | [Présentation et réflexion](docs/09-showcase-and-reflection/SHOWCASE_AND_REFLECTION.html) | Démonstration, preuves, crédits et apprentissages |
+| [Ressources sur les opportunités](docs/10-opportunity-sources/Opportunity_Equity_Engine_600_Sources.html) | 600 sources de recherche, niveaux de vérification, champs structurés et règles de qualité |
 
 ## Plus d’opportunités. Un chemin plus clair.
 

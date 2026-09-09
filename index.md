@@ -83,6 +83,12 @@ Choose a collection to browse the initiative, student learning path, product des
     <span>Present the work, document evidence, credit contributors, and reflect on learning.</span>
     <b>Tell the story <span aria-hidden="true">↗</span></b>
   </a>
+  <a class="library-card library-card-orange" href="docs/10-opportunity-sources/Opportunity_Equity_Engine_600_Sources.html">
+    <span class="library-icon">◎</span>
+    <strong>Opportunity resources</strong>
+    <span>Explore 600 research sources, verification tiers, and structured data fields.</span>
+    <b>Explore the sources <span aria-hidden="true">↗</span></b>
+  </a>
 </div>
 
 ## More opportunities. A clearer path.

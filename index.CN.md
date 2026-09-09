@@ -23,6 +23,7 @@ translation_fr: /index.FR.md
 | [研究与验证](docs/07-research-and-validation/RESEARCH_AND_VALIDATION.html) | 学生访谈、来源核验、可用性测试和证据决策 |
 | [学生工具箱](docs/08-student-toolkit/STUDENT_TOOLKIT.html) | GitHub 协作、可访问性、隐私、安全和排障 |
 | [展示与反思](docs/09-showcase-and-reflection/SHOWCASE_AND_REFLECTION.html) | 展示成果、记录证据、致谢和学习反思 |
+| [机会资源](docs/10-opportunity-sources/Opportunity_Equity_Engine_600_Sources.html) | 600 个研究来源、核验层级、数据字段和质量规则 |
 
 ## 更多机会，更清晰的路径
 
