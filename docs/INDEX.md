@@ -90,4 +90,4 @@ docs/
 
 ## Current project status
 
-The repository currently contains the initiative charter, bilingual product plans, architecture, student guides, delivery plan, timeline, implementation guide, and visual demo deliverables. The next practical milestone is the vertical-slice application described in [DEMO_IMPLEMENTATION_GUIDE.md](05-build/DEMO_IMPLEMENTATION_GUIDE.html).
+The repository currently contains the initiative charter, bilingual product plans, architecture, student guides, delivery plan, research materials, the 600-source opportunity catalog, implementation guide, toolkit, and visual demo deliverables. The next practical milestone is the vertical-slice application described in [DEMO_IMPLEMENTATION_GUIDE.md](05-build/DEMO_IMPLEMENTATION_GUIDE.html).

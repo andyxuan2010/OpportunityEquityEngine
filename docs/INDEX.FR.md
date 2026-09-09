@@ -63,7 +63,7 @@ Chaque document doit avoir un objectif clair. Les nouveaux contenus doivent rest
 
 ## État actuel
 
-Le dépôt contient la charte, les plans bilingues, l’architecture, les guides pour élèves, le plan de réalisation, le calendrier, le guide d’implémentation et les supports de démonstration. La prochaine étape est de construire la tranche verticale décrite dans le [guide d’implémentation](05-build/DEMO_IMPLEMENTATION_GUIDE.html).
+Le dépôt contient la charte, les plans bilingues, l’architecture, les guides pour élèves, le plan de réalisation, les documents de recherche, le catalogue de 600 sources d’opportunités, la boîte à outils, le calendrier, le guide d’implémentation et les supports de démonstration. La prochaine étape est de construire la tranche verticale décrite dans le [guide d’implémentation](05-build/DEMO_IMPLEMENTATION_GUIDE.html).
 ## Référence complète synchronisée
 
 Le contenu anglais complet est inclus automatiquement ci-dessous, avec toutes les sections, exemples, liens, tableaux et ressources multimédias.
