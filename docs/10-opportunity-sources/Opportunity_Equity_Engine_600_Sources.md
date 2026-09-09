@@ -36,7 +36,7 @@ Annual programs frequently close and reopen. A closed 2026 page can still be a v
 ## Scholarships — 100 sources
 
 | # | Source / opportunity | Organization | Geography | Grade 11 relevance | Tier | Reference / event |
-|---:|---|---|---|---|:---:|---|
+|:---|---|---|---|---|:---:|---|
 | 1 | [McGill Entrance Scholarships](https://www.mcgill.ca/studentaid/scholarships-aid/future-undergrads/entrance-scholarships) | McGill University | Montreal, QC | Entering undergrad | A | One-year and Major Entrance Scholarships |
 | 2 | [McGill Major Entrance Scholarship application instructions](https://www.mcgill.ca/studentaid/scholarships-aid/future-undergrads/entrance-scholarships/application-instructions) | McGill University | Montreal, QC | Entering undergrad | A | Major entrance scholarship application |
 | 3 | [McGill Undergraduate Scholarships & Awards Calendar](https://www.mcgill.ca/studentawards/undergraduate-scholarships-and-awards) | McGill University | Montreal, QC | Entering/current undergrad | A | Official awards calendar |
@@ -141,7 +141,7 @@ Annual programs frequently close and reopen. A closed 2026 page can still be a v
 ## Competitions — 100 sources
 
 | # | Source / opportunity | Organization | Geography | Grade 11 relevance | Tier | Reference / event |
-|---:|---|---|---|---|:---:|---|
+|:---|---|---|---|---|:---:|---|
 | 1 | [CEMC Mathematics & Computing Contests](https://cemc.uwaterloo.ca/contests) | University of Waterloo CEMC | Canada / international | Grades 5–12 | A | Contest hub |
 | 2 | [Canadian Computing Competition](https://cemc.uwaterloo.ca/contests) | University of Waterloo CEMC | Canada / international | Grades 9–12 | A | CCC |
 | 3 | [Canadian Team Mathematics Contest](https://cemc.uwaterloo.ca/contests/ctmc) | University of Waterloo CEMC | Canada / international | Grades 9–12 | A | CTMC |
@@ -246,7 +246,7 @@ Annual programs frequently close and reopen. A closed 2026 page can still be a v
 ## Research Programs — 100 sources
 
 | # | Source / opportunity | Organization | Geography | Grade 11 relevance | Tier | Reference / event |
-|---:|---|---|---|---|:---:|---|
+|:---|---|---|---|---|:---:|---|
 | 1 | [National High School Big Data & AI Challenge](https://www.stemfellowship.org/hsbdc/2026-27) | STEM Fellowship | Canada | High school / CEGEP | A | Original research + conference/publication pathway |
 | 2 | [Research 101](https://joinresearch.ca/research-101) | Join Research Canada | Canada / online worldwide | High school | A | Free online research training |
 | 3 | [Join Research Canada](https://joinresearch.ca/) | Join Research Canada | Canada / online worldwide | High school | A | Research opportunities and symposium |
@@ -351,7 +351,7 @@ Annual programs frequently close and reopen. A closed 2026 page can still be a v
 ## Volunteering — 100 sources
 
 | # | Source / opportunity | Organization | Geography | Grade 11 relevance | Tier | Reference / event |
-|---:|---|---|---|---|:---:|---|
+|:---|---|---|---|---|:---:|---|
 | 1 | [Canada Service Corps](https://www.canada.ca/en/services/youth/canada-service-corps.html) | Government of Canada | Canada | Youth 12–30 | A | National service program |
 | 2 | [Canada Service Corps Service Placements](https://www.canada.ca/en/services/youth/canada-service-corps/services.html) | Government of Canada | Canada | Youth 12–30 | A | Volunteer placement database |
 | 3 | [Canada Service Corps Youth Volunteer](https://www.canada.ca/en/services/youth/canada-service-corps/youth-volunteer.html) | Government of Canada | Canada | Youth 12–30 | A | Placements and micro-grants |
@@ -456,7 +456,7 @@ Annual programs frequently close and reopen. A closed 2026 page can still be a v
 ## Summer Programs — 100 sources
 
 | # | Source / opportunity | Organization | Geography | Grade 11 relevance | Tier | Reference / event |
-|---:|---|---|---|---|:---:|---|
+|:---|---|---|---|---|:---:|---|
 | 1 | [McGill Summer Academy](https://www.mcgill.ca/summeracademy/) | McGill University | Montreal, QC | High school | A | Pre-university residential academic program |
 | 2 | [Concordia Summer Camps](https://www.concordia.ca/camps.html) | Concordia University | Montreal, QC | Ages up to 17 | A | Science, engineering, AI, fine arts |
 | 3 | [U of T Youth Summer Program](https://ysp.utoronto.ca/) | University of Toronto | Toronto, ON | Grades 10–12 | A | Law and Medicine YSP |
@@ -561,7 +561,7 @@ Annual programs frequently close and reopen. A closed 2026 page can still be a v
 ## University-Preparation Opportunities — 100 sources
 
 | # | Source / opportunity | Organization | Geography | Grade 11 relevance | Tier | Reference / event |
-|---:|---|---|---|---|:---:|---|
+|:---|---|---|---|---|:---:|---|
 | 1 | [McGill Open House](https://www.mcgill.ca/openhouse/) | McGill University | Montreal, QC | Prospective undergrads | A | 2026 Open House |
 | 2 | [McGill Undergraduate Admissions](https://www.mcgill.ca/undergraduate-admissions/) | McGill University | Montreal, QC | Prospective undergrads | B | Admissions hub |
 | 3 | [McGill Campus Tours](https://www.mcgill.ca/undergraduate-admissions/visit) | McGill University | Montreal, QC | Prospective students | B | Tours and visits |
