@@ -42,6 +42,6 @@ Le contenu anglais complet est inclus automatiquement ci-dessous, avec toutes le
 <summary>Ouvrir la référence anglaise complète</summary>
 
 {% capture canonical_source %}{% include_relative DEMO_IMPLEMENTATION_GUIDE.md %}{% endcapture %}
-{{ canonical_source | remove_first: '---' | remove_first: '---' }}
+{{ canonical_source | split: "\n" | slice: 7, 9999 | join: "\n" }}
 
 </details>

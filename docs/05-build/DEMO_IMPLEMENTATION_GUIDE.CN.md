@@ -46,6 +46,6 @@ translation_fr: /docs/05-build/DEMO_IMPLEMENTATION_GUIDE.FR.md
 <summary>打开完整英文参考</summary>
 
 {% capture canonical_source %}{% include_relative DEMO_IMPLEMENTATION_GUIDE.md %}{% endcapture %}
-{{ canonical_source | remove_first: '---' | remove_first: '---' }}
+{{ canonical_source | split: "\n" | slice: 7, 9999 | join: "\n" }}
 
 </details>

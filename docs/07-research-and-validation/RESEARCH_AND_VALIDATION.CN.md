@@ -57,6 +57,6 @@ translation_fr: /docs/07-research-and-validation/RESEARCH_AND_VALIDATION.FR.md
 <summary>打开完整英文参考</summary>
 
 {% capture canonical_source %}{% include_relative RESEARCH_AND_VALIDATION.md %}{% endcapture %}
-{{ canonical_source | remove_first: '---' | remove_first: '---' }}
+{{ canonical_source | split: "\n" | slice: 7, 9999 | join: "\n" }}
 
 </details>

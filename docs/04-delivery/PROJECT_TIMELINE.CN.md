@@ -38,6 +38,6 @@ translation_fr: /docs/04-delivery/PROJECT_TIMELINE.FR.md
 <summary>打开完整英文参考</summary>
 
 {% capture canonical_source %}{% include_relative PROJECT_TIMELINE.md %}{% endcapture %}
-{{ canonical_source | remove_first: '---' | remove_first: '---' }}
+{{ canonical_source | split: "\n" | slice: 7, 9999 | join: "\n" }}
 
 </details>
