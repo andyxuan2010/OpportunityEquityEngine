@@ -171,10 +171,6 @@ button { font: inherit; }
 .hero-orbit-three { width: 1080px; height: 1080px; right: -300px; bottom: -570px; border-color: rgba(157, 214, 255, .08); }
 
 .home-content { padding-top: 44px; }
-.home-content > h2:first-child { margin-top: 0; }
-.home-content > h2:first-child, .home-content > h2:first-child + p { display: inline-block; vertical-align: top; }
-.home-content > h2:first-child { width: 46%; }
-.home-content > h2:first-child + p { width: 45%; margin-top: 5px; }
 .library-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px; margin: 34px 0 68px; }
 .library-card { min-height: 270px; display: grid; grid-template-columns: 58px minmax(0, 1fr); grid-template-rows: auto 1fr auto; column-gap: 18px; padding: 30px; border: 1px solid var(--line); border-radius: 22px; background: var(--surface); box-shadow: 0 14px 34px rgba(31, 57, 88, .07); transition: transform .22s ease, border-color .22s ease, box-shadow .22s ease; }
 .library-card:hover, .library-card:focus-visible { transform: translateY(-7px); border-color: var(--blue-bright); box-shadow: 0 22px 46px rgba(31, 57, 88, .14); }
@@ -400,8 +396,6 @@ button { font: inherit; }
   .hero-description { font-size: 16px; }
   .hero-stamp { right: 8%; bottom: 9%; }
   .home-content { padding-top: 32px; }
-  .home-content > h2:first-child, .home-content > h2:first-child + p { display: block; width: auto; }
-  .home-content > h2:first-child + p { margin-top: 0; }
   .home-content > h2:nth-of-type(2) ~ h3 { display: block; width: auto; margin: 20px 0; }
   .library-grid { grid-template-columns: 1fr; gap: 15px; margin-bottom: 50px; }
   .library-card { min-height: 230px; padding: 24px; }
