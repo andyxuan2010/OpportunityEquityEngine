@@ -236,7 +236,3 @@ The repository contains the initiative charter, architecture, student guides, de
 ```text
 Profile → Verified sample data → Eligibility → Match score → Explanation
 ```
-
-## Live site
-
-This documentation is published at [andyxuan.ca/OpportunityEquityEngine](https://andyxuan.ca/OpportunityEquityEngine/).
