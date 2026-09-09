@@ -37,27 +37,38 @@ The goal is not to guarantee admission or replace an official eligibility decisi
 
 The project is currently in the planning and demo-design stage. The recommended first release is a focused MVP rather than a large nationwide platform.
 
+## Repository layout
+
+- `docs/01-initiative/`: purpose, audience, product vision, and bilingual project plans
+- `docs/02-architecture/`: end-to-end system architecture
+- `docs/03-student-guides/`: beginner, learning, and vibe-coding guidance
+- `docs/04-delivery/`: project management, roles, cost, risks, and timeline
+- `docs/05-build/`: step-by-step demo implementation
+- `docs/06-demo/`: visual deliverables, end-user journeys, and image assets
+- `docs/INDEX.md`: documentation index and recommended reading paths
+
 ## Documentation
 
 | Document | Purpose |
 |---|---|
-| [Initiative](initiative.md) | Purpose, users, problem, ultimate goal, principles, and impact |
-| [Architecture](architecture.md) | End-to-end system architecture and technical design |
-| [Beginner project guide](BEGINNER_PROJECT_GUIDE.md) | Zero-to-demo guide for students with no prior experience |
-| [Vibe coding for students](VIBE_CODING_FOR_STUDENTS.md) | How AI-assisted development lowers technical barriers while preserving creativity |
-| [Learning prerequisites](LEARNING_PREREQUISITES.md) | Knowledge to develop, technical gaps, and learning roadmap |
-| [Demo implementation guide](DEMO_IMPLEMENTATION_GUIDE.md) | Step-by-step sample implementation with code examples |
-| [Project management plan](PROJECT_MANAGEMENT_PLAN.md) | Proposal, tools, cost, roles, risks, and team process |
-| [Project timeline](PROJECT_TIMELINE.md) | Estimated 16-week delivery plan and milestones |
-| [Demo deliverables](DEMO_DELIVERABLES.md) | User journeys, implementation targets, and visual mockups |
-| [English project plan](Opportunity_Equity_Engine.md) | Detailed product and AI project plan |
-| [中文项目方案](Opportunity_Equity_Engine.CN.md) | Chinese version of the project plan |
+| [Documentation index](docs/INDEX.md) | Topic map and recommended reading paths |
+| [Initiative](docs/01-initiative/initiative.md) | Purpose, users, problem, ultimate goal, principles, and impact |
+| [Architecture](docs/02-architecture/architecture.md) | End-to-end system architecture and technical design |
+| [Beginner project guide](docs/03-student-guides/BEGINNER_PROJECT_GUIDE.md) | Zero-to-demo guide for students with no prior experience |
+| [Vibe coding for students](docs/03-student-guides/VIBE_CODING_FOR_STUDENTS.md) | How AI-assisted development lowers technical barriers while preserving creativity |
+| [Learning prerequisites](docs/03-student-guides/LEARNING_PREREQUISITES.md) | Knowledge to develop, technical gaps, and learning roadmap |
+| [Demo implementation guide](docs/05-build/DEMO_IMPLEMENTATION_GUIDE.md) | Step-by-step sample implementation with code examples |
+| [Project management plan](docs/04-delivery/PROJECT_MANAGEMENT_PLAN.md) | Proposal, tools, cost, roles, risks, and team process |
+| [Project timeline](docs/04-delivery/PROJECT_TIMELINE.md) | Estimated 16-week delivery plan and milestones |
+| [Demo deliverables](docs/06-demo/DEMO_DELIVERABLES.md) | User journeys, implementation targets, and visual mockups |
+| [English project plan](docs/01-initiative/Opportunity_Equity_Engine.md) | Detailed product and AI project plan |
+| [中文项目方案](docs/01-initiative/Opportunity_Equity_Engine.CN.md) | Chinese version of the project plan |
 
 ## Product preview
 
-![Opportunity Equity Engine student dashboard](demo-assets/01-student-dashboard.png)
+![Opportunity Equity Engine student dashboard](docs/06-demo/demo-assets/01-student-dashboard.png)
 
-See the complete [demo deliverables and visual product journey](DEMO_DELIVERABLES.md).
+See the complete [demo deliverables and visual product journey](docs/06-demo/DEMO_DELIVERABLES.md).
 
 ## Recommended technology direction
 
@@ -99,4 +110,4 @@ Visit the [GitHub Pages site](https://andyxuan.ca/OpportunityEquityEngine/) for 
 
 ## Repository status
 
-This repository currently contains the initiative, architecture, learning, management, implementation, timeline, and demo-design documentation. The next major milestone is implementing the small vertical-slice demo described in [DEMO_IMPLEMENTATION_GUIDE.md](DEMO_IMPLEMENTATION_GUIDE.md).
+This repository currently contains the initiative, architecture, learning, management, implementation, timeline, and demo-design documentation. The next major milestone is implementing the small vertical-slice demo described in [DEMO_IMPLEMENTATION_GUIDE.md](docs/05-build/DEMO_IMPLEMENTATION_GUIDE.md).
