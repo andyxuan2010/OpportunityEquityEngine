@@ -174,11 +174,19 @@ button { font: inherit; }
 .library-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px; margin: 34px 0 68px; }
 .library-card { min-height: 322px; display: grid; grid-template-columns: 58px minmax(0, 1fr); grid-template-rows: auto 1fr auto; column-gap: 18px; padding: 30px; border: 1px solid var(--line); border-radius: 22px; background: var(--surface); box-shadow: 0 14px 34px rgba(31, 57, 88, .07); transition: transform .22s ease, border-color .22s ease, box-shadow .22s ease; }
 .library-card:hover, .library-card:focus-visible { transform: translateY(-7px); border-color: var(--blue-bright); box-shadow: 0 22px 46px rgba(31, 57, 88, .14); }
-.library-icon { width: 58px; height: 58px; display: grid; grid-column: 1; grid-row: 1; place-items: center; margin: 0; border-radius: 17px; color: white; font-size: 29px; line-height: 1; box-shadow: 0 14px 25px rgba(22, 123, 211, .22); }
-.library-card-blue .library-icon { background: linear-gradient(145deg, #1595ea, #0875cd); }
-.library-card-purple .library-icon { background: linear-gradient(145deg, #8a65e2, #6c45c7); box-shadow: 0 14px 25px rgba(118, 82, 216, .22); }
-.library-card-teal .library-icon { background: linear-gradient(145deg, #199c89, #128173); box-shadow: 0 14px 25px rgba(20, 141, 128, .22); }
-.library-card-orange .library-icon { background: linear-gradient(145deg, #f08c48, #d86b32); box-shadow: 0 14px 25px rgba(216, 107, 50, .22); }
+.library-icon { width: 58px; height: 58px; display: grid; grid-column: 1; grid-row: 1; place-items: center; margin: 0; color: white; font-size: 29px; line-height: 1; }
+.library-icon-start { border-radius: 18px 31px 18px 31px; background: linear-gradient(145deg, #f08c48, #d86b32); box-shadow: 0 14px 25px rgba(216, 107, 50, .22); }
+.library-icon-initiative { clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%); background: linear-gradient(145deg, #1595ea, #0875cd); box-shadow: 0 14px 25px rgba(22, 123, 211, .22); }
+.library-icon-guides { border-radius: 50%; background: linear-gradient(145deg, #8a65e2, #6c45c7); box-shadow: 0 14px 25px rgba(118, 82, 216, .22); }
+.library-icon-architecture { border-radius: 7px 27px 7px 27px; background: linear-gradient(145deg, #199c89, #128173); box-shadow: 0 14px 25px rgba(20, 141, 128, .22); }
+.library-icon-delivery { clip-path: polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%); background: linear-gradient(145deg, #f0c04b, #d49b22); box-shadow: 0 14px 25px rgba(212, 155, 34, .22); }
+.library-icon-build { clip-path: polygon(15% 0, 85% 0, 100% 15%, 100% 85%, 85% 100%, 15% 100%, 0 85%, 0 15%); background: linear-gradient(145deg, #ed6398, #c93d72); box-shadow: 0 14px 25px rgba(201, 61, 114, .22); }
+.library-icon-demo { border-radius: 50% 50% 9px 50%; background: linear-gradient(145deg, #e86d61, #c74b4c); box-shadow: 0 14px 25px rgba(199, 75, 76, .22); }
+.library-icon-research { border-radius: 28px 8px 28px 8px; background: linear-gradient(145deg, #69b45f, #3e8f4b); box-shadow: 0 14px 25px rgba(62, 143, 75, .22); }
+.library-icon-toolkit { clip-path: polygon(0 0, 100% 0, 100% 77%, 77% 77%, 77% 100%, 0 100%); background: linear-gradient(145deg, #7568de, #5145b8); box-shadow: 0 14px 25px rgba(81, 69, 184, .22); }
+.library-icon-showcase { border-radius: 31px 31px 7px 7px; background: linear-gradient(145deg, #35b6d0, #168ba9); box-shadow: 0 14px 25px rgba(22, 139, 169, .22); }
+.library-icon-sources { border-radius: 7px 31px 31px 31px; background: linear-gradient(145deg, #d78459, #ad5b3d); box-shadow: 0 14px 25px rgba(173, 91, 61, .22); }
+.library-icon-live { border-radius: 9px 9px 31px 31px; background: linear-gradient(145deg, #70849e, #4c617d); box-shadow: 0 14px 25px rgba(76, 97, 125, .22); }
 .library-card strong { grid-column: 2; grid-row: 1; align-self: center; color: var(--ink); font-size: 24px; letter-spacing: -.045em; line-height: 1.1; }
 .library-card > span:not(.library-icon) { grid-column: 1 / -1; grid-row: 2; margin-top: 12px; color: var(--muted); font-size: 14px; line-height: 1.55; }
 .library-card b { grid-column: 1 / -1; grid-row: 3; display: flex; justify-content: space-between; align-items: center; gap: 8px; margin-top: auto; padding-top: 22px; color: var(--blue); font-size: 12px; }
