@@ -217,10 +217,10 @@ button { font: inherit; }
 .home-content > h2:nth-of-type(2) ~ h3 { display: inline-block; width: calc(50% - 14px); margin-right: 20px; padding: 26px; border: 1px solid var(--line); border-radius: 18px; background: var(--surface); box-shadow: 0 12px 32px rgba(31, 57, 88, .06); }
 .home-content > h2:nth-of-type(2) ~ h3:nth-of-type(even) { margin-right: 0; }
 
-.document-shell { padding-top: 54px; }
-.document-kicker { width: 100%; max-width: 1050px; margin: 0 auto 18px; color: var(--blue); font-size: 12px; font-weight: 850; letter-spacing: .17em; text-transform: uppercase; }
+.document-shell { display: flex; flex-direction: column; align-items: center; padding-top: 54px; }
+.document-kicker { width: min(100%, 1050px); margin: 0 0 18px; color: var(--blue); font-size: 12px; font-weight: 850; letter-spacing: .17em; text-transform: uppercase; }
 .kicker-dot { display: inline-block; width: 8px; height: 8px; margin-right: 8px; border-radius: 50%; background: var(--teal); box-shadow: 0 0 0 5px rgba(20, 141, 128, .12); }
-.document-content { width: 100%; max-width: 1050px; margin-inline: auto; padding: clamp(30px, 6vw, 78px); border: 1px solid var(--line); border-radius: 28px; background: var(--surface); box-shadow: var(--shadow); }
+.document-content { width: min(100%, 1050px); margin: 0; padding: clamp(30px, 6vw, 78px); border: 1px solid var(--line); border-radius: 28px; background: var(--surface); box-shadow: var(--shadow); }
 .document-content h1 { margin: 0 0 20px; color: var(--ink); font-size: clamp(42px, 6vw, 76px); letter-spacing: -.06em; line-height: 1; }
 .document-content h2 { margin: 48px 0 16px; color: var(--navy); font-size: clamp(27px, 3vw, 40px); letter-spacing: -.045em; line-height: 1.08; }
 .document-content h3 { margin-top: 32px; }
