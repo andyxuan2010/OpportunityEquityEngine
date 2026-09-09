@@ -89,6 +89,22 @@ button { font: inherit; }
 .brand-copy { display: flex; flex-direction: column; gap: 4px; }
 .brand-copy strong { color: #1b273d; font-size: 18px; line-height: 1; letter-spacing: -.035em; }
 .brand-copy small { color: #738197; font-size: 10px; font-weight: 800; letter-spacing: .12em; line-height: 1; }
+.theme-button {
+  min-width: 58px;
+  min-height: 42px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 0 12px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  color: var(--ink);
+  background: var(--surface);
+  cursor: pointer;
+}
+.theme-button:hover { border-color: var(--blue-bright); color: var(--blue); }
+
 .site-main { min-height: calc(100vh - 164px); padding: 8px 0 56px; }
 .project-hero {
   min-height: 0;
@@ -154,7 +170,7 @@ button { font: inherit; }
 .hero-orbit-two { width: 850px; height: 850px; right: -175px; bottom: -450px; border-color: rgba(157, 214, 255, .12); }
 .hero-orbit-three { width: 1080px; height: 1080px; right: -300px; bottom: -570px; border-color: rgba(157, 214, 255, .08); }
 
-.home-content { padding-top: 76px; }
+.home-content { padding-top: 44px; }
 .home-content > h2:first-child { margin-top: 0; }
 .home-content > h2:first-child, .home-content > h2:first-child + p { display: inline-block; vertical-align: top; }
 .home-content > h2:first-child { width: 46%; }
@@ -327,6 +343,7 @@ button { font: inherit; }
 [data-theme="dark"] .nav-primary a, [data-theme="dark"] .brand-copy strong { color: #e7effa; }
 [data-theme="dark"] .brand-copy small, [data-theme="dark"] .language-option { color: #95a9c5; }
 [data-theme="dark"] .language-option:hover, [data-theme="dark"] .language-option:focus-visible { color: #8ed4ff; background: var(--soft-blue); }
+[data-theme="dark"] .theme-button { border-color: var(--line); color: #e7effa; background: var(--surface); }
 [data-theme="dark"] .home-content h2, [data-theme="dark"] .document-content h1, [data-theme="dark"] .document-content h2, [data-theme="dark"] .home-content h3, [data-theme="dark"] .document-content h3, [data-theme="dark"] .document-content h4 { color: #e7effa; }
 [data-theme="dark"] .home-content > h2:nth-of-type(2) ~ h3 { border-color: var(--line); background: var(--surface); }
 [data-theme="dark"] .library-card { border-color: var(--line); background: var(--surface); }
@@ -357,12 +374,13 @@ button { font: inherit; }
   .brand-copy small { max-width: 180px; overflow: hidden; font-size: 7px; text-overflow: ellipsis; white-space: nowrap; }
   .nav-secondary { order: 3; }
   .language-option { min-width: 27px; padding: 0 3px; font-size: 9px; }
+  .theme-button { min-width: 42px; min-height: 38px; padding: 0 9px; }
   .site-main { padding-top: 6px; padding-bottom: 48px; }
   .project-hero { min-height: 0; border-radius: 20px; padding: 16px 18px; align-items: flex-start; }
   .project-hero h1 { font-size: clamp(40px, 10vw, 58px); white-space: normal; }
   .hero-description { font-size: 16px; }
   .hero-stamp { right: 8%; bottom: 9%; }
-  .home-content { padding-top: 50px; }
+  .home-content { padding-top: 32px; }
   .home-content > h2:first-child, .home-content > h2:first-child + p { display: block; width: auto; }
   .home-content > h2:first-child + p { margin-top: 0; }
   .home-content > h2:nth-of-type(2) ~ h3 { display: block; width: auto; margin: 20px 0; }
@@ -402,6 +420,7 @@ button { font: inherit; }
   .nav-secondary { gap: 4px; }
   .language-switcher { gap: 1px; }
   .language-option { min-width: 24px; min-height: 30px; padding: 0 2px; }
+  .theme-button { min-width: 36px; padding: 0 7px; }
 }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
 

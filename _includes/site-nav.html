@@ -38,6 +38,7 @@
         <a class="language-option{% if page.locale == 'fr' %} active{% endif %}" href="{{ language_fr | replace: '.md', '.html' | relative_url }}" lang="fr">FR</a>
         <a class="language-option{% if page.locale == 'zh' %} active{% endif %}" href="{{ language_zh | replace: '.md', '.html' | relative_url }}" lang="zh-CN">中文</a>
       </div>
+      <button class="theme-button" type="button" data-theme-toggle aria-label="Toggle color theme"><span aria-hidden="true">◐</span></button>
     </div>
   </div>
 </header>
