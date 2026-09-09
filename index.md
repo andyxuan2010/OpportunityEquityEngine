@@ -196,12 +196,16 @@ Use [docs/INDEX.md](docs/INDEX.html) as the central index. The documentation is 
 | [04 — Delivery](docs/04-delivery/PROJECT_MANAGEMENT_PLAN.html), [Project timeline](docs/04-delivery/PROJECT_TIMELINE.html) | Roles, tools, cost, risks, team process, and 16-week timeline |
 | [05 — Build](docs/05-build/DEMO_IMPLEMENTATION_GUIDE.html) | Step-by-step implementation, code examples, testing, and deployment |
 | [06 — Demo](docs/06-demo/DEMO_DELIVERABLES.html) | End-user screens, presentation flow, and visual product deliverables |
+| [07 — Research and validation](docs/07-research-and-validation/RESEARCH_AND_VALIDATION.html) | Student interviews, source verification, usability testing, and evidence-based decisions |
+| [08 — Student toolkit](docs/08-student-toolkit/STUDENT_TOOLKIT.html) | Collaboration, accessibility, privacy, safety, and troubleshooting |
+| [09 — Showcase and reflection](docs/09-showcase-and-reflection/SHOWCASE_AND_REFLECTION.html) | Presentation, portfolio evidence, credits, and learning reflection |
+| [10 — Opportunity sources](docs/10-opportunity-sources/Opportunity_Equity_Engine_600_Sources.html) | 600 research sources, verification tiers, ingestion fields, and data-quality rules |
 
 ## Recommended starting paths
 
 ### For a student who is new to technology
 
-[Beginner project guide](docs/03-student-guides/BEGINNER_PROJECT_GUIDE.html) → [Vibe coding guide](docs/03-student-guides/VIBE_CODING_FOR_STUDENTS.html) → [Demo implementation](docs/05-build/DEMO_IMPLEMENTATION_GUIDE.html)
+[Beginner project guide](docs/03-student-guides/BEGINNER_PROJECT_GUIDE.html) → [Quick app and website guide](docs/03-student-guides/QUICK_APP_AND_WEBSITE_BUILD_GUIDE.html) → [Vibe coding guide](docs/03-student-guides/VIBE_CODING_FOR_STUDENTS.html) → [Demo implementation](docs/05-build/DEMO_IMPLEMENTATION_GUIDE.html)
 
 ### For a team organizing the semester
 

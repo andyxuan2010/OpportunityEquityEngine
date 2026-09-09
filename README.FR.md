@@ -22,7 +22,7 @@ Le projet est actuellement au stade de la planification et de la conception de l
 
 Commencez par [l’accueil français](index.FR.md). Les versions anglaise, chinoise et française sont disponibles avec le sélecteur de langue en haut du site GitHub Pages.
 
-Les guides pour les élèves comprennent le [guide de projet pour débutants](docs/03-student-guides/BEGINNER_PROJECT_GUIDE.FR.md), le [guide Vibe Coding](docs/03-student-guides/VIBE_CODING_FOR_STUDENTS.FR.md), les [prérequis d’apprentissage](docs/03-student-guides/LEARNING_PREREQUISITES.FR.md) et le [guide de création rapide d’une application ou d’un site web](docs/03-student-guides/QUICK_APP_AND_WEBSITE_BUILD_GUIDE.FR.md).
+Les guides pour les élèves comprennent le [guide de projet pour débutants](docs/03-student-guides/BEGINNER_PROJECT_GUIDE.FR.md), le [guide Vibe Coding](docs/03-student-guides/VIBE_CODING_FOR_STUDENTS.FR.md), les [prérequis d’apprentissage](docs/03-student-guides/LEARNING_PREREQUISITES.FR.md) et le [guide de création rapide d’une application ou d’un site web](docs/03-student-guides/QUICK_APP_AND_WEBSITE_BUILD_GUIDE.FR.md). Le nouveau [catalogue de 600 sources d’opportunités](docs/10-opportunity-sources/Opportunity_Equity_Engine_600_Sources.FR.md) contient les sources de recherche, les niveaux de vérification, les champs et les règles de qualité.
 
 ## Principes de confiance
 

@@ -49,6 +49,7 @@ The project is currently in the planning and demo-design stage. The recommended 
 - `docs/07-research-and-validation/`: student research, consent, source verification, and usability testing
 - `docs/08-student-toolkit/`: GitHub collaboration, accessibility, privacy, safety, and troubleshooting
 - `docs/09-showcase-and-reflection/`: presentation, portfolio evidence, credits, and learning reflection
+- `docs/10-opportunity-sources/`: 600-source opportunity catalog, verification tiers, and data-quality rules
 - `docs/INDEX.md`: documentation index and recommended reading paths
 
 ## Documentation
@@ -68,6 +69,7 @@ The project is currently in the planning and demo-design stage. The recommended 
 | [Project timeline](docs/04-delivery/PROJECT_TIMELINE.md) | Estimated 16-week delivery plan and milestones |
 | [Demo deliverables](docs/06-demo/DEMO_DELIVERABLES.md) | User journeys, implementation targets, and visual mockups |
 | [Research and validation](docs/07-research-and-validation/RESEARCH_AND_VALIDATION.md) | Interviews, source verification, usability testing, and evidence |
+| [600-source opportunity catalog](docs/10-opportunity-sources/Opportunity_Equity_Engine_600_Sources.md) | Research sources, verification tiers, ingestion fields, and data-quality rules |
 | [Student toolkit](docs/08-student-toolkit/STUDENT_TOOLKIT.md) | Collaboration, accessibility, privacy, responsible AI, and troubleshooting |
 | [Showcase and reflection](docs/09-showcase-and-reflection/SHOWCASE_AND_REFLECTION.md) | Presentation, portfolio evidence, credits, and student reflection |
 | [English project plan](docs/01-initiative/Opportunity_Equity_Engine.md) | Detailed product and AI project plan |
@@ -119,4 +121,4 @@ Visit the [GitHub Pages site](https://andyxuan.ca/OpportunityEquityEngine/) for 
 
 ## Repository status
 
-This repository currently contains the initiative, architecture, learning, management, implementation, timeline, and demo-design documentation. The next major milestone is implementing the small vertical-slice demo described in [DEMO_IMPLEMENTATION_GUIDE.md](docs/05-build/DEMO_IMPLEMENTATION_GUIDE.md).
+This repository currently contains the initiative, architecture, learning, delivery, implementation, research, opportunity-source catalog, toolkit, timeline, showcase, and demo-design documentation. The next major milestone is implementing the small vertical-slice demo described in [DEMO_IMPLEMENTATION_GUIDE.md](docs/05-build/DEMO_IMPLEMENTATION_GUIDE.md).
