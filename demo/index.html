@@ -45,7 +45,7 @@
             <nav class="top-nav" aria-label="Top navigation"><a href="./">Home</a><button data-view="explore">Explore</button><button data-view="saved">Saved</button><button data-view="resources">Resources</button></nav>
             <span class="demo-pill"><span></span> Prototype mode</span>
             <button class="icon-button top-theme" data-action="toggle-theme" aria-label="Toggle appearance">◐</button>
-            <span class="top-avatar">AM</span>
+            <button class="top-avatar" data-view="auth" aria-label="Open account">AM</button>
           </div>
         </header>
 
@@ -128,6 +128,33 @@
           <div class="page-intro"><div><p class="eyebrow">CONTROLLED WORKFLOW</p><h1>Review before publishing.</h1><p class="lead">A small quality-control surface for checking extracted opportunity records.</p></div><span class="large-number orange-text" id="admin-large-number">03</span></div>
           <div class="admin-banner"><span>▣</span><div><strong>Admin-only prototype view</strong><p>In production, this screen would require authenticated reviewer access. Actions below update only this browser demo.</p></div></div>
           <div class="review-table" id="review-list"></div>
+        </section>
+
+        <section class="view" id="view-auth" data-label="Account">
+          <div class="auth-layout">
+            <section class="auth-story">
+              <p class="eyebrow">YOUR OPPORTUNITY EQUITY ENGINE</p>
+              <h1>Keep your path moving.</h1>
+              <p class="lead">Create one account to save opportunities, track next steps, and return to your matching profile from any device.</p>
+              <div class="auth-path" aria-hidden="true"><span>Discover</span><i>→</i><span>Understand</span><i>→</i><span>Act</span></div>
+              <div class="auth-trust"><span>✓</span><div><strong>Your choices stay yours</strong><p>We use account information to keep your opportunity workspace available. This demo never stores passwords.</p></div></div>
+            </section>
+            <section class="panel auth-card">
+              <div class="auth-tabs" role="tablist" aria-label="Account access"><button class="auth-tab active" data-auth-mode="login" role="tab" aria-selected="true">Log in</button><button class="auth-tab" data-auth-mode="register" role="tab" aria-selected="false">Create account</button></div>
+              <p class="eyebrow" id="auth-eyebrow">WELCOME BACK</p>
+              <h2 id="auth-title">Log in to your workspace</h2>
+              <p class="auth-copy" id="auth-copy">Use your email or a connected identity provider to continue.</p>
+              <form id="auth-form" class="auth-form">
+                <label id="auth-name-field" hidden>Full name<input name="name" autocomplete="name" placeholder="Alex Morgan"></label>
+                <label>Email address<input name="email" type="email" autocomplete="email" required placeholder="you@example.com"></label>
+                <label>Password<input name="password" type="password" autocomplete="current-password" required placeholder="••••••••"></label>
+                <button class="primary-button auth-submit" type="submit" id="auth-submit">Log in <span>→</span></button>
+              </form>
+              <div class="auth-divider"><span>or continue with</span></div>
+              <div class="provider-grid"><button type="button" class="provider-button" data-auth-provider="Google / Gmail"><span class="provider-g">G</span> Google / Gmail</button><button type="button" class="provider-button" data-auth-provider="Facebook"><span class="provider-f">f</span> Facebook</button><button type="button" class="provider-button" data-auth-provider="Microsoft"><span class="provider-m">▦</span> Microsoft</button></div>
+              <p class="auth-config-note">Federated sign-in is shown in prototype mode. Configure OAuth client IDs and callback URLs before enabling production access.</p>
+            </section>
+          </div>
         </section>
 
         <footer class="app-footer"><span>Opportunity Equity Engine · Student demo</span><span>Guidance, not a guarantee of acceptance.</span></footer>
