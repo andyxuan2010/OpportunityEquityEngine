@@ -18,10 +18,11 @@ Voici le point de départ pour la vision du projet, l’apprentissage, la recher
 1. [Commencer ici](00-start-here/START_HERE.html)
 2. [Initiative](01-initiative/initiative.html)
 3. [Guide de projet pour débutants](03-student-guides/BEGINNER_PROJECT_GUIDE.html)
-4. [Recherche et validation](07-research-and-validation/RESEARCH_AND_VALIDATION.html)
-5. [Boîte à outils](08-student-toolkit/STUDENT_TOOLKIT.html)
-6. [Guide d’implémentation](05-build/DEMO_IMPLEMENTATION_GUIDE.html)
-7. [Présentation et réflexion](09-showcase-and-reflection/SHOWCASE_AND_REFLECTION.html)
+4. [Guide pour créer rapidement une application ou un site web](03-student-guides/QUICK_APP_AND_WEBSITE_BUILD_GUIDE.html)
+5. [Recherche et validation](07-research-and-validation/RESEARCH_AND_VALIDATION.html)
+6. [Boîte à outils](08-student-toolkit/STUDENT_TOOLKIT.html)
+7. [Guide d’implémentation](05-build/DEMO_IMPLEMENTATION_GUIDE.html)
+8. [Présentation et réflexion](09-showcase-and-reflection/SHOWCASE_AND_REFLECTION.html)
 
 ### Pour organiser une équipe
 
@@ -46,7 +47,7 @@ Voici le point de départ pour la vision du projet, l’apprentissage, la recher
 | Initiative | [Initiative](01-initiative/initiative.html), [plan IA](01-initiative/Opportunity_Equity_Engine.html) | But, public, problème, portée et positionnement |
 | Démarrage | [Commencer ici](00-start-here/START_HERE.html) | Première heure, rôles, accord d’équipe et définition de terminé |
 | Architecture | [Architecture](02-architecture/architecture.html) | Composants, données, correspondance, recherche, sécurité et exploitation |
-| Apprentissage | [Guide débutant](03-student-guides/BEGINNER_PROJECT_GUIDE.html), [Vibe Coding](03-student-guides/VIBE_CODING_FOR_STUDENTS.html) | Démarrage, développement assisté par IA et parcours d’apprentissage |
+| Apprentissage | [Guide débutant](03-student-guides/BEGINNER_PROJECT_GUIDE.html), [Guide de création rapide](03-student-guides/QUICK_APP_AND_WEBSITE_BUILD_GUIDE.html), [Vibe Coding](03-student-guides/VIBE_CODING_FOR_STUDENTS.html) | Démarrage, prototypes rapides, développement assisté par IA et parcours d’apprentissage |
 | Recherche et validation | [Recherche et validation](07-research-and-validation/RESEARCH_AND_VALIDATION.html) | Entretiens, consentement, sources, tests d’utilisabilité et décisions fondées |
 | Réalisation | [Plan de gestion](04-delivery/PROJECT_MANAGEMENT_PLAN.html), [calendrier](04-delivery/PROJECT_TIMELINE.html) | Rôles, outils, coûts, risques et étapes |
 | Construction | [Guide d’implémentation](05-build/DEMO_IMPLEMENTATION_GUIDE.html) | Configuration, données, code, tests et déploiement |

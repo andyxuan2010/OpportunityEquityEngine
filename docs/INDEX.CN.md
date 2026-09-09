@@ -18,10 +18,11 @@ translation_fr: /docs/INDEX.FR.md
 1. [从这里开始](00-start-here/START_HERE.html)
 2. [项目愿景](01-initiative/initiative.html)
 3. [入门项目指南](03-student-guides/BEGINNER_PROJECT_GUIDE.html)
-4. [研究与验证](07-research-and-validation/RESEARCH_AND_VALIDATION.html)
-5. [学生工具箱](08-student-toolkit/STUDENT_TOOLKIT.html)
-6. [演示实现指南](05-build/DEMO_IMPLEMENTATION_GUIDE.html)
-7. [展示与反思](09-showcase-and-reflection/SHOWCASE_AND_REFLECTION.html)
+4. [快速构建应用和网站指南](03-student-guides/QUICK_APP_AND_WEBSITE_BUILD_GUIDE.html)
+5. [研究与验证](07-research-and-validation/RESEARCH_AND_VALIDATION.html)
+6. [学生工具箱](08-student-toolkit/STUDENT_TOOLKIT.html)
+7. [演示实现指南](05-build/DEMO_IMPLEMENTATION_GUIDE.html)
+8. [展示与反思](09-showcase-and-reflection/SHOWCASE_AND_REFLECTION.html)
 
 ### 规划学生团队
 
@@ -46,7 +47,7 @@ translation_fr: /docs/INDEX.FR.md
 | 项目愿景 | [项目愿景](01-initiative/initiative.html)、[项目方案](01-initiative/Opportunity_Equity_Engine.html) | 目的、用户、问题、范围和产品定位 |
 | 项目入门 | [从这里开始](00-start-here/START_HERE.html) | 第一个小时、角色、团队约定和完成标准 |
 | 架构 | [系统架构](02-architecture/architecture.html) | 组件、数据、匹配、搜索、安全和运行 |
-| 学生学习 | [入门指南](03-student-guides/BEGINNER_PROJECT_GUIDE.html)、[Vibe Coding](03-student-guides/VIBE_CODING_FOR_STUDENTS.html) | 从零开始、AI 辅助开发和学习路径 |
+| 学生学习 | [入门指南](03-student-guides/BEGINNER_PROJECT_GUIDE.html)、[快速构建应用和网站指南](03-student-guides/QUICK_APP_AND_WEBSITE_BUILD_GUIDE.html)、[Vibe Coding](03-student-guides/VIBE_CODING_FOR_STUDENTS.html) | 从零开始、快速原型、AI 辅助开发和学习路径 |
 | 研究与验证 | [研究与验证](07-research-and-validation/RESEARCH_AND_VALIDATION.html) | 访谈、同意、来源核验、可用性测试和证据决策 |
 | 项目交付 | [管理计划](04-delivery/PROJECT_MANAGEMENT_PLAN.html)、[时间线](04-delivery/PROJECT_TIMELINE.html) | 角色、工具、成本、风险和里程碑 |
 | 实现 | [演示实现指南](05-build/DEMO_IMPLEMENTATION_GUIDE.html) | 设置、数据模型、代码、测试和部署 |

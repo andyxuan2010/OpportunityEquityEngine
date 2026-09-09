@@ -18,10 +18,11 @@ This index is the starting point for the project's initiative, product design, s
 1. [Start here](00-start-here/START_HERE.html)
 2. [Initiative](01-initiative/initiative.html)
 3. [Beginner project guide](03-student-guides/BEGINNER_PROJECT_GUIDE.html)
-4. [Research and validation](07-research-and-validation/RESEARCH_AND_VALIDATION.html)
-5. [Student toolkit](08-student-toolkit/STUDENT_TOOLKIT.html)
-6. [Demo implementation guide](05-build/DEMO_IMPLEMENTATION_GUIDE.html)
-7. [Showcase and reflection](09-showcase-and-reflection/SHOWCASE_AND_REFLECTION.html)
+4. [Quick app and website build guide](03-student-guides/QUICK_APP_AND_WEBSITE_BUILD_GUIDE.html)
+5. [Research and validation](07-research-and-validation/RESEARCH_AND_VALIDATION.html)
+6. [Student toolkit](08-student-toolkit/STUDENT_TOOLKIT.html)
+7. [Demo implementation guide](05-build/DEMO_IMPLEMENTATION_GUIDE.html)
+8. [Showcase and reflection](09-showcase-and-reflection/SHOWCASE_AND_REFLECTION.html)
 
 ### Planning a student team
 
@@ -46,7 +47,7 @@ This index is the starting point for the project's initiative, product design, s
 | Initiative and product vision | [Initiative](01-initiative/initiative.html), [English plan](01-initiative/Opportunity_Equity_Engine.html), [中文方案](01-initiative/Opportunity_Equity_Engine.CN.html) | Purpose, audience, problem, ultimate goal, scope, and product positioning |
 | Starting the project | [Start here](00-start-here/START_HERE.html) | First-hour checklist, roles, working agreement, and definition of done |
 | Architecture | [Architecture](02-architecture/architecture.html) | End-to-end components, data model, matching, search, security, and operations |
-| Student learning | [Beginner guide](03-student-guides/BEGINNER_PROJECT_GUIDE.html), [Vibe coding](03-student-guides/VIBE_CODING_FOR_STUDENTS.html), [Prerequisites](03-student-guides/LEARNING_PREREQUISITES.html) | Starting from zero, AI-assisted development, knowledge gaps, and learning sequence |
+| Student learning | [Beginner guide](03-student-guides/BEGINNER_PROJECT_GUIDE.html), [Quick app and website build](03-student-guides/QUICK_APP_AND_WEBSITE_BUILD_GUIDE.html), [Vibe coding](03-student-guides/VIBE_CODING_FOR_STUDENTS.html), [Prerequisites](03-student-guides/LEARNING_PREREQUISITES.html) | Starting from zero, quick prototypes, AI-assisted development, knowledge gaps, and learning sequence |
 | Research and validation | [Research and validation](07-research-and-validation/RESEARCH_AND_VALIDATION.html) | Interviews, consent, source verification, usability testing, and evidence-based decisions |
 | Project delivery | [Management plan](04-delivery/PROJECT_MANAGEMENT_PLAN.html), [Timeline](04-delivery/PROJECT_TIMELINE.html) | Roles, tools, cost, risks, team process, milestones, and definition of done |
 | Implementation | [Demo implementation guide](05-build/DEMO_IMPLEMENTATION_GUIDE.html) | Beginner-friendly tasks, setup, schema, code examples, testing, and deployment |
