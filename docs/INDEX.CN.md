@@ -17,37 +17,37 @@ translation_fr: /docs/INDEX.FR.md
   <section class="index-path-group">
     <h3>技术新手</h3>
     <ol class="index-path-cards">
-      <li><a href="00-start-here/START_HERE.html"><span class="index-path-number">01</span><span>从这里开始</span></a></li>
-      <li><a href="01-initiative/initiative.html"><span class="index-path-number">02</span><span>项目愿景</span></a></li>
-      <li><a href="03-student-guides/BEGINNER_PROJECT_GUIDE.html"><span class="index-path-number">03</span><span>入门项目指南</span></a></li>
-      <li><a href="03-student-guides/QUICK_APP_AND_WEBSITE_BUILD_GUIDE.html"><span class="index-path-number">04</span><span>快速构建应用和网站指南</span></a></li>
-      <li><a href="07-research-and-validation/RESEARCH_AND_VALIDATION.html"><span class="index-path-number">05</span><span>研究与验证</span></a></li>
-      <li><a href="10-opportunity-sources/Opportunity_Equity_Engine_600_Sources.html"><span class="index-path-number">06</span><span>机会来源目录</span></a></li>
-      <li><a href="08-student-toolkit/STUDENT_TOOLKIT.html"><span class="index-path-number">07</span><span>学生工具箱</span></a></li>
-      <li><a href="05-build/DEMO_IMPLEMENTATION_GUIDE.html"><span class="index-path-number">08</span><span>演示实现指南</span></a></li>
-      <li><a href="09-showcase-and-reflection/SHOWCASE_AND_REFLECTION.html"><span class="index-path-number">09</span><span>展示与反思</span></a></li>
+      <li><a href="00-start-here/START_HERE.html"><span class="index-path-icon index-path-icon-orange" aria-hidden="true">↗</span><span class="index-path-number">01</span><span>从这里开始</span></a></li>
+      <li><a href="01-initiative/initiative.html"><span class="index-path-icon index-path-icon-blue" aria-hidden="true">◇</span><span class="index-path-number">02</span><span>项目愿景</span></a></li>
+      <li><a href="03-student-guides/BEGINNER_PROJECT_GUIDE.html"><span class="index-path-icon index-path-icon-purple" aria-hidden="true">▦</span><span class="index-path-number">03</span><span>入门项目指南</span></a></li>
+      <li><a href="03-student-guides/QUICK_APP_AND_WEBSITE_BUILD_GUIDE.html"><span class="index-path-icon index-path-icon-teal" aria-hidden="true">⌁</span><span class="index-path-number">04</span><span>快速构建应用和网站指南</span></a></li>
+      <li><a href="07-research-and-validation/RESEARCH_AND_VALIDATION.html"><span class="index-path-icon index-path-icon-gold" aria-hidden="true">⌕</span><span class="index-path-number">05</span><span>研究与验证</span></a></li>
+      <li><a href="10-opportunity-sources/Opportunity_Equity_Engine_600_Sources.html"><span class="index-path-icon index-path-icon-red" aria-hidden="true">◎</span><span class="index-path-number">06</span><span>机会来源目录</span></a></li>
+      <li><a href="08-student-toolkit/STUDENT_TOOLKIT.html"><span class="index-path-icon index-path-icon-green" aria-hidden="true">⚙</span><span class="index-path-number">07</span><span>学生工具箱</span></a></li>
+      <li><a href="05-build/DEMO_IMPLEMENTATION_GUIDE.html"><span class="index-path-icon index-path-icon-slate" aria-hidden="true">⌘</span><span class="index-path-number">08</span><span>演示实现指南</span></a></li>
+      <li><a href="09-showcase-and-reflection/SHOWCASE_AND_REFLECTION.html"><span class="index-path-icon index-path-icon-pink" aria-hidden="true">★</span><span class="index-path-number">09</span><span>展示与反思</span></a></li>
     </ol>
   </section>
 
   <section class="index-path-group">
     <h3>规划学生团队</h3>
     <ol class="index-path-cards">
-      <li><a href="00-start-here/START_HERE.html"><span class="index-path-number">01</span><span>从这里开始</span></a></li>
-      <li><a href="07-research-and-validation/RESEARCH_AND_VALIDATION.html"><span class="index-path-number">02</span><span>研究与验证</span></a></li>
-      <li><a href="04-delivery/PROJECT_MANAGEMENT_PLAN.html"><span class="index-path-number">03</span><span>项目管理计划</span></a></li>
-      <li><a href="08-student-toolkit/STUDENT_TOOLKIT.html"><span class="index-path-number">04</span><span>学生工具箱</span></a></li>
-      <li><a href="04-delivery/PROJECT_TIMELINE.html"><span class="index-path-number">05</span><span>项目时间线</span></a></li>
-      <li><a href="09-showcase-and-reflection/SHOWCASE_AND_REFLECTION.html"><span class="index-path-number">06</span><span>展示与反思</span></a></li>
+      <li><a href="00-start-here/START_HERE.html"><span class="index-path-icon index-path-icon-orange" aria-hidden="true">↗</span><span class="index-path-number">01</span><span>从这里开始</span></a></li>
+      <li><a href="07-research-and-validation/RESEARCH_AND_VALIDATION.html"><span class="index-path-icon index-path-icon-gold" aria-hidden="true">⌕</span><span class="index-path-number">02</span><span>研究与验证</span></a></li>
+      <li><a href="04-delivery/PROJECT_MANAGEMENT_PLAN.html"><span class="index-path-icon index-path-icon-purple" aria-hidden="true">◷</span><span class="index-path-number">03</span><span>项目管理计划</span></a></li>
+      <li><a href="08-student-toolkit/STUDENT_TOOLKIT.html"><span class="index-path-icon index-path-icon-green" aria-hidden="true">⚙</span><span class="index-path-number">04</span><span>学生工具箱</span></a></li>
+      <li><a href="04-delivery/PROJECT_TIMELINE.html"><span class="index-path-icon index-path-icon-blue" aria-hidden="true">↺</span><span class="index-path-number">05</span><span>项目时间线</span></a></li>
+      <li><a href="09-showcase-and-reflection/SHOWCASE_AND_REFLECTION.html"><span class="index-path-icon index-path-icon-pink" aria-hidden="true">★</span><span class="index-path-number">06</span><span>展示与反思</span></a></li>
     </ol>
   </section>
 
   <section class="index-path-group">
     <h3>理解技术系统</h3>
     <ol class="index-path-cards">
-      <li><a href="02-architecture/architecture.html"><span class="index-path-number">01</span><span>系统架构</span></a></li>
-      <li><a href="05-build/DEMO_IMPLEMENTATION_GUIDE.html"><span class="index-path-number">02</span><span>演示实现指南</span></a></li>
-      <li><a href="03-student-guides/LEARNING_PREREQUISITES.html"><span class="index-path-number">03</span><span>学习先修知识</span></a></li>
-      <li><a href="06-demo/DEMO_DELIVERABLES.html"><span class="index-path-number">04</span><span>演示交付物</span></a></li>
+      <li><a href="02-architecture/architecture.html"><span class="index-path-icon index-path-icon-teal" aria-hidden="true">⌁</span><span class="index-path-number">01</span><span>系统架构</span></a></li>
+      <li><a href="05-build/DEMO_IMPLEMENTATION_GUIDE.html"><span class="index-path-icon index-path-icon-slate" aria-hidden="true">⌘</span><span class="index-path-number">02</span><span>演示实现指南</span></a></li>
+      <li><a href="03-student-guides/LEARNING_PREREQUISITES.html"><span class="index-path-icon index-path-icon-orange" aria-hidden="true">✓</span><span class="index-path-number">03</span><span>学习先修知识</span></a></li>
+      <li><a href="06-demo/DEMO_DELIVERABLES.html"><span class="index-path-icon index-path-icon-blue" aria-hidden="true">▣</span><span class="index-path-number">04</span><span>演示交付物</span></a></li>
     </ol>
   </section>
 </div>
