@@ -26,19 +26,21 @@
           {% assign breadcrumb_library = 'Project' %}
           {% assign breadcrumb_project = 'Opportunity Equity Engine' %}
         {% endif %}
-        <nav class="document-breadcrumb" aria-label="{{ breadcrumb_aria }}">
-          <a href="https://andyxuan.ca/">{{ breadcrumb_library }}</a>
-          <span class="document-breadcrumb-separator" aria-hidden="true">/</span>
-          <a href="{{ '/' | relative_url }}">{{ breadcrumb_project }}</a>
-          <span class="document-breadcrumb-separator" aria-hidden="true">/</span>
-          <span class="document-breadcrumb-current" aria-current="page">{{ page.title }}</span>
-        </nav>
         <div class="document-reader">
           {% include document-toc.html %}
-          <article class="document-content">
-            {% include document-actions.html %}
-            {{ content }}
-          </article>
+          <div class="document-column">
+            <nav class="document-breadcrumb" aria-label="{{ breadcrumb_aria }}">
+              <a href="https://andyxuan.ca/">{{ breadcrumb_library }}</a>
+              <span class="document-breadcrumb-separator" aria-hidden="true">/</span>
+              <a href="{{ '/' | relative_url }}">{{ breadcrumb_project }}</a>
+              <span class="document-breadcrumb-separator" aria-hidden="true">/</span>
+              <span class="document-breadcrumb-current" aria-current="page">{{ page.title }}</span>
+            </nav>
+            <article class="document-content">
+              {% include document-actions.html %}
+              {{ content }}
+            </article>
+          </div>
         </div>
       </div>
     </main>
