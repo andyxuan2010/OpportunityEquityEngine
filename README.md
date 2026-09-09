@@ -42,7 +42,7 @@ The project is currently in the planning and demo-design stage. The recommended 
 - `docs/01-initiative/`: purpose, audience, product vision, and bilingual project plans
 - `docs/02-architecture/`: end-to-end system architecture
 - `docs/00-start-here/`: student orientation, first contribution, and working agreement
-- `docs/03-student-guides/`: beginner, learning, and vibe-coding guidance
+- `docs/03-student-guides/`: beginner, prerequisite, vibe-coding, and rapid app/website guidance
 - `docs/04-delivery/`: project management, roles, cost, risks, and timeline
 - `docs/05-build/`: step-by-step demo implementation
 - `docs/06-demo/`: visual deliverables, end-user journeys, and image assets
@@ -62,6 +62,7 @@ The project is currently in the planning and demo-design stage. The recommended 
 | [Beginner project guide](docs/03-student-guides/BEGINNER_PROJECT_GUIDE.md) | Zero-to-demo guide for students with no prior experience |
 | [Vibe coding for students](docs/03-student-guides/VIBE_CODING_FOR_STUDENTS.md) | How AI-assisted development lowers technical barriers while preserving creativity |
 | [Learning prerequisites](docs/03-student-guides/LEARNING_PREREQUISITES.md) | Knowledge to develop, technical gaps, and learning roadmap |
+| [Quick app and website build guide](docs/03-student-guides/QUICK_APP_AND_WEBSITE_BUILD_GUIDE.md) | Fast paths for responsive websites, PWAs, iPhone prototypes, and student testing |
 | [Demo implementation guide](docs/05-build/DEMO_IMPLEMENTATION_GUIDE.md) | Step-by-step sample implementation with code examples |
 | [Project management plan](docs/04-delivery/PROJECT_MANAGEMENT_PLAN.md) | Proposal, tools, cost, roles, risks, and team process |
 | [Project timeline](docs/04-delivery/PROJECT_TIMELINE.md) | Estimated 16-week delivery plan and milestones |

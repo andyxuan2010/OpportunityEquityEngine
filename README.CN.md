@@ -22,6 +22,8 @@
 
 完整的中文文档从 [中文项目首页](index.CN.md) 开始。英文、中文和法文版本可以通过 GitHub Pages 页面顶部的语言切换器选择。
 
+学生指南包括 [入门项目指南](docs/03-student-guides/BEGINNER_PROJECT_GUIDE.CN.md)、[Vibe Coding 指南](docs/03-student-guides/VIBE_CODING_FOR_STUDENTS.CN.md)、[学习先修知识](docs/03-student-guides/LEARNING_PREREQUISITES.CN.md) 和 [快速构建应用和网站指南](docs/03-student-guides/QUICK_APP_AND_WEBSITE_BUILD_GUIDE.CN.md)。
+
 ## 信任原则
 
 - 不编造截止日期、要求、费用或项目收益。
