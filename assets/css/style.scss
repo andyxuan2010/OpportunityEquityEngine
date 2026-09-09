@@ -223,6 +223,15 @@ button { font: inherit; }
 .home-content th, .document-content th { color: var(--navy); background: var(--soft-blue); font-size: 13px; }
 .home-content td, .home-content th, .document-content td, .document-content th { padding: 16px 18px; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; }
 .home-content tr:last-child td, .document-content tr:last-child td { border-bottom: 0; }
+.document-catalog table { table-layout: fixed; }
+.document-catalog th, .document-catalog td { overflow-wrap: anywhere; word-break: normal; }
+.document-catalog th:nth-child(1), .document-catalog td:nth-child(1) { width: 5%; }
+.document-catalog th:nth-child(2), .document-catalog td:nth-child(2) { width: 27%; }
+.document-catalog th:nth-child(3), .document-catalog td:nth-child(3) { width: 17%; }
+.document-catalog th:nth-child(4), .document-catalog td:nth-child(4) { width: 15%; }
+.document-catalog th:nth-child(5), .document-catalog td:nth-child(5) { width: 16%; }
+.document-catalog th:nth-child(6), .document-catalog td:nth-child(6) { width: 6%; }
+.document-catalog th:nth-child(7), .document-catalog td:nth-child(7) { width: 14%; }
 .home-content blockquote, .document-content blockquote { margin: 24px 0; padding: 18px 22px; border-left: 4px solid var(--blue-bright); border-radius: 0 15px 15px 0; color: var(--navy); background: var(--soft-blue); }
 .home-content img, .document-content img { display: block; width: auto; max-width: 100%; height: auto; margin: 28px auto; border: 1px solid var(--line); border-radius: 18px; box-shadow: var(--shadow); }
 .home-content pre, .document-content pre { overflow-x: auto; padding: 22px; border-radius: 16px; color: #dff2ff; background: #0b2544; box-shadow: var(--shadow); }
@@ -411,6 +420,7 @@ button { font: inherit; }
   .library-card-links { padding-top: 16px; }
   .library-card-links a { font-size: 11px; }
   .home-content table, .document-content table { display: block; overflow-x: auto; }
+  .document-catalog table { min-width: 760px; table-layout: auto; }
   .document-shell { padding-top: 32px; padding-bottom: 44px; }
   .document-toc { max-height: 220px; margin-bottom: 18px; padding: 10px 0 14px; }
   .document-toc-label { margin-bottom: 9px; }

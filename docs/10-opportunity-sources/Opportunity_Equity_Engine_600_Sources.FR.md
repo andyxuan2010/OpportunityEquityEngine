@@ -2,6 +2,7 @@
 layout: default
 title: Catalogue de 600 sources d’opportunités
 locale: fr
+catalog: true
 translation_en: /docs/10-opportunity-sources/Opportunity_Equity_Engine_600_Sources.md
 translation_zh: /docs/10-opportunity-sources/Opportunity_Equity_Engine_600_Sources.CN.md
 translation_fr: /docs/10-opportunity-sources/Opportunity_Equity_Engine_600_Sources.FR.md

@@ -36,7 +36,7 @@
               <span class="document-breadcrumb-separator" aria-hidden="true">/</span>
               <span class="document-breadcrumb-current" aria-current="page">{{ page.title }}</span>
             </nav>
-            <article class="document-content">
+            <article class="document-content{% if page.catalog %} document-catalog{% endif %}">
               {% include document-actions.html %}
               {{ content }}
             </article>
