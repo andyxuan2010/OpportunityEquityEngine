@@ -784,3 +784,26 @@ html[data-theme="dark"] .detail-section.highlight { border-color: rgba(98, 217, 
   .auth-story .lead { font-size: 14px; }
   .auth-path { margin-top: 32px; gap: 9px; font-size: 11px; }
 }
+
+/* Calm cloud palette: reduce surface separation while preserving readable hierarchy. */
+html[data-theme="light"] body {
+  --bg: #f7fafc;
+  --surface: #fbfdfe;
+  --surface-2: #f4f8fa;
+  --surface-3: #eef5f7;
+  --line: #e2ebef;
+  --shadow: 0 12px 28px rgba(42, 78, 113, .055);
+  background: linear-gradient(145deg, #fbfdfe, #f5fafb);
+}
+html[data-theme="light"] .app-shell { background: linear-gradient(145deg, #fbfdfe, #f3f9fa); }
+html[data-theme="light"] .topbar, html[data-theme="light"] .sidebar { background: rgba(251, 253, 254, .88); }
+html[data-theme="light"] .profile-mini, html[data-theme="light"] .opportunity-card, html[data-theme="light"] .panel, html[data-theme="light"] .result-card, html[data-theme="light"] .saved-card, html[data-theme="light"] .review-row, html[data-theme="light"] .resource-card, html[data-theme="light"] .auth-card, html[data-theme="light"] .onboarding-panel { border-color: #e2ebef; background: #f9fcfd; box-shadow: 0 10px 25px rgba(42, 78, 113, .045); }
+html[data-theme="light"] .profile-strip { border-color: #e2ebef; background: #f4fafb; box-shadow: 0 8px 20px rgba(42, 78, 113, .04); }
+html[data-theme="light"] .dashboard-search-panel, html[data-theme="light"] .mission-card, html[data-theme="light"] .journey-panel { border-color: #e0edef; background: #eff8f9; }
+html[data-theme="light"] .saved-summary { border-color: #e7e2f5; background: #f7f4fd; }
+html[data-theme="light"] .resource-hero, html[data-theme="light"] .auth-story { border-color: #e0edef; background: linear-gradient(110deg, #eff8f9, #f8fbfc); }
+html[data-theme="light"] .detail-facts span, html[data-theme="light"] .privacy-note { background: #f0f8f9; }
+html[data-theme="light"] .admin-banner { border-color: #eee4c8; background: #fcf8ed; }
+html[data-theme="light"] .modal-backdrop { background: rgba(36, 67, 86, .16); }
+html[data-theme="light"] .modal { border-color: #e2ebef; background: #f9fcfd; box-shadow: 0 22px 55px rgba(42, 78, 113, .12); }
+html[data-theme="light"] .result-fact, html[data-theme="light"] .profile-quote { border-color: #e5edef; }
