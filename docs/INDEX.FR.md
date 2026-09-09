@@ -13,33 +13,44 @@ Voici le point de départ pour la vision du projet, l’apprentissage, la recher
 
 ## Parcours recommandés
 
-### Pour débuter en technologie
+<div class="index-paths">
+  <section class="index-path-group">
+    <h3>Pour débuter en technologie</h3>
+    <ol class="index-path-cards">
+      <li><a href="00-start-here/START_HERE.html"><span class="index-path-number">01</span><span>Commencer ici</span></a></li>
+      <li><a href="01-initiative/initiative.html"><span class="index-path-number">02</span><span>Initiative</span></a></li>
+      <li><a href="03-student-guides/BEGINNER_PROJECT_GUIDE.html"><span class="index-path-number">03</span><span>Guide de projet pour débutants</span></a></li>
+      <li><a href="03-student-guides/QUICK_APP_AND_WEBSITE_BUILD_GUIDE.html"><span class="index-path-number">04</span><span>Guide pour créer rapidement une application ou un site web</span></a></li>
+      <li><a href="07-research-and-validation/RESEARCH_AND_VALIDATION.html"><span class="index-path-number">05</span><span>Recherche et validation</span></a></li>
+      <li><a href="10-opportunity-sources/Opportunity_Equity_Engine_600_Sources.html"><span class="index-path-number">06</span><span>Catalogue de sources d’opportunités</span></a></li>
+      <li><a href="08-student-toolkit/STUDENT_TOOLKIT.html"><span class="index-path-number">07</span><span>Boîte à outils</span></a></li>
+      <li><a href="05-build/DEMO_IMPLEMENTATION_GUIDE.html"><span class="index-path-number">08</span><span>Guide d’implémentation</span></a></li>
+      <li><a href="09-showcase-and-reflection/SHOWCASE_AND_REFLECTION.html"><span class="index-path-number">09</span><span>Présentation et réflexion</span></a></li>
+    </ol>
+  </section>
 
-1. [Commencer ici](00-start-here/START_HERE.html)
-2. [Initiative](01-initiative/initiative.html)
-3. [Guide de projet pour débutants](03-student-guides/BEGINNER_PROJECT_GUIDE.html)
-4. [Guide pour créer rapidement une application ou un site web](03-student-guides/QUICK_APP_AND_WEBSITE_BUILD_GUIDE.html)
-5. [Recherche et validation](07-research-and-validation/RESEARCH_AND_VALIDATION.html)
-6. [Catalogue de sources d’opportunités](10-opportunity-sources/Opportunity_Equity_Engine_600_Sources.html)
-7. [Boîte à outils](08-student-toolkit/STUDENT_TOOLKIT.html)
-8. [Guide d’implémentation](05-build/DEMO_IMPLEMENTATION_GUIDE.html)
-9. [Présentation et réflexion](09-showcase-and-reflection/SHOWCASE_AND_REFLECTION.html)
+  <section class="index-path-group">
+    <h3>Pour organiser une équipe</h3>
+    <ol class="index-path-cards">
+      <li><a href="00-start-here/START_HERE.html"><span class="index-path-number">01</span><span>Commencer ici</span></a></li>
+      <li><a href="07-research-and-validation/RESEARCH_AND_VALIDATION.html"><span class="index-path-number">02</span><span>Recherche et validation</span></a></li>
+      <li><a href="04-delivery/PROJECT_MANAGEMENT_PLAN.html"><span class="index-path-number">03</span><span>Plan de gestion</span></a></li>
+      <li><a href="08-student-toolkit/STUDENT_TOOLKIT.html"><span class="index-path-number">04</span><span>Boîte à outils</span></a></li>
+      <li><a href="04-delivery/PROJECT_TIMELINE.html"><span class="index-path-number">05</span><span>Calendrier du projet</span></a></li>
+      <li><a href="09-showcase-and-reflection/SHOWCASE_AND_REFLECTION.html"><span class="index-path-number">06</span><span>Présentation et réflexion</span></a></li>
+    </ol>
+  </section>
 
-### Pour organiser une équipe
-
-1. [Commencer ici](00-start-here/START_HERE.html)
-2. [Recherche et validation](07-research-and-validation/RESEARCH_AND_VALIDATION.html)
-3. [Plan de gestion](04-delivery/PROJECT_MANAGEMENT_PLAN.html)
-4. [Boîte à outils](08-student-toolkit/STUDENT_TOOLKIT.html)
-5. [Calendrier du projet](04-delivery/PROJECT_TIMELINE.html)
-6. [Présentation et réflexion](09-showcase-and-reflection/SHOWCASE_AND_REFLECTION.html)
-
-### Pour examiner le système
-
-1. [Architecture](02-architecture/architecture.html)
-2. [Guide d’implémentation](05-build/DEMO_IMPLEMENTATION_GUIDE.html)
-3. [Prérequis d’apprentissage](03-student-guides/LEARNING_PREREQUISITES.html)
-4. [Livrables de démonstration](06-demo/DEMO_DELIVERABLES.html)
+  <section class="index-path-group">
+    <h3>Pour examiner le système</h3>
+    <ol class="index-path-cards">
+      <li><a href="02-architecture/architecture.html"><span class="index-path-number">01</span><span>Architecture</span></a></li>
+      <li><a href="05-build/DEMO_IMPLEMENTATION_GUIDE.html"><span class="index-path-number">02</span><span>Guide d’implémentation</span></a></li>
+      <li><a href="03-student-guides/LEARNING_PREREQUISITES.html"><span class="index-path-number">03</span><span>Prérequis d’apprentissage</span></a></li>
+      <li><a href="06-demo/DEMO_DELIVERABLES.html"><span class="index-path-number">04</span><span>Livrables de démonstration</span></a></li>
+    </ol>
+  </section>
+</div>
 
 ## Index thématique
 

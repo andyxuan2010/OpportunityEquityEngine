@@ -13,33 +13,44 @@ This index is the starting point for the project's initiative, product design, s
 
 ## Recommended reading paths
 
-### New to the project
+<div class="index-paths">
+  <section class="index-path-group">
+    <h3>New to the project</h3>
+    <ol class="index-path-cards">
+      <li><a href="00-start-here/START_HERE.html"><span class="index-path-number">01</span><span>Start here</span></a></li>
+      <li><a href="01-initiative/initiative.html"><span class="index-path-number">02</span><span>Initiative</span></a></li>
+      <li><a href="03-student-guides/BEGINNER_PROJECT_GUIDE.html"><span class="index-path-number">03</span><span>Beginner project guide</span></a></li>
+      <li><a href="03-student-guides/QUICK_APP_AND_WEBSITE_BUILD_GUIDE.html"><span class="index-path-number">04</span><span>Quick app and website build guide</span></a></li>
+      <li><a href="07-research-and-validation/RESEARCH_AND_VALIDATION.html"><span class="index-path-number">05</span><span>Research and validation</span></a></li>
+      <li><a href="10-opportunity-sources/Opportunity_Equity_Engine_600_Sources.html"><span class="index-path-number">06</span><span>Opportunity source catalog</span></a></li>
+      <li><a href="08-student-toolkit/STUDENT_TOOLKIT.html"><span class="index-path-number">07</span><span>Student toolkit</span></a></li>
+      <li><a href="05-build/DEMO_IMPLEMENTATION_GUIDE.html"><span class="index-path-number">08</span><span>Demo implementation guide</span></a></li>
+      <li><a href="09-showcase-and-reflection/SHOWCASE_AND_REFLECTION.html"><span class="index-path-number">09</span><span>Showcase and reflection</span></a></li>
+    </ol>
+  </section>
 
-1. [Start here](00-start-here/START_HERE.html)
-2. [Initiative](01-initiative/initiative.html)
-3. [Beginner project guide](03-student-guides/BEGINNER_PROJECT_GUIDE.html)
-4. [Quick app and website build guide](03-student-guides/QUICK_APP_AND_WEBSITE_BUILD_GUIDE.html)
-5. [Research and validation](07-research-and-validation/RESEARCH_AND_VALIDATION.html)
-6. [Opportunity source catalog](10-opportunity-sources/Opportunity_Equity_Engine_600_Sources.html)
-7. [Student toolkit](08-student-toolkit/STUDENT_TOOLKIT.html)
-8. [Demo implementation guide](05-build/DEMO_IMPLEMENTATION_GUIDE.html)
-9. [Showcase and reflection](09-showcase-and-reflection/SHOWCASE_AND_REFLECTION.html)
+  <section class="index-path-group">
+    <h3>Planning a student team</h3>
+    <ol class="index-path-cards">
+      <li><a href="00-start-here/START_HERE.html"><span class="index-path-number">01</span><span>Start here</span></a></li>
+      <li><a href="07-research-and-validation/RESEARCH_AND_VALIDATION.html"><span class="index-path-number">02</span><span>Research and validation</span></a></li>
+      <li><a href="04-delivery/PROJECT_MANAGEMENT_PLAN.html"><span class="index-path-number">03</span><span>Project management plan</span></a></li>
+      <li><a href="08-student-toolkit/STUDENT_TOOLKIT.html"><span class="index-path-number">04</span><span>Student toolkit</span></a></li>
+      <li><a href="04-delivery/PROJECT_TIMELINE.html"><span class="index-path-number">05</span><span>Project timeline</span></a></li>
+      <li><a href="09-showcase-and-reflection/SHOWCASE_AND_REFLECTION.html"><span class="index-path-number">06</span><span>Showcase and reflection</span></a></li>
+    </ol>
+  </section>
 
-### Planning a student team
-
-1. [Start here](00-start-here/START_HERE.html)
-2. [Research and validation](07-research-and-validation/RESEARCH_AND_VALIDATION.html)
-3. [Project management plan](04-delivery/PROJECT_MANAGEMENT_PLAN.html)
-4. [Student toolkit](08-student-toolkit/STUDENT_TOOLKIT.html)
-5. [Project timeline](04-delivery/PROJECT_TIMELINE.html)
-6. [Showcase and reflection](09-showcase-and-reflection/SHOWCASE_AND_REFLECTION.html)
-
-### Understanding the technical system
-
-1. [Architecture](02-architecture/architecture.html)
-2. [Demo implementation guide](05-build/DEMO_IMPLEMENTATION_GUIDE.html)
-3. [Learning prerequisites](03-student-guides/LEARNING_PREREQUISITES.html)
-4. [Demo deliverables](06-demo/DEMO_DELIVERABLES.html)
+  <section class="index-path-group">
+    <h3>Understanding the technical system</h3>
+    <ol class="index-path-cards">
+      <li><a href="02-architecture/architecture.html"><span class="index-path-number">01</span><span>Architecture</span></a></li>
+      <li><a href="05-build/DEMO_IMPLEMENTATION_GUIDE.html"><span class="index-path-number">02</span><span>Demo implementation guide</span></a></li>
+      <li><a href="03-student-guides/LEARNING_PREREQUISITES.html"><span class="index-path-number">03</span><span>Learning prerequisites</span></a></li>
+      <li><a href="06-demo/DEMO_DELIVERABLES.html"><span class="index-path-number">04</span><span>Demo deliverables</span></a></li>
+    </ol>
+  </section>
+</div>
 
 ## Topic index
 
