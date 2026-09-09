@@ -23,6 +23,10 @@ Les élèves ne devraient pas construire à partir de suppositions. La recherche
 
 Demandez la permission avant de prendre des notes ou d’enregistrer, expliquez le but et le caractère volontaire, puis posez des questions sur des comportements récents : « Montre-moi comment tu cherches un programme. » Évitez les données sensibles non nécessaires. Retirez les noms et détails identifiants. Ne promettez jamais une admission, un financement ou un résultat précis.
 
+## Une note de recherche pratique
+
+Notez la date, le type de participant (pas son nom), la question, le comportement observé, la citation ou la preuve, l’interprétation et la décision soutenue. Séparez ce qui a été observé de ce qui a été déduit.
+
 ## Vérifier les possibilités
 
 Pour chaque possibilité, conserver l’URL officielle, le titre, la date de vérification, le lieu, l’admissibilité, le coût, la date limite, la langue et une note de preuve. Si un détail est incertain, écrire « à vérifier » plutôt que deviner.
