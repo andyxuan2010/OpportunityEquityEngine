@@ -40,8 +40,8 @@
       <div class="language-switcher" aria-label="Choose language">
         <span class="language-label">{{ language_label }}</span>
         <a class="language-option{% if page.locale == nil or page.locale == 'en' %} active{% endif %}" href="{{ page.translation_en | default: page.url | relative_url }}" lang="en">EN</a>
-        <a class="language-option{% if page.locale == 'zh' %} active{% endif %}" href="{{ page.translation_zh | relative_url }}" lang="zh-CN">中文</a>
-        <a class="language-option{% if page.locale == 'fr' %} active{% endif %}" href="{{ page.translation_fr | relative_url }}" lang="fr">FR</a>
+        <a class="language-option{% if page.locale == 'fr' %} active{% endif %}" href="{{ page.translation_fr | default: page.url | relative_url }}" lang="fr">FR</a>
+        <a class="language-option{% if page.locale == 'zh' %} active{% endif %}" href="{{ page.translation_zh | default: page.url | relative_url }}" lang="zh-CN">中文</a>
       </div>
       <button class="theme-button" type="button" data-theme-toggle aria-label="Toggle color theme"><span aria-hidden="true">◐</span><span class="theme-button-label">Theme</span></button>
     </div>
