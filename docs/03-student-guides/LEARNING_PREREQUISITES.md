@@ -1,3 +1,8 @@
+---
+layout: default
+title: Learning Prerequisites
+---
+
 # Learning Prerequisites and Delivery Roadmap
 
 This document describes what a Grade 11 student should learn to deliver the Opportunity Equity Engine successfully. It is not necessary to master every topic before starting. The recommended approach is **vibe coding**: use AI tools to translate clear product requirements into working code, then inspect, test, debug, and improve that code. The student does not need to memorize a programming language before beginning.

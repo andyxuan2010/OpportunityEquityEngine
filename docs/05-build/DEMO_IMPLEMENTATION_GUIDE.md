@@ -1,3 +1,8 @@
+---
+layout: default
+title: Demo Implementation Guide
+---
+
 # Opportunity Equity Engine — Beginner Demo Implementation
 
 This guide shows how a small team of high school students can build a working demo from zero. It is intentionally small: the goal is to prove the complete user journey before adding advanced crawling, authentication, vector search, or a large AI system.

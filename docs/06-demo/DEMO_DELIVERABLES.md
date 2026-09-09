@@ -1,3 +1,8 @@
+---
+layout: default
+title: Demo Deliverables
+---
+
 # Opportunity Equity Engine — Demo Deliverables
 
 ## Purpose of this document

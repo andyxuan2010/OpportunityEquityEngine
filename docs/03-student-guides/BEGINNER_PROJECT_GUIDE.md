@@ -1,3 +1,8 @@
+---
+layout: default
+title: Beginner Project Guide
+---
+
 # Opportunity Equity Engine — Beginner Project Guide
 
 ## Welcome

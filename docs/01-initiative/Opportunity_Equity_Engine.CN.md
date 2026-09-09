@@ -1,3 +1,8 @@
+---
+layout: default
+title: 项目方案
+---
+
 # Opportunity Equity Engine：高中生 AI 项目方案
 
 ## 项目概述

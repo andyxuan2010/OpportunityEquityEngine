@@ -1,3 +1,8 @@
+---
+layout: default
+title: High-Level Architecture
+---
+
 # Opportunity Equity Engine — High-Level Architecture
 
 ## 1. System overview

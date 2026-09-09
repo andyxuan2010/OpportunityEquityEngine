@@ -1,13 +1,56 @@
-# Opportunity Equity Engine
+---
+layout: home
+title: Opportunity Equity Engine
+---
+
+## Explore the library
+
+Choose a collection to browse the initiative, student learning path, product design, or implementation material.
+
+<div class="library-grid">
+  <a class="library-card library-card-blue" href="docs/01-initiative/initiative.md">
+    <span class="library-icon">◇</span>
+    <strong>Initiative &amp; vision</strong>
+    <span>Purpose, audience, problem, and the long-term goal.</span>
+    <b>Explore initiative <span aria-hidden="true">↗</span></b>
+  </a>
+  <a class="library-card library-card-purple" href="docs/03-student-guides/BEGINNER_PROJECT_GUIDE.md">
+    <span class="library-icon">▦</span>
+    <strong>Student guides</strong>
+    <span>Beginner-friendly learning, vibe coding, and prerequisites.</span>
+    <b>Start learning <span aria-hidden="true">↗</span></b>
+  </a>
+  <a class="library-card library-card-teal" href="docs/02-architecture/architecture.md">
+    <span class="library-icon">⌁</span>
+    <strong>Architecture</strong>
+    <span>System design, matching rules, data, security, and operations.</span>
+    <b>Read architecture <span aria-hidden="true">↗</span></b>
+  </a>
+  <a class="library-card library-card-orange" href="docs/04-delivery/PROJECT_MANAGEMENT_PLAN.md">
+    <span class="library-icon">◷</span>
+    <strong>Delivery plan</strong>
+    <span>Roles, risks, tools, milestones, and the semester plan.</span>
+    <b>View delivery plan <span aria-hidden="true">↗</span></b>
+  </a>
+  <a class="library-card library-card-blue" href="docs/05-build/DEMO_IMPLEMENTATION_GUIDE.md">
+    <span class="library-icon">⌘</span>
+    <strong>Build guide</strong>
+    <span>A step-by-step path from sample data to a working vertical slice.</span>
+    <b>Start building <span aria-hidden="true">↗</span></b>
+  </a>
+  <a class="library-card library-card-purple" href="docs/06-demo/DEMO_DELIVERABLES.md">
+    <span class="library-icon">▣</span>
+    <strong>Demo deliverables</strong>
+    <span>End-user journeys, presentation flow, and visual product assets.</span>
+    <b>View the product <span aria-hidden="true">↗</span></b>
+  </a>
+</div>
 
 ## More opportunities. A clearer path.
 
 The Opportunity Equity Engine is a student-led initiative helping high school students discover, understand, and prioritize scholarships, competitions, research, volunteering, summer programs, and university-preparation opportunities.
 
 > From scattered information to a confident next step.
-
-| [Explore the initiative](docs/01-initiative/initiative.md) | [View the product journey](docs/06-demo/DEMO_DELIVERABLES.md) | [Start building](docs/03-student-guides/BEGINNER_PROJECT_GUIDE.md) |
-|---|---|---|
 
 ## At a glance
 

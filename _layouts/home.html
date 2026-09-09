@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="{{ site.description }}">
+    <meta name="theme-color" content="#0a2b50">
+    <title>{{ site.title }} · Documentation</title>
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+  </head>
+  <body class="home-page">
+    {% include site-nav.html %}
+    <main class="site-main">
+      <div class="content-shell">
+        <section class="project-hero" aria-labelledby="hero-title">
+          <div class="hero-orbit hero-orbit-one"></div>
+          <div class="hero-orbit hero-orbit-two"></div>
+          <div class="hero-orbit hero-orbit-three"></div>
+          <div class="hero-copy">
+            <p class="hero-eyebrow">Student-centered opportunity guidance</p>
+            <h1 id="hero-title">Opportunity Equity<br><span>Engine</span> documentation</h1>
+            <p class="hero-description">Practical product plans, student guides, architecture notes, and implementation materials for turning scattered opportunities into a clearer path.</p>
+          </div>
+          <div class="hero-stamp" aria-hidden="true">
+            <span>O</span>
+            <small>OEE / 2026</small>
+          </div>
+        </section>
+        <div class="home-content">
+          {{ content }}
+        </div>
+      </div>
+    </main>
+    <footer class="site-footer">
+      <div class="content-shell footer-inner">
+        <span>{{ site.title }}</span>
+        <a href="{{ site.github.repository_url }}">View repository <span aria-hidden="true">↗</span></a>
+      </div>
+    </footer>
+    {% include theme-toggle.html %}
+  </body>
+</html>

@@ -1,3 +1,8 @@
+---
+layout: default
+title: Project Management Plan
+---
+
 # Opportunity Equity Engine — Project Management Plan
 
 ## 1. Executive proposal

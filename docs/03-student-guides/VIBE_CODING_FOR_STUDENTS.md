@@ -1,3 +1,8 @@
+---
+layout: default
+title: Vibe Coding for Students
+---
+
 # Vibe Coding for High School Students
 
 ## You do not need to be afraid of coding

@@ -1,3 +1,8 @@
+---
+layout: default
+title: Documentation Index
+---
+
 # Opportunity Equity Engine — Documentation Index
 
 This index is the starting point for the project's initiative, product design, student learning, technical architecture, delivery planning, implementation, and demo materials.

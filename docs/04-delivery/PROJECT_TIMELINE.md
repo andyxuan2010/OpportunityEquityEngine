@@ -1,3 +1,8 @@
+---
+layout: default
+title: Project Timeline
+---
+
 # Opportunity Equity Engine — Estimated Project Timeline
 
 ## Planning assumptions

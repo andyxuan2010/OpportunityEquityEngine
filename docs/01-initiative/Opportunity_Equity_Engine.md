@@ -1,3 +1,8 @@
+---
+layout: default
+title: AI Project Plan
+---
+
 # Opportunity Equity Engine: AI Project Plan for High School Students
 
 ## Project Overview

@@ -1,0 +1,15 @@
+<script>
+  (() => {
+    const root = document.documentElement;
+    const saved = localStorage.getItem('oee-theme');
+    if (saved === 'dark') root.dataset.theme = 'dark';
+    const button = document.querySelector('[data-theme-toggle]');
+    if (!button) return;
+    button.addEventListener('click', () => {
+      const dark = root.dataset.theme !== 'dark';
+      root.dataset.theme = dark ? 'dark' : 'light';
+      localStorage.setItem('oee-theme', dark ? 'dark' : 'light');
+      button.setAttribute('aria-label', dark ? 'Use light theme' : 'Use dark theme');
+    });
+  })();
+</script>

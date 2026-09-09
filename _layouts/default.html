@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="{{ site.description }}">
+    <meta name="theme-color" content="#0a2b50">
+    <title>{{ page.title | default: site.title }} · {{ site.title }}</title>
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+  </head>
+  <body>
+    {% include site-nav.html %}
+    <main class="site-main">
+      <div class="content-shell document-shell">
+        <div class="document-kicker"><span class="kicker-dot"></span> Project documentation</div>
+        <article class="document-content">
+          {{ content }}
+        </article>
+      </div>
+    </main>
+    <footer class="site-footer">
+      <div class="content-shell footer-inner">
+        <span>{{ site.title }}</span>
+        <a href="{{ site.github.repository_url }}">View repository <span aria-hidden="true">↗</span></a>
+      </div>
+    </footer>
+    {% include theme-toggle.html %}
+  </body>
+</html>

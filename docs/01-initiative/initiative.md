@@ -1,3 +1,8 @@
+---
+layout: default
+title: Initiative
+---
+
 # Opportunity Equity Engine — Initiative
 
 ## 1. Initiative statement
