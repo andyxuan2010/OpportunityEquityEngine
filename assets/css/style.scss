@@ -238,9 +238,10 @@ button { font: inherit; }
 .document-kicker { width: min(100%, 1050px); margin: 0 0 18px; color: var(--blue); font-size: 12px; font-weight: 850; letter-spacing: .17em; text-transform: uppercase; }
 .kicker-dot { display: inline-block; width: 8px; height: 8px; margin-right: 8px; border-radius: 50%; background: var(--teal); box-shadow: 0 0 0 5px rgba(20, 141, 128, .12); }
 .document-reader { width: min(100%, 1220px); display: grid; grid-template-columns: 190px minmax(0, 1fr); gap: 24px; align-items: start; }
-.document-toc { position: sticky; top: 104px; max-height: calc(100vh - 128px); overflow-y: auto; padding: 16px 0; scrollbar-width: thin; }
+.document-toc { position: sticky; top: 104px; max-height: calc(100vh - 128px); overflow-y: auto; padding: 16px 0; scrollbar-width: none; -ms-overflow-style: none; }
+.document-toc::-webkit-scrollbar, .document-toc-nav::-webkit-scrollbar { display: none; width: 0; height: 0; }
 .document-toc-label { margin: 0 0 14px; color: var(--muted); font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace; font-size: 11px; font-weight: 850; letter-spacing: .28em; }
-.document-toc-nav { display: flex; flex-direction: column; gap: 2px; }
+.document-toc-nav { display: flex; flex-direction: column; gap: 2px; scrollbar-width: none; -ms-overflow-style: none; }
 .document-toc-link { display: block; padding: 9px 10px; border-left: 2px solid transparent; border-radius: 0 12px 12px 0; color: var(--muted); font-size: 13px; line-height: 1.35; text-decoration: none; transition: background-color .16s ease, border-color .16s ease, color .16s ease; }
 .document-toc-link:hover, .document-toc-link:focus-visible, .document-toc-link.is-active { border-left-color: var(--teal); background: var(--soft-blue); color: var(--teal); }
 .document-toc-link.is-active { font-weight: 750; }
@@ -250,11 +251,11 @@ button { font: inherit; }
   width: min(100%, 1050px);
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 8px;
   margin: 0 0 18px;
 }
 .document-action {
-  min-width: 92px;
+  min-width: 78px;
   display: inline-flex;
   flex-direction: column;
   align-items: center;
@@ -268,8 +269,8 @@ button { font: inherit; }
 }
 .document-action:hover, .document-action:focus-visible { color: var(--blue); }
 .file-icon {
-  width: 58px;
-  height: 58px;
+  width: 48px;
+  height: 48px;
   display: grid;
   place-items: center;
   border: 2px solid #dedbd2;
@@ -278,14 +279,14 @@ button { font: inherit; }
   transition: transform .2s ease, border-color .2s ease, box-shadow .2s ease;
 }
 .document-action:hover .file-icon, .document-action:focus-visible .file-icon { transform: translateY(-2px); border-color: currentColor; box-shadow: 0 8px 18px rgba(31, 57, 88, .12); }
-.file-icon svg { width: 31px; height: 36px; overflow: visible; }
+.file-icon svg { width: 25px; height: 29px; overflow: visible; }
 .file-icon path { fill: white; stroke: #1d2927; stroke-width: 3; stroke-linejoin: round; }
 .file-icon path + path { fill: none; }
 .file-icon rect { stroke: none; }
 .file-icon text { fill: white; font-family: Arial, sans-serif; font-size: 10px; font-weight: 800; text-anchor: middle; }
 .file-icon-md rect { fill: #13c7e5; }
 .file-icon-pdf rect { fill: #f2484b; }
-.document-action-label { color: currentColor; font-size: 11px; font-weight: 750; line-height: 1.2; white-space: nowrap; }
+.document-action-label { color: currentColor; font-size: 10px; font-weight: 750; line-height: 1.2; white-space: nowrap; }
 .document-content { width: 100%; position: relative; margin: 0; padding: clamp(30px, 6vw, 78px); border: 1px solid var(--line); border-radius: 28px; background: var(--surface); box-shadow: var(--shadow); }
 .document-content > .document-actions { position: absolute; top: clamp(30px, 6vw, 78px); right: clamp(30px, 6vw, 78px); width: auto; margin: 0; }
 .document-content > h1:first-of-type { padding-right: 220px; }
@@ -365,10 +366,10 @@ button { font: inherit; }
   .document-actions { gap: 8px; margin-bottom: 14px; }
   .document-content > .document-actions { position: static; width: 100%; margin-bottom: 20px; }
   .document-content > h1:first-of-type { padding-right: 0; }
-  .document-action { min-width: 82px; }
-  .file-icon { width: 50px; height: 50px; }
-  .file-icon svg { width: 27px; height: 32px; }
-  .document-action-label { font-size: 10px; }
+  .document-action { min-width: 70px; }
+  .file-icon { width: 44px; height: 44px; }
+  .file-icon svg { width: 23px; height: 27px; }
+  .document-action-label { font-size: 9px; }
   .document-content { padding: 28px 22px; border-radius: 20px; }
   .document-content p, .document-content li { font-size: 15px; }
   .footer-inner { min-height: 70px; }
