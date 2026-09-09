@@ -2,141 +2,146 @@
 
 ## More opportunities. A clearer path.
 
-The Opportunity Equity Engine helps high school students discover, understand, and prioritize opportunities that fit their interests, circumstances, and goals.
+The Opportunity Equity Engine is a student-led initiative helping high school students discover, understand, and prioritize scholarships, competitions, research, volunteering, summer programs, and university-preparation opportunities.
 
-<p>
-  <a href="docs/01-initiative/initiative.md">Read the initiative</a> ·
-  <a href="docs/06-demo/DEMO_DELIVERABLES.md">See the demo deliverables</a> ·
-  <a href="docs/03-student-guides/BEGINNER_PROJECT_GUIDE.md">Start the beginner guide</a>
-</p>
+> From scattered information to a confident next step.
 
-## The problem
+| [Explore the initiative](docs/01-initiative/initiative.md) | [View the product journey](docs/06-demo/DEMO_DELIVERABLES.md) | [Start building](docs/03-student-guides/BEGINNER_PROJECT_GUIDE.md) |
+|---|---|---|
 
-Students often face a wall of disconnected websites, PDFs, deadlines, scholarships, competitions, research programs, and volunteer opportunities. The difficult questions are:
+## At a glance
 
-- What exists?
-- What fits my grade and location?
-- What matches my interests?
-- What can I afford?
-- What should I do first?
+| | |
+|---|---|
+| **Audience** | High school students, initially in Montreal and Quebec |
+| **Challenge** | Opportunity information is scattered, difficult to compare, and easy to miss |
+| **Response** | Verified information, clear eligibility, relevant ranking, and actionable next steps |
+| **Approach** | Vibe coding + structured data + deterministic rules + grounded AI |
+| **Current stage** | Initiative, design, and demo-planning stage |
+| **North-star goal** | Every student deserves a path from curiosity to opportunity |
 
-The product turns this:
+## The opportunity gap
 
-![The problem: scattered information](docs/06-demo/demo-assets/02-problem-before-after.png)
+Students often face disconnected websites, PDFs, school announcements, deadlines, and application portals. The problem is not a lack of ambition; it is a lack of clear, timely, understandable access.
 
-into a clearer journey:
+The platform is designed to answer five simple questions:
 
-```text
-Discover → Understand → Prioritize → Act
-```
+1. What opportunities exist?
+2. Which ones fit my grade and location?
+3. Which ones connect to my interests?
+4. What can I afford?
+5. What should I do next?
 
-## The student experience
+![From scattered information to one clear path](docs/06-demo/demo-assets/02-problem-before-after.png)
 
-### 1. Create a simple profile
+## The product experience
 
-Students enter only what is needed for matching, such as grade, region, interests, language, budget, and availability.
+### 1. Start with a simple profile
+
+The student enters only the information needed for matching, such as grade, region, interests, language, budget, and availability.
 
 ![Student onboarding](docs/06-demo/demo-assets/03-student-onboarding.png)
 
-### 2. See personal recommendations
+### 2. Receive understandable recommendations
 
-The dashboard shows opportunities with match scores, deadlines, costs, and clear reasons.
+The dashboard presents ranked opportunities with match scores, deadlines, costs, and reasons grounded in the stored information.
 
 ![Student dashboard](docs/06-demo/demo-assets/01-student-dashboard.png)
 
-### 3. Explore more options
+### 3. Explore the wider opportunity space
 
-Students can search and filter opportunities by interests, grade, location, cost, category, and deadline.
+Search and filters let students explore beyond the first recommendations by category, location, cost, language, grade, and deadline.
 
-![Explore opportunities](docs/06-demo/demo-assets/07-explore-search.png)
+![Opportunity search and filters](docs/06-demo/demo-assets/07-explore-search.png)
 
-### 4. Understand one opportunity
+### 4. Understand before acting
 
-The detail page explains the match and provides source evidence, verification information, and the official application link.
+Each detail page shows eligibility information, source evidence, verification status, and the official application link.
 
 ![Opportunity detail](docs/06-demo/demo-assets/04-opportunity-detail.png)
 
-### 5. Save and plan the next step
+### 5. Save a next step
 
-Students can save opportunities, see upcoming deadlines, and organize a simple next action.
+Students can save opportunities and organize deadlines so discovery becomes action.
 
 ![Saved opportunities and deadlines](docs/06-demo/demo-assets/05-saved-deadlines.png)
 
-### 6. Use the experience on a phone
+## Trust by design
 
-The main journey should remain simple and readable on a mobile screen.
-
-![Mobile student experience](docs/06-demo/demo-assets/08-mobile-matches.png)
-
-## Trust behind the experience
-
-AI should help interpret unstructured webpages and PDFs, but it should not silently decide eligibility or publish unverified facts.
+AI is used where language understanding is helpful. Traditional code and human review are used where correctness matters.
 
 ```text
-Source information
-        ↓
+Permitted source information
+          ↓
 AI-assisted extraction
-        ↓
+          ↓
 Validation and human review
-        ↓
+          ↓
 Structured opportunity record
-        ↓
+          ↓
 Deterministic eligibility rules
-        ↓
+          ↓
 Transparent ranking and explanation
+          ↓
+Student chooses the next step
 ```
 
-Administrators need a review workflow to correct inaccurate or outdated information before it reaches students.
+The platform must never invent requirements, deadlines, costs, or acceptance outcomes. Match scores are guidance, not guarantees.
 
-![Admin review queue](docs/06-demo/demo-assets/06-admin-review.png)
+![Administrator review queue](docs/06-demo/demo-assets/06-admin-review.png)
+
+## Built by students, with creativity first
+
+The project is designed for high school students, including beginners. Vibe coding helps students cross programming-language and technical barriers by allowing them to:
+
+- Describe an idea in ordinary language.
+- Generate a small piece of working code.
+- Ask why it works.
+- Test it and learn from errors.
+- Improve the experience based on real user feedback.
+
+The AI is the technical building partner. Students remain the product owners, designers, researchers, testers, and decision-makers.
+
+## Documentation map
+
+Use [docs/INDEX.md](docs/INDEX.md) as the central index. The documentation is organized like a professional project repository:
+
+| Topic | Contents |
+|---|---|
+| [01 — Initiative](docs/01-initiative/initiative.md) | Purpose, audience, problem, goal, product vision, and bilingual plans |
+| [02 — Architecture](docs/02-architecture/architecture.md) | System components, data model, matching, search, security, and operations |
+| [03 — Student guides](docs/03-student-guides/BEGINNER_PROJECT_GUIDE.md) | Beginner path, vibe coding, prerequisites, and knowledge gaps |
+| [04 — Delivery](docs/04-delivery/PROJECT_MANAGEMENT_PLAN.md) | Roles, tools, cost, risks, team process, and 16-week timeline |
+| [05 — Build](docs/05-build/DEMO_IMPLEMENTATION_GUIDE.md) | Step-by-step implementation, code examples, testing, and deployment |
+| [06 — Demo](docs/06-demo/DEMO_DELIVERABLES.md) | End-user screens, presentation flow, and visual product deliverables |
+
+## Recommended starting paths
+
+### For a student who is new to technology
+
+[Beginner project guide](docs/03-student-guides/BEGINNER_PROJECT_GUIDE.md) → [Vibe coding guide](docs/03-student-guides/VIBE_CODING_FOR_STUDENTS.md) → [Demo implementation](docs/05-build/DEMO_IMPLEMENTATION_GUIDE.md)
+
+### For a team organizing the semester
+
+[Initiative](docs/01-initiative/initiative.md) → [Management plan](docs/04-delivery/PROJECT_MANAGEMENT_PLAN.md) → [Project timeline](docs/04-delivery/PROJECT_TIMELINE.md)
+
+### For a technical reviewer
+
+[Architecture](docs/02-architecture/architecture.md) → [Learning prerequisites](docs/03-student-guides/LEARNING_PREREQUISITES.md) → [Demo deliverables](docs/06-demo/DEMO_DELIVERABLES.md)
 
 ## The ultimate goal
 
-The goal is not to make students apply to everything. The goal is to help each student find a few relevant possibilities, understand them, and take a confident next step.
+The goal is not to make students apply to everything. The goal is to help each student find a few relevant possibilities, understand them, and act with greater confidence.
 
-![The intended impact](docs/06-demo/demo-assets/09-impact-outcome.png)
+![Every student deserves a path](docs/06-demo/demo-assets/09-impact-outcome.png)
 
-> Every student deserves a path from curiosity to opportunity.
+## Project status
 
-## Student-led and beginner-friendly
+The repository contains the initiative charter, architecture, student guides, delivery plan, implementation guide, timeline, and visual demo deliverables. The next milestone is a small vertical slice:
 
-This project is designed for a small high school team, including students with no prior experience in computer science, AI, cloud services, or app development.
-
-The team can use vibe coding to:
-
-- Turn ideas into prototypes quickly.
-- Ask AI to explain unfamiliar code.
-- Build interfaces and API endpoints.
-- Create tests and debug errors.
-- Explore creative product ideas.
-
-Students still own the important decisions: what problem to solve, who to help, what information is trustworthy, how to test the product, and how to improve it.
-
-## Documentation
-
-### Start here
-
-- [Initiative](docs/01-initiative/initiative.md) — purpose, audience, problem, and ultimate goal.
-- [Beginner project guide](docs/03-student-guides/BEGINNER_PROJECT_GUIDE.md) — start from zero experience.
-- [Vibe coding for students](docs/03-student-guides/VIBE_CODING_FOR_STUDENTS.md) — build confidently with AI assistance.
-
-### Plan and understand
-
-- [Architecture](docs/02-architecture/architecture.md) — how the complete system fits together.
-- [Learning prerequisites](docs/03-student-guides/LEARNING_PREREQUISITES.md) — what to learn and what not to fear.
-- [Project management plan](docs/04-delivery/PROJECT_MANAGEMENT_PLAN.md) — team, tools, cost, roles, and risks.
-- [Project timeline](docs/04-delivery/PROJECT_TIMELINE.md) — the estimated semester plan.
-
-### Build and demonstrate
-
-- [Demo implementation guide](docs/05-build/DEMO_IMPLEMENTATION_GUIDE.md) — step-by-step implementation.
-- [Demo deliverables](docs/06-demo/DEMO_DELIVERABLES.md) — final-product visuals and presentation flow.
-- [English project plan](docs/01-initiative/Opportunity_Equity_Engine.md)
-- [中文项目方案](docs/01-initiative/Opportunity_Equity_Engine.CN.md)
-
-## Current status
-
-The repository currently contains the project charter, architecture, learning guides, management plan, implementation guide, timeline, and visual demo deliverables. The next step is to build the small vertical slice described in the [implementation guide](docs/05-build/DEMO_IMPLEMENTATION_GUIDE.md).
+```text
+Profile → Verified sample data → Eligibility → Match score → Explanation
+```
 
 ## Live site
 

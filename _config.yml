@@ -1,0 +1,11 @@
+title: Opportunity Equity Engine
+description: A student-led platform helping high school students discover, understand, and prioritize meaningful opportunities.
+url: https://andyxuan.ca
+baseurl: /OpportunityEquityEngine
+theme: jekyll-theme-cayman
+markdown: kramdown
+show_downloads: false
+
+github:
+  is_project_page: true
+  repository_url: https://github.com/andyxuan2010/OpportunityEquityEngine
