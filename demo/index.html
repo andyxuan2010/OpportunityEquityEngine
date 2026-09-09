@@ -92,8 +92,27 @@
         </section>
 
         <section class="view" id="view-profile" data-label="My profile">
-          <div class="page-intro"><div><p class="eyebrow">YOUR INPUTS</p><h1>Make the matching useful.</h1><p class="lead">We only use the details needed to find and explain opportunities. This demo stores them in your browser.</p></div><span class="large-number">04</span></div>
-          <div class="profile-layout"><section class="panel profile-form-panel"><div class="panel-heading"><div><p class="eyebrow">MATCHING PROFILE</p><h2>Your details</h2></div><span class="verified-label">Private on this device</span></div><form id="profile-form" class="profile-form"><label>Name<input name="name" required></label><div class="form-row"><label>Grade<select name="grade"><option value="9">Grade 9</option><option value="10">Grade 10</option><option value="11">Grade 11</option><option value="12">Grade 12</option></select></label><label>Location<select name="location"><option>Montreal</option><option>Quebec</option><option>Toronto</option><option>Online</option></select></label></div><fieldset><legend>Interests</legend><div class="interest-options" id="interest-options"></div></fieldset><label>Maximum budget<select name="budget"><option value="0">Free only</option><option value="300">Up to $300</option><option value="500">Up to $500</option><option value="1000">Up to $1,000</option></select></label><button class="primary-button" type="submit">Update recommendations <span>→</span></button><p class="form-note">No grades, immigration status, or financial details are needed for this prototype.</p></form></section><section class="panel how-panel"><span class="how-icon">◎</span><p class="eyebrow">HOW MATCHING WORKS</p><h2>Rules first. Explanation second.</h2><p>We filter obvious mismatches using grade, location, budget, and deadline rules. Then we score shared interests and explain the result using the stored fields.</p><div class="rule-list"><span><b>01</b>Eligibility</span><span><b>02</b>Interest fit</span><span><b>03</b>Next action</span></div></section></div>
+          <div class="onboarding-layout">
+            <section class="onboarding-story">
+              <p class="eyebrow">PERSONALIZED OPPORTUNITIES</p>
+              <h1>Let’s find <em>opportunities</em> for you.</h1>
+              <p class="lead">Tell us what you’re curious about. We’ll help you explore a clearer path with your interests, location, grade, and budget in mind.</p>
+              <div class="onboarding-illustration" aria-hidden="true"><div class="book book-blue">EXPLORE</div><div class="book book-teal">LEARN</div><div class="book book-yellow">CREATE CHANGE</div><span class="plant-leaf leaf-one"></span><span class="plant-leaf leaf-two"></span><span class="note-card">Same curiosity.<br><strong>A brighter tomorrow.</strong><br>♡</span></div>
+            </section>
+            <section class="panel onboarding-panel">
+              <div class="stepper" aria-label="Profile setup progress"><span class="current">1</span><i></i><span>2</span><i></i><span>3</span><i></i><span>4</span></div>
+              <p class="step-label">Step 1 of 4</p>
+              <form id="profile-form" class="profile-form onboarding-form">
+                <label>Name<input name="name" required></label>
+                <fieldset><legend>What are you interested in?</legend><div class="interest-options" id="interest-options"></div></fieldset>
+                <div class="form-row"><label>Where are you located?<select name="location"><option>Montreal</option><option>Quebec</option><option>Toronto</option><option>Online</option></select></label><label>What grade are you in?<select name="grade"><option value="9">Grade 9</option><option value="10">Grade 10</option><option value="11">Grade 11</option><option value="12">Grade 12</option></select></label></div>
+                <label>What is your maximum budget?<select name="budget"><option value="0">Free only</option><option value="300">Up to $300</option><option value="500">Up to $500</option><option value="1000">Up to $1,000</option></select></label>
+                <div class="privacy-note"><span>▣</span><div><strong>Your privacy matters</strong><p>We only use the information needed to match you with relevant opportunities.</p></div></div>
+                <button class="primary-button onboarding-submit" type="submit">See my opportunities <span>→</span></button>
+                <p class="form-note">Your profile stays in this browser for this demo.</p>
+              </form>
+            </section>
+          </div>
         </section>
 
         <section class="view" id="view-admin" data-label="Review queue">
