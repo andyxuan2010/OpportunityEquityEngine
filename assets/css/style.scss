@@ -14,7 +14,8 @@
   --soft-blue: #edf5fd;
   --teal: #148d80;
   --shadow: 0 18px 45px rgba(31, 57, 88, .10);
-  --max-width: 1536px;
+  // Match the shared container rhythm used by the sibling documentation sites.
+  --max-width: 1220px;
 }
 
 * { box-sizing: border-box; }
@@ -101,15 +102,15 @@ button { font: inherit; }
 .theme-button:hover { border-color: var(--blue-bright); color: var(--blue); }
 .theme-button-label { font-size: 11px; font-weight: 800; }
 
-.site-main { min-height: calc(100vh - 164px); padding: 16px 0 72px; }
+.site-main { min-height: calc(100vh - 164px); padding: 16px 0 64px; }
 .project-hero {
-  min-height: 560px;
+  min-height: 430px;
   position: relative;
   display: flex;
   align-items: center;
   overflow: hidden;
-  border-radius: 38px;
-  padding: clamp(48px, 6vw, 88px) clamp(42px, 7vw, 108px);
+  border-radius: 28px;
+  padding: clamp(28px, 4vw, 48px) clamp(24px, 4vw, 56px);
   color: white;
   background: linear-gradient(112deg, #071f3b 0%, #0b3768 47%, #1676c9 100%);
   box-shadow: 0 24px 50px rgba(22, 50, 84, .22);
@@ -121,7 +122,7 @@ button { font: inherit; }
   background: linear-gradient(90deg, rgba(4, 24, 48, .16), transparent 56%);
   pointer-events: none;
 }
-.hero-copy { max-width: 1200px; position: relative; z-index: 2; }
+.hero-copy { max-width: 1000px; position: relative; z-index: 2; }
 .hero-eyebrow {
   margin: 0 0 26px;
   color: #8ed4ff;
@@ -131,19 +132,20 @@ button { font: inherit; }
   text-transform: uppercase;
 }
 .project-hero h1 {
-  max-width: 1200px;
+  max-width: 1000px;
   margin: 0;
-  font-size: clamp(44px, 4.2vw, 78px);
-  font-weight: 760;
+  font-size: clamp(40px, 3.4vw, 64px);
+  font-weight: 740;
   letter-spacing: -.06em;
   line-height: .96;
+  white-space: nowrap;
 }
 .project-hero h1 span { color: #eaf7ff; }
 .hero-description {
-  max-width: 760px;
-  margin: 24px 0 0;
+  max-width: 660px;
+  margin: 18px 0 0;
   color: #d4e9fa;
-  font-size: clamp(16px, 1.2vw, 20px);
+  font-size: clamp(15px, 1vw, 18px);
   line-height: 1.6;
 }
 .hero-stamp {
@@ -266,8 +268,8 @@ button { font: inherit; }
   .theme-button { min-width: 42px; min-height: 38px; padding: 0 9px; }
   .theme-button-label { display: none; }
   .site-main { padding-top: 10px; padding-bottom: 48px; }
-  .project-hero { min-height: 500px; border-radius: 26px; padding: 42px 30px; align-items: flex-start; }
-  .project-hero h1 { font-size: clamp(44px, 13vw, 68px); }
+  .project-hero { min-height: 400px; border-radius: 24px; padding: 30px 24px; align-items: flex-start; }
+  .project-hero h1 { font-size: clamp(40px, 10vw, 58px); white-space: normal; }
   .hero-description { font-size: 16px; }
   .hero-stamp { right: 8%; bottom: 9%; }
   .home-content { padding-top: 50px; }
