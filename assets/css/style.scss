@@ -348,7 +348,7 @@ button { font: inherit; }
 .document-content > table,
 .document-content > details,
 .document-content > hr { width: min(var(--reading-width), 100%); margin-inline: auto; }
-.document-catalog { padding-inline: 30px; }
+.document-catalog { max-width: 100%; padding-inline: 30px; overflow-x: auto; }
 .document-catalog table { width: 100%; max-width: none; }
 .document-content > h1:first-of-type { padding-right: 110px; }
 .document-content h1 { margin: 0 0 16px; color: var(--ink); font-size: clamp(30px, 3.2vw, 46px); letter-spacing: -.055em; line-height: 1.02; }
