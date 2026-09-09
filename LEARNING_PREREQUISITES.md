@@ -1,6 +1,6 @@
 # Learning Prerequisites and Delivery Roadmap
 
-This document describes what a Grade 11 student should learn to deliver the Opportunity Equity Engine successfully. It is not necessary to master every topic before starting. The best approach is to learn the essentials, build a small vertical slice, and deepen knowledge as the product grows.
+This document describes what a Grade 11 student should learn to deliver the Opportunity Equity Engine successfully. It is not necessary to master every topic before starting. The recommended approach is **vibe coding**: use AI tools to translate clear product requirements into working code, then inspect, test, debug, and improve that code. The student does not need to memorize a programming language before beginning.
 
 ## 1. What “successfully deliver” means
 
@@ -17,12 +17,51 @@ For the first release, success means being able to:
 
 The target is a reliable MVP, not a production-scale platform used by millions of students.
 
-## 2. Recommended learning priority
+## 2. Vibe coding changes the prerequisite
+
+Vibe coding means developing through a tight collaboration loop with an AI coding assistant:
+
+```text
+Describe a small requirement
+          ↓
+Ask AI to propose or modify the code
+          ↓
+Review the files and the data flow
+          ↓
+Run the app and tests
+          ↓
+Use the errors and results to guide the next change
+```
+
+For this project, the student does **not** need to be an expert in Python, TypeScript, React, or SQL before starting. AI can generate boilerplate, explain unfamiliar syntax, create UI components, write queries, and help debug errors.
+
+However, vibe coding does not remove the need for technical understanding. The student remains responsible for deciding:
+
+- What the product should do.
+- Which data should be collected and why.
+- Whether an eligibility rule is correct.
+- Whether an AI-generated answer is supported by a source.
+- Whether code is secure, tested, and maintainable.
+- Whether the deployed application actually works.
+
+The most important coding skill is therefore **code literacy**, not language memorization: the ability to read a change, explain its purpose, run it, recognize a bad result, and ask the AI to correct it.
+
+### Vibe coding guardrails
+
+- Ask AI to change one small feature at a time.
+- Ask for an explanation of unfamiliar code before accepting it.
+- Review the full diff before committing.
+- Never paste API keys, passwords, or private student data into an AI tool.
+- Run tests after every meaningful change.
+- Ask AI to write tests for eligibility and ranking logic.
+- Treat generated code and generated opportunity data as untrusted until verified.
+
+## 3. Recommended learning priority
 
 | Priority | Area | Why it matters |
 |---|---|---|
-| Must learn | Python or TypeScript, Git, HTTP, SQL, debugging | Required to build and troubleshoot the application |
-| Must learn | React/Next.js and FastAPI or an equivalent backend | Required to connect the user interface to the data and matching logic |
+| Must learn | AI-assisted development, Git, HTTP, basic SQL, debugging | Required to direct and verify the application build |
+| Must learn | How a frontend, backend, database, and API connect | More important than mastering a specific framework |
 | Must learn | Relational data modeling and validation | Opportunity and eligibility data must be consistent and searchable |
 | Must learn | LLM API usage and structured JSON output | Required for extracting information from webpages and PDFs |
 | Must learn | Deployment, environment variables, and logs | A working local demo is not the same as a usable online product |
@@ -30,22 +69,22 @@ The target is a reliable MVP, not a production-scale platform used by millions o
 | Should learn | Authentication, authorization, privacy, and rate limiting | Student data must be protected |
 | Later | Queues, advanced MLOps, Kubernetes, model training, microservices | Useful at larger scale but unnecessary for the first MVP |
 
-## 3. Computer and software knowledge
+## 4. Computer and software knowledge
 
 ### Essential foundations
 
-The student should understand:
+The student should understand enough to direct and review AI-generated code:
 
 - Files, folders, paths, processes, and command-line basics.
 - How a web browser communicates with a server.
 - HTML, CSS, JavaScript, and JSON.
-- Variables, functions, conditionals, loops, arrays, objects, and modules.
+- Variables, functions, conditionals, loops, arrays, objects, and modules at a conceptual level.
 - Exceptions, logging, debugging, and reading error messages.
 - Basic object-oriented or data-oriented design.
 - Git commits, branches, pull requests, merge conflicts, and `.gitignore`.
 - How to read API documentation and test an endpoint.
 
-Python is a good choice for the backend and data pipeline. TypeScript is a good choice for the frontend. A student can start with one language, but should eventually be comfortable reading both if the recommended stack is used.
+Python is a good choice for the backend and data pipeline, while TypeScript is a good choice for the frontend. Either language can be generated and taught incrementally by an AI assistant. Start with the stack that produces the fastest working prototype; learn enough syntax to read, test, and modify the generated code. Switching languages or frameworks is not a prerequisite for success.
 
 ### Web application knowledge
 
@@ -84,7 +123,7 @@ Learn to write and run:
 
 The matching rules should be testable without calling an LLM.
 
-## 4. AI knowledge
+## 5. AI knowledge
 
 ### Essential AI concepts
 
@@ -165,7 +204,7 @@ Track:
 
 False eligible results are more serious than a recommendation that is merely less relevant.
 
-## 5. Cloud and infrastructure knowledge
+## 6. Cloud and infrastructure knowledge
 
 ### Essential deployment concepts
 
@@ -217,7 +256,7 @@ Set up:
 
 The team should be able to answer: “What failed, when did it fail, which users were affected, and how can we recover?”
 
-## 6. Data collection and content knowledge
+## 7. Data collection and content knowledge
 
 This project is partly a data-quality project. Technical skills alone are not enough.
 
@@ -233,7 +272,7 @@ The student should learn:
 
 Every published opportunity should have a source URL, verification date, and clear application link.
 
-## 7. Likely knowledge gaps
+## 8. Likely knowledge gaps
 
 ### Gap 1: Building a complete system
 
@@ -275,7 +314,7 @@ The team may try to cover every opportunity in Canada or build too many features
 
 **Response:** limit the first release to one region, a few categories, and approximately 400 verified opportunities.
 
-## 8. Technical barriers and notes
+## 9. Technical barriers and notes
 
 ### Web scraping is unreliable
 
@@ -325,7 +364,7 @@ French, English, and Chinese users may use different terminology and source mate
 
 **Note:** store source language, preserve original text, test search in each supported language, and have a human review important translated content.
 
-## 9. Suggested learn-while-building sequence
+## 10. Suggested learn-while-building sequence
 
 ### Phase 1: Foundations
 
@@ -369,7 +408,7 @@ French, English, and Chinese users may use different terminology and source mate
 - Record false matches, missing opportunities, and confusing explanations.
 - Improve data and rules before adding new features.
 
-## 10. Suggested team distribution
+## 11. Suggested team distribution
 
 For a four-person team:
 
@@ -382,7 +421,7 @@ For a four-person team:
 
 Everyone should understand the end-to-end flow well enough to debug a basic issue.
 
-## 11. Delivery checklist
+## 12. Delivery checklist
 
 Before calling the MVP complete, confirm that:
 
@@ -400,8 +439,8 @@ Before calling the MVP complete, confirm that:
 
 ## Final guidance
 
-The strongest learning strategy is to build a narrow, trustworthy product. A Grade 11 student does not need to become an expert in every area before beginning. The essential path is:
+The strongest learning strategy is to build a narrow, trustworthy product. A Grade 11 student does not need to become an expert in every area or memorize a particular programming language before beginning. With vibe coding, the essential path is:
 
-> Programming fundamentals → web and database basics → structured LLM use → deterministic matching → deployment and testing → data quality and evaluation.
+> Clear requirements → AI-assisted implementation → code literacy and debugging → structured LLM use → deterministic matching → deployment and testing → data quality and evaluation.
 
-The project becomes technically credible when the AI is useful, the rules are inspectable, the sources are verifiable, and the deployed system behaves reliably.
+The project becomes technically credible when the AI is useful, the rules are inspectable, the sources are verifiable, and the deployed system behaves reliably. The student's job is not to write every line manually; it is to make good technical decisions and verify every important result.
