@@ -1,0 +1,15 @@
+{% if page.locale == 'zh' %}
+  {% assign toc_label = '本页内容' %}
+  {% assign toc_aria = '本页导航' %}
+{% elsif page.locale == 'fr' %}
+  {% assign toc_label = 'SUR CETTE PAGE' %}
+  {% assign toc_aria = 'Navigation de la page' %}
+{% else %}
+  {% assign toc_label = 'ON THIS PAGE' %}
+  {% assign toc_aria = 'On this page' %}
+{% endif %}
+
+<aside class="document-toc" data-document-toc aria-label="{{ toc_aria }}">
+  <p class="document-toc-label">{{ toc_label }}</p>
+  <nav class="document-toc-nav" data-toc-list></nav>
+</aside>

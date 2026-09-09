@@ -7,6 +7,7 @@
     <meta name="theme-color" content="#0a2b50">
     <title>{{ page.title | default: site.title }} · {{ site.title }}</title>
     <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+    <script src="{{ '/assets/js/document-toc.js' | relative_url }}" defer></script>
   </head>
   <body>
     {% include site-nav.html %}
@@ -33,10 +34,13 @@
           <span class="document-breadcrumb-current" aria-current="page">{{ page.title }}</span>
         </nav>
         <div class="document-kicker"><span class="kicker-dot"></span>{% if page.locale == 'zh' %}项目文档{% elsif page.locale == 'fr' %}Documentation du projet{% else %}Project documentation{% endif %}</div>
-        <article class="document-content">
-          {% include document-actions.html %}
-          {{ content }}
-        </article>
+        <div class="document-reader">
+          {% include document-toc.html %}
+          <article class="document-content">
+            {% include document-actions.html %}
+            {{ content }}
+          </article>
+        </div>
       </div>
     </main>
     <footer class="site-footer">
