@@ -276,9 +276,9 @@ button { font: inherit; }
 .document-kicker { width: min(100%, 1050px); margin: 0 0 18px; color: var(--blue); font-size: 12px; font-weight: 850; letter-spacing: .17em; text-transform: uppercase; }
 .kicker-dot { display: inline-block; width: 8px; height: 8px; margin-right: 8px; border-radius: 50%; background: var(--teal); box-shadow: 0 0 0 5px rgba(20, 141, 128, .12); }
 .document-shell { width: min(1760px, calc(100% - 40px)); max-width: none; }
-.document-reader { width: 100%; display: grid; grid-template-columns: 60px minmax(0, 1fr) 200px; gap: 10px; align-items: start; }
+.document-reader { width: 100%; display: grid; grid-template-columns: 200px minmax(0, 1fr) 200px; gap: 10px; align-items: start; }
 .document-column { min-width: 0; }
-.document-toc { width: 60px; grid-column: 1; grid-row: 1; position: sticky; top: 104px; max-height: calc(100vh - 128px); overflow-y: auto; padding: 16px 0; scrollbar-width: none; -ms-overflow-style: none; }
+.document-toc { width: 200px; grid-column: 1; grid-row: 1; position: sticky; top: 104px; max-height: calc(100vh - 128px); overflow-y: auto; padding: 16px 0; scrollbar-width: none; -ms-overflow-style: none; }
 .document-toc::-webkit-scrollbar, .document-toc-nav::-webkit-scrollbar { display: none; width: 0; height: 0; }
 .document-toc-label { margin: 0 0 14px; color: var(--muted); font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace; font-size: 11px; font-weight: 850; letter-spacing: .28em; }
 .document-toc-nav { display: flex; flex-direction: column; gap: 2px; scrollbar-width: none; -ms-overflow-style: none; }
@@ -348,6 +348,7 @@ button { font: inherit; }
 .document-content > table,
 .document-content > details,
 .document-content > hr { width: min(var(--reading-width), 100%); margin-inline: auto; }
+.document-catalog { padding-inline: 20px; }
 .document-catalog table { width: 100%; max-width: none; }
 .document-content > h1:first-of-type { padding-right: 110px; }
 .document-content h1 { margin: 0 0 16px; color: var(--ink); font-size: clamp(30px, 3.2vw, 46px); letter-spacing: -.055em; line-height: 1.02; }
