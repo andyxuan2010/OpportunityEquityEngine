@@ -41,7 +41,7 @@ translation_fr: /docs/10-opportunity-sources/Opportunity_Equity_Engine_600_Sourc
 | 2 | [麦吉尔专业入学奖学金申请说明](https://www.mcgill.ca/studentaid/scholarships-aid/future-undergrads/entrance-scholarships/application-instructions) |麦吉尔大学 |魁北克省蒙特利尔 |进入本科 | A |专业入学奖学金申请|
 | 3 | [麦吉尔本科生奖学金和奖项日历](https://www.mcgill.ca/studentawards/undergraduate-scholarships-and-awards) |麦吉尔大学 |魁北克省蒙特利尔 |进入/当前本科生 | A |官方颁奖日历|
 | 4 | [麦吉尔入学助学金计划](https://www.mcgill.ca/studentaid/scholarships-aid/future-undergrads/need) |麦吉尔大学 |魁北克省蒙特利尔 |进入本科 | A |基于需求的入学助学金|
-| 5 | 【多伦多大学国家奖学金】(https://future.utoronto.ca/national-scholarships) |多伦多大学 |安大略省多伦多 |加拿大高中申请者| A |国家奖学金项目|
+| 5 | [多伦多大学国家奖学金](https://future.utoronto.ca/national-scholarships) |多伦多大学 |安大略省多伦多 |加拿大高中申请者| A |国家奖学金项目|
 | 6 | [多伦多大学奖学金 – 斯卡伯勒](https://utsc.utoronto.ca/admissions/scholarships) |多伦多大学士嘉堡分校 |安大略省多伦多 |进入本科 | A |自动和申请奖学金|
 | 7 | [多伦多大学密西沙加分校入学奖学金](https://www.utm.utoronto.ca/future-students/finances/entrance-scholarships) |多伦多大学密西沙加分校 |安大略省米西索加 |进入本科 | A |自动入场奖励|
 | 8 | [滑铁卢入学奖学金](https://uwaterloo.ca/future-students/financing/scholarships) |滑铁卢大学|安大略省滑铁卢 |进入本科 | A |校长奖、优异奖和教师奖|
@@ -133,9 +133,9 @@ translation_fr: /docs/10-opportunity-sources/Opportunity_Equity_Engine_600_Sourc
 | 94 |[加拿大工程师奖学金](https://engineerscanada.ca/awards-and-honours/scholarships) |加拿大工程师 |加拿大 |工科学生| B |工程奖学金|
 | 95 |[女性 STEM 奖学金来源](https://scwist.ca/) |加拿大科学技术女性协会|加拿大 | STEM 领域的女性 | B |奖学金和机会参考|
 | 96 |[BlackNorth 倡议教育机会](https://blacknorth.ca/) |黑北倡议|加拿大 |黑人青年/学生| B |教育资助机会|
-| 97 |【BBPA国家奖学金计划】(https://bbpa.org/national-scholarships/) |黑人商业和专业协会|加拿大 |黑人学生| B |国家奖学金|
-| 98 |【加拿大华人专业协会教育基金会】(https://cpac-canada.ca/) | CPAC基金会|加拿大 |符合资格的学生 | B |学生奖学金|
-| 99 |【加拿大华人专业人士联合会奖学金】(https://fccp.ca/) | FCCP |加拿大 |符合资格的学生 | B |奖学金参考|
+| 97 |[BBPA国家奖学金计划](https://bbpa.org/national-scholarships/) |黑人商业和专业协会|加拿大 |黑人学生| B |国家奖学金|
+| 98 |[加拿大华人专业协会教育基金会](https://cpac-canada.ca/) | CPAC基金会|加拿大 |符合资格的学生 | B |学生奖学金|
+| 99 |[加拿大华人专业人士联合会奖学金](https://fccp.ca/) | FCCP |加拿大 |符合资格的学生 | B |奖学金参考|
 | 100 |[魁北克视角奖学金信息](https://www.quebec.ca/en/education/student-financial-assistance) |魁北克政府|魁北克 |符合资格的专上课程 | B |省级学生资助|
 
 ## 竞赛 — 100 个来源
@@ -146,8 +146,8 @@ translation_fr: /docs/10-opportunity-sources/Opportunity_Equity_Engine_600_Sourc
 | 2 | [加拿大计算机竞赛](https://cemc.uwaterloo.ca/contests) |滑铁卢大学CEMC |加拿大/国际| 9–12 年级 | A | CCC |
 | 3 | [加拿大代表队数学竞赛](https://cemc.uwaterloo.ca/contests/ctmc) |滑铁卢大学CEMC |加拿大/国际| 9–12 年级 | A |中国纺织机械有限公司 |
 | 4 | [欧几里得竞赛](https://cemc.uwaterloo.ca/contests/euclid) |滑铁卢大学CEMC |加拿大/国际|高中| A |欧几里得|
-| 5 | 【加拿大高中数学竞赛】(https://cemc.uwaterloo.ca/contests) |滑铁卢大学CEMC |加拿大/国际| 11–12 年级 | A |华润上华 |
-| 6 | 【加拿大中级数学竞赛】(https://cemc.uwaterloo.ca/contests) |滑铁卢大学CEMC |加拿大/国际| 9-10 年级 | A |中集|
+| 5 | [加拿大高中数学竞赛](https://cemc.uwaterloo.ca/contests) |滑铁卢大学CEMC |加拿大/国际| 11–12 年级 | A |华润上华 |
+| 6 | [加拿大中级数学竞赛](https://cemc.uwaterloo.ca/contests) |滑铁卢大学CEMC |加拿大/国际| 9-10 年级 | A |中集|
 | 7 | [帕斯卡大赛](https://cemc.uwaterloo.ca/contests) |滑铁卢大学CEMC |加拿大/国际| 9 年级 | A |帕斯卡|
 | 8 | [凯利竞赛](https://cemc.uwaterloo.ca/contests) |滑铁卢大学CEMC |加拿大/国际| 10 年级 | A |凯利 |
 | 9 | [费马竞赛](https://cemc.uwaterloo.ca/contests) |滑铁卢大学CEMC |加拿大/国际| 11 年级 | A |费马|
@@ -159,9 +159,9 @@ translation_fr: /docs/10-opportunity-sources/Opportunity_Equity_Engine_600_Sourc
 | 15 |[加拿大数学公开挑战赛](https://cms.math.ca/competitions/comc/) |加拿大数学会|加拿大 |中学| B |通讯中心 |
 | 16 |[加拿大数学奥林匹克](https://cms.math.ca/competitions/cmo/) |加拿大数学会|加拿大 |顶尖中学数学学生 | B |奇美电子 |
 | 17 |[加拿大青少年数学奥林匹克](https://cms.math.ca/competitions/cjmo/) |加拿大数学会|加拿大 |低年级中学生 | B | CJMO |
-| 18 |【加拿大杰伊数学竞赛】(https://cms.math.ca/competitions/cjmc/) |加拿大数学会|加拿大 | 5-8 年级 | B | CJMC |
+| 18 |[加拿大杰伊数学竞赛](https://cms.math.ca/competitions/cjmc/) |加拿大数学会|加拿大 | 5-8 年级 | B | CJMC |
 | 19 |[加拿大人工智能奥林匹克](https://www.iaiocanada.com/participate/) |加拿大人工智能奥林匹克竞赛 |加拿大/国际预选赛| 9–12 年级 | A |全国预选赛及训练营|
-| 20 | 【全国高中大数据人工智能挑战赛】(https://www.stemfellowship.org/hsbdc/2026-27) | STEM 奖学金 |加拿大 |高中/CEGEP | A |人工智能/数据科学研究竞赛 |
+| 20 | [全国高中大数据人工智能挑战赛](https://www.stemfellowship.org/hsbdc/2026-27) | STEM 奖学金 |加拿大 |高中/CEGEP | A |人工智能/数据科学研究竞赛 |
 | 21 |[加拿大科学博览会](https://youthscience.ca/science-fairs/cwsf/) |加拿大青年科学 |加拿大 |中学/CEGEP | B |全国科学博览会|
 | 22 |[区域 STEM 博览会](https://youthscience.ca/science-fairs/regional-fairs/) |加拿大青年科学 |加拿大 |中学| B |区域资格途径|
 | 23 |[加拿大Regeneron ISEF团队](https://youthscience.ca/science-fairs/team-canada/events/regeneron-isef-2027/) |加拿大青年科学 |加拿大/美国决赛 |顶尖科学博览会决赛入围者 | A | ISEF 2027 途径 |
@@ -189,7 +189,7 @@ translation_fr: /docs/10-opportunity-sources/Opportunity_Equity_Engine_600_Sourc
 | 45 |[魁北克技能奥林匹克](https://www.competencesquebec.com/) |魁北克能力 |魁北克 |中学/职业| B |魁北克技能大赛|
 | 46 |[科技女孩](https://www.technovation.org/) |科技创新|国际 |符合资格的女孩/性别多元化青年| B | App/AI创业大赛 |
 | 47 |[钻石挑战](https://diamondchallenge.org/competition/) |特拉华大学霍恩创业|国际 |高中队| B |商业/社会创新|
-| 48 |【蓝海学生创业大赛】(https://blueoceancompetition.org/) |蓝海竞争|国际 |高中| B |创业路演赛 |
+| 48 |[蓝海学生创业大赛](https://blueoceancompetition.org/) |蓝海竞争|国际 |高中| B |创业路演赛 |
 | 49 |[康拉德挑战](https://www.conradchallenge.org/) |康拉德基金会|国际 | 13-18 岁 | B |创新大赛|
 | 50 |[突破少年挑战赛](https://breakthroughjuniorchallenge.org/) |突破奖基金会|国际 | 13-18 岁 | B |科学传播视频挑战|
 | 51 |[气候科学奥林匹克竞赛](https://climatescience.org/olympiad) |气候科学|国际 |青年| B |气候问题解决竞赛 |
@@ -208,14 +208,14 @@ translation_fr: /docs/10-opportunity-sources/Opportunity_Equity_Engine_600_Sourc
 | 64 |[麦吉尔中学联合国研讨会](https://ssuns.org/) | SSUNS / 麦吉尔 |魁北克省蒙特利尔 |高中| B |模拟联合国|
 | 65 |[哈佛模拟联合国](https://www.harvardmun.org/) |哈佛国际关系委员会|国际 |高中| B |模拟联合国|
 | 66 |[约翰洛克学院征文比赛](https://www.johnlockeinstitute.com/essay-competition) |约翰洛克研究所|国际 |中学| B |学术征文比赛|
-| 67 |【哈佛国际评论学术写作大赛】(https://hir.harvard.edu/contest/) |哈佛国际评论 |国际 |高中| B |学术写作 |
+| 67 |[哈佛国际评论学术写作大赛](https://hir.harvard.edu/contest/) |哈佛国际评论 |国际 |高中| B |学术写作 |
 | 68 |[女王英联邦征文比赛](https://www.royalcwsociety.org/essay-competition) |皇家英联邦协会 |英联邦 |学龄青年| B |征文比赛|
 | 69 |[Polar Expressions 出版大赛](https://www.polarexpressions.ca/) |极性表达式 |加拿大 |加拿大学生 | B |诗歌/短篇小说比赛 |
 | 70 |[CBC First Page 学生写作挑战赛](https://www.cbc.ca/books/literaryprizes) |加拿大广播公司 |加拿大 |学生 | C |写作比赛中心​​ |
 | 71 |[诗歌之声 / Les voix de la poésie](https://poetryinvoice.ca/) |诗歌之声|加拿大 |高中| B |诗歌朗诵比赛|
 | 72 |[加拿大计算机奥林匹克途径](https://cemc.uwaterloo.ca/contests/ccc) |滑铁卢大学CEMC |加拿大 |顶级 CCC 参与者 | B |高级计算途径|
 | 73 |[加拿大数学奥林匹克途径](https://cms.math.ca/competitions/) |加拿大数学会|加拿大 | COMC 顶级参与者 | B |奥林匹克途径|
-| 74 |【加拿大国际数学奥林匹克代表队】(https://cms.math.ca/competitions/imo/) |加拿大数学会|国际 |加拿大顶尖中学生 | B |加拿大队|
+| 74 |[加拿大国际数学奥林匹克代表队](https://cms.math.ca/competitions/imo/) |加拿大数学会|国际 |加拿大顶尖中学生 | B |加拿大队|
 | 75 |[国际信息学奥林匹克加拿大队](https://cemc.uwaterloo.ca/contests/ccc) |加拿大计算机奥林匹克竞赛|国际 |顶尖计算机学生| B | IOI途径|
 | 76 |[国际生物奥林匹克加拿大代表队](https://www.canadianbiologyolympiad.ca/) |加拿大生物奥林匹克竞赛|国际 |顶尖生物学生| B | IBO 途径 |
 | 77 |[国际化学奥林匹克加拿大队](https://www.cheminst.ca/) |加拿大化学研究所|国际 |顶尖化学学生| B | IChO 通路 |
@@ -223,7 +223,7 @@ translation_fr: /docs/10-opportunity-sources/Opportunity_Equity_Engine_600_Sourc
 | 79 |[加拿大国际地理奥林匹克](https://challenge.canadiangeographic.ca/) |加拿大地理|国际 |中学| B |地理途径|
 | 80 | [加拿大目的地想象](https://www.destinationimagination.org/) |目的地想象|加拿大/国际|学校团队| B |创造性地解决问题 |
 | 81 |[心灵奥德赛](https://www.odysseyofthemind.com/) |心灵的奥德赛|国际 |学校团队| B |创造性地解决问题 |
-| 82 |【未来城市大赛】(https://futurecity.org/) |发现E |国际 |中/次要依赖区域 | B |工程设计|
+| 82 |[未来城市大赛](https://futurecity.org/) |发现E |国际 |中/次要依赖区域 | B |工程设计|
 | 83 |[eCYBERMISSION](https://www.ecybermission.com/) | NSTA/美国陆军 |美国/在线| 6-9 年级 | B | STEM 挑战 |
 | 84 |[GLOBE 国际 STEM 网络挑战](https://www.globe.gov/) |全球计划|国际 |学校学生| B |环境科学挑战|
 | 85 |[世界学者杯](https://www.scholarscup.org/) |世界学者杯|国际 |中学| B |辩论/写作/测验 |
@@ -235,11 +235,11 @@ translation_fr: /docs/10-opportunity-sources/Opportunity_Equity_Engine_600_Sourc
 | 91 |[国际历史奥林匹克](https://www.historyolympiad.com/) |国际学术竞赛|国际 |中学| B |历史竞赛|
 | 92 |[领导者经济学/经济学竞赛中心](https://fte.org/) |经济学教学基础|国际 |高中| B |经济学项目和竞赛|
 | 93 |[高中联储挑战](https://www.federalreserveeducation.org/) |美联储|美国/选定的国际访问|高中| C |经济学竞赛参考|
-| 94 |【沃顿全球高中投资大赛】(https://globalyouth.wharton.upenn.edu/investment-competition/) |沃顿商学院全球青年项目|国际 |高中队| B |投资竞赛|
+| 94 |[沃顿全球高中投资大赛](https://globalyouth.wharton.upenn.edu/investment-competition/) |沃顿商学院全球青年项目|国际 |高中队| B |投资竞赛|
 | 95 |[Knowledge@Wharton 高中竞赛](https://globalyouth.wharton.upenn.edu/) |沃顿商学院全球青年 |国际 |高中| B |商业竞争中心|
 | 96 |[股市游戏](https://www.stockmarketgame.org/) | SIFMA 基金会 |美国/国际项目|学校团队| B |投资模拟 |
 | 97 |[科技创新挑战资源](https://www.technovation.org/) |科技创新|国际 |符合条件的青年队| B |人工智能/应用竞赛 |
-| 98 |【Google Code-中青年编码资源接班人】(https://developers.google.com/community) |谷歌开发者|国际 |学生 | C |开发者挑战发现|
+| 98 |[Google Code-中青年编码资源接班人](https://developers.google.com/community) |谷歌开发者|国际 |学生 | C |开发者挑战发现|
 | 99 |[Kaggle 竞赛](https://www.kaggle.com/competitions) |卡格尔 |国际 |高级高中生| C |数据科学竞赛 |
 | 100 |[Zindi 竞赛](https://zindi.africa/competitions) |辛迪 |国际 |高级高中生| C |人工智能/数据竞赛 |
 
@@ -247,7 +247,7 @@ translation_fr: /docs/10-opportunity-sources/Opportunity_Equity_Engine_600_Sourc
 
 | # |来源/机会|组织|地理 | 11年级相关性|等级 |参考/事件 |
 |:---:|---|---|---|---|:---:|---|
-| 1 | 【全国高中大数据人工智能挑战赛】(https://www.stemfellowship.org/hsbdc/2026-27) | STEM 奖学金 |加拿大 |高中/CEGEP | A |原创研究+会议/出版途径|
+| 1 | [全国高中大数据人工智能挑战赛](https://www.stemfellowship.org/hsbdc/2026-27) | STEM 奖学金 |加拿大 |高中/CEGEP | A |原创研究+会议/出版途径|
 | 2 | [研究 101](https://joinresearch.ca/research-101) |加入加拿大研究中心 |加拿大/全球在线|高中| A |免费在线研究培训|
 | 3 | [加入加拿大研究中心](https://joinresearch.ca/) |加入加拿大研究中心 |加拿大/全球在线|高中| A |研究机会和研讨会|
 | 4 | [INRS 学徒](https://inrs.ca/en/studies/student-life-services/student-commitment/apprentis-chercheurs-program/) |国家科学研究所|魁北克 |高中| A |为期一周的实验室实习|
@@ -306,9 +306,9 @@ translation_fr: /docs/10-opportunity-sources/Opportunity_Equity_Engine_600_Sourc
 | 57 |[加拿大/美国数学营](https://www.mathcamp.org/) |数学营 |国际 |高中| B |高等数学|
 | 58 |[西蒙斯暑期研究计划](https://www.stonybrook.edu/commcms/simons/) |石溪大学|美国的资格各不相同|高中| B |研究计划参考|
 | 59 |[洛克菲勒 SSRP](https://www.rockefeller.edu/outreach/ssrp/) |洛克菲勒大学|美国的资格各不相同|高中| B |生物医学研究|
-| 60 | 【纪念斯隆·凯特琳 HOPP 暑期学生项目】(https://www.mskcc.org/education-training/high-school-college/hopp-summer-student) |斯隆 |美国的资格各不相同|高中| B |生物医学研究|
+| 60 | [纪念斯隆·凯特琳 HOPP 暑期学生项目](https://www.mskcc.org/education-training/high-school-college/hopp-summer-student) |斯隆 |美国的资格各不相同|高中| B |生物医学研究|
 | 61 |[Wistar高中生物医学研究项目](https://www.wistar.org/education-training/high-school-program-biomedical-research/) |威斯塔研究所 |美国费城 |高中| A |生物医学研究实习 |
-| 62 |【NIH高中暑期实习计划】(https://www.training.nih.gov/research-training/hs/) |美国国立卫生研究院 |美国资格限制 |高中| B |生物医学研究|
+| 62 |[NIH高中暑期实习计划](https://www.training.nih.gov/research-training/hs/) |美国国立卫生研究院 |美国资格限制 |高中| B |生物医学研究|
 | 63 |[史密森科学教育中心实习/资源](https://ssec.si.edu/) |史密森尼 |美国/在线资源|高中| B |科研资源|
 | 64 |[NASA STEM Gateway 实习](https://stemgateway.nasa.gov/) |美国宇航局 |美国资格限制 |高中| B | STEM 研究/实习 |
 | 65 |[美国宇航局公民科学](https://science.nasa.gov/citizen-science/) |美国宇航局 |国际参与程度各异 |所有年龄段| B |公民科学研究|
@@ -368,7 +368,7 @@ translation_fr: /docs/10-opportunity-sources/Opportunity_Equity_Engine_600_Sourc
 | 14 |[Maisonneuve-Rosemont 医院志愿服务](https://ciusss-estmtl.gouv.qc.ca/) |蒙特利尔东岛 CIUSSS | CIUSSS魁北克省蒙特利尔 |变化 | B |医院志愿服务|
 | 15 |[CIUSSS 蒙特利尔中西区志愿服务](https://www.ciussscentreouest.ca/) | CIUSSS 中心-西部 |魁北克省蒙特利尔 |变化 | B |健康/社区志愿服务 |
 | 16 |[CIUSSS 南中心志愿服务](https://ciusss-centresudmtl.gouv.qc.ca/) |蒙特利尔南岛 CIUSSS 中心 |魁北克省蒙特利尔 |变化 | B |健康/社区志愿服务 |
-| 17 |【蒙特利尔总医院志愿服务】(https://muhc.ca/volunteer) | MUHC |魁北克省蒙特利尔 |变化 | B |医院志愿服务|
+| 17 |[蒙特利尔总医院志愿服务](https://muhc.ca/volunteer) | MUHC |魁北克省蒙特利尔 |变化 | B |医院志愿服务|
 | 18 |[英石。玛丽医院志愿者服务](https://www.smhc.qc.ca/) |圣玛丽医院中心 |魁北克省蒙特利尔 |变化 | B |医院志愿服务|
 | 19 |[加拿大圣地兄弟会儿童医院志愿服务](https://www.shrinerschildrens.org/en/locations/canada) |加拿大圣地兄弟会儿童医院 |魁北克省蒙特利尔 |变化 | B |儿科志愿服务 |
 | 20 | [加拿大红十字会志愿者](https://www.redcross.ca/volunteer) |加拿大红十字会|加拿大 |青少年/成人；角色依赖 | B |人道主义志愿服务|
@@ -413,7 +413,7 @@ translation_fr: /docs/10-opportunity-sources/Opportunity_Equity_Engine_600_Sourc
 | 59 |[加拿大公园管理局保护参与](https://parks.canada.ca/nature/science/conservation) |加拿大公园 |加拿大 |青少年/成人| B |保护参与|
 | 60 | [保护青年团](https://trca.ca/get-involved/conservation-youth-corps/) |多伦多及地区保护局 |安大略省 GTA |高中| A |志愿者时间+保护|
 | 61 |[环保青年团](https://www.kettlecreekconservation.on.ca/environmental-youth-corps/) |凯特尔溪保护局|安大略省 |高中| A |环保志愿者时间|
-| 62 |【海洋智慧青年出海】(https://ocean.org/learn-explore/youth/) |海洋智慧 |加拿大 |青年| B |海洋服务计划|
+| 62 |[海洋智慧青年出海](https://ocean.org/learn-explore/youth/) |海洋智慧 |加拿大 |青年| B |海洋服务计划|
 | 63 |[海洋桥](https://ocean.org/learn-explore/youth/) |海洋智慧 |加拿大 |高中生/年轻人| B |海洋领导力/服务|
 | 64 |[加拿大野生动物联合会青少年计划](https://cwf-fcf.org/en/explore/) |世界水力联合会 |加拿大 |青年| B |保护/服务计划|
 | 65 |[Ducks Unlimited 加拿大志愿服务](https://www.ducks.ca/get-involved/) |鸭子无限加拿大 |加拿大 |青少年/成人| B |湿地保护|
@@ -465,7 +465,7 @@ translation_fr: /docs/10-opportunity-sources/Opportunity_Equity_Engine_600_Sourc
 | 6 | [多伦多大学预科课程日期和费用](https://internationalprograms.utoronto.ca/international-summer-programs/pre-university-program/dates-fees/) |多伦多大学 |安大略省多伦多 |高中| A | 2027 年日期和费用 |
 | 7 | [多伦多大学高中强化课程](https://future.utoronto.ca/high-school-enrichment-programs) |多伦多大学 |安大略省多伦多 |高中| A |夏季/拓展中心 |
 | 8 | [多伦多大学深度暑期学院](https://outreach.engineering.utoronto.ca/pre-university-programs/deep-summer-academy/) |多伦多大学工程学院 |安大略省多伦多 | 9–12 年级 | B |工程/技术 |
-| 9 | 【科学无限夏令营】(https://summercamp.physics.utoronto.ca/) |多伦多大学 |安大略省多伦多 | 10–11 年级 | A |科学部门研讨会|
+| 9 | [科学无限夏令营](https://summercamp.physics.utoronto.ca/) |多伦多大学 |安大略省多伦多 | 10–11 年级 | A |科学部门研讨会|
 | 10 |[多伦多大学 AEMS 学院](https://solar.utoronto.ca/aems-academy/) |多伦多大学 |安大略省多伦多 |高中/本科 | A |高级 STEM 课程 |
 | 11 |[UTM学习学院](https://www.utm.utoronto.ca/language-studies/areas-of-study/education-studies/learning-academy-high-school-students) |多伦多大学密西沙加分校 |安大略省米西索加 |高中| A |大学预科课程 |
 | 12 |[滑铁卢高中强化计划](https://uwaterloo.ca/future-students/tours-events/high-school-enrichment-programs) |滑铁卢大学|安大略省滑铁卢 | 9–12 年级 | A |暑期项目中心|
@@ -474,7 +474,7 @@ translation_fr: /docs/10-opportunity-sources/Opportunity_Equity_Engine_600_Sourc
 | 15 |[滑铁卢 GeoX 夏令营](https://uwaterloo.ca/future-students/tours-events/high-school-enrichment-programs) |滑铁卢大学|安大略省滑铁卢 |进入 11-12 年级 | A |地球/环境 |
 | 16 |[青年学生量子学校](https://uwaterloo.ca/institute-for-quantum-computing/outreach) |量子计算研究所|安大略省滑铁卢 | 10–12 年级 | B |量子信息|
 | 17 |[滑铁卢解剖学 101](https://uwaterloo.ca/future-students/tours-events/high-school-enrichment-programs) |滑铁卢大学|安大略省滑铁卢 |完成 11-12 年级 | A |健康/运动学 |
-| 18 |【滑铁卢在线暑期解题课程】(https://cemc.uwaterloo.ca/) |滑铁卢大学CEMC |在线 |完成 11 年级数学 | B |数学|
+| 18 |[滑铁卢在线暑期解题课程](https://cemc.uwaterloo.ca/) |滑铁卢大学CEMC |在线 |完成 11 年级数学 | B |数学|
 | 19 |[SHAD 加拿大](https://www.shad.ca/) |加拿大鲥鱼 |加拿大主办大学 | 10–11 年级 | B | STEM/创业住宅 |
 | 20 | [UBC 高中生课程](https://extendedlearning.ubc.ca/courses-programs/programs-high-school-students) | UBC 延伸学习 |温哥华，不列颠哥伦比亚省 / 在线 | 13-18 岁 | A |节目中心|
 | 21 |[UBC 未来全球领袖校园](https://extendedlearning.ubc.ca/programs-high-school-students/ubc-future-global-leaders/on-campus) |英属哥伦比亚大学 |温哥华，不列颠哥伦比亚省 | 15-18 岁 | A |大学预科|
@@ -486,13 +486,13 @@ translation_fr: /docs/10-opportunity-sources/Opportunity_Equity_Engine_600_Sourc
 | 27 |[维多利亚大学科学创业](https://www.scienceventure.ca/) |维多利亚大学 |维多利亚，不列颠哥伦比亚省 |青年| B | STEM 营 |
 | 28 |[UNBC Active Minds 营](https://www.unbc.ca/active-minds) |北不列颠哥伦比亚大学 |乔治王子城，不列颠哥伦比亚省 |青年| B |学术营|
 | 29 |[TRU 科技营](https://www.tru.ca/science/camps.html) |汤普森河大学|不列颠哥伦比亚省坎卢普斯 |青年| B | STEM 营 |
-| 30 | 【温哥华岛大学暑期青少年项目】(https://services.viu.ca/campus-recreation/youth-camps) |温哥华岛大学|不列颠哥伦比亚省纳奈莫 |青年| B |夏令营 |
+| 30 | [温哥华岛大学暑期青少年项目](https://services.viu.ca/campus-recreation/youth-camps) |温哥华岛大学|不列颠哥伦比亚省纳奈莫 |青年| B |夏令营 |
 | 31 | [阿尔伯塔大学DiscoverE](https://www.ualberta.ca/en/engineering/community/discovere/index.html) |阿尔伯塔大学|艾伯塔省埃德蒙顿 |青年| B |工程/STEM 营 |
 | 32 |[WISEST 暑期研究计划](https://www.ualberta.ca/en/current-students/undergraduate-research-initiative/opportunities-for-high-school-students/index.html) |阿尔伯塔大学|艾伯塔省埃德蒙顿 | 11年级；地区资格 | B |研究暑期项目|
 | 33 |[卡尔加里大学思想运动](https://schulich.ucalgary.ca/minds-motion) |卡尔加里大学 |艾伯塔省卡尔加里 |青年| B | STEM 营 |
 | 34 |[卡尔加里大学 HYRS](https://research.ucalgary.ca/students/high-school-youth-researcher-summer-program) |卡尔加里大学 |艾伯塔省卡尔加里 | 11年级；地区资格 | B |健康研究|
 | 35 |[莱斯布里奇大学目的地探索](https://www.ulethbridge.ca/destination-exploration) |莱斯布里奇大学|艾伯塔省莱斯布里奇 |青年| B | STEM 营 |
-| 36 |【萨斯喀彻温大学SCI-FI科学营】(https://scifi.usask.ca/) |萨斯喀彻温大学|萨斯卡通，SK |青年| B | STEM 营 |
+| 36 |[萨斯喀彻温大学SCI-FI科学营](https://scifi.usask.ca/) |萨斯喀彻温大学|萨斯卡通，SK |青年| B | STEM 营 |
 | 37 |[里贾纳大学EYES](https://www.uregina.ca/engineering/outreach/eyes.html) |里贾纳大学 |里贾纳，SK |青年| B |工程/科学营 |
 | 38 |[曼尼托巴大学迷你U课程](https://umanitoba.ca/mini-u) |曼尼托巴大学 |温尼伯，MB |青年| B |夏令营 |
 | 39 |[温尼伯大学青年项目](https://www.uwinnipeg.ca/youth/) |温尼伯大学 |温尼伯，MB |青年| B |青少年项目|
@@ -507,7 +507,7 @@ translation_fr: /docs/10-opportunity-sources/Opportunity_Equity_Engine_600_Sourc
 | 48 |[约克科学参与计划](https://www.yorku.ca/science/youth-programs/) |约克大学|安大略省多伦多 |青年| B | STEM 项目 |
 | 49 |[约克狮子队夏令营](https://yorkulions.ca/sports/2013/4/16/CAMPS.aspx) |约克大学|安大略省多伦多 |青年| B |夏令营 |
 | 50 |[TMU SciXchange 青少年项目](https://www.torontomu.ca/scixchange/) |多伦多城市大学 |安大略省多伦多 |青年| B | STEM 外展 |
-| 51 |【TMU Design Fabrication Zone青少年编程】(https://www.torontomu.ca/) |多伦多城市大学 |安大略省多伦多 |青年| C |设计/技术发现|
+| 51 |[TMU Design Fabrication Zone青少年编程](https://www.torontomu.ca/) |多伦多城市大学 |安大略省多伦多 |青年| C |设计/技术发现|
 | 52 |[OCAD U 大学预科暑期强化课程](https://apply.ocadu.ca/register/psi2027notificationlist) | OCAD 大学 |安大略省多伦多 |高中| A |艺术/设计作品集项目|
 | 53 |[布鲁克青年大学](https://brocku.ca/youth-university/) |布鲁克大学|安大略省圣凯瑟琳斯 |青年| B |暑期项目|
 | 54 |[安大略科技工程外展](https://engineering.ontariotechu.ca/outreach/) |安大略理工大学|安大略省奥沙瓦 |青年| B | STEM 营 |
@@ -522,7 +522,7 @@ translation_fr: /docs/10-opportunity-sources/Opportunity_Equity_Engine_600_Sourc
 | 63 |[UPEI 暑期青少年项目](https://www.upei.ca/) |爱德华王子岛大学|裴 |青年| C |暑期项目来源|
 | 64 |[纪念工程外展](https://www.mun.ca/engineering/community/outreach/) |纪念大学|纽芬兰及拉布拉多 |青年| B |工程/STEM 营 |
 | 65 |[Actua 国家 STEM 计划](https://actua.ca/) |实际 |加拿大 |青年| B |国家 STEM 推广网络 |
-| 66 |【加拿大Learning Code青少年项目】(https://www.canadalearningcode.ca/) |加拿大学习守则|加拿大 |青年| B |编码程序|
+| 66 |[加拿大Learning Code青少年项目](https://www.canadalearningcode.ca/) |加拿大学习守则|加拿大 |青年| B |编码程序|
 | 67 |[儿童代码婕斯](https://kidscodejeunesse.org/) |儿童代码婕斯 |加拿大 |青年| B |编码/人工智能教育 |
 | 68 |[数字时刻](https://www.digitalmoment.org/) |数字时刻|加拿大 |青年| B |数字技能课程|
 | 69 |[Hackergal 夏季/技术项目](https://hackergal.org/) |哈克格尔 |加拿大 |女孩/性别多元化青年 | B |编码程序|
@@ -629,14 +629,14 @@ translation_fr: /docs/10-opportunity-sources/Opportunity_Equity_Engine_600_Sourc
 | 65 |[维多利亚大学旅游与活动](https://www.uvic.ca/undergraduate/tours-events/) |维多利亚大学 |维多利亚，不列颠哥伦比亚省 |未来的学生| B |旅游/活动 |
 | 66 |[UNBC 未来学生](https://www.unbc.ca/future-students) |北不列颠哥伦比亚大学 |乔治王子城，不列颠哥伦比亚省 |未来的本科生| B |招生中心 |
 | 67 |[TRU 未来的学生](https://www.tru.ca/future.html) |汤普森河大学|不列颠哥伦比亚省坎卢普斯 |未来的本科生| B |招生中心 |
-| 68 |【阿尔伯塔大学本科招生】(https://www.ualberta.ca/en/admissions/index.html) |阿尔伯塔大学|艾伯塔省埃德蒙顿 |未来的本科生| B |招生中心 |
+| 68 |[阿尔伯塔大学本科招生](https://www.ualberta.ca/en/admissions/index.html) |阿尔伯塔大学|艾伯塔省埃德蒙顿 |未来的本科生| B |招生中心 |
 | 69 |[阿尔伯塔大学游览和活动](https://www.ualberta.ca/en/admissions/undergraduate/tours-and-events/index.html) |阿尔伯塔大学|艾伯塔省埃德蒙顿 |未来的学生| B |旅游/活动 |
 | 70 |[卡尔加里大学未来学生](https://www.ucalgary.ca/future-students/undergraduate) |卡尔加里大学 |艾伯塔省卡尔加里 |未来的本科生| B |招生中心 |
 | 71 |[卡尔加里大学旅游与活动](https://www.ucalgary.ca/future-students/undergraduate/tours-events) |卡尔加里大学 |艾伯塔省卡尔加里 |未来的学生| B |旅游/活动 |
 | 72 |[莱斯布里奇大学未来学生](https://www.ulethbridge.ca/future-student) |莱斯布里奇大学|艾伯塔省莱斯布里奇 |未来的本科生| B |招生中心 |
-| 73 |【萨斯喀彻温大学招生】(https://admissions.usask.ca/) |萨斯喀彻温大学|萨斯卡通，SK |未来的本科生| B |招生中心 |
+| 73 |[萨斯喀彻温大学招生](https://admissions.usask.ca/) |萨斯喀彻温大学|萨斯卡通，SK |未来的本科生| B |招生中心 |
 | 74 |[里贾纳大学未来的学生](https://www.uregina.ca/admissions/) |里贾纳大学 |里贾纳，SK |未来的本科生| B |招生中心 |
-| 75 |【曼尼托巴大学本科招生】(https://umanitoba.ca/explore/undergraduate-admissions) |曼尼托巴大学 |温尼伯，MB |未来的本科生| B |招生中心 |
+| 75 |[曼尼托巴大学本科招生](https://umanitoba.ca/explore/undergraduate-admissions) |曼尼托巴大学 |温尼伯，MB |未来的本科生| B |招生中心 |
 | 76 |[温尼伯大学未来学生](https://www.uwinnipeg.ca/future-student/) |温尼伯大学 |温尼伯，MB |未来的本科生| B |招生中心 |
 | 77 |[达尔豪斯招生](https://www.dal.ca/admissions.html) |达尔豪斯大学 |新斯科舍省哈利法克斯 |未来的本科生| B |招生中心 |
 | 78 |[达尔豪西校园游览和活动](https://www.dal.ca/admissions/open-house.html) |达尔豪斯大学 |新斯科舍省哈利法克斯 |未来的学生| B |开放日/活动 |
