@@ -214,6 +214,9 @@ button { font: inherit; }
 .home-library > p { width: 45%; min-height: 53px; margin-top: 5px; }
 .home-content h3, .document-content h3 { margin-top: 34px; color: #17365a; font-size: clamp(21px, 2vw, 30px); letter-spacing: -.03em; line-height: 1.15; }
 .home-content p { color: var(--muted); }
+.demo-callout { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin: 0 0 26px; padding: 13px 16px; border: 1px solid var(--line); border-radius: 12px; color: var(--muted); background: var(--surface); box-shadow: 0 10px 24px rgba(31, 57, 88, .05); font-size: 13px; }
+.demo-callout strong { color: var(--navy); }
+.demo-callout a { white-space: nowrap; }
 .home-content a, .document-content a { color: #126dc1; font-weight: 700; }
 .home-content a:hover, .document-content a:hover { color: var(--teal); }
 .home-content table, .document-content table {
