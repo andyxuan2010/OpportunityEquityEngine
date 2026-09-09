@@ -23,12 +23,15 @@
   {% assign language_label = 'Language' %}
   {% assign brand_subtitle = 'STUDENT OPPORTUNITY DOCUMENTATION' %}
 {% endif %}
+{% assign language_en = page.translation_en | default: page.url | replace: '.md', '.html' %}
+{% assign language_zh = page.translation_zh | replace: '.md', '.html' %}
+{% assign language_fr = page.translation_fr | replace: '.md', '.html' %}
 <header class="site-nav">
   <div class="nav-inner">
     <nav class="nav-primary" aria-label="Primary navigation">
-      <a href="{{ '/' | relative_url }}"><span aria-hidden="true">⌂</span> {{ nav_home }}</a>
+      <a href="https://andyxuan.ca/"><span aria-hidden="true">⌂</span> {{ nav_home }}</a>
       <a href="https://andyxuan.ca/#featured"><span aria-hidden="true">◆</span> {{ nav_projects }}</a>
-      <a href="{{ '/docs/INDEX.md' | relative_url }}"><span aria-hidden="true">▤</span> {{ nav_docs }}</a>
+      <a href="{{ '/docs/INDEX.html' | relative_url }}"><span aria-hidden="true">▤</span> {{ nav_docs }}</a>
       <a href="{{ site.github.repository_url }}" target="_blank" rel="noreferrer">{{ nav_github }} <span aria-hidden="true">↗</span></a>
     </nav>
     <a class="site-brand" href="{{ '/' | relative_url }}" aria-label="Opportunity Equity Engine home">
@@ -39,9 +42,9 @@
       <span class="portal-label">{{ portal_label }}</span>
       <div class="language-switcher" aria-label="Choose language">
         <span class="language-label">{{ language_label }}</span>
-        <a class="language-option{% if page.locale == nil or page.locale == 'en' %} active{% endif %}" href="{{ page.translation_en | default: page.url | relative_url }}" lang="en">EN</a>
-        <a class="language-option{% if page.locale == 'fr' %} active{% endif %}" href="{{ page.translation_fr | default: page.url | relative_url }}" lang="fr">FR</a>
-        <a class="language-option{% if page.locale == 'zh' %} active{% endif %}" href="{{ page.translation_zh | default: page.url | relative_url }}" lang="zh-CN">中文</a>
+        <a class="language-option{% if page.locale == nil or page.locale == 'en' %} active{% endif %}" href="{{ language_en | relative_url }}" lang="en">EN</a>
+        <a class="language-option{% if page.locale == 'fr' %} active{% endif %}" href="{{ language_fr | relative_url }}" lang="fr">FR</a>
+        <a class="language-option{% if page.locale == 'zh' %} active{% endif %}" href="{{ language_zh | relative_url }}" lang="zh-CN">中文</a>
       </div>
       <button class="theme-button" type="button" data-theme-toggle aria-label="Toggle color theme"><span aria-hidden="true">◐</span><span class="theme-button-label">Theme</span></button>
     </div>

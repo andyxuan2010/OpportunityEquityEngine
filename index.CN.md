@@ -13,12 +13,12 @@ translation_fr: /index.FR.md
 
 | 主题 | 内容 |
 |---|---|
-| [项目愿景](docs/01-initiative/initiative.md) | 目标用户、问题、产品定位和长期影响 |
-| [学生指南](docs/03-student-guides/BEGINNER_PROJECT_GUIDE.md) | 入门学习、Vibe Coding 和先修知识 |
-| [系统架构](docs/02-architecture/architecture.md) | 数据、匹配规则、安全和运行方式 |
-| [交付计划](docs/04-delivery/PROJECT_MANAGEMENT_PLAN.md) | 角色、风险、里程碑和团队流程 |
-| [构建指南](docs/05-build/DEMO_IMPLEMENTATION_GUIDE.md) | 从样例数据到可运行垂直切片的步骤 |
-| [演示交付物](docs/06-demo/DEMO_DELIVERABLES.md) | 用户流程、展示脚本和产品视觉素材 |
+| [项目愿景](docs/01-initiative/initiative.html) | 目标用户、问题、产品定位和长期影响 |
+| [学生指南](docs/03-student-guides/BEGINNER_PROJECT_GUIDE.html) | 入门学习、Vibe Coding 和先修知识 |
+| [系统架构](docs/02-architecture/architecture.html) | 数据、匹配规则、安全和运行方式 |
+| [交付计划](docs/04-delivery/PROJECT_MANAGEMENT_PLAN.html) | 角色、风险、里程碑和团队流程 |
+| [构建指南](docs/05-build/DEMO_IMPLEMENTATION_GUIDE.html) | 从样例数据到可运行垂直切片的步骤 |
+| [演示交付物](docs/06-demo/DEMO_DELIVERABLES.html) | 用户流程、展示脚本和产品视觉素材 |
 
 ## 更多机会，更清晰的路径
 
@@ -44,9 +44,9 @@ translation_fr: /index.FR.md
 
 ## 推荐阅读路径
 
-- 新手： [入门项目指南](docs/03-student-guides/BEGINNER_PROJECT_GUIDE.md) → [Vibe Coding 指南](docs/03-student-guides/VIBE_CODING_FOR_STUDENTS.md) → [演示实现](docs/05-build/DEMO_IMPLEMENTATION_GUIDE.md)
-- 团队规划： [项目愿景](docs/01-initiative/initiative.md) → [管理计划](docs/04-delivery/PROJECT_MANAGEMENT_PLAN.md) → [项目时间线](docs/04-delivery/PROJECT_TIMELINE.md)
-- 技术评审： [架构](docs/02-architecture/architecture.md) → [先修知识](docs/03-student-guides/LEARNING_PREREQUISITES.md) → [演示交付物](docs/06-demo/DEMO_DELIVERABLES.md)
+- 新手： [入门项目指南](docs/03-student-guides/BEGINNER_PROJECT_GUIDE.html) → [Vibe Coding 指南](docs/03-student-guides/VIBE_CODING_FOR_STUDENTS.html) → [演示实现](docs/05-build/DEMO_IMPLEMENTATION_GUIDE.html)
+- 团队规划： [项目愿景](docs/01-initiative/initiative.html) → [管理计划](docs/04-delivery/PROJECT_MANAGEMENT_PLAN.html) → [项目时间线](docs/04-delivery/PROJECT_TIMELINE.html)
+- 技术评审： [架构](docs/02-architecture/architecture.html) → [先修知识](docs/03-student-guides/LEARNING_PREREQUISITES.html) → [演示交付物](docs/06-demo/DEMO_DELIVERABLES.html)
 
 ## 最终目标
 

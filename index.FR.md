@@ -13,12 +13,12 @@ Choisissez une collection pour découvrir la vision du projet, le parcours d’a
 
 | Thème | Contenu |
 |---|---|
-| [Vision du projet](docs/01-initiative/initiative.md) | Public cible, problème, positionnement et impact à long terme |
-| [Guides pour les élèves](docs/03-student-guides/BEGINNER_PROJECT_GUIDE.md) | Apprentissage débutant, Vibe Coding et prérequis |
-| [Architecture](docs/02-architecture/architecture.md) | Données, règles de correspondance, sécurité et exploitation |
-| [Plan de réalisation](docs/04-delivery/PROJECT_MANAGEMENT_PLAN.md) | Rôles, risques, étapes et processus d’équipe |
-| [Guide de construction](docs/05-build/DEMO_IMPLEMENTATION_GUIDE.md) | Des données d’exemple à une tranche verticale fonctionnelle |
-| [Livrables de démonstration](docs/06-demo/DEMO_DELIVERABLES.md) | Parcours utilisateur, présentation et éléments visuels |
+| [Vision du projet](docs/01-initiative/initiative.html) | Public cible, problème, positionnement et impact à long terme |
+| [Guides pour les élèves](docs/03-student-guides/BEGINNER_PROJECT_GUIDE.html) | Apprentissage débutant, Vibe Coding et prérequis |
+| [Architecture](docs/02-architecture/architecture.html) | Données, règles de correspondance, sécurité et exploitation |
+| [Plan de réalisation](docs/04-delivery/PROJECT_MANAGEMENT_PLAN.html) | Rôles, risques, étapes et processus d’équipe |
+| [Guide de construction](docs/05-build/DEMO_IMPLEMENTATION_GUIDE.html) | Des données d’exemple à une tranche verticale fonctionnelle |
+| [Livrables de démonstration](docs/06-demo/DEMO_DELIVERABLES.html) | Parcours utilisateur, présentation et éléments visuels |
 
 ## Plus d’opportunités. Un chemin plus clair.
 
@@ -44,9 +44,9 @@ La plateforme doit toujours distinguer les informations vérifiées, les donnée
 
 ## Parcours recommandés
 
-- Débutant : [guide de projet](docs/03-student-guides/BEGINNER_PROJECT_GUIDE.md) → [guide Vibe Coding](docs/03-student-guides/VIBE_CODING_FOR_STUDENTS.md) → [implémentation de la démo](docs/05-build/DEMO_IMPLEMENTATION_GUIDE.md)
-- Équipe : [initiative](docs/01-initiative/initiative.md) → [plan de gestion](docs/04-delivery/PROJECT_MANAGEMENT_PLAN.md) → [calendrier](docs/04-delivery/PROJECT_TIMELINE.md)
-- Revue technique : [architecture](docs/02-architecture/architecture.md) → [prérequis](docs/03-student-guides/LEARNING_PREREQUISITES.md) → [livrables](docs/06-demo/DEMO_DELIVERABLES.md)
+- Débutant : [guide de projet](docs/03-student-guides/BEGINNER_PROJECT_GUIDE.html) → [guide Vibe Coding](docs/03-student-guides/VIBE_CODING_FOR_STUDENTS.html) → [implémentation de la démo](docs/05-build/DEMO_IMPLEMENTATION_GUIDE.html)
+- Équipe : [initiative](docs/01-initiative/initiative.html) → [plan de gestion](docs/04-delivery/PROJECT_MANAGEMENT_PLAN.html) → [calendrier](docs/04-delivery/PROJECT_TIMELINE.html)
+- Revue technique : [architecture](docs/02-architecture/architecture.html) → [prérequis](docs/03-student-guides/LEARNING_PREREQUISITES.html) → [livrables](docs/06-demo/DEMO_DELIVERABLES.html)
 
 ## Objectif final
 

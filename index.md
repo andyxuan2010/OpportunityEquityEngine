@@ -12,37 +12,37 @@ translation_fr: /index.FR.md
 Choose a collection to browse the initiative, student learning path, product design, or implementation material.
 
 <div class="library-grid">
-  <a class="library-card library-card-blue" href="docs/01-initiative/initiative.md">
+  <a class="library-card library-card-blue" href="docs/01-initiative/initiative.html">
     <span class="library-icon">◇</span>
     <strong>Initiative &amp; vision</strong>
     <span>Purpose, audience, problem, and the long-term goal.</span>
     <b>Explore initiative <span aria-hidden="true">↗</span></b>
   </a>
-  <a class="library-card library-card-purple" href="docs/03-student-guides/BEGINNER_PROJECT_GUIDE.md">
+  <a class="library-card library-card-purple" href="docs/03-student-guides/BEGINNER_PROJECT_GUIDE.html">
     <span class="library-icon">▦</span>
     <strong>Student guides</strong>
     <span>Beginner-friendly learning, vibe coding, and prerequisites.</span>
     <b>Start learning <span aria-hidden="true">↗</span></b>
   </a>
-  <a class="library-card library-card-teal" href="docs/02-architecture/architecture.md">
+  <a class="library-card library-card-teal" href="docs/02-architecture/architecture.html">
     <span class="library-icon">⌁</span>
     <strong>Architecture</strong>
     <span>System design, matching rules, data, security, and operations.</span>
     <b>Read architecture <span aria-hidden="true">↗</span></b>
   </a>
-  <a class="library-card library-card-orange" href="docs/04-delivery/PROJECT_MANAGEMENT_PLAN.md">
+  <a class="library-card library-card-orange" href="docs/04-delivery/PROJECT_MANAGEMENT_PLAN.html">
     <span class="library-icon">◷</span>
     <strong>Delivery plan</strong>
     <span>Roles, risks, tools, milestones, and the semester plan.</span>
     <b>View delivery plan <span aria-hidden="true">↗</span></b>
   </a>
-  <a class="library-card library-card-blue" href="docs/05-build/DEMO_IMPLEMENTATION_GUIDE.md">
+  <a class="library-card library-card-blue" href="docs/05-build/DEMO_IMPLEMENTATION_GUIDE.html">
     <span class="library-icon">⌘</span>
     <strong>Build guide</strong>
     <span>A step-by-step path from sample data to a working vertical slice.</span>
     <b>Start building <span aria-hidden="true">↗</span></b>
   </a>
-  <a class="library-card library-card-purple" href="docs/06-demo/DEMO_DELIVERABLES.md">
+  <a class="library-card library-card-purple" href="docs/06-demo/DEMO_DELIVERABLES.html">
     <span class="library-icon">▣</span>
     <strong>Demo deliverables</strong>
     <span>End-user journeys, presentation flow, and visual product assets.</span>
@@ -151,30 +151,30 @@ The AI is the technical building partner. Students remain the product owners, de
 
 ## Documentation map
 
-Use [docs/INDEX.md](docs/INDEX.md) as the central index. The documentation is organized like a professional project repository:
+Use [docs/INDEX.md](docs/INDEX.html) as the central index. The documentation is organized like a professional project repository:
 
 | Topic | Contents |
 |---|---|
-| [01 — Initiative](docs/01-initiative/initiative.md) | Purpose, audience, problem, goal, product vision, and bilingual plans |
-| [02 — Architecture](docs/02-architecture/architecture.md) | System components, data model, matching, search, security, and operations |
-| [03 — Student guides](docs/03-student-guides/BEGINNER_PROJECT_GUIDE.md) | Beginner path, vibe coding, prerequisites, and knowledge gaps |
-| [04 — Delivery](docs/04-delivery/PROJECT_MANAGEMENT_PLAN.md) | Roles, tools, cost, risks, team process, and 16-week timeline |
-| [05 — Build](docs/05-build/DEMO_IMPLEMENTATION_GUIDE.md) | Step-by-step implementation, code examples, testing, and deployment |
-| [06 — Demo](docs/06-demo/DEMO_DELIVERABLES.md) | End-user screens, presentation flow, and visual product deliverables |
+| [01 — Initiative](docs/01-initiative/initiative.html) | Purpose, audience, problem, goal, product vision, and bilingual plans |
+| [02 — Architecture](docs/02-architecture/architecture.html) | System components, data model, matching, search, security, and operations |
+| [03 — Student guides](docs/03-student-guides/BEGINNER_PROJECT_GUIDE.html) | Beginner path, vibe coding, prerequisites, and knowledge gaps |
+| [04 — Delivery](docs/04-delivery/PROJECT_MANAGEMENT_PLAN.html) | Roles, tools, cost, risks, team process, and 16-week timeline |
+| [05 — Build](docs/05-build/DEMO_IMPLEMENTATION_GUIDE.html) | Step-by-step implementation, code examples, testing, and deployment |
+| [06 — Demo](docs/06-demo/DEMO_DELIVERABLES.html) | End-user screens, presentation flow, and visual product deliverables |
 
 ## Recommended starting paths
 
 ### For a student who is new to technology
 
-[Beginner project guide](docs/03-student-guides/BEGINNER_PROJECT_GUIDE.md) → [Vibe coding guide](docs/03-student-guides/VIBE_CODING_FOR_STUDENTS.md) → [Demo implementation](docs/05-build/DEMO_IMPLEMENTATION_GUIDE.md)
+[Beginner project guide](docs/03-student-guides/BEGINNER_PROJECT_GUIDE.html) → [Vibe coding guide](docs/03-student-guides/VIBE_CODING_FOR_STUDENTS.html) → [Demo implementation](docs/05-build/DEMO_IMPLEMENTATION_GUIDE.html)
 
 ### For a team organizing the semester
 
-[Initiative](docs/01-initiative/initiative.md) → [Management plan](docs/04-delivery/PROJECT_MANAGEMENT_PLAN.md) → [Project timeline](docs/04-delivery/PROJECT_TIMELINE.md)
+[Initiative](docs/01-initiative/initiative.html) → [Management plan](docs/04-delivery/PROJECT_MANAGEMENT_PLAN.html) → [Project timeline](docs/04-delivery/PROJECT_TIMELINE.html)
 
 ### For a technical reviewer
 
-[Architecture](docs/02-architecture/architecture.md) → [Learning prerequisites](docs/03-student-guides/LEARNING_PREREQUISITES.md) → [Demo deliverables](docs/06-demo/DEMO_DELIVERABLES.md)
+[Architecture](docs/02-architecture/architecture.html) → [Learning prerequisites](docs/03-student-guides/LEARNING_PREREQUISITES.html) → [Demo deliverables](docs/06-demo/DEMO_DELIVERABLES.html)
 
 ## The ultimate goal
 
