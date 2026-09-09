@@ -1,0 +1,170 @@
+{% if page.locale == 'zh' %}
+  {% assign library_heading = '探索文档库' %}
+  {% assign library_intro = '选择一个资料集合，了解项目愿景、学生学习路径、产品设计或实现方法。' %}
+  {% assign card_start_title = '从这里开始' %}
+  {% assign card_start_description = '选择角色、配置工具并完成第一次贡献。' %}
+  {% assign card_start_action = '开始项目' %}
+  {% assign card_initiative_title = '项目倡议与愿景' %}
+  {% assign card_initiative_description = '目标用户、问题、产品定位和长期影响。' %}
+  {% assign card_initiative_link = '项目倡议' %}
+  {% assign card_plan_link = 'AI 项目方案' %}
+  {% assign card_guides_title = '学生指南' %}
+  {% assign card_guides_description = '入门学习、快速原型、Vibe Coding 和先修知识。' %}
+  {% assign card_beginner_link = '初学者项目指南' %}
+  {% assign card_vibe_link = '学生 Vibe Coding 指南' %}
+  {% assign card_prereq_link = '学习先修知识' %}
+  {% assign card_quick_link = '快速构建应用和网站指南' %}
+  {% assign card_architecture_title = '架构' %}
+  {% assign card_architecture_description = '数据、匹配规则、安全和运行方式。' %}
+  {% assign card_architecture_action = '阅读架构' %}
+  {% assign card_delivery_title = '交付计划' %}
+  {% assign card_delivery_description = '角色、风险、里程碑和团队流程。' %}
+  {% assign card_management_link = '管理计划' %}
+  {% assign card_timeline_link = '项目时间线' %}
+  {% assign card_build_title = '构建指南' %}
+  {% assign card_build_description = '从样例数据到可运行垂直切片的步骤。' %}
+  {% assign card_build_action = '开始构建' %}
+  {% assign card_demo_title = '演示交付物' %}
+  {% assign card_demo_description = '用户流程、展示脚本和产品视觉素材。' %}
+  {% assign card_demo_action = '查看产品' %}
+  {% assign card_research_title = '研究与验证' %}
+  {% assign card_research_description = '学生访谈、来源核验、可用性测试和证据决策。' %}
+  {% assign card_research_action = '验证想法' %}
+  {% assign card_toolkit_title = '学生工具箱' %}
+  {% assign card_toolkit_description = 'GitHub 协作、可访问性、隐私、安全和排障。' %}
+  {% assign card_toolkit_action = '团队协作' %}
+  {% assign card_showcase_title = '展示与反思' %}
+  {% assign card_showcase_description = '展示成果、记录证据、致谢和学习反思。' %}
+  {% assign card_showcase_action = '讲述成果' %}
+  {% assign card_sources_title = '机会资源' %}
+  {% assign card_sources_description = '600 个研究来源、核验层级、数据字段和质量规则。' %}
+  {% assign card_sources_action = '探索来源' %}
+  {% assign locale_suffix = '.CN' %}
+{% elsif page.locale == 'fr' %}
+  {% assign library_heading = 'Explorer la bibliothèque' %}
+  {% assign library_intro = 'Choisissez une collection pour découvrir la vision du projet, le parcours d’apprentissage, la conception du produit ou les méthodes de réalisation.' %}
+  {% assign card_start_title = 'Commencer ici' %}
+  {% assign card_start_description = 'Choisir un rôle, configurer les outils et faire une première contribution.' %}
+  {% assign card_start_action = 'Commencer le projet' %}
+  {% assign card_initiative_title = 'Initiative et vision' %}
+  {% assign card_initiative_description = 'Public cible, problème, positionnement et impact à long terme.' %}
+  {% assign card_initiative_link = 'Initiative' %}
+  {% assign card_plan_link = 'Plan de projet IA' %}
+  {% assign card_guides_title = 'Guides pour les élèves' %}
+  {% assign card_guides_description = 'Apprentissage débutant, prototypes rapides, Vibe Coding et prérequis.' %}
+  {% assign card_beginner_link = 'Guide de projet pour débutants' %}
+  {% assign card_vibe_link = 'Guide Vibe Coding' %}
+  {% assign card_prereq_link = 'Prérequis' %}
+  {% assign card_quick_link = 'Guide de création rapide' %}
+  {% assign card_architecture_title = 'Architecture' %}
+  {% assign card_architecture_description = 'Données, règles de correspondance, sécurité et exploitation.' %}
+  {% assign card_architecture_action = 'Lire l’architecture' %}
+  {% assign card_delivery_title = 'Plan de livraison' %}
+  {% assign card_delivery_description = 'Rôles, risques, étapes et processus d’équipe.' %}
+  {% assign card_management_link = 'Plan de gestion' %}
+  {% assign card_timeline_link = 'Calendrier du projet' %}
+  {% assign card_build_title = 'Guide de construction' %}
+  {% assign card_build_description = 'Des données d’exemple à une tranche verticale fonctionnelle.' %}
+  {% assign card_build_action = 'Commencer à construire' %}
+  {% assign card_demo_title = 'Livrables de démonstration' %}
+  {% assign card_demo_description = 'Parcours utilisateur, présentation et éléments visuels.' %}
+  {% assign card_demo_action = 'Voir le produit' %}
+  {% assign card_research_title = 'Recherche et validation' %}
+  {% assign card_research_description = 'Entretiens, sources, tests d’utilisabilité et décisions fondées.' %}
+  {% assign card_research_action = 'Valider l’idée' %}
+  {% assign card_toolkit_title = 'Boîte à outils des élèves' %}
+  {% assign card_toolkit_description = 'Collaboration GitHub, accessibilité, confidentialité et dépannage.' %}
+  {% assign card_toolkit_action = 'Travailler en équipe' %}
+  {% assign card_showcase_title = 'Présentation et réflexion' %}
+  {% assign card_showcase_description = 'Démonstration, preuves, crédits et apprentissages.' %}
+  {% assign card_showcase_action = 'Raconter le projet' %}
+  {% assign card_sources_title = 'Ressources sur les opportunités' %}
+  {% assign card_sources_description = '600 sources de recherche, niveaux de vérification, champs structurés et règles de qualité.' %}
+  {% assign card_sources_action = 'Explorer les sources' %}
+  {% assign locale_suffix = '.FR' %}
+{% else %}
+  {% assign library_heading = 'Explore the library' %}
+  {% assign library_intro = 'Choose a collection to browse the initiative, student learning path, product design, or implementation material.' %}
+  {% assign card_start_title = 'Start here' %}
+  {% assign card_start_description = 'Choose a role, set up your tools, and make your first contribution.' %}
+  {% assign card_start_action = 'Begin the project' %}
+  {% assign card_initiative_title = 'Initiative & vision' %}
+  {% assign card_initiative_description = 'Purpose, audience, problem, and the long-term goal.' %}
+  {% assign card_initiative_link = 'Initiative' %}
+  {% assign card_plan_link = 'AI project plan' %}
+  {% assign card_guides_title = 'Student guides' %}
+  {% assign card_guides_description = 'Beginner-friendly learning, vibe coding, rapid prototypes, and prerequisites.' %}
+  {% assign card_beginner_link = 'Beginner project guide' %}
+  {% assign card_vibe_link = 'Vibe coding for students' %}
+  {% assign card_prereq_link = 'Learning prerequisites' %}
+  {% assign card_quick_link = 'Quick app and website guide' %}
+  {% assign card_architecture_title = 'Architecture' %}
+  {% assign card_architecture_description = 'System design, matching rules, data, security, and operations.' %}
+  {% assign card_architecture_action = 'Read architecture' %}
+  {% assign card_delivery_title = 'Delivery plan' %}
+  {% assign card_delivery_description = 'Roles, risks, tools, milestones, and the semester plan.' %}
+  {% assign card_management_link = 'Management plan' %}
+  {% assign card_timeline_link = 'Timeline' %}
+  {% assign card_build_title = 'Build guide' %}
+  {% assign card_build_description = 'A step-by-step path from sample data to a working vertical slice.' %}
+  {% assign card_build_action = 'Start building' %}
+  {% assign card_demo_title = 'Demo deliverables' %}
+  {% assign card_demo_description = 'End-user journeys, presentation flow, and visual product assets.' %}
+  {% assign card_demo_action = 'View the product' %}
+  {% assign card_research_title = 'Research & validation' %}
+  {% assign card_research_description = 'Interview students, verify sources, test usability, and learn from evidence.' %}
+  {% assign card_research_action = 'Validate the idea' %}
+  {% assign card_toolkit_title = 'Student toolkit' %}
+  {% assign card_toolkit_description = 'Collaborate safely with GitHub, accessibility, privacy, and troubleshooting guidance.' %}
+  {% assign card_toolkit_action = 'Work as a team' %}
+  {% assign card_showcase_title = 'Showcase & reflection' %}
+  {% assign card_showcase_description = 'Present the work, document evidence, credit contributors, and reflect on learning.' %}
+  {% assign card_showcase_action = 'Tell the story' %}
+  {% assign card_sources_title = 'Opportunity resources' %}
+  {% assign card_sources_description = 'Explore 600 research sources, verification tiers, and structured data fields.' %}
+  {% assign card_sources_action = 'Explore the sources' %}
+  {% assign locale_suffix = '' %}
+{% endif %}
+
+<section class="home-library" aria-labelledby="library-heading">
+  <h2 id="library-heading">{{ library_heading }}</h2>
+  <p>{{ library_intro }}</p>
+  <div class="library-grid">
+    <a class="library-card library-card-orange" href="docs/00-start-here/START_HERE{{ locale_suffix }}.html">
+      <span class="library-icon">↗</span><strong>{{ card_start_title }}</strong><span>{{ card_start_description }}</span><b>{{ card_start_action }} <span aria-hidden="true">↗</span></b>
+    </a>
+    <div class="library-card library-card-blue">
+      <span class="library-icon">◇</span><strong>{{ card_initiative_title }}</strong><span>{{ card_initiative_description }}</span>
+      <div class="library-card-links" aria-label="{{ card_initiative_title }} document links"><a href="docs/01-initiative/initiative{{ locale_suffix }}.html">{{ card_initiative_link }} <span aria-hidden="true">↗</span></a><a href="docs/01-initiative/Opportunity_Equity_Engine{{ locale_suffix }}.html">{{ card_plan_link }} <span aria-hidden="true">↗</span></a></div>
+    </div>
+    <div class="library-card library-card-purple library-card-student-guides">
+      <span class="library-icon">▦</span><strong>{{ card_guides_title }}</strong><span>{{ card_guides_description }}</span>
+      <div class="library-card-links" aria-label="{{ card_guides_title }} document links"><a href="docs/03-student-guides/BEGINNER_PROJECT_GUIDE{{ locale_suffix }}.html">{{ card_beginner_link }} <span aria-hidden="true">↗</span></a><a href="docs/03-student-guides/VIBE_CODING_FOR_STUDENTS{{ locale_suffix }}.html">{{ card_vibe_link }} <span aria-hidden="true">↗</span></a><a href="docs/03-student-guides/LEARNING_PREREQUISITES{{ locale_suffix }}.html">{{ card_prereq_link }} <span aria-hidden="true">↗</span></a><a href="docs/03-student-guides/QUICK_APP_AND_WEBSITE_BUILD_GUIDE{{ locale_suffix }}.html">{{ card_quick_link }} <span aria-hidden="true">↗</span></a></div>
+    </div>
+    <a class="library-card library-card-teal" href="docs/02-architecture/architecture{{ locale_suffix }}.html">
+      <span class="library-icon">⌁</span><strong>{{ card_architecture_title }}</strong><span>{{ card_architecture_description }}</span><b>{{ card_architecture_action }} <span aria-hidden="true">↗</span></b>
+    </a>
+    <div class="library-card library-card-orange">
+      <span class="library-icon">◷</span><strong>{{ card_delivery_title }}</strong><span>{{ card_delivery_description }}</span>
+      <div class="library-card-links" aria-label="{{ card_delivery_title }} document links"><a href="docs/04-delivery/PROJECT_MANAGEMENT_PLAN{{ locale_suffix }}.html">{{ card_management_link }} <span aria-hidden="true">↗</span></a><a href="docs/04-delivery/PROJECT_TIMELINE{{ locale_suffix }}.html">{{ card_timeline_link }} <span aria-hidden="true">↗</span></a></div>
+    </div>
+    <a class="library-card library-card-blue" href="docs/05-build/DEMO_IMPLEMENTATION_GUIDE{{ locale_suffix }}.html">
+      <span class="library-icon">⌘</span><strong>{{ card_build_title }}</strong><span>{{ card_build_description }}</span><b>{{ card_build_action }} <span aria-hidden="true">↗</span></b>
+    </a>
+    <a class="library-card library-card-purple" href="docs/06-demo/DEMO_DELIVERABLES{{ locale_suffix }}.html">
+      <span class="library-icon">▣</span><strong>{{ card_demo_title }}</strong><span>{{ card_demo_description }}</span><b>{{ card_demo_action }} <span aria-hidden="true">↗</span></b>
+    </a>
+    <a class="library-card library-card-teal" href="docs/07-research-and-validation/RESEARCH_AND_VALIDATION{{ locale_suffix }}.html">
+      <span class="library-icon">⌕</span><strong>{{ card_research_title }}</strong><span>{{ card_research_description }}</span><b>{{ card_research_action }} <span aria-hidden="true">↗</span></b>
+    </a>
+    <a class="library-card library-card-blue" href="docs/08-student-toolkit/STUDENT_TOOLKIT{{ locale_suffix }}.html">
+      <span class="library-icon">⌘</span><strong>{{ card_toolkit_title }}</strong><span>{{ card_toolkit_description }}</span><b>{{ card_toolkit_action }} <span aria-hidden="true">↗</span></b>
+    </a>
+    <a class="library-card library-card-purple" href="docs/09-showcase-and-reflection/SHOWCASE_AND_REFLECTION{{ locale_suffix }}.html">
+      <span class="library-icon">★</span><strong>{{ card_showcase_title }}</strong><span>{{ card_showcase_description }}</span><b>{{ card_showcase_action }} <span aria-hidden="true">↗</span></b>
+    </a>
+    <a class="library-card library-card-orange" href="docs/10-opportunity-sources/Opportunity_Equity_Engine_600_Sources{{ locale_suffix }}.html">
+      <span class="library-icon">◎</span><strong>{{ card_sources_title }}</strong><span>{{ card_sources_description }}</span><b>{{ card_sources_action }} <span aria-hidden="true">↗</span></b>
+    </a>
+  </div>
+</section>

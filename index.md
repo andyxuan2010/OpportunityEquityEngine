@@ -7,6 +7,7 @@ translation_zh: /index.CN.md
 translation_fr: /index.FR.md
 ---
 
+{% comment %}
 ## Explore the library
 
 Choose a collection to browse the initiative, student learning path, product design, or implementation material.
@@ -90,6 +91,7 @@ Choose a collection to browse the initiative, student learning path, product des
     <b>Explore the sources <span aria-hidden="true">↗</span></b>
   </a>
 </div>
+{% endcomment %}
 
 ## More opportunities. A clearer path.
 

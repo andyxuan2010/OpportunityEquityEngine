@@ -197,6 +197,10 @@ button { font: inherit; }
   letter-spacing: -.055em;
   line-height: 1.05;
 }
+.home-library > h2 { margin-top: 0; }
+.home-library > h2, .home-library > p { display: inline-block; vertical-align: top; }
+.home-library > h2 { width: 46%; }
+.home-library > p { width: 45%; margin-top: 5px; }
 .home-content h3, .document-content h3 { margin-top: 34px; color: #17365a; font-size: clamp(21px, 2vw, 30px); letter-spacing: -.03em; line-height: 1.15; }
 .home-content p { color: var(--muted); }
 .home-content a, .document-content a { color: #126dc1; font-weight: 700; }

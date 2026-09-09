@@ -7,6 +7,7 @@ translation_zh: /index.CN.md
 translation_fr: /index.FR.md
 ---
 
+{% comment %}
 ## 探索文档库
 
 选择一个资料集合，了解项目愿景、学生学习路径、产品设计或实现方法。
@@ -24,6 +25,7 @@ translation_fr: /index.FR.md
 | [学生工具箱](docs/08-student-toolkit/STUDENT_TOOLKIT.html) | GitHub 协作、可访问性、隐私、安全和排障 |
 | [展示与反思](docs/09-showcase-and-reflection/SHOWCASE_AND_REFLECTION.html) | 展示成果、记录证据、致谢和学习反思 |
 | [机会资源](docs/10-opportunity-sources/Opportunity_Equity_Engine_600_Sources.html) | 600 个研究来源、核验层级、数据字段和质量规则 |
+{% endcomment %}
 
 ## 更多机会，更清晰的路径
 
