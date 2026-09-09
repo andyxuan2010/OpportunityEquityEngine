@@ -276,7 +276,6 @@ button { font: inherit; }
 .document-kicker { width: min(100%, 1050px); margin: 0 0 18px; color: var(--blue); font-size: 12px; font-weight: 850; letter-spacing: .17em; text-transform: uppercase; }
 .kicker-dot { display: inline-block; width: 8px; height: 8px; margin-right: 8px; border-radius: 50%; background: var(--teal); box-shadow: 0 0 0 5px rgba(20, 141, 128, .12); }
 .document-shell { width: min(1760px, calc(100% - 40px)); max-width: none; }
-.home-page .site-main > .content-shell { width: min(1760px, calc(100% - 40px)); max-width: none; }
 .document-reader { width: 100%; display: grid; grid-template-columns: 200px minmax(0, 1fr) 200px; gap: 10px; align-items: start; }
 .document-column { min-width: 0; }
 .document-toc { width: 200px; grid-column: 1; grid-row: 1; position: sticky; top: 104px; max-height: calc(100vh - 128px); overflow-y: auto; padding: 16px 0; scrollbar-width: none; -ms-overflow-style: none; }
@@ -377,6 +376,10 @@ button { font: inherit; }
 .document-related-link strong { margin-top: auto; font-size: 15px; line-height: 1.3; }
 .document-related-link > span { align-self: flex-end; margin-top: 10px; color: var(--blue); font-size: 16px; font-weight: 800; line-height: 1; }
 
+@media (min-width: 1181px) {
+  .home-page .site-main > .content-shell { width: min(1340px, calc(100% - 460px)); max-width: none; }
+}
+
 .site-footer { border-top: 1px solid var(--line); color: var(--muted); background: var(--surface); }
 .footer-inner { min-height: 82px; display: flex; align-items: center; justify-content: space-between; font-size: 12px; }
 .footer-inner a { color: var(--blue); font-weight: 750; }
@@ -414,7 +417,6 @@ button { font: inherit; }
 }
 @media (max-width: 780px) {
   .content-shell { width: min(var(--max-width), calc(100% - var(--site-gutter-mobile))); }
-  .home-page .site-main > .content-shell { width: min(var(--max-width), calc(100% - var(--site-gutter-mobile))); }
   .site-nav { position: static; }
   .nav-inner { min-height: 70px; display: flex; justify-content: space-between; gap: 12px; padding-inline: 14px; }
   .nav-primary { order: 2; }
