@@ -285,4 +285,16 @@ button { font: inherit; }
   .document-content p, .document-content li { font-size: 15px; }
   .footer-inner { min-height: 70px; }
 }
+@media (max-width: 480px) {
+  .nav-inner { gap: 6px; padding-inline: 10px; }
+  .site-brand { gap: 7px; }
+  .brand-mark { width: 36px; height: 36px; border-radius: 10px; font-size: 16px; }
+  .brand-copy strong { font-size: 12px; }
+  .brand-copy small { display: none; }
+  .nav-primary a:first-child { font-size: 12px; }
+  .nav-secondary { gap: 4px; }
+  .language-switcher { gap: 1px; }
+  .language-option { min-width: 24px; min-height: 30px; padding: 0 2px; }
+  .theme-button { min-width: 36px; padding: 0 7px; }
+}
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
