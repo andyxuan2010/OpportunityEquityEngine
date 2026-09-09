@@ -12,7 +12,7 @@ translation_fr: /index.FR.md
 Choose a collection to browse the initiative, student learning path, product design, or implementation material.
 
 <div class="library-grid">
-  <a class="library-card library-card-orange" href="docs/article.html?article=start-here">
+  <a class="library-card library-card-orange" href="docs/00-start-here/START_HERE.html">
     <span class="library-icon">↗</span>
     <strong>Start here</strong>
     <span>Choose a role, set up your tools, and make your first contribution.</span>
@@ -23,8 +23,8 @@ Choose a collection to browse the initiative, student learning path, product des
     <strong>Initiative &amp; vision</strong>
     <span>Purpose, audience, problem, and the long-term goal.</span>
     <div class="library-card-links" aria-label="Initiative document links">
-      <a href="docs/article.html?article=initiative">Initiative <span aria-hidden="true">↗</span></a>
-      <a href="docs/article.html?article=opportunity-equity-engine">AI project plan <span aria-hidden="true">↗</span></a>
+      <a href="docs/01-initiative/initiative.html">Initiative <span aria-hidden="true">↗</span></a>
+      <a href="docs/01-initiative/Opportunity_Equity_Engine.html">AI project plan <span aria-hidden="true">↗</span></a>
     </div>
   </div>
   <div class="library-card library-card-purple library-card-student-guides">
@@ -32,13 +32,13 @@ Choose a collection to browse the initiative, student learning path, product des
     <strong>Student guides</strong>
     <span>Beginner-friendly learning, vibe coding, rapid prototypes, and prerequisites.</span>
     <div class="library-card-links" aria-label="Student guide links">
-      <a href="docs/article.html?article=beginner-project-guide">Beginner project guide <span aria-hidden="true">↗</span></a>
-      <a href="docs/article.html?article=vibe-coding-for-students">Vibe coding for students <span aria-hidden="true">↗</span></a>
-      <a href="docs/article.html?article=learning-prerequisites">Learning prerequisites <span aria-hidden="true">↗</span></a>
-      <a href="docs/article.html?article=quick-app-and-website-build-guide">Quick app and website guide <span aria-hidden="true">↗</span></a>
+      <a href="docs/03-student-guides/BEGINNER_PROJECT_GUIDE.html">Beginner project guide <span aria-hidden="true">↗</span></a>
+      <a href="docs/03-student-guides/VIBE_CODING_FOR_STUDENTS.html">Vibe coding for students <span aria-hidden="true">↗</span></a>
+      <a href="docs/03-student-guides/LEARNING_PREREQUISITES.html">Learning prerequisites <span aria-hidden="true">↗</span></a>
+      <a href="docs/03-student-guides/QUICK_APP_AND_WEBSITE_BUILD_GUIDE.html">Quick app and website guide <span aria-hidden="true">↗</span></a>
     </div>
   </div>
-  <a class="library-card library-card-teal" href="docs/article.html?article=architecture">
+  <a class="library-card library-card-teal" href="docs/02-architecture/architecture.html">
     <span class="library-icon">⌁</span>
     <strong>Architecture</strong>
     <span>System design, matching rules, data, security, and operations.</span>
@@ -49,41 +49,41 @@ Choose a collection to browse the initiative, student learning path, product des
     <strong>Delivery plan</strong>
     <span>Roles, risks, tools, milestones, and the semester plan.</span>
     <div class="library-card-links" aria-label="Delivery document links">
-      <a href="docs/article.html?article=project-management-plan">Management plan <span aria-hidden="true">↗</span></a>
-      <a href="docs/article.html?article=project-timeline">Timeline <span aria-hidden="true">↗</span></a>
+      <a href="docs/04-delivery/PROJECT_MANAGEMENT_PLAN.html">Management plan <span aria-hidden="true">↗</span></a>
+      <a href="docs/04-delivery/PROJECT_TIMELINE.html">Timeline <span aria-hidden="true">↗</span></a>
     </div>
   </div>
-  <a class="library-card library-card-blue" href="docs/article.html?article=demo-implementation-guide">
+  <a class="library-card library-card-blue" href="docs/05-build/DEMO_IMPLEMENTATION_GUIDE.html">
     <span class="library-icon">⌘</span>
     <strong>Build guide</strong>
     <span>A step-by-step path from sample data to a working vertical slice.</span>
     <b>Start building <span aria-hidden="true">↗</span></b>
   </a>
-  <a class="library-card library-card-purple" href="docs/article.html?article=demo-deliverables">
+  <a class="library-card library-card-purple" href="docs/06-demo/DEMO_DELIVERABLES.html">
     <span class="library-icon">▣</span>
     <strong>Demo deliverables</strong>
     <span>End-user journeys, presentation flow, and visual product assets.</span>
     <b>View the product <span aria-hidden="true">↗</span></b>
   </a>
-  <a class="library-card library-card-teal" href="docs/article.html?article=research-and-validation">
+  <a class="library-card library-card-teal" href="docs/07-research-and-validation/RESEARCH_AND_VALIDATION.html">
     <span class="library-icon">⌕</span>
     <strong>Research &amp; validation</strong>
     <span>Interview students, verify sources, test usability, and learn from evidence.</span>
     <b>Validate the idea <span aria-hidden="true">↗</span></b>
   </a>
-  <a class="library-card library-card-blue" href="docs/article.html?article=student-toolkit">
+  <a class="library-card library-card-blue" href="docs/08-student-toolkit/STUDENT_TOOLKIT.html">
     <span class="library-icon">⌘</span>
     <strong>Student toolkit</strong>
     <span>Collaborate safely with GitHub, accessibility, privacy, and troubleshooting guidance.</span>
     <b>Work as a team <span aria-hidden="true">↗</span></b>
   </a>
-  <a class="library-card library-card-purple" href="docs/article.html?article=showcase-and-reflection">
+  <a class="library-card library-card-purple" href="docs/09-showcase-and-reflection/SHOWCASE_AND_REFLECTION.html">
     <span class="library-icon">★</span>
     <strong>Showcase &amp; reflection</strong>
     <span>Present the work, document evidence, credit contributors, and reflect on learning.</span>
     <b>Tell the story <span aria-hidden="true">↗</span></b>
   </a>
-  <a class="library-card library-card-orange" href="docs/article.html?article=opportunity-equity-engine-600-sources">
+  <a class="library-card library-card-orange" href="docs/10-opportunity-sources/Opportunity_Equity_Engine_600_Sources.html">
     <span class="library-icon">◎</span>
     <strong>Opportunity resources</strong>
     <span>Explore 600 research sources, verification tiers, and structured data fields.</span>
