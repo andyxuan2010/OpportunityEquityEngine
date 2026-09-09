@@ -42,9 +42,9 @@
       <span class="portal-label">{{ portal_label }}</span>
       <div class="language-switcher" aria-label="Choose language">
         <span class="language-label">{{ language_label }}</span>
-        <a class="language-option{% if page.locale == nil or page.locale == 'en' %} active{% endif %}" href="{{ language_en | relative_url }}" lang="en">EN</a>
-        <a class="language-option{% if page.locale == 'fr' %} active{% endif %}" href="{{ language_fr | relative_url }}" lang="fr">FR</a>
-        <a class="language-option{% if page.locale == 'zh' %} active{% endif %}" href="{{ language_zh | relative_url }}" lang="zh-CN">中文</a>
+        <a class="language-option{% if page.locale == nil or page.locale == 'en' %} active{% endif %}" href="{{ language_en | replace: '.md', '.html' | relative_url }}" lang="en">EN</a>
+        <a class="language-option{% if page.locale == 'fr' %} active{% endif %}" href="{{ language_fr | replace: '.md', '.html' | relative_url }}" lang="fr">FR</a>
+        <a class="language-option{% if page.locale == 'zh' %} active{% endif %}" href="{{ language_zh | replace: '.md', '.html' | relative_url }}" lang="zh-CN">中文</a>
       </div>
       <button class="theme-button" type="button" data-theme-toggle aria-label="Toggle color theme"><span aria-hidden="true">◐</span><span class="theme-button-label">Theme</span></button>
     </div>
