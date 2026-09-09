@@ -172,7 +172,7 @@ button { font: inherit; }
 
 .home-content { padding-top: 44px; }
 .library-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px; margin: 34px 0 68px; }
-.library-card { min-height: 270px; display: grid; grid-template-columns: 58px minmax(0, 1fr); grid-template-rows: auto 1fr auto; column-gap: 18px; padding: 30px; border: 1px solid var(--line); border-radius: 22px; background: var(--surface); box-shadow: 0 14px 34px rgba(31, 57, 88, .07); transition: transform .22s ease, border-color .22s ease, box-shadow .22s ease; }
+.library-card { min-height: 322px; display: grid; grid-template-columns: 58px minmax(0, 1fr); grid-template-rows: auto 1fr auto; column-gap: 18px; padding: 30px; border: 1px solid var(--line); border-radius: 22px; background: var(--surface); box-shadow: 0 14px 34px rgba(31, 57, 88, .07); transition: transform .22s ease, border-color .22s ease, box-shadow .22s ease; }
 .library-card:hover, .library-card:focus-visible { transform: translateY(-7px); border-color: var(--blue-bright); box-shadow: 0 22px 46px rgba(31, 57, 88, .14); }
 .library-icon { width: 58px; height: 58px; display: grid; grid-column: 1; grid-row: 1; place-items: center; margin: 0; border-radius: 17px; color: white; font-size: 29px; line-height: 1; box-shadow: 0 14px 25px rgba(22, 123, 211, .22); }
 .library-card-blue .library-icon { background: linear-gradient(145deg, #1595ea, #0875cd); }
@@ -196,7 +196,7 @@ button { font: inherit; }
 .home-library > h2 { margin-top: 0; }
 .home-library > h2, .home-library > p { display: inline-block; vertical-align: top; }
 .home-library > h2 { width: 46%; }
-.home-library > p { width: 45%; margin-top: 5px; }
+.home-library > p { width: 45%; min-height: 53px; margin-top: 5px; }
 .home-content h3, .document-content h3 { margin-top: 34px; color: #17365a; font-size: clamp(21px, 2vw, 30px); letter-spacing: -.03em; line-height: 1.15; }
 .home-content p { color: var(--muted); }
 .home-content a, .document-content a { color: #126dc1; font-weight: 700; }
@@ -398,7 +398,7 @@ button { font: inherit; }
   .home-content { padding-top: 32px; }
   .home-content > h2:nth-of-type(2) ~ h3 { display: block; width: auto; margin: 20px 0; }
   .library-grid { grid-template-columns: 1fr; gap: 15px; margin-bottom: 50px; }
-  .library-card { min-height: 230px; padding: 24px; }
+  .library-card { min-height: 322px; padding: 24px; }
   .library-card-links { padding-top: 16px; }
   .library-card-links a { font-size: 11px; }
   .home-content table, .document-content table { display: block; overflow-x: auto; }
