@@ -36,12 +36,12 @@ Choose a collection to browse the initiative, student learning path, product des
     <span>System design, matching rules, data, security, and operations.</span>
     <b>Read architecture <span aria-hidden="true">↗</span></b>
   </a>
-  <a class="library-card library-card-orange" href="docs/04-delivery/PROJECT_MANAGEMENT_PLAN.html">
+  <div class="library-card library-card-orange">
     <span class="library-icon">◷</span>
     <strong>Delivery plan</strong>
     <span>Roles, risks, tools, milestones, and the semester plan.</span>
-    <b>View delivery plan <span aria-hidden="true">↗</span></b>
-  </a>
+    <b><a href="docs/04-delivery/PROJECT_MANAGEMENT_PLAN.html">Management plan <span aria-hidden="true">↗</span></a><a href="docs/04-delivery/PROJECT_TIMELINE.html">Timeline <span aria-hidden="true">↗</span></a></b>
+  </div>
   <a class="library-card library-card-blue" href="docs/05-build/DEMO_IMPLEMENTATION_GUIDE.html">
     <span class="library-icon">⌘</span>
     <strong>Build guide</strong>

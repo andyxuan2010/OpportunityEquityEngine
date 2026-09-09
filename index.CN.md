@@ -17,7 +17,7 @@ translation_fr: /index.FR.md
 | [项目愿景](docs/01-initiative/initiative.html) | 目标用户、问题、产品定位和长期影响 |
 | [学生指南](docs/03-student-guides/BEGINNER_PROJECT_GUIDE.html) | 入门学习、Vibe Coding 和先修知识 |
 | [系统架构](docs/02-architecture/architecture.html) | 数据、匹配规则、安全和运行方式 |
-| [交付计划](docs/04-delivery/PROJECT_MANAGEMENT_PLAN.html) | 角色、风险、里程碑和团队流程 |
+| [管理计划](docs/04-delivery/PROJECT_MANAGEMENT_PLAN.html)、[项目时间线](docs/04-delivery/PROJECT_TIMELINE.html) | 角色、风险、里程碑和团队流程 |
 | [构建指南](docs/05-build/DEMO_IMPLEMENTATION_GUIDE.html) | 从样例数据到可运行垂直切片的步骤 |
 | [演示交付物](docs/06-demo/DEMO_DELIVERABLES.html) | 用户流程、展示脚本和产品视觉素材 |
 | [研究与验证](docs/07-research-and-validation/RESEARCH_AND_VALIDATION.html) | 学生访谈、来源核验、可用性测试和证据决策 |

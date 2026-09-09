@@ -17,7 +17,7 @@ Choisissez une collection pour découvrir la vision du projet, le parcours d’a
 | [Vision du projet](docs/01-initiative/initiative.html) | Public cible, problème, positionnement et impact à long terme |
 | [Guides pour les élèves](docs/03-student-guides/BEGINNER_PROJECT_GUIDE.html) | Apprentissage débutant, Vibe Coding et prérequis |
 | [Architecture](docs/02-architecture/architecture.html) | Données, règles de correspondance, sécurité et exploitation |
-| [Plan de réalisation](docs/04-delivery/PROJECT_MANAGEMENT_PLAN.html) | Rôles, risques, étapes et processus d’équipe |
+| [Plan de gestion](docs/04-delivery/PROJECT_MANAGEMENT_PLAN.html), [calendrier du projet](docs/04-delivery/PROJECT_TIMELINE.html) | Rôles, risques, étapes et processus d’équipe |
 | [Guide de construction](docs/05-build/DEMO_IMPLEMENTATION_GUIDE.html) | Des données d’exemple à une tranche verticale fonctionnelle |
 | [Livrables de démonstration](docs/06-demo/DEMO_DELIVERABLES.html) | Parcours utilisateur, présentation et éléments visuels |
 | [Recherche et validation](docs/07-research-and-validation/RESEARCH_AND_VALIDATION.html) | Entretiens, sources, tests d’utilisabilité et décisions fondées |
