@@ -12,6 +12,34 @@
     {% include site-nav.html %}
     <main class="site-main">
       <div class="content-shell document-shell">
+        {% if page.locale == 'zh' %}
+          {% assign breadcrumb_aria = '文档路径' %}
+          {% assign breadcrumb_library = '工程文档库' %}
+          {% assign breadcrumb_project = '机会公平引擎' %}
+          {% assign breadcrumb_docs = '项目文档' %}
+          {% assign breadcrumb_index = '/docs/INDEX.CN.html' %}
+        {% elsif page.locale == 'fr' %}
+          {% assign breadcrumb_aria = 'Fil d’Ariane de la documentation' %}
+          {% assign breadcrumb_library = 'Bibliothèque d’ingénierie' %}
+          {% assign breadcrumb_project = 'Moteur d’équité des opportunités' %}
+          {% assign breadcrumb_docs = 'Documentation du projet' %}
+          {% assign breadcrumb_index = '/docs/INDEX.FR.html' %}
+        {% else %}
+          {% assign breadcrumb_aria = 'Document breadcrumb' %}
+          {% assign breadcrumb_library = 'Engineering library' %}
+          {% assign breadcrumb_project = 'Opportunity Equity Engine' %}
+          {% assign breadcrumb_docs = 'Project documentation' %}
+          {% assign breadcrumb_index = '/docs/INDEX.html' %}
+        {% endif %}
+        <nav class="document-breadcrumb" aria-label="{{ breadcrumb_aria }}">
+          <a href="https://andyxuan.ca/">{{ breadcrumb_library }}</a>
+          <span class="document-breadcrumb-separator" aria-hidden="true">/</span>
+          <a href="{{ '/' | relative_url }}">{{ breadcrumb_project }}</a>
+          <span class="document-breadcrumb-separator" aria-hidden="true">/</span>
+          <a href="{{ breadcrumb_index | relative_url }}">{{ breadcrumb_docs }}</a>
+          <span class="document-breadcrumb-separator" aria-hidden="true">/</span>
+          <span class="document-breadcrumb-current" aria-current="page">{{ page.title }}</span>
+        </nav>
         <div class="document-kicker"><span class="kicker-dot"></span>{% if page.locale == 'zh' %}项目文档{% elsif page.locale == 'fr' %}Documentation du projet{% else %}Project documentation{% endif %}</div>
         <article class="document-content">
           {{ content }}

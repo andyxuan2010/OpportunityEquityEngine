@@ -217,7 +217,24 @@ button { font: inherit; }
 .home-content > h2:nth-of-type(2) ~ h3 { display: inline-block; width: calc(50% - 14px); margin-right: 20px; padding: 26px; border: 1px solid var(--line); border-radius: 18px; background: var(--surface); box-shadow: 0 12px 32px rgba(31, 57, 88, .06); }
 .home-content > h2:nth-of-type(2) ~ h3:nth-of-type(even) { margin-right: 0; }
 
-.document-shell { display: flex; flex-direction: column; align-items: center; padding-top: 54px; }
+.document-shell { display: flex; flex-direction: column; align-items: center; padding-top: 28px; }
+.document-breadcrumb {
+  width: min(100%, 1050px);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 24px;
+  padding: 0 4px;
+  color: #687a76;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+  font-size: clamp(12px, 1.45vw, 16px);
+  line-height: 1.45;
+}
+.document-breadcrumb a { color: #19745e; font-weight: 650; }
+.document-breadcrumb a:hover, .document-breadcrumb a:focus-visible { color: var(--blue); text-decoration: underline; text-underline-offset: 3px; }
+.document-breadcrumb-separator { color: #8d9995; font-size: 1.2em; }
+.document-breadcrumb-current { color: #68736f; }
 .document-kicker { width: min(100%, 1050px); margin: 0 0 18px; color: var(--blue); font-size: 12px; font-weight: 850; letter-spacing: .17em; text-transform: uppercase; }
 .kicker-dot { display: inline-block; width: 8px; height: 8px; margin-right: 8px; border-radius: 50%; background: var(--teal); box-shadow: 0 0 0 5px rgba(20, 141, 128, .12); }
 .document-content { width: min(100%, 1050px); margin: 0; padding: clamp(30px, 6vw, 78px); border: 1px solid var(--line); border-radius: 28px; background: var(--surface); box-shadow: var(--shadow); }
@@ -280,7 +297,8 @@ button { font: inherit; }
   .library-card { min-height: 230px; padding: 24px; }
   .library-icon { margin-bottom: 24px; }
   .home-content table, .document-content table { display: block; overflow-x: auto; }
-  .document-shell { padding-top: 32px; }
+  .document-shell { padding-top: 20px; }
+  .document-breadcrumb { gap: 5px; margin-bottom: 16px; padding-inline: 0; font-size: 12px; }
   .document-content { padding: 28px 22px; border-radius: 20px; }
   .document-content p, .document-content li { font-size: 15px; }
   .footer-inner { min-height: 70px; }
