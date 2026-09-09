@@ -239,7 +239,7 @@ button { font: inherit; }
 .home-content table th:nth-child(5), .home-content table td:nth-child(5), .document-content table th:nth-child(5), .document-content table td:nth-child(5) { background: var(--table-column-5); }
 .home-content table th:nth-child(6), .home-content table td:nth-child(6), .document-content table th:nth-child(6), .document-content table td:nth-child(6) { background: var(--table-column-6); }
 .home-content table th:nth-child(7), .home-content table td:nth-child(7), .document-content table th:nth-child(7), .document-content table td:nth-child(7) { background: var(--table-column-7); }
-.document-catalog th:nth-child(1), .document-catalog td:nth-child(1) { width: 5%; min-width: 90px; padding: 8px 6px; white-space: nowrap; }
+.document-catalog th:nth-child(1), .document-catalog td:nth-child(1) { width: 6%; min-width: 90px; padding: 8px 10px; white-space: nowrap; }
 .document-catalog th:nth-child(2), .document-catalog td:nth-child(2) { width: 25%; }
 .document-catalog th:nth-child(3), .document-catalog td:nth-child(3) { width: 16%; }
 .document-catalog th:nth-child(4), .document-catalog td:nth-child(4) { width: 14%; }
@@ -348,7 +348,7 @@ button { font: inherit; }
 .document-content > table,
 .document-content > details,
 .document-content > hr { width: min(var(--reading-width), 100%); margin-inline: auto; }
-.document-catalog { padding-inline: 20px; }
+.document-catalog { padding-inline: 30px; }
 .document-catalog table { width: 100%; max-width: none; }
 .document-content > h1:first-of-type { padding-right: 110px; }
 .document-content h1 { margin: 0 0 16px; color: var(--ink); font-size: clamp(30px, 3.2vw, 46px); letter-spacing: -.055em; line-height: 1.02; }
