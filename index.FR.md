@@ -14,7 +14,7 @@ Choisissez une collection pour découvrir la vision du projet, le parcours d’a
 | Thème | Contenu |
 |---|---|
 | [Commencer ici](docs/00-start-here/START_HERE.html) | Choisir un rôle, configurer les outils et faire une première contribution |
-| [Vision du projet](docs/01-initiative/initiative.html) | Public cible, problème, positionnement et impact à long terme |
+| [Vision du projet](docs/01-initiative/initiative.html), [plan de projet IA](docs/01-initiative/Opportunity_Equity_Engine.html) | Public cible, problème, positionnement et impact à long terme |
 | [Guides pour les élèves](docs/03-student-guides/BEGINNER_PROJECT_GUIDE.html), [Vibe Coding](docs/03-student-guides/VIBE_CODING_FOR_STUDENTS.html), [Prérequis](docs/03-student-guides/LEARNING_PREREQUISITES.html), [Guide de création rapide](docs/03-student-guides/QUICK_APP_AND_WEBSITE_BUILD_GUIDE.html) | Apprentissage débutant, prototypes rapides, Vibe Coding et prérequis |
 | [Architecture](docs/02-architecture/architecture.html) | Données, règles de correspondance, sécurité et exploitation |
 | [Plan de gestion](docs/04-delivery/PROJECT_MANAGEMENT_PLAN.html), [calendrier du projet](docs/04-delivery/PROJECT_TIMELINE.html) | Rôles, risques, étapes et processus d’équipe |
