@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#0b1730">
+    <meta name="theme-color" content="#f4f8fc">
     <meta name="description" content="A student-centered opportunity matching demo.">
     <title>Opportunity Equity Engine · Student demo</title>
     <link rel="stylesheet" href="styles.css">
@@ -12,7 +12,7 @@
     <div class="app-shell">
       <aside class="sidebar">
         <a class="brand" href="./" aria-label="Opportunity Equity Engine home">
-          <span class="brand-mark">O</span>
+          <span class="brand-mark">◈</span>
           <span><strong>Opportunity Equity</strong><small>ENGINE / DEMO</small></span>
         </a>
 
@@ -23,11 +23,11 @@
         </div>
 
         <nav class="side-nav" aria-label="Demo navigation">
-          <button class="nav-item active" data-view="dashboard"><span>⌂</span> Dashboard</button>
-          <button class="nav-item" data-view="explore"><span>⌕</span> Explore</button>
+          <button class="nav-item active" data-view="dashboard"><span>⌂</span> My Dashboard</button>
+          <button class="nav-item" data-view="explore"><span>⌕</span> Find opportunities</button>
           <button class="nav-item" data-view="saved"><span>♡</span> Saved <b class="nav-count" id="saved-count">0</b></button>
-          <button class="nav-item" data-view="profile"><span>◉</span> My profile</button>
-          <button class="nav-item" data-view="admin"><span>▤</span> Review queue <b class="nav-count orange" id="review-count">3</b></button>
+          <button class="nav-item" data-view="profile"><span>◉</span> My interests</button>
+          <button class="nav-item" data-view="admin"><span>▤</span> Resources <b class="nav-count orange" id="review-count">3</b></button>
         </nav>
 
         <div class="sidebar-bottom">
@@ -39,10 +39,12 @@
 
       <main class="main-content">
         <header class="topbar">
-          <div class="breadcrumb"><span>Student workspace</span><i>/</i><strong id="page-label">Dashboard</strong></div>
+          <div class="breadcrumb"><span>Opportunity Equity Engine</span><i>/</i><strong id="page-label">Dashboard</strong></div>
           <div class="top-actions">
+            <nav class="top-nav" aria-label="Top navigation"><a href="./">Home</a><button data-view="explore">Explore</button><button data-view="saved">Saved</button><button data-view="admin">Resources</button></nav>
             <span class="demo-pill"><span></span> Prototype mode</span>
             <button class="icon-button top-theme" data-action="toggle-theme" aria-label="Toggle appearance">◐</button>
+            <span class="top-avatar">AM</span>
           </div>
         </header>
 
@@ -50,15 +52,21 @@
           <div class="welcome-row">
             <div>
               <p class="eyebrow">TUESDAY · OCTOBER 8, 2026</p>
-              <h1>Good morning, Alex <span>✦</span></h1>
-              <p class="lead">A few opportunities that line up with what you told us.</p>
+              <h1>Good to see you back!</h1>
+              <p class="lead">Explore. Learn. Apply. A brighter future is within reach.</p>
             </div>
             <button class="outline-button" data-action="edit-profile">Edit profile <span>→</span></button>
           </div>
 
           <div class="profile-strip">
             <div class="profile-strip-main"><span class="spark-icon">✦</span><div><small>YOUR MATCHING PROFILE</small><strong id="dashboard-profile">Grade 11 · Montreal · AI + Medicine</strong></div></div>
+            <div class="profile-quote">“I want to use technology to improve people’s lives.”</div>
             <div class="profile-tags" id="dashboard-tags"><span>Under $300</span><span>Weekends</span></div>
+          </div>
+
+          <div class="dashboard-search-grid">
+            <section class="dashboard-search-panel"><p class="eyebrow">START EXPLORING</p><h2>Find opportunities that fit you</h2><button class="dashboard-search-box" data-view="explore"><span>⌕</span><span>Search programs, internships, scholarships and more...</span><b>Search</b></button></section>
+            <aside class="mission-card"><span class="mission-icon">⌁</span><p>Different backgrounds.<br>Brighter futures.<br>Opportunities for everyone.</p><i></i></aside>
           </div>
 
           <div class="section-heading"><div><p class="eyebrow">PERSONALIZED FOR YOU</p><h2>Top matches</h2></div><button class="link-button" data-view="explore">See all opportunities <span>↗</span></button></div>
