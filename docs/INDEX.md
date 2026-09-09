@@ -56,7 +56,7 @@ This index is the starting point for the project's initiative, product design, s
 
 | Topic | Primary documents | What to find here |
 |---|---|---|
-| Initiative and product vision | [Initiative](01-initiative/initiative.html), [English plan](01-initiative/Opportunity_Equity_Engine.html), [中文方案](01-initiative/Opportunity_Equity_Engine.CN.html) | Purpose, audience, problem, ultimate goal, scope, and product positioning |
+| Initiative and product vision | [Initiative](01-initiative/initiative.html), [plan](01-initiative/Opportunity_Equity_Engine.html) | Purpose, audience, problem, ultimate goal, scope, and product positioning |
 | Starting the project | [Start here](00-start-here/START_HERE.html) | First-hour checklist, roles, working agreement, and definition of done |
 | Architecture | [Architecture](02-architecture/architecture.html) | End-to-end components, data model, matching, search, security, and operations |
 | Student learning | [Beginner guide](03-student-guides/BEGINNER_PROJECT_GUIDE.html), [Quick app and website build](03-student-guides/QUICK_APP_AND_WEBSITE_BUILD_GUIDE.html), [Vibe coding](03-student-guides/VIBE_CODING_FOR_STUDENTS.html), [Prerequisites](03-student-guides/LEARNING_PREREQUISITES.html) | Starting from zero, quick prototypes, AI-assisted development, knowledge gaps, and learning sequence |

@@ -12,7 +12,7 @@
   --background: #f4f7fb;
   --line: #dbe4ef;
   --soft-blue: #edf5fd;
-  --table-column-1: #f6f9fd;
+  --table-column-1: #fff3c4;
   --table-column-2: #f4fbfa;
   --table-column-3: #fff9f1;
   --table-column-4: #f8f6ff;
@@ -403,7 +403,7 @@ button { font: inherit; }
 .footer-inner a { color: var(--blue); font-weight: 750; }
 
 [data-theme="dark"] body { --ink: #e7effa; --muted: #a9b9d0; --surface: #111e32; --background: #091322; --line: #263a56; --soft-blue: #152b46; --navy: #c9e8ff; }
-[data-theme="dark"] body { --table-column-1: color-mix(in srgb, var(--surface) 94%, #8ecbff 6%); --table-column-2: color-mix(in srgb, var(--surface) 94%, #74e0c1 6%); --table-column-3: color-mix(in srgb, var(--surface) 94%, #ffd38a 6%); --table-column-4: color-mix(in srgb, var(--surface) 94%, #c9b8ff 6%); --table-column-5: color-mix(in srgb, var(--surface) 94%, #8ecbff 6%); --table-column-6: color-mix(in srgb, var(--surface) 94%, #c9b8ff 6%); --table-column-7: color-mix(in srgb, var(--surface) 94%, #74e0c1 6%); }
+[data-theme="dark"] body { --table-column-1: color-mix(in srgb, var(--surface) 86%, #ffd166 14%); --table-column-2: color-mix(in srgb, var(--surface) 94%, #74e0c1 6%); --table-column-3: color-mix(in srgb, var(--surface) 94%, #ffd38a 6%); --table-column-4: color-mix(in srgb, var(--surface) 94%, #c9b8ff 6%); --table-column-5: color-mix(in srgb, var(--surface) 94%, #8ecbff 6%); --table-column-6: color-mix(in srgb, var(--surface) 94%, #c9b8ff 6%); --table-column-7: color-mix(in srgb, var(--surface) 94%, #74e0c1 6%); }
 [data-theme="dark"] .site-nav, [data-theme="dark"] .site-footer { border-color: var(--line); background: rgba(9, 19, 34, .94); }
 [data-theme="dark"] .nav-primary a, [data-theme="dark"] .brand-copy strong { color: #e7effa; }
 [data-theme="dark"] .brand-copy small, [data-theme="dark"] .language-option { color: #95a9c5; }
