@@ -30,3 +30,14 @@ translation_fr: /docs/04-delivery/PROJECT_TIMELINE.FR.md
 ## 里程碑
 
 最重要的里程碑是：问题陈述、原型、已核验样例数据、第一次端到端流程、用户测试反馈和可重复演示。每个里程碑都应有明确的验收标准。
+## 完整同步参考
+
+以下内容会直接同步英文原文，包含完整章节、示例、链接、表格和媒体资源。
+
+<details markdown="1">
+<summary>打开完整英文参考</summary>
+
+{% capture canonical_source %}{% include_relative PROJECT_TIMELINE.md %}{% endcapture %}
+{{ canonical_source | remove_first: '---' | remove_first: '---' }}
+
+</details>

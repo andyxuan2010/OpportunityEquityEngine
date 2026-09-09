@@ -41,3 +41,14 @@ Collecter seulement les données nécessaires et éviter les informations person
 ## Évolution
 
 Surveiller la fraîcheur des données, les échecs d’importation, la recherche, la file de revue et la disponibilité. Livrer d’abord une tranche testable, puis ajouter les notifications, de nouvelles sources, la recherche vectorielle et le déploiement à grande échelle.
+## Référence complète synchronisée
+
+Le contenu anglais complet est inclus automatiquement ci-dessous, y compris les sections, exemples, liens, tableaux et médias.
+
+<details markdown="1">
+<summary>Ouvrir la référence anglaise complète</summary>
+
+{% capture canonical_source %}{% include_relative architecture.md %}{% endcapture %}
+{{ canonical_source | remove_first: '---' | remove_first: '---' }}
+
+</details>

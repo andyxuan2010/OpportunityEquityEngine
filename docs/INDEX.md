@@ -9,24 +9,28 @@ translation_fr: /docs/INDEX.FR.md
 
 # Opportunity Equity Engine — Documentation Index
 
-This index is the starting point for the project's initiative, product design, student learning, technical architecture, delivery planning, implementation, and demo materials.
+This index is the starting point for the project's initiative, product design, student learning, research, collaboration, implementation, and showcase materials.
 
 ## Recommended reading paths
 
 ### New to the project
 
-1. [Initiative](01-initiative/initiative.html)
-2. [Beginner project guide](03-student-guides/BEGINNER_PROJECT_GUIDE.html)
-3. [Vibe coding for students](03-student-guides/VIBE_CODING_FOR_STUDENTS.html)
-4. [Demo implementation guide](05-build/DEMO_IMPLEMENTATION_GUIDE.html)
-5. [Demo deliverables](06-demo/DEMO_DELIVERABLES.html)
+1. [Start here](00-start-here/START_HERE.html)
+2. [Initiative](01-initiative/initiative.html)
+3. [Beginner project guide](03-student-guides/BEGINNER_PROJECT_GUIDE.html)
+4. [Research and validation](07-research-and-validation/RESEARCH_AND_VALIDATION.html)
+5. [Student toolkit](08-student-toolkit/STUDENT_TOOLKIT.html)
+6. [Demo implementation guide](05-build/DEMO_IMPLEMENTATION_GUIDE.html)
+7. [Showcase and reflection](09-showcase-and-reflection/SHOWCASE_AND_REFLECTION.html)
 
 ### Planning a student team
 
-1. [Initiative](01-initiative/initiative.html)
-2. [Project management plan](04-delivery/PROJECT_MANAGEMENT_PLAN.html)
-3. [Project timeline](04-delivery/PROJECT_TIMELINE.html)
-4. [Learning prerequisites](03-student-guides/LEARNING_PREREQUISITES.html)
+1. [Start here](00-start-here/START_HERE.html)
+2. [Research and validation](07-research-and-validation/RESEARCH_AND_VALIDATION.html)
+3. [Project management plan](04-delivery/PROJECT_MANAGEMENT_PLAN.html)
+4. [Student toolkit](08-student-toolkit/STUDENT_TOOLKIT.html)
+5. [Project timeline](04-delivery/PROJECT_TIMELINE.html)
+6. [Showcase and reflection](09-showcase-and-reflection/SHOWCASE_AND_REFLECTION.html)
 
 ### Understanding the technical system
 
@@ -40,11 +44,15 @@ This index is the starting point for the project's initiative, product design, s
 | Topic | Primary documents | What to find here |
 |---|---|---|
 | Initiative and product vision | [Initiative](01-initiative/initiative.html), [English plan](01-initiative/Opportunity_Equity_Engine.html), [中文方案](01-initiative/Opportunity_Equity_Engine.CN.html) | Purpose, audience, problem, ultimate goal, scope, and product positioning |
+| Starting the project | [Start here](00-start-here/START_HERE.html) | First-hour checklist, roles, working agreement, and definition of done |
 | Architecture | [Architecture](02-architecture/architecture.html) | End-to-end components, data model, matching, search, security, and operations |
 | Student learning | [Beginner guide](03-student-guides/BEGINNER_PROJECT_GUIDE.html), [Vibe coding](03-student-guides/VIBE_CODING_FOR_STUDENTS.html), [Prerequisites](03-student-guides/LEARNING_PREREQUISITES.html) | Starting from zero, AI-assisted development, knowledge gaps, and learning sequence |
+| Research and validation | [Research and validation](07-research-and-validation/RESEARCH_AND_VALIDATION.html) | Interviews, consent, source verification, usability testing, and evidence-based decisions |
 | Project delivery | [Management plan](04-delivery/PROJECT_MANAGEMENT_PLAN.html), [Timeline](04-delivery/PROJECT_TIMELINE.html) | Roles, tools, cost, risks, team process, milestones, and definition of done |
 | Implementation | [Demo implementation guide](05-build/DEMO_IMPLEMENTATION_GUIDE.html) | Beginner-friendly tasks, setup, schema, code examples, testing, and deployment |
+| Collaboration and safety | [Student toolkit](08-student-toolkit/STUDENT_TOOLKIT.html) | GitHub workflow, accessibility, privacy, responsible AI, troubleshooting, and glossary |
 | Demo and presentation | [Demo deliverables](06-demo/DEMO_DELIVERABLES.html) | End-user journey, product behavior, presentation script, and visual mockups |
+| Showcase and reflection | [Showcase and reflection](09-showcase-and-reflection/SHOWCASE_AND_REFLECTION.html) | Demo story, portfolio evidence, honest claims, credits, and learning reflection |
 
 ## Repository documentation layout
 
@@ -52,13 +60,17 @@ This index is the starting point for the project's initiative, product design, s
 README.md                 Repository orientation
 index.md                  GitHub Pages landing page
 docs/
+├── 00-start-here/        Student orientation and first contribution
 ├── INDEX.md              This documentation index
 ├── 01-initiative/        Purpose and product vision
 ├── 02-architecture/      Technical architecture
 ├── 03-student-guides/    Beginner and learning guidance
 ├── 04-delivery/          Team management and timeline
 ├── 05-build/             Implementation instructions
-└── 06-demo/              Demo deliverables and image assets
+├── 06-demo/              Demo deliverables and image assets
+├── 07-research-and-validation/  Research, consent, and usability testing
+├── 08-student-toolkit/   Collaboration, safety, and troubleshooting
+└── 09-showcase-and-reflection/  Presentation, portfolio, and reflection
 ```
 
 ## Documentation standards

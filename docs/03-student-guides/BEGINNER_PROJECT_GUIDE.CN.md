@@ -43,3 +43,14 @@ translation_fr: /docs/03-student-guides/BEGINNER_PROJECT_GUIDE.FR.md
 ## 完成标准
 
 学生能完成流程，看到相关机会，理解分数的原因，并通过官方链接继续申请。代码能够运行，错误状态有提示，样例数据有来源，团队也能解释做出的产品决定。
+## 完整同步参考
+
+以下内容会直接同步英文原文，包含完整章节、示例、链接、表格和媒体资源。
+
+<details markdown="1">
+<summary>打开完整英文参考</summary>
+
+{% capture canonical_source %}{% include_relative BEGINNER_PROJECT_GUIDE.md %}{% endcapture %}
+{{ canonical_source | remove_first: '---' | remove_first: '---' }}
+
+</details>

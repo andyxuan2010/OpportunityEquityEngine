@@ -34,3 +34,14 @@ Chaque fiche doit contenir au minimum le nom, l’organisme, la catégorie, le l
 ## Tests et déploiement
 
 Tester les niveaux, régions, langues, budgets et dates limites, ainsi que les champs manquants, les entrées invalides, l’absence de résultat et les erreurs de chargement. Ne jamais envoyer de secrets dans Git. La production nécessite authentification, permissions, sauvegardes, journaux et politique de confidentialité.
+## Référence complète synchronisée
+
+Le contenu anglais complet est inclus automatiquement ci-dessous, avec toutes les sections, exemples, liens, tableaux et ressources multimédias.
+
+<details markdown="1">
+<summary>Ouvrir la référence anglaise complète</summary>
+
+{% capture canonical_source %}{% include_relative DEMO_IMPLEMENTATION_GUIDE.md %}{% endcapture %}
+{{ canonical_source | remove_first: '---' | remove_first: '---' }}
+
+</details>

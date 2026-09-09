@@ -36,3 +36,14 @@ translation_fr: /docs/03-student-guides/LEARNING_PREREQUISITES.FR.md
 ## 建议路线
 
 从问题研究开始，接着制作静态原型，再实现样例数据和匹配规则，最后加入持久化、审核和部署。清晰的垂直切片比大量未完成的功能更有价值。
+## 完整同步参考
+
+以下内容会直接同步英文原文，包含完整章节、示例、链接、表格和媒体资源。
+
+<details markdown="1">
+<summary>打开完整英文参考</summary>
+
+{% capture canonical_source %}{% include_relative LEARNING_PREREQUISITES.md %}{% endcapture %}
+{{ canonical_source | remove_first: '---' | remove_first: '---' }}
+
+</details>

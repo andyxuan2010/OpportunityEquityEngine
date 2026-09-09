@@ -47,6 +47,79 @@ Test, learn, and repeat
 
 The AI can help write code, but you provide the direction. You decide what problem is worth solving, who it helps, what it should feel like, and what “good” means.
 
+## What vibe coding is good at
+
+Vibe coding is especially useful when you have a clear goal but do not yet know the syntax or framework:
+
+| Good use | Example request | What you still do |
+|---|---|---|
+| Create a first interface | “Build a mobile-friendly opportunity card with a title, deadline, cost, source link, and save button.” | Decide which information a student needs, then check the layout on a phone. |
+| Turn an idea into a data shape | “Suggest a JSON structure for an opportunity and explain each field.” | Decide which fields are necessary and verify them against official sources. |
+| Explore a rule | “Write a function that matches a student’s grade to an opportunity’s minimum and maximum grade.” | Define edge cases, test boundary values, and confirm the rule is fair. |
+| Understand an error | “Explain this error, identify the likely file, and give me the smallest safe fix.” | Reproduce the problem, apply the fix, and check what else could have changed. |
+| Create tests and documentation | “Write tests for an empty result, an expired deadline, and a matching opportunity.” | Read every test and confirm it represents real user behavior. |
+
+It is less reliable at deciding what students truly need, knowing whether a deadline or eligibility requirement is current, protecting private data, or judging whether a product is fair and safe. Those responsibilities stay with the team.
+
+## Three concrete examples
+
+### Example 1: From a student story to a screen
+
+Start with a small story:
+
+> As a student in Grade 10 who likes biology, I want to see opportunities I can still apply for and understand why each one matches me.
+
+Ask the AI to create only the first screen:
+
+```text
+Create a React component for three opportunity cards.
+Each card must show the program name, category, deadline, cost, match reason, and official source link.
+Use sample data only. Make it keyboard accessible and readable at 390px wide.
+Do not add authentication or a database yet. Explain each file you create.
+```
+
+Run it, resize the browser, and ask a classmate to find one relevant opportunity. If they cannot tell why a result appeared, improve the wording or data—not just the colors.
+
+### Example 2: From a policy to a tested rule
+
+Suppose the team agrees that an opportunity is eligible when the student’s grade is between `minimum_grade` and `maximum_grade`, inclusive. Ask for a small function and tests:
+
+```text
+Implement isEligible(studentGrade, opportunity) in TypeScript.
+Return false for missing grades or invalid ranges.
+Write tests for below minimum, exactly minimum, inside the range,
+exactly maximum, above maximum, and missing data.
+Explain why each test matters.
+```
+
+You decide whether “inclusive” is correct, inspect the code, run the tests, and add a source note to the requirement. The AI helps express the rule; it does not invent the policy.
+
+### Example 3: From an error to a learning loop
+
+When a page breaks, give the assistant the exact error and the smallest relevant code sample:
+
+```text
+I expected the results list to show ten opportunities, but it is empty.
+Here is the network response and the filtering function.
+Explain the data flow in beginner language, suggest two likely causes,
+and give me one diagnostic step at a time. Do not rewrite the whole feature.
+```
+
+This keeps you in control. You learn whether the problem is the request, the data shape, the filter, or the display instead of accepting a large unexplained rewrite.
+
+## A useful prompt pattern
+
+Good prompts provide context, a small goal, constraints, and a way to verify the result:
+
+```text
+Context: We are building a student opportunity finder for a 390px phone screen.
+Goal: Add an empty-results message to the search page.
+Constraints: Keep the existing visual style; do not change the API or translations.
+Verification: Give me the files changed and two tests, including a no-results case.
+```
+
+If the answer is too large, ask for a plan or a smaller step. If you cannot explain what changed, you are not ready to merge it.
+
 ## Your creativity is the main advantage
 
 Vibe coding is not about making every student produce the same application. It makes it faster to explore original ideas.

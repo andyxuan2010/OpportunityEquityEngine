@@ -30,3 +30,14 @@ Choisir quelques objectifs au début de la semaine, signaler les blocages au mil
 ## Jalons
 
 Les jalons principaux sont l’énoncé du problème, le prototype, les données vérifiées, le premier parcours de bout en bout, les retours utilisateurs et une démonstration reproductible. Chaque jalon doit avoir des critères d’acceptation explicites.
+## Référence complète synchronisée
+
+Le contenu anglais complet est inclus automatiquement ci-dessous, avec toutes les sections, exemples, liens, tableaux et ressources multimédias.
+
+<details markdown="1">
+<summary>Ouvrir la référence anglaise complète</summary>
+
+{% capture canonical_source %}{% include_relative PROJECT_TIMELINE.md %}{% endcapture %}
+{{ canonical_source | remove_first: '---' | remove_first: '---' }}
+
+</details>

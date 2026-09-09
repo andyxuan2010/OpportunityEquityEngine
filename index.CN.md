@@ -13,12 +13,16 @@ translation_fr: /index.FR.md
 
 | 主题 | 内容 |
 |---|---|
+| [从这里开始](docs/00-start-here/START_HERE.html) | 选择角色、配置工具并完成第一次贡献 |
 | [项目愿景](docs/01-initiative/initiative.html) | 目标用户、问题、产品定位和长期影响 |
 | [学生指南](docs/03-student-guides/BEGINNER_PROJECT_GUIDE.html) | 入门学习、Vibe Coding 和先修知识 |
 | [系统架构](docs/02-architecture/architecture.html) | 数据、匹配规则、安全和运行方式 |
 | [交付计划](docs/04-delivery/PROJECT_MANAGEMENT_PLAN.html) | 角色、风险、里程碑和团队流程 |
 | [构建指南](docs/05-build/DEMO_IMPLEMENTATION_GUIDE.html) | 从样例数据到可运行垂直切片的步骤 |
 | [演示交付物](docs/06-demo/DEMO_DELIVERABLES.html) | 用户流程、展示脚本和产品视觉素材 |
+| [研究与验证](docs/07-research-and-validation/RESEARCH_AND_VALIDATION.html) | 学生访谈、来源核验、可用性测试和证据决策 |
+| [学生工具箱](docs/08-student-toolkit/STUDENT_TOOLKIT.html) | GitHub 协作、可访问性、隐私、安全和排障 |
+| [展示与反思](docs/09-showcase-and-reflection/SHOWCASE_AND_REFLECTION.html) | 展示成果、记录证据、致谢和学习反思 |
 
 ## 更多机会，更清晰的路径
 
@@ -51,3 +55,14 @@ translation_fr: /index.FR.md
 ## 最终目标
 
 目标不是让学生申请所有机会，而是帮助每位学生找到少量适合自己的可能性，理解它们，并更有信心地采取行动。
+## 完整同步参考
+
+以下内容会直接同步英文原文，包含完整章节、示例、链接、表格和媒体资源。
+
+<details markdown="1">
+<summary>打开完整英文参考</summary>
+
+{% capture canonical_source %}{% include_relative index.md %}{% endcapture %}
+{{ canonical_source | remove_first: '---' | remove_first: '---' }}
+
+</details>

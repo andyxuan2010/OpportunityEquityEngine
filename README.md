@@ -41,10 +41,14 @@ The project is currently in the planning and demo-design stage. The recommended 
 
 - `docs/01-initiative/`: purpose, audience, product vision, and bilingual project plans
 - `docs/02-architecture/`: end-to-end system architecture
+- `docs/00-start-here/`: student orientation, first contribution, and working agreement
 - `docs/03-student-guides/`: beginner, learning, and vibe-coding guidance
 - `docs/04-delivery/`: project management, roles, cost, risks, and timeline
 - `docs/05-build/`: step-by-step demo implementation
 - `docs/06-demo/`: visual deliverables, end-user journeys, and image assets
+- `docs/07-research-and-validation/`: student research, consent, source verification, and usability testing
+- `docs/08-student-toolkit/`: GitHub collaboration, accessibility, privacy, safety, and troubleshooting
+- `docs/09-showcase-and-reflection/`: presentation, portfolio evidence, credits, and learning reflection
 - `docs/INDEX.md`: documentation index and recommended reading paths
 
 ## Documentation
@@ -52,6 +56,7 @@ The project is currently in the planning and demo-design stage. The recommended 
 | Document | Purpose |
 |---|---|
 | [Documentation index](docs/INDEX.md) | Topic map and recommended reading paths |
+| [Start here](docs/00-start-here/START_HERE.md) | First-hour orientation, roles, working agreement, and definition of done |
 | [Initiative](docs/01-initiative/initiative.md) | Purpose, users, problem, ultimate goal, principles, and impact |
 | [Architecture](docs/02-architecture/architecture.md) | End-to-end system architecture and technical design |
 | [Beginner project guide](docs/03-student-guides/BEGINNER_PROJECT_GUIDE.md) | Zero-to-demo guide for students with no prior experience |
@@ -61,6 +66,9 @@ The project is currently in the planning and demo-design stage. The recommended 
 | [Project management plan](docs/04-delivery/PROJECT_MANAGEMENT_PLAN.md) | Proposal, tools, cost, roles, risks, and team process |
 | [Project timeline](docs/04-delivery/PROJECT_TIMELINE.md) | Estimated 16-week delivery plan and milestones |
 | [Demo deliverables](docs/06-demo/DEMO_DELIVERABLES.md) | User journeys, implementation targets, and visual mockups |
+| [Research and validation](docs/07-research-and-validation/RESEARCH_AND_VALIDATION.md) | Interviews, source verification, usability testing, and evidence |
+| [Student toolkit](docs/08-student-toolkit/STUDENT_TOOLKIT.md) | Collaboration, accessibility, privacy, responsible AI, and troubleshooting |
+| [Showcase and reflection](docs/09-showcase-and-reflection/SHOWCASE_AND_REFLECTION.md) | Presentation, portfolio evidence, credits, and student reflection |
 | [English project plan](docs/01-initiative/Opportunity_Equity_Engine.md) | Detailed product and AI project plan |
 | [中文项目方案](docs/01-initiative/Opportunity_Equity_Engine.CN.md) | Chinese version of the project plan |
 

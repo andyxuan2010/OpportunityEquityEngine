@@ -38,3 +38,14 @@ translation_fr: /docs/05-build/DEMO_IMPLEMENTATION_GUIDE.FR.md
 ## 部署与安全
 
 演示环境可以使用托管服务，但秘密不能提交到 Git。生产版本需要认证、权限控制、备份、日志、输入验证和隐私政策。演示中的样例数据必须明确标注。
+## 完整同步参考
+
+以下内容会直接同步英文原文，包含完整章节、示例、链接、表格和媒体资源。
+
+<details markdown="1">
+<summary>打开完整英文参考</summary>
+
+{% capture canonical_source %}{% include_relative DEMO_IMPLEMENTATION_GUIDE.md %}{% endcapture %}
+{{ canonical_source | remove_first: '---' | remove_first: '---' }}
+
+</details>

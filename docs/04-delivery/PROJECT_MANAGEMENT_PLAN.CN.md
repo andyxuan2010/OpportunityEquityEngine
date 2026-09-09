@@ -32,3 +32,14 @@ translation_fr: /docs/04-delivery/PROJECT_MANAGEMENT_PLAN.FR.md
 ## 完成定义
 
 学生可以建立档案、得到匹配结果、理解原因、查看官方来源并完成一个保存或下一步操作；团队能够展示测试结果、已知限制、数据核验状态和后续计划。
+## 完整同步参考
+
+以下内容会直接同步英文原文，包含完整章节、示例、链接、表格和媒体资源。
+
+<details markdown="1">
+<summary>打开完整英文参考</summary>
+
+{% capture canonical_source %}{% include_relative PROJECT_MANAGEMENT_PLAN.md %}{% endcapture %}
+{{ canonical_source | remove_first: '---' | remove_first: '---' }}
+
+</details>

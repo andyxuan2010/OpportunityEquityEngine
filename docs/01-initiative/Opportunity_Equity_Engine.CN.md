@@ -511,3 +511,14 @@ Budget: Free / <$500
 > **Opportunity Database + AI Extraction + Eligibility Engine + Personalized Ranking + School / Community Deployment + Measurable Equity Impact**
 
 如果能做到这个程度，它完全足够成为一个有分量的高中生 AI 项目。
+## 完整同步参考
+
+以下内容会直接同步英文原文，包含完整章节、示例、链接、表格和媒体资源。
+
+<details markdown="1">
+<summary>打开完整英文参考</summary>
+
+{% capture canonical_source %}{% include_relative Opportunity_Equity_Engine.md %}{% endcapture %}
+{{ canonical_source | remove_first: '---' | remove_first: '---' }}
+
+</details>

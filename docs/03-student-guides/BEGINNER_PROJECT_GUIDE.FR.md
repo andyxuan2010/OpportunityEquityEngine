@@ -41,3 +41,14 @@ Donnez à l’IA une petite tâche, une entrée, une sortie et des critères d�
 ## Définition de terminé
 
 L’élève peut terminer le parcours, comprendre le résultat, consulter la source officielle et choisir une prochaine action. Le code fonctionne, les états d’erreur sont prévus, les données ont une source et l’équipe peut expliquer ses décisions.
+## Référence complète synchronisée
+
+Le contenu anglais complet est inclus automatiquement ci-dessous, avec toutes les sections, exemples, liens, tableaux et ressources multimédias.
+
+<details markdown="1">
+<summary>Ouvrir la référence anglaise complète</summary>
+
+{% capture canonical_source %}{% include_relative BEGINNER_PROJECT_GUIDE.md %}{% endcapture %}
+{{ canonical_source | remove_first: '---' | remove_first: '---' }}
+
+</details>

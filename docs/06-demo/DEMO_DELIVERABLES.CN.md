@@ -33,3 +33,14 @@ translation_fr: /docs/06-demo/DEMO_DELIVERABLES.FR.md
 ## 成功标准
 
 观众可以说出学生为什么看到这个机会、信息来自哪里、下一步是什么，以及哪些部分仍属于样例或未来计划。演示必须诚实表达限制，不承诺录取结果。
+## 完整同步参考
+
+以下内容会直接同步英文原文，包含完整章节、示例、链接、表格和媒体资源。
+
+<details markdown="1">
+<summary>打开完整英文参考</summary>
+
+{% capture canonical_source %}{% include_relative DEMO_DELIVERABLES.md %}{% endcapture %}
+{{ canonical_source | remove_first: '---' | remove_first: '---' }}
+
+</details>

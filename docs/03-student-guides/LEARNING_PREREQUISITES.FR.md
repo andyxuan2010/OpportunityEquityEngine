@@ -36,3 +36,14 @@ Pratiquer les tests unitaires, les tests de parcours, l’accessibilité, la ges
 ## Parcours conseillé
 
 Commencer par la recherche, créer ensuite un prototype statique, implémenter les données et les règles, puis ajouter la persistance, la revue et le déploiement. Une tranche verticale claire vaut mieux qu’une longue liste de fonctions inachevées.
+## Référence complète synchronisée
+
+Le contenu anglais complet est inclus automatiquement ci-dessous, avec toutes les sections, exemples, liens, tableaux et ressources multimédias.
+
+<details markdown="1">
+<summary>Ouvrir la référence anglaise complète</summary>
+
+{% capture canonical_source %}{% include_relative LEARNING_PREREQUISITES.md %}{% endcapture %}
+{{ canonical_source | remove_first: '---' | remove_first: '---' }}
+
+</details>

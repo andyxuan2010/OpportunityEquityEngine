@@ -9,24 +9,28 @@ translation_fr: /docs/INDEX.FR.md
 
 # Moteur d’équité des opportunités — Index de la documentation
 
-Voici le point de départ pour la vision du projet, la conception du produit, l’apprentissage des élèves, l’architecture, la réalisation et la démonstration.
+Voici le point de départ pour la vision du projet, l’apprentissage, la recherche, la collaboration, la réalisation et la présentation.
 
 ## Parcours recommandés
 
 ### Pour débuter en technologie
 
-1. [Initiative](01-initiative/initiative.html)
-2. [Guide de projet pour débutants](03-student-guides/BEGINNER_PROJECT_GUIDE.html)
-3. [Vibe Coding pour les élèves](03-student-guides/VIBE_CODING_FOR_STUDENTS.html)
-4. [Guide d’implémentation](05-build/DEMO_IMPLEMENTATION_GUIDE.html)
-5. [Livrables de démonstration](06-demo/DEMO_DELIVERABLES.html)
+1. [Commencer ici](00-start-here/START_HERE.html)
+2. [Initiative](01-initiative/initiative.html)
+3. [Guide de projet pour débutants](03-student-guides/BEGINNER_PROJECT_GUIDE.html)
+4. [Recherche et validation](07-research-and-validation/RESEARCH_AND_VALIDATION.html)
+5. [Boîte à outils](08-student-toolkit/STUDENT_TOOLKIT.html)
+6. [Guide d’implémentation](05-build/DEMO_IMPLEMENTATION_GUIDE.html)
+7. [Présentation et réflexion](09-showcase-and-reflection/SHOWCASE_AND_REFLECTION.html)
 
 ### Pour organiser une équipe
 
-1. [Initiative](01-initiative/initiative.html)
-2. [Plan de gestion](04-delivery/PROJECT_MANAGEMENT_PLAN.html)
-3. [Calendrier du projet](04-delivery/PROJECT_TIMELINE.html)
-4. [Prérequis d’apprentissage](03-student-guides/LEARNING_PREREQUISITES.html)
+1. [Commencer ici](00-start-here/START_HERE.html)
+2. [Recherche et validation](07-research-and-validation/RESEARCH_AND_VALIDATION.html)
+3. [Plan de gestion](04-delivery/PROJECT_MANAGEMENT_PLAN.html)
+4. [Boîte à outils](08-student-toolkit/STUDENT_TOOLKIT.html)
+5. [Calendrier du projet](04-delivery/PROJECT_TIMELINE.html)
+6. [Présentation et réflexion](09-showcase-and-reflection/SHOWCASE_AND_REFLECTION.html)
 
 ### Pour examiner le système
 
@@ -40,11 +44,15 @@ Voici le point de départ pour la vision du projet, la conception du produit, l�
 | Thème | Documents principaux | À trouver |
 |---|---|---|
 | Initiative | [Initiative](01-initiative/initiative.html), [plan IA](01-initiative/Opportunity_Equity_Engine.html) | But, public, problème, portée et positionnement |
+| Démarrage | [Commencer ici](00-start-here/START_HERE.html) | Première heure, rôles, accord d’équipe et définition de terminé |
 | Architecture | [Architecture](02-architecture/architecture.html) | Composants, données, correspondance, recherche, sécurité et exploitation |
 | Apprentissage | [Guide débutant](03-student-guides/BEGINNER_PROJECT_GUIDE.html), [Vibe Coding](03-student-guides/VIBE_CODING_FOR_STUDENTS.html) | Démarrage, développement assisté par IA et parcours d’apprentissage |
+| Recherche et validation | [Recherche et validation](07-research-and-validation/RESEARCH_AND_VALIDATION.html) | Entretiens, consentement, sources, tests d’utilisabilité et décisions fondées |
 | Réalisation | [Plan de gestion](04-delivery/PROJECT_MANAGEMENT_PLAN.html), [calendrier](04-delivery/PROJECT_TIMELINE.html) | Rôles, outils, coûts, risques et étapes |
 | Construction | [Guide d’implémentation](05-build/DEMO_IMPLEMENTATION_GUIDE.html) | Configuration, données, code, tests et déploiement |
+| Collaboration et sécurité | [Boîte à outils](08-student-toolkit/STUDENT_TOOLKIT.html) | GitHub, accessibilité, confidentialité, IA responsable et dépannage |
 | Démonstration | [Livrables](06-demo/DEMO_DELIVERABLES.html) | Parcours utilisateur, comportement et supports visuels |
+| Présentation et réflexion | [Présentation et réflexion](09-showcase-and-reflection/SHOWCASE_AND_REFLECTION.html) | Récit de démo, portfolio, crédits et apprentissages |
 
 ## Normes documentaires
 
@@ -53,3 +61,14 @@ Chaque document doit avoir un objectif clair. Les nouveaux contenus doivent rest
 ## État actuel
 
 Le dépôt contient la charte, les plans bilingues, l’architecture, les guides pour élèves, le plan de réalisation, le calendrier, le guide d’implémentation et les supports de démonstration. La prochaine étape est de construire la tranche verticale décrite dans le [guide d’implémentation](05-build/DEMO_IMPLEMENTATION_GUIDE.html).
+## Référence complète synchronisée
+
+Le contenu anglais complet est inclus automatiquement ci-dessous, avec toutes les sections, exemples, liens, tableaux et ressources multimédias.
+
+<details markdown="1">
+<summary>Ouvrir la référence anglaise complète</summary>
+
+{% capture canonical_source %}{% include_relative INDEX.md %}{% endcapture %}
+{{ canonical_source | remove_first: '---' | remove_first: '---' }}
+
+</details>

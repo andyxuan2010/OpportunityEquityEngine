@@ -32,3 +32,14 @@ La première version doit privilégier les services gratuits ou peu coûteux. Le
 ## Définition de terminé
 
 Un élève peut créer un profil, obtenir un résultat, comprendre la raison, consulter la source officielle et enregistrer une prochaine action. L’équipe peut présenter les tests, les limites, l’état de vérification des données et le plan suivant.
+## Référence complète synchronisée
+
+Le contenu anglais complet est inclus automatiquement ci-dessous, avec toutes les sections, exemples, liens, tableaux et ressources multimédias.
+
+<details markdown="1">
+<summary>Ouvrir la référence anglaise complète</summary>
+
+{% capture canonical_source %}{% include_relative PROJECT_MANAGEMENT_PLAN.md %}{% endcapture %}
+{{ canonical_source | remove_first: '---' | remove_first: '---' }}
+
+</details>

@@ -48,3 +48,14 @@ La première démonstration doit rester petite : un ensemble de données manuel,
 ## Impact recherché
 
 Le projet ne cherche pas à faire postuler chaque élève à tout. Il veut aider chaque élève à trouver quelques options pertinentes, à comprendre ses choix et à avancer avec confiance.
+## Référence complète synchronisée
+
+Le contenu anglais complet est inclus automatiquement ci-dessous, avec toutes les sections, exemples, liens, tableaux et ressources multimédias.
+
+<details markdown="1">
+<summary>Ouvrir la référence anglaise complète</summary>
+
+{% capture canonical_source %}{% include_relative Opportunity_Equity_Engine.md %}{% endcapture %}
+{{ canonical_source | remove_first: '---' | remove_first: '---' }}
+
+</details>

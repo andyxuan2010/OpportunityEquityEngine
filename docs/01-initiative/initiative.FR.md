@@ -46,3 +46,14 @@ Un administrateur peut vérifier, corriger ou désactiver une fiche. Le crawling
 ## Réussite
 
 Un élève doit trouver rapidement quelques options pertinentes, comprendre pourquoi elles lui conviennent, consulter la source officielle et savoir quoi faire ensuite. La réussite se mesure par la compréhension, la confiance et l’action, pas par le nombre de candidatures.
+## Référence complète synchronisée
+
+Le contenu anglais complet est inclus automatiquement ci-dessous, avec toutes les sections, exemples, liens, tableaux et ressources multimédias.
+
+<details markdown="1">
+<summary>Ouvrir la référence anglaise complète</summary>
+
+{% capture canonical_source %}{% include_relative initiative.md %}{% endcapture %}
+{{ canonical_source | remove_first: '---' | remove_first: '---' }}
+
+</details>

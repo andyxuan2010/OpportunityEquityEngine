@@ -12,6 +12,12 @@ translation_fr: /index.FR.md
 Choose a collection to browse the initiative, student learning path, product design, or implementation material.
 
 <div class="library-grid">
+  <a class="library-card library-card-orange" href="docs/00-start-here/START_HERE.html">
+    <span class="library-icon">↗</span>
+    <strong>Start here</strong>
+    <span>Choose a role, set up your tools, and make your first contribution.</span>
+    <b>Begin the project <span aria-hidden="true">↗</span></b>
+  </a>
   <a class="library-card library-card-blue" href="docs/01-initiative/initiative.html">
     <span class="library-icon">◇</span>
     <strong>Initiative &amp; vision</strong>
@@ -47,6 +53,24 @@ Choose a collection to browse the initiative, student learning path, product des
     <strong>Demo deliverables</strong>
     <span>End-user journeys, presentation flow, and visual product assets.</span>
     <b>View the product <span aria-hidden="true">↗</span></b>
+  </a>
+  <a class="library-card library-card-teal" href="docs/07-research-and-validation/RESEARCH_AND_VALIDATION.html">
+    <span class="library-icon">⌕</span>
+    <strong>Research &amp; validation</strong>
+    <span>Interview students, verify sources, test usability, and learn from evidence.</span>
+    <b>Validate the idea <span aria-hidden="true">↗</span></b>
+  </a>
+  <a class="library-card library-card-blue" href="docs/08-student-toolkit/STUDENT_TOOLKIT.html">
+    <span class="library-icon">⌘</span>
+    <strong>Student toolkit</strong>
+    <span>Collaborate safely with GitHub, accessibility, privacy, and troubleshooting guidance.</span>
+    <b>Work as a team <span aria-hidden="true">↗</span></b>
+  </a>
+  <a class="library-card library-card-purple" href="docs/09-showcase-and-reflection/SHOWCASE_AND_REFLECTION.html">
+    <span class="library-icon">★</span>
+    <strong>Showcase &amp; reflection</strong>
+    <span>Present the work, document evidence, credit contributors, and reflect on learning.</span>
+    <b>Tell the story <span aria-hidden="true">↗</span></b>
   </a>
 </div>
 

@@ -33,3 +33,14 @@ Commencer par le problème de l’information dispersée, puis suivre un profil 
 ## Réussite
 
 Le public doit comprendre pourquoi une possibilité est affichée, d’où vient l’information, quelle est la prochaine étape et ce qui reste un exemple ou une idée future. La démonstration doit être honnête sur ses limites et ne promettre aucun résultat d’admission.
+## Référence complète synchronisée
+
+Le contenu anglais complet est inclus automatiquement ci-dessous, avec toutes les sections, exemples, liens, tableaux et ressources multimédias.
+
+<details markdown="1">
+<summary>Ouvrir la référence anglaise complète</summary>
+
+{% capture canonical_source %}{% include_relative DEMO_DELIVERABLES.md %}{% endcapture %}
+{{ canonical_source | remove_first: '---' | remove_first: '---' }}
+
+</details>

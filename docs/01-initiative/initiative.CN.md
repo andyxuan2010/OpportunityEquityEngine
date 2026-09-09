@@ -46,3 +46,14 @@ translation_fr: /docs/01-initiative/initiative.FR.md
 ## 成功标准
 
 学生可以在较短时间内找到少量真正相关的机会，理解为什么适合自己，看到官方来源，并知道下一步应该做什么。平台不以申请数量衡量成功，而以理解、信任和行动衡量。
+## 完整同步参考
+
+以下内容会直接同步英文原文，包含完整章节、示例、链接、表格和媒体资源。
+
+<details markdown="1">
+<summary>打开完整英文参考</summary>
+
+{% capture canonical_source %}{% include_relative initiative.md %}{% endcapture %}
+{{ canonical_source | remove_first: '---' | remove_first: '---' }}
+
+</details>

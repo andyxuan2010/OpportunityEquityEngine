@@ -41,3 +41,15 @@ translation_fr: /docs/02-architecture/architecture.FR.md
 ## 运行与演进
 
 监控应关注数据新鲜度、抓取或导入失败、搜索错误、审核队列和应用可用性。先交付一个可测试的垂直切片，再逐步加入通知、更多数据源、向量搜索和规模化部署。
+
+## 完整同步参考
+
+以下内容会直接同步英文原文，包含完整章节、代码示例、链接、表格和媒体资源。
+
+<details markdown="1">
+<summary>打开完整英文参考</summary>
+
+{% capture canonical_source %}{% include_relative architecture.md %}{% endcapture %}
+{{ canonical_source | remove_first: '---' | remove_first: '---' }}
+
+</details>
