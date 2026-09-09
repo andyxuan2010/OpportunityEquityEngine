@@ -1,0 +1,59 @@
+{% if page.locale == 'zh' %}
+  {% assign related_heading = '继续阅读' %}
+  {% assign related_intro = '继续浏览项目中最相关的下一步内容。' %}
+{% elsif page.locale == 'fr' %}
+  {% assign related_heading = 'Poursuivre la lecture' %}
+  {% assign related_intro = 'Explorez les prochaines ressources les plus utiles pour le projet.' %}
+{% else %}
+  {% assign related_heading = 'Continue reading' %}
+  {% assign related_intro = 'Explore the next resources that are most useful for this project.' %}
+{% endif %}
+
+{% assign related_keys = '/docs/00-start-here/START_HERE.md|/docs/01-initiative/initiative.md|/docs/02-architecture/architecture.md|/docs/03-student-guides/BEGINNER_PROJECT_GUIDE.md|/docs/05-build/DEMO_IMPLEMENTATION_GUIDE.md|/docs/08-student-toolkit/STUDENT_TOOLKIT.md' | split: '|' %}
+{% assign related_count = 0 %}
+
+<section class="document-related" aria-labelledby="continue-reading-title">
+  <div class="document-related-header">
+    <h2 id="continue-reading-title">{{ related_heading }}</h2>
+    <p>{{ related_intro }}</p>
+  </div>
+  <div class="document-related-grid">
+    {% for canonical_path in related_keys %}
+      {% if related_count < 3 and page.translation_en != canonical_path %}
+        {% assign target_path = canonical_path %}
+        {% case canonical_path %}
+          {% when '/docs/00-start-here/START_HERE.md' %}
+            {% assign related_title = 'Start Here' %}
+            {% assign related_type = 'Project orientation' %}
+            {% if page.locale == 'zh' %}{% assign target_path = '/docs/00-start-here/START_HERE.CN.md' %}{% assign related_title = '从这里开始' %}{% assign related_type = '项目入门' %}{% elsif page.locale == 'fr' %}{% assign target_path = '/docs/00-start-here/START_HERE.FR.md' %}{% assign related_title = 'Commencer ici' %}{% assign related_type = 'Orientation du projet' %}{% endif %}
+          {% when '/docs/01-initiative/initiative.md' %}
+            {% assign related_title = 'Initiative' %}
+            {% assign related_type = 'Purpose and vision' %}
+            {% if page.locale == 'zh' %}{% assign target_path = '/docs/01-initiative/initiative.CN.md' %}{% assign related_title = '项目倡议' %}{% assign related_type = '目标与愿景' %}{% elsif page.locale == 'fr' %}{% assign target_path = '/docs/01-initiative/initiative.FR.md' %}{% assign related_title = 'Initiative' %}{% assign related_type = 'Objectif et vision' %}{% endif %}
+          {% when '/docs/02-architecture/architecture.md' %}
+            {% assign related_title = 'High-Level Architecture' %}
+            {% assign related_type = 'Product design' %}
+            {% if page.locale == 'zh' %}{% assign target_path = '/docs/02-architecture/architecture.CN.md' %}{% assign related_title = '高层架构' %}{% assign related_type = '产品设计' %}{% elsif page.locale == 'fr' %}{% assign target_path = '/docs/02-architecture/architecture.FR.md' %}{% assign related_title = 'Architecture de haut niveau' %}{% assign related_type = 'Conception du produit' %}{% endif %}
+          {% when '/docs/03-student-guides/BEGINNER_PROJECT_GUIDE.md' %}
+            {% assign related_title = 'Beginner Project Guide' %}
+            {% assign related_type = 'Student learning' %}
+            {% if page.locale == 'zh' %}{% assign target_path = '/docs/03-student-guides/BEGINNER_PROJECT_GUIDE.CN.md' %}{% assign related_title = '初学者项目指南' %}{% assign related_type = '学生学习' %}{% elsif page.locale == 'fr' %}{% assign target_path = '/docs/03-student-guides/BEGINNER_PROJECT_GUIDE.FR.md' %}{% assign related_title = 'Guide de projet pour débutants' %}{% assign related_type = 'Apprentissage étudiant' %}{% endif %}
+          {% when '/docs/05-build/DEMO_IMPLEMENTATION_GUIDE.md' %}
+            {% assign related_title = 'Demo Implementation Guide' %}
+            {% assign related_type = 'Build and test' %}
+            {% if page.locale == 'zh' %}{% assign target_path = '/docs/05-build/DEMO_IMPLEMENTATION_GUIDE.CN.md' %}{% assign related_title = '演示实现指南' %}{% assign related_type = '构建与测试' %}{% elsif page.locale == 'fr' %}{% assign target_path = '/docs/05-build/DEMO_IMPLEMENTATION_GUIDE.FR.md' %}{% assign related_title = 'Guide d’implémentation de la démonstration' %}{% assign related_type = 'Construire et tester' %}{% endif %}
+          {% when '/docs/08-student-toolkit/STUDENT_TOOLKIT.md' %}
+            {% assign related_title = 'Student Toolkit' %}
+            {% assign related_type = 'Tools and services' %}
+            {% if page.locale == 'zh' %}{% assign target_path = '/docs/08-student-toolkit/STUDENT_TOOLKIT.CN.md' %}{% assign related_title = '学生工具箱' %}{% assign related_type = '工具与服务' %}{% elsif page.locale == 'fr' %}{% assign target_path = '/docs/08-student-toolkit/STUDENT_TOOLKIT.FR.md' %}{% assign related_title = 'Boîte à outils des élèves' %}{% assign related_type = 'Outils et services' %}{% endif %}
+        {% endcase %}
+        <a class="document-related-link" href="{{ target_path | replace: '.md', '.html' | relative_url }}">
+          <small>{{ related_type }}</small>
+          <strong>{{ related_title }}</strong>
+          <span aria-hidden="true">↗</span>
+        </a>
+        {% assign related_count = related_count | plus: 1 %}
+      {% endif %}
+    {% endfor %}
+  </div>
+</section>
