@@ -1,6 +1,10 @@
 ---
 layout: default
 title: Project Management Plan
+locale: en
+translation_en: /docs/04-delivery/PROJECT_MANAGEMENT_PLAN.md
+translation_zh: /docs/04-delivery/PROJECT_MANAGEMENT_PLAN.CN.md
+translation_fr: /docs/04-delivery/PROJECT_MANAGEMENT_PLAN.FR.md
 ---
 
 # Opportunity Equity Engine — Project Management Plan

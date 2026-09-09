@@ -1,6 +1,10 @@
 ---
 layout: default
 title: Documentation Index
+locale: en
+translation_en: /docs/INDEX.md
+translation_zh: /docs/INDEX.CN.md
+translation_fr: /docs/INDEX.FR.md
 ---
 
 # Opportunity Equity Engine — Documentation Index

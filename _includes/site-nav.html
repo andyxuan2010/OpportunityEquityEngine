@@ -1,17 +1,48 @@
+{% if page.locale == 'zh' %}
+  {% assign nav_home = '首页' %}
+  {% assign nav_projects = '项目' %}
+  {% assign nav_docs = '文档' %}
+  {% assign nav_github = 'GitHub' %}
+  {% assign portal_label = '文档门户' %}
+  {% assign language_label = '语言' %}
+  {% assign brand_subtitle = '学生机会文档' %}
+{% elsif page.locale == 'fr' %}
+  {% assign nav_home = 'Accueil' %}
+  {% assign nav_projects = 'Projets' %}
+  {% assign nav_docs = 'Documentation' %}
+  {% assign nav_github = 'GitHub' %}
+  {% assign portal_label = 'Portail documentaire' %}
+  {% assign language_label = 'Langue' %}
+  {% assign brand_subtitle = 'DOCUMENTATION DES OPPORTUNITÉS ÉTUDIANTES' %}
+{% else %}
+  {% assign nav_home = 'Home' %}
+  {% assign nav_projects = 'Projects' %}
+  {% assign nav_docs = 'Documentation' %}
+  {% assign nav_github = 'GitHub' %}
+  {% assign portal_label = 'Documentation portal' %}
+  {% assign language_label = 'Language' %}
+  {% assign brand_subtitle = 'STUDENT OPPORTUNITY DOCUMENTATION' %}
+{% endif %}
 <header class="site-nav">
   <div class="nav-inner">
     <nav class="nav-primary" aria-label="Primary navigation">
-      <a href="{{ '/' | relative_url }}"><span aria-hidden="true">⌂</span> Home</a>
-      <a href="https://andyxuan.ca/#featured"><span aria-hidden="true">◆</span> Projects</a>
-      <a href="{{ '/docs/INDEX.md' | relative_url }}"><span aria-hidden="true">▤</span> Documentation</a>
-      <a href="{{ site.github.repository_url }}" target="_blank" rel="noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+      <a href="{{ '/' | relative_url }}"><span aria-hidden="true">⌂</span> {{ nav_home }}</a>
+      <a href="https://andyxuan.ca/#featured"><span aria-hidden="true">◆</span> {{ nav_projects }}</a>
+      <a href="{{ '/docs/INDEX.md' | relative_url }}"><span aria-hidden="true">▤</span> {{ nav_docs }}</a>
+      <a href="{{ site.github.repository_url }}" target="_blank" rel="noreferrer">{{ nav_github }} <span aria-hidden="true">↗</span></a>
     </nav>
     <a class="site-brand" href="{{ '/' | relative_url }}" aria-label="Opportunity Equity Engine home">
       <span class="brand-mark">O</span>
-      <span class="brand-copy"><strong>Opportunity Equity</strong><small>STUDENT OPPORTUNITY DOCUMENTATION</small></span>
+      <span class="brand-copy"><strong>Opportunity Equity</strong><small>{{ brand_subtitle }}</small></span>
     </a>
     <div class="nav-secondary">
-      <span class="portal-label">Documentation portal</span>
+      <span class="portal-label">{{ portal_label }}</span>
+      <div class="language-switcher" aria-label="Choose language">
+        <span class="language-label">{{ language_label }}</span>
+        <a class="language-option{% if page.locale == nil or page.locale == 'en' %} active{% endif %}" href="{{ page.translation_en | default: page.url | relative_url }}" lang="en">EN</a>
+        <a class="language-option{% if page.locale == 'zh' %} active{% endif %}" href="{{ page.translation_zh | relative_url }}" lang="zh-CN">中文</a>
+        <a class="language-option{% if page.locale == 'fr' %} active{% endif %}" href="{{ page.translation_fr | relative_url }}" lang="fr">FR</a>
+      </div>
       <button class="theme-button" type="button" data-theme-toggle aria-label="Toggle color theme"><span aria-hidden="true">◐</span><span class="theme-button-label">Theme</span></button>
     </div>
   </div>

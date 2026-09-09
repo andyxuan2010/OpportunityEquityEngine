@@ -1,6 +1,10 @@
 ---
 layout: default
 title: Demo Implementation Guide
+locale: en
+translation_en: /docs/05-build/DEMO_IMPLEMENTATION_GUIDE.md
+translation_zh: /docs/05-build/DEMO_IMPLEMENTATION_GUIDE.CN.md
+translation_fr: /docs/05-build/DEMO_IMPLEMENTATION_GUIDE.FR.md
 ---
 
 # Opportunity Equity Engine — Beginner Demo Implementation

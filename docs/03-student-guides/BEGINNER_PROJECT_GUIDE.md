@@ -1,6 +1,10 @@
 ---
 layout: default
 title: Beginner Project Guide
+locale: en
+translation_en: /docs/03-student-guides/BEGINNER_PROJECT_GUIDE.md
+translation_zh: /docs/03-student-guides/BEGINNER_PROJECT_GUIDE.CN.md
+translation_fr: /docs/03-student-guides/BEGINNER_PROJECT_GUIDE.FR.md
 ---
 
 # Opportunity Equity Engine — Beginner Project Guide

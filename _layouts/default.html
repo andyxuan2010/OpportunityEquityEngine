@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" data-theme="light">
+<html lang="{% if page.locale == 'zh' %}zh-CN{% elsif page.locale == 'fr' %}fr{% else %}en{% endif %}" data-theme="light">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -12,7 +12,7 @@
     {% include site-nav.html %}
     <main class="site-main">
       <div class="content-shell document-shell">
-        <div class="document-kicker"><span class="kicker-dot"></span> Project documentation</div>
+        <div class="document-kicker"><span class="kicker-dot"></span>{% if page.locale == 'zh' %}项目文档{% elsif page.locale == 'fr' %}Documentation du projet{% else %}Project documentation{% endif %}</div>
         <article class="document-content">
           {{ content }}
         </article>

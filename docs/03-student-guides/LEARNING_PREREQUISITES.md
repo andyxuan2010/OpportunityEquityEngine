@@ -1,6 +1,10 @@
 ---
 layout: default
 title: Learning Prerequisites
+locale: en
+translation_en: /docs/03-student-guides/LEARNING_PREREQUISITES.md
+translation_zh: /docs/03-student-guides/LEARNING_PREREQUISITES.CN.md
+translation_fr: /docs/03-student-guides/LEARNING_PREREQUISITES.FR.md
 ---
 
 # Learning Prerequisites and Delivery Roadmap

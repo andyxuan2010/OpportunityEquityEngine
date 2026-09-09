@@ -1,6 +1,10 @@
 ---
 layout: home
 title: Opportunity Equity Engine
+locale: en
+translation_en: /index.md
+translation_zh: /index.CN.md
+translation_fr: /index.FR.md
 ---
 
 ## Explore the library

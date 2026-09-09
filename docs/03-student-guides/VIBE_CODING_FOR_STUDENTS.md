@@ -1,6 +1,10 @@
 ---
 layout: default
 title: Vibe Coding for Students
+locale: en
+translation_en: /docs/03-student-guides/VIBE_CODING_FOR_STUDENTS.md
+translation_zh: /docs/03-student-guides/VIBE_CODING_FOR_STUDENTS.CN.md
+translation_fr: /docs/03-student-guides/VIBE_CODING_FOR_STUDENTS.FR.md
 ---
 
 # Vibe Coding for High School Students

@@ -1,6 +1,10 @@
 ---
 layout: default
 title: Demo Deliverables
+locale: en
+translation_en: /docs/06-demo/DEMO_DELIVERABLES.md
+translation_zh: /docs/06-demo/DEMO_DELIVERABLES.CN.md
+translation_fr: /docs/06-demo/DEMO_DELIVERABLES.FR.md
 ---
 
 # Opportunity Equity Engine — Demo Deliverables

@@ -63,6 +63,11 @@ button { font: inherit; }
 .nav-primary a:hover, .nav-primary a:focus-visible { color: var(--blue); }
 .nav-primary a span { color: #738197; font-size: 12px; }
 .portal-label { color: #738197; font-weight: 500; }
+.language-switcher { display: inline-flex; align-items: center; gap: 4px; padding-left: 18px; border-left: 1px solid var(--line); }
+.language-label { color: #8a98aa; font-size: 10px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
+.language-option { min-width: 30px; min-height: 30px; display: inline-grid; place-items: center; padding: 0 5px; border-radius: 8px; color: #7a899e; font-size: 10px; font-weight: 850; }
+.language-option:hover, .language-option:focus-visible { color: var(--blue); background: var(--soft-blue); }
+.language-option.active { color: white; background: var(--blue); box-shadow: 0 7px 16px rgba(22, 123, 211, .22); }
 .site-brand { display: flex; align-items: center; gap: 15px; justify-self: center; min-width: max-content; }
 .brand-mark {
   width: 50px;
@@ -229,6 +234,9 @@ button { font: inherit; }
 [data-theme="dark"] .site-nav, [data-theme="dark"] .site-footer { border-color: var(--line); background: rgba(9, 19, 34, .94); }
 [data-theme="dark"] .nav-primary a, [data-theme="dark"] .brand-copy strong { color: #e7effa; }
 [data-theme="dark"] .portal-label, [data-theme="dark"] .brand-copy small { color: #95a9c5; }
+[data-theme="dark"] .language-switcher { border-color: var(--line); }
+[data-theme="dark"] .language-label, [data-theme="dark"] .language-option { color: #95a9c5; }
+[data-theme="dark"] .language-option:hover, [data-theme="dark"] .language-option:focus-visible { color: #8ed4ff; background: var(--soft-blue); }
 [data-theme="dark"] .theme-button { border-color: var(--line); color: #e7effa; background: var(--surface); }
 [data-theme="dark"] .home-content h2, [data-theme="dark"] .document-content h1, [data-theme="dark"] .document-content h2, [data-theme="dark"] .home-content h3, [data-theme="dark"] .document-content h3 { color: #e7effa; }
 [data-theme="dark"] .home-content > h2:nth-of-type(2) ~ h3 { border-color: var(--line); background: var(--surface); }
@@ -252,6 +260,9 @@ button { font: inherit; }
   .brand-copy strong { font-size: 14px; }
   .brand-copy small { max-width: 180px; overflow: hidden; font-size: 7px; text-overflow: ellipsis; white-space: nowrap; }
   .nav-secondary { order: 3; }
+  .language-switcher { padding-left: 0; border-left: 0; }
+  .language-label { display: none; }
+  .language-option { min-width: 27px; padding: 0 3px; font-size: 9px; }
   .theme-button { min-width: 42px; min-height: 38px; padding: 0 9px; }
   .theme-button-label { display: none; }
   .site-main { padding-top: 10px; padding-bottom: 48px; }

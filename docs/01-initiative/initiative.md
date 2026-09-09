@@ -1,6 +1,10 @@
 ---
 layout: default
 title: Initiative
+locale: en
+translation_en: /docs/01-initiative/initiative.md
+translation_zh: /docs/01-initiative/initiative.CN.md
+translation_fr: /docs/01-initiative/initiative.FR.md
 ---
 
 # Opportunity Equity Engine — Initiative

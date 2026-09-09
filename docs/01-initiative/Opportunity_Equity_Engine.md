@@ -1,6 +1,10 @@
 ---
 layout: default
 title: AI Project Plan
+locale: en
+translation_en: /docs/01-initiative/Opportunity_Equity_Engine.md
+translation_zh: /docs/01-initiative/Opportunity_Equity_Engine.CN.md
+translation_fr: /docs/01-initiative/Opportunity_Equity_Engine.FR.md
 ---
 
 # Opportunity Equity Engine: AI Project Plan for High School Students

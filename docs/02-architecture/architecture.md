@@ -1,6 +1,10 @@
 ---
 layout: default
 title: High-Level Architecture
+locale: en
+translation_en: /docs/02-architecture/architecture.md
+translation_zh: /docs/02-architecture/architecture.CN.md
+translation_fr: /docs/02-architecture/architecture.FR.md
 ---
 
 # Opportunity Equity Engine — High-Level Architecture

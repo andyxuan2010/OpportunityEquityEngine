@@ -1,6 +1,10 @@
 ---
 layout: default
 title: 项目方案
+locale: zh
+translation_en: /docs/01-initiative/Opportunity_Equity_Engine.md
+translation_zh: /docs/01-initiative/Opportunity_Equity_Engine.CN.md
+translation_fr: /docs/01-initiative/Opportunity_Equity_Engine.FR.md
 ---
 
 # Opportunity Equity Engine：高中生 AI 项目方案

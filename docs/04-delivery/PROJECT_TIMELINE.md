@@ -1,6 +1,10 @@
 ---
 layout: default
 title: Project Timeline
+locale: en
+translation_en: /docs/04-delivery/PROJECT_TIMELINE.md
+translation_zh: /docs/04-delivery/PROJECT_TIMELINE.CN.md
+translation_fr: /docs/04-delivery/PROJECT_TIMELINE.FR.md
 ---
 
 # Opportunity Equity Engine — Estimated Project Timeline
