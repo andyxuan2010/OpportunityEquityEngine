@@ -230,7 +230,7 @@ button { font: inherit; }
 .document-catalog th:nth-child(3), .document-catalog td:nth-child(3) { width: 16%; }
 .document-catalog th:nth-child(4), .document-catalog td:nth-child(4) { width: 14%; }
 .document-catalog th:nth-child(5), .document-catalog td:nth-child(5) { width: 15%; }
-.document-catalog th:nth-child(6), .document-catalog td:nth-child(6) { width: 7%; }
+.document-catalog th:nth-child(6), .document-catalog td:nth-child(6) { width: 7%; min-width: 80px; white-space: nowrap; }
 .document-catalog th:nth-child(7), .document-catalog td:nth-child(7) { width: 15%; }
 .home-content blockquote, .document-content blockquote { margin: 24px 0; padding: 18px 22px; border-left: 4px solid var(--blue-bright); border-radius: 0 15px 15px 0; color: var(--navy); background: var(--soft-blue); }
 .home-content img, .document-content img { display: block; width: auto; max-width: 100%; height: auto; margin: 28px auto; border: 1px solid var(--line); border-radius: 18px; box-shadow: var(--shadow); }
