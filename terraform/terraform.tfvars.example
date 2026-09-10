@@ -1,0 +1,19 @@
+# Copy this file to terraform.tfvars or pass values through your deployment pipeline.
+# Do not put client secrets, OAuth secrets, or passwords in this file.
+
+location                 = "canadacentral"
+environment              = "dev"
+workload                 = "opportunity"
+app_service_plan_sku_name = "B1"
+dotnet_version            = "8.0"
+always_on                = false
+
+# App Service names are globally constrained for the hostname. Set an explicit
+# unique value before applying if the generated name is already in use.
+# app_service_name = "app-opportunity-equity-engine-dev"
+
+app_settings = {
+  AAD_TENANT_ID     = "common"
+  AAD_REDIRECT_PATH = "/auth/callback"
+  AAD_SCOPES        = "User.Read"
+}

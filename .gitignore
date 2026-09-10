@@ -1,0 +1,28 @@
+.terraform/
+*.tfstate
+*.tfstate.*
+*.tfplan
+terraform/terraform.tfvars
+terraform/*.tfvars.json
+
+credentials
+
+# don't include terraform lock file
+.terraform.lock.hcl
+
+# don't include any terraform local providers
+.terraform/providers/*
+
+.git/hooks/post-checkout
+# Environment variables file
+
+# Repository setup script (environment-specific)
+
+# repo-setup gitignore managed start
+# Local workspace files
+.env
+.vscode/
+.vscode/load-dotenv.ps1
+post-checkout.ps1
+repo-setup.ps1
+# repo-setup gitig
