@@ -12,7 +12,7 @@ const opportunities = [
 
 const interestOptions = ["AI", "Medicine", "Research", "Coding", "Design", "Environment", "Leadership", "University"];
 const opportunityImages = {
-  competition: "./assets/opportunities/competition.png",
+  competition: "./assets/opportunities/competition-v2.png",
   research: "./assets/opportunities/research.png",
   summer: "./assets/opportunities/coding.png",
   scholarship: "./assets/opportunities/research.png",
