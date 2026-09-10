@@ -28,3 +28,5 @@ credentials
 post-checkout.ps1
 repo-setup.ps1
 # repo-setup gitig
+*.apps.googleusercontent.com.json
+client_secret*

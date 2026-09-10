@@ -4,6 +4,12 @@ variable "subscription_id" {
   default     = ""
 }
 
+variable "tenant_id" {
+  description = "Microsoft Entra tenant ID. Leave empty to use the provider's normal Azure CLI or ARM_* authentication context."
+  type        = string
+  default     = ""
+}
+
 variable "features" {
   description = "Optional reference-style feature switches. App Registration is gated by enable_app_services and enable_app_registration_for_appservice."
   type        = map(bool)

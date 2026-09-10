@@ -22,6 +22,17 @@ The provider reads Azure CLI or ARM_* authentication context. No credentials are
 
 ## Initialize
 
+Use an external Terraform data directory so provider and module caches are kept
+outside this repository:
+
+```powershell
+$env:TF_DATA_DIR = "C:\terraform-cache\repos\andyxuan2010\app-service-oee-demo"
+```
+
+Terraform downloads remote modules into that cache. It does not vendor them into
+the repository. Do not run Terraform from this directory without setting
+`TF_DATA_DIR`, or Terraform will create a local `.terraform` directory.
+
 From this directory, configure the remote backend during initialization:
 
 ```powershell
@@ -32,16 +43,22 @@ terraform init `
   -backend-config="key=opportunity-equity-engine/appservice.tfstate"
 ```
 
+For the dev environment, use its checked-in backend settings and variables:
+
+```powershell
+$env:TF_DATA_DIR = "C:\terraform-cache\repos\andyxuan2010\app-service-oee-demo"
+terraform init -backend-config="environments/dev/backend.hcl"
+terraform plan -var-file="environments/dev/terraform.tfvars"
+```
+
 The state storage account should have blob versioning and restricted access enabled. Do not commit a `.tfstate` file.
 
 ## Plan and apply
 
 ```powershell
-Copy-Item terraform.tfvars.example terraform.tfvars
-# Edit terraform.tfvars and set a globally unique app_service_name.
 terraform fmt -recursive
 terraform validate
-terraform plan -out=tfplan
+terraform plan -var-file="environments/dev/terraform.tfvars" -out=tfplan
 terraform apply tfplan
 ```
 

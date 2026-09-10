@@ -1,23 +1,31 @@
 # Copy this file to terraform.tfvars or pass values through your deployment pipeline.
 # Do not put client secrets, OAuth secrets, or passwords in this file.
 
+subscription_id          = "<azure-subscription-id>"
+tenant_id                = "<entra-tenant-id>"
 location                 = "canadacentral"
 environment              = "dev"
 workload                 = "opportunity"
+resource_group_name      = "rg-opportunity-dev"
+app_service_plan_name    = "asp-opportunity-dev"
+app_service_name         = "app-opportunity-dev"
 app_service_plan_sku_name = "F1"
 dotnet_version            = "10.0"
-always_on                = false
-enable_easy_auth         = false
-enable_app_services      = true
+always_on                 = false
+health_check_path         = "/health"
+health_check_eviction_time_in_min = 5
+enable_easy_auth          = false
+enable_app_services       = true
 enable_app_registration_for_appservice = true
 app_service_auth_mode    = "both"
 app_service_allow_anonymous = true
 app_service_unauthenticated_action = "AllowAnonymous"
-app_registration_name    = ""
+app_registration_name    = "appreg-opportunity-dev"
 app_registration_display_name = null
 app_registration_web_redirect_uris = []
 app_registration_create_client_secret = true
 app_registration_key_vault_id = null
+app_registration_federated_identity_credentials = {}
 
 # App Service names are globally constrained for the hostname. Set an explicit
 # unique value before applying if the generated name is already in use.
