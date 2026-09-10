@@ -1,8 +1,8 @@
-# Opportunity Equity Engine — front-end demo
+# Opportunity Equity Engine — ASP.NET Core App Service frontend
 
-This is a self-contained, static front-end prototype for the student experience described in the architecture and demo-deliverables documents.
+This is the ASP.NET Core frontend for the Opportunity Equity Engine App Service. Azure App Service Authentication (Easy Auth) is the source of truth for the signed-in account. The frontend reads the authenticated provider identity from `/api/auth/session` and does not contain a hard-coded user profile or password form.
 
-The frontend is served by the ASP.NET Core host at the App Service root, or run it locally with any static file server. It uses demo records and browser `localStorage` for the profile, saved opportunities, review decisions, and appearance preference; it does not require a backend or API key.
+The opportunity catalog and review queue are sample records for the current demo experience. A signed-in user’s matching preferences and saved opportunities are isolated by the authenticated account subject in browser storage; account identity and sign-in state come from App Service Authentication.
 
 The prototype includes:
 
@@ -12,4 +12,4 @@ The prototype includes:
 - a small review queue showing the publish-quality workflow;
 - responsive desktop/mobile layouts and a light/dark appearance toggle.
 
-The data is intentionally marked as demo data in the detail view. Current eligibility, dates, costs, and application requirements should always be confirmed on the linked official source.
+The catalog is intentionally marked as sample data in the detail view. Current eligibility, dates, costs, and application requirements should always be confirmed on the linked official source.

@@ -13,11 +13,10 @@ const opportunities = [
 const interestOptions = ["AI", "Medicine", "Research", "Coding", "Design", "Environment", "Leadership", "University"];
 const emptyProfile = { grade: null, location: "", interests: [], budget: null };
 const reviewDefaults = Object.fromEntries(opportunities.filter((item) => item.status === "needs-review").map((item) => [item.id, "needs-review"]));
-let profile = normalizeProfile(load("oee-profile", emptyProfile));
-let saved = load("oee-saved", []);
-if (Array.isArray(saved) && saved.length === 3 && ["ai-design", "biomed", "ocean"].every((id) => saved.includes(id))) saved = [];
-let reviews = load("oee-reviews", reviewDefaults);
 let currentUser = null;
+let profile = { ...emptyProfile };
+let saved = [];
+let reviews = load("oee-reviews", reviewDefaults);
 let activeView = "dashboard";
 
 function load(key, fallback) {
@@ -25,10 +24,15 @@ function load(key, fallback) {
 }
 function normalizeProfile(value) {
   if (!value || typeof value !== "object") return { ...emptyProfile };
-  const legacyDemoProfile = value.name === "Alex Morgan" && Number(value.grade) === 11 && value.location === "Montreal" && Array.isArray(value.interests) && value.interests.join("|") === "AI|Medicine" && Number(value.budget) === 300;
-  if (legacyDemoProfile) return { ...emptyProfile };
   return { ...emptyProfile, grade: value.grade ?? null, location: value.location || "", interests: Array.isArray(value.interests) ? value.interests : [], budget: value.budget ?? null };
 }
+function accountStorageKey(key) { return `oee-account-v2:${currentUser?.subject || "guest"}:${key}`; }
+function loadAccountState() {
+  profile = normalizeProfile(load(accountStorageKey("profile"), emptyProfile));
+  saved = load(accountStorageKey("saved"), []);
+  if (!Array.isArray(saved)) saved = [];
+}
+function persistAccount(key, value) { persist(accountStorageKey(key), value); }
 function persist(key, value) { try { localStorage.setItem(key, JSON.stringify(value)); } catch {} }
 function escapeHtml(value) { return String(value ?? "").replace(/[&<>\"']/g, (character) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", "\"": "&quot;", "'": "&#39;" }[character])); }
 function formatCost(cost) { return cost === 0 ? "Free" : `$${cost}`; }
@@ -86,17 +90,22 @@ function beginFederatedLogin(provider) {
 async function refreshAuthSession() {
   try {
     const response = await fetch("/api/auth/session", { credentials: "same-origin", headers: { Accept: "application/json" } });
-    if (!response.ok) return;
-    const session = await response.json();
+    const session = response.ok ? await response.json() : { authenticated: false, user: null };
     currentUser = session.authenticated ? session.user : null;
+    loadAccountState();
     updateAccountIdentity();
+    document.querySelector("#quick-profile-form").innerHTML = profileFormMarkup(false);
+    if (activeView === "dashboard") renderDashboard();
+    if (activeView === "profile") renderProfile();
     if (currentUser) showToast(`Signed in with ${currentUser.provider || "your account"}`);
   } catch (_) {
     currentUser = null;
+    loadAccountState();
     updateAccountIdentity();
+    document.querySelector("#quick-profile-form").innerHTML = profileFormMarkup(false);
   }
 }
-document.addEventListener("click", (event) => { const provider = event.target.closest("[data-auth-provider]"); if (provider) { beginFederatedLogin(provider.dataset.authProvider); } const signout = event.target.closest("#auth-signout"); if (signout) { window.location.assign("/.auth/logout?post_logout_redirect_uri=/"); } });
+document.addEventListener("click", (event) => { const target = event.target instanceof Element ? event.target : null; if (!target) return; const provider = target.closest("[data-auth-provider]"); if (provider) { beginFederatedLogin(provider.dataset.authProvider); } const signout = target.closest("#auth-signout"); if (signout) { window.location.assign("/.auth/logout?post_logout_redirect_uri=/"); } });
 
 function profileFormMarkup(includeButton = true) {
   return `<div class="account-context"><small>ACCOUNT</small><strong>${escapeHtml(currentUser?.name || currentUser?.email || "Sign in with a provider first")}</strong></div><div class="form-row"><label>Grade<select name="grade">${[9, 10, 11, 12].map((grade) => `<option value="${grade}" ${Number(profile.grade) === grade ? "selected" : ""}>Grade ${grade}</option>`).join("")}</select></label><label>Location<select name="location"><option value="">Choose a location</option>${["Montreal", "Quebec", "Toronto", "Online"].map((location) => `<option ${profile.location === location ? "selected" : ""}>${location}</option>`).join("")}</select></label></div><fieldset><legend>Interests</legend><div class="interest-options">${interestOptions.map((interest) => `<label class="interest-chip"><input type="checkbox" name="interests" value="${interest}" ${profile.interests.includes(interest) ? "checked" : ""}><span>${interest}</span></label>`).join("")}</div></fieldset><label>Maximum budget<select name="budget"><option value="">Choose a budget</option>${[0, 300, 500, 1000].map((budget) => `<option value="${budget}" ${Number(profile.budget) === budget ? "selected" : ""}>${budget === 0 ? "Free only" : `Up to $${budget.toLocaleString()}`}</option>`).join("")}</select></label>${includeButton ? `<button class="primary-button" type="submit">Update recommendations <span>→</span></button><p class="form-note">Only your matching preferences are saved in this browser.</p>` : `<button class="primary-button" type="submit">Save preferences <span>→</span></button>`}`;
@@ -134,26 +143,27 @@ function showView(view) {
   activeView = view; document.querySelectorAll(".view").forEach((section) => section.classList.toggle("active", section.id === `view-${view}`)); document.querySelectorAll(".nav-item").forEach((button) => button.classList.toggle("active", button.dataset.view === view)); const section = document.querySelector(`#view-${view}`); document.querySelector("#page-label").textContent = section.dataset.label;
   if (view === "dashboard") renderDashboard(); if (view === "explore") renderExplore(); if (view === "saved") renderSaved(); if (view === "profile") renderProfile(); if (view === "admin") renderAdmin(); window.scrollTo({ top: 0, behavior: "smooth" });
 }
-function toggleSaved(id) { saved = isSaved(id) ? saved.filter((savedId) => savedId !== id) : [id, ...saved]; persist("oee-saved", saved); updateProfileCopy(); showToast(isSaved(id) ? "Saved to your shortlist" : "Removed from your shortlist"); if (activeView === "dashboard") renderDashboard(); if (activeView === "explore") renderExplore(); if (activeView === "saved") renderSaved(); }
-function openDetails(id) { const item = getOpportunity(id); if (!item) return; const match = matchOpportunity(item); document.querySelector("#detail-content").innerHTML = `<div class="detail-heading"><div>${icon(item)}<div><span class="category-label">${escapeHtml(item.categoryLabel)}</span><h2 id="detail-title">${escapeHtml(item.title)}</h2><p>${escapeHtml(item.organization)} · ${escapeHtml(item.location)}</p></div></div><span class="fit-score large">${match.score}<small>% fit</small></span></div><div class="detail-facts"><span><small>GRADE</small>${item.minGrade}–${item.maxGrade}</span><span><small>LOCATION</small>${escapeHtml(item.location)}</span><span><small>COST</small>${escapeHtml(formatCost(item.cost))}</span><span><small>DEADLINE</small>${escapeHtml(item.deadlineLabel)}</span></div><section class="detail-section highlight"><p class="eyebrow">WHY THIS MATCHES</p><p>${escapeHtml(match.reason)} ${escapeHtml(item.action)} is a clear next step.</p></section><section class="detail-section"><p class="eyebrow">OVERVIEW</p><p>${escapeHtml(item.description)}</p></section><section class="detail-section evidence"><p class="eyebrow">SOURCE EVIDENCE</p><p>Demo record reviewed ${escapeHtml(item.verifiedAt)}. Confirm current requirements and dates on the official source before applying.</p><a href="${escapeHtml(item.sourceUrl)}" target="_blank" rel="noopener">Open official source ↗</a></section><div class="detail-actions"><button class="primary-button" data-save-id="${item.id}">${isSaved(item.id) ? "♥ Saved" : "♡ Save opportunity"}</button><a class="outline-button" href="${escapeHtml(item.applicationUrl)}" target="_blank" rel="noopener">View application ↗</a></div>`; document.querySelector("#detail-modal").hidden = false; }
+function toggleSaved(id) { saved = isSaved(id) ? saved.filter((savedId) => savedId !== id) : [id, ...saved]; persistAccount("saved", saved); updateProfileCopy(); showToast(isSaved(id) ? "Saved to your shortlist" : "Removed from your shortlist"); if (activeView === "dashboard") renderDashboard(); if (activeView === "explore") renderExplore(); if (activeView === "saved") renderSaved(); }
+function openDetails(id) { const item = getOpportunity(id); if (!item) return; const match = matchOpportunity(item); document.querySelector("#detail-content").innerHTML = `<div class="detail-heading"><div>${icon(item)}<div><span class="category-label">${escapeHtml(item.categoryLabel)}</span><h2 id="detail-title">${escapeHtml(item.title)}</h2><p>${escapeHtml(item.organization)} · ${escapeHtml(item.location)}</p></div></div><span class="fit-score large">${match.score}<small>% fit</small></span></div><div class="detail-facts"><span><small>GRADE</small>${item.minGrade}–${item.maxGrade}</span><span><small>LOCATION</small>${escapeHtml(item.location)}</span><span><small>COST</small>${escapeHtml(formatCost(item.cost))}</span><span><small>DEADLINE</small>${escapeHtml(item.deadlineLabel)}</span></div><section class="detail-section highlight"><p class="eyebrow">WHY THIS MATCHES</p><p>${escapeHtml(match.reason)} ${escapeHtml(item.action)} is a clear next step.</p></section><section class="detail-section"><p class="eyebrow">OVERVIEW</p><p>${escapeHtml(item.description)}</p></section><section class="detail-section evidence"><p class="eyebrow">SOURCE EVIDENCE</p><p>Sample record reviewed ${escapeHtml(item.verifiedAt)}. Confirm current requirements and dates on the official source before applying.</p><a href="${escapeHtml(item.sourceUrl)}" target="_blank" rel="noopener">Open official source ↗</a></section><div class="detail-actions"><button class="primary-button" data-save-id="${item.id}">${isSaved(item.id) ? "♥ Saved" : "♡ Save opportunity"}</button><a class="outline-button" href="${escapeHtml(item.applicationUrl)}" target="_blank" rel="noopener">View application ↗</a></div>`; document.querySelector("#detail-modal").hidden = false; }
 function closeModals() { document.querySelectorAll(".modal-backdrop").forEach((modal) => { modal.hidden = true; }); }
 function showToast(message) { const toast = document.querySelector("#toast"); toast.textContent = message; toast.classList.add("show"); clearTimeout(showToast.timer); showToast.timer = setTimeout(() => toast.classList.remove("show"), 2600); }
 function openProfileModal() { document.querySelector("#quick-profile-form").innerHTML = profileFormMarkup(false); document.querySelector("#profile-modal").hidden = false; }
-function handleProfileSubmit(form) { const data = new FormData(form); const interests = data.getAll("interests"); if (!data.get("grade") || !data.get("location") || data.get("budget") === "" || !interests.length) { showToast("Complete your preferences first"); return; } profile = { grade: Number(data.get("grade")), location: String(data.get("location")), interests, budget: Number(data.get("budget")) }; persist("oee-profile", profile); closeModals(); updateProfileCopy(); showToast("Profile updated — recommendations refreshed"); showView("dashboard"); }
+function handleProfileSubmit(form) { if (!currentUser) { showView("auth"); showToast("Sign in before saving your profile"); return; } const data = new FormData(form); const interests = data.getAll("interests"); if (!data.get("grade") || !data.get("location") || data.get("budget") === "" || !interests.length) { showToast("Complete your preferences first"); return; } profile = { grade: Number(data.get("grade")), location: String(data.get("location")), interests, budget: Number(data.get("budget")) }; persistAccount("profile", profile); closeModals(); updateProfileCopy(); showToast("Profile updated — recommendations refreshed"); showView("dashboard"); }
 
 document.addEventListener("click", (event) => {
-  const viewButton = event.target.closest("[data-view]"); if (viewButton) { event.preventDefault(); showView(viewButton.dataset.view); return; }
-  const action = event.target.closest("[data-action]"); if (action?.dataset.action === "toggle-theme") { const next = document.documentElement.dataset.theme === "light" ? "dark" : "light"; document.documentElement.dataset.theme = next; persist("oee-theme", next); } if (action?.dataset.action === "edit-profile") openProfileModal(); if (action?.dataset.action === "close-modal") closeModals();
-  const detail = event.target.closest("[data-detail-id]"); if (detail) openDetails(detail.dataset.detailId);
-  const saveButton = event.target.closest("[data-save-id]"); if (saveButton) { event.stopPropagation(); toggleSaved(saveButton.dataset.saveId); if (!document.querySelector("#detail-modal").hidden) openDetails(saveButton.dataset.saveId); }
-  const reviewButton = event.target.closest("[data-review-action]"); if (reviewButton) { reviews[reviewButton.dataset.reviewId] = reviewButton.dataset.reviewAction === "approve" ? "approved" : "verification-requested"; persist("oee-reviews", reviews); renderAdmin(); updateProfileCopy(); showToast(reviewButton.dataset.reviewAction === "approve" ? "Record approved" : "Verification requested"); }
+  const target = event.target instanceof Element ? event.target : null; if (!target) return;
+  const viewButton = target.closest("[data-view]"); if (viewButton) { event.preventDefault(); showView(viewButton.dataset.view); return; }
+  const action = target.closest("[data-action]"); if (action?.dataset.action === "toggle-theme") { const next = document.documentElement.dataset.theme === "light" ? "dark" : "light"; document.documentElement.dataset.theme = next; persist("oee-theme", next); } if (action?.dataset.action === "edit-profile") openProfileModal(); if (action?.dataset.action === "close-modal") closeModals();
+  const detail = target.closest("[data-detail-id]"); if (detail) openDetails(detail.dataset.detailId);
+  const saveButton = target.closest("[data-save-id]"); if (saveButton) { event.stopPropagation(); toggleSaved(saveButton.dataset.saveId); if (!document.querySelector("#detail-modal").hidden) openDetails(saveButton.dataset.saveId); }
+  const reviewButton = target.closest("[data-review-action]"); if (reviewButton) { reviews[reviewButton.dataset.reviewId] = reviewButton.dataset.reviewAction === "approve" ? "approved" : "verification-requested"; persist("oee-reviews", reviews); renderAdmin(); updateProfileCopy(); showToast(reviewButton.dataset.reviewAction === "approve" ? "Record approved" : "Verification requested"); }
 });
 document.querySelector("#profile-form").addEventListener("submit", (event) => { event.preventDefault(); handleProfileSubmit(event.currentTarget); });
 document.querySelector("#quick-profile-form").addEventListener("submit", (event) => { event.preventDefault(); handleProfileSubmit(event.currentTarget); });
 document.querySelector("#search-input").addEventListener("input", renderExplore); document.querySelector("#category-filter").addEventListener("change", renderExplore); document.querySelector("#budget-filter").addEventListener("change", renderExplore);
 document.querySelector("#clear-filters").addEventListener("click", () => { document.querySelector("#search-input").value = ""; document.querySelector("#category-filter").value = "all"; document.querySelector("#budget-filter").value = "all"; renderExplore(); });
 document.addEventListener("keydown", (event) => { if (event.key === "Escape") closeModals(); });
-document.documentElement.dataset.theme = load("oee-theme", "light"); document.querySelector("#quick-profile-form").innerHTML = profileFormMarkup(false); updateProfileCopy(); showView("dashboard");
+document.documentElement.dataset.theme = load("oee-theme", "light"); loadAccountState(); document.querySelector("#quick-profile-form").innerHTML = profileFormMarkup(false); updateProfileCopy(); showView("dashboard");
 refreshAuthSession();
 
 /* Reference-inspired list, detail, and matching surfaces. */
