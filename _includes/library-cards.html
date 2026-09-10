@@ -41,7 +41,8 @@
   {% assign card_sources_action = '探索来源' %}
   {% assign card_live_title = '在线演示' %}
   {% assign card_live_description = '打开学生工作区，体验基于个人资料的推荐、机会探索、收藏下一步和审核流程。' %}
-  {% assign card_live_action = '打开在线演示' %}
+  {% assign card_live_docs_action = '查看演示交付物' %}
+  {% assign card_live_dynamic_action = '打开动态网站' %}
   {% assign locale_suffix = '.CN' %}
 {% elsif page.locale == 'fr' %}
   {% assign library_heading = 'Explorer la bibliothèque' %}
@@ -86,7 +87,8 @@
   {% assign card_sources_action = 'Explorer les sources' %}
   {% assign card_live_title = 'Démonstration en direct' %}
   {% assign card_live_description = 'Ouvrez l’espace élève pour tester les recommandations, la recherche, les favoris et le processus de revue.' %}
-  {% assign card_live_action = 'Ouvrir la démonstration' %}
+  {% assign card_live_docs_action = 'Voir les livrables' %}
+  {% assign card_live_dynamic_action = 'Ouvrir le site dynamique' %}
   {% assign locale_suffix = '.FR' %}
 {% else %}
   {% assign library_heading = 'Explore the library' %}
@@ -131,7 +133,8 @@
   {% assign card_sources_action = 'Explore the sources' %}
   {% assign card_live_title = 'Live Demo' %}
   {% assign card_live_description = 'Open the student workspace to try profile-based recommendations, explore opportunities, save next steps, and review demo records.' %}
-  {% assign card_live_action = 'Open the Live Demo' %}
+  {% assign card_live_docs_action = 'View demo deliverables' %}
+  {% assign card_live_dynamic_action = 'Open dynamic site' %}
   {% assign locale_suffix = '' %}
 {% endif %}
 
@@ -175,8 +178,9 @@
     <a class="library-card library-card-orange" href="docs/10-opportunity-sources/Opportunity_Equity_Engine_600_Sources{{ locale_suffix }}.html">
       <span class="library-icon library-icon-sources">◎</span><strong>{{ card_sources_title }}</strong><span>{{ card_sources_description }}</span><b>{{ card_sources_action }} <span aria-hidden="true">↗</span></b>
     </a>
-    <a class="library-card library-card-blue" href="https://app-opportunity-dev.azurewebsites.net/">
-      <span class="library-icon library-icon-live">◌</span><strong>{{ card_live_title }}</strong><span>{{ card_live_description }}</span><b>{{ card_live_action }} <span aria-hidden="true">↗</span></b>
-    </a>
+    <div class="library-card library-card-blue">
+      <span class="library-icon library-icon-live">◌</span><strong>{{ card_live_title }}</strong><span>{{ card_live_description }}</span>
+      <div class="library-card-links" aria-label="{{ card_live_title }} links"><a href="docs/06-demo/DEMO_DELIVERABLES{{ locale_suffix }}.html">{{ card_live_docs_action }} <span aria-hidden="true">↗</span></a><a href="https://app-opportunity-dev.azurewebsites.net/">{{ card_live_dynamic_action }} <span aria-hidden="true">↗</span></a></div>
+    </div>
   </div>
 </section>
