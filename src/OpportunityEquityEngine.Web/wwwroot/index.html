@@ -33,6 +33,7 @@
         <div class="sidebar-bottom">
           <div class="trust-note"><span class="dot"></span><span><strong>Demo data</strong><small>Guidance, not a guarantee.</small></span></div>
           <button class="text-button" data-action="toggle-theme">◐ <span>Appearance</span></button>
+          <button class="sidebar-logout" id="sidebar-signout" data-action="sign-out" hidden>↪ <span>Log off</span></button>
           <a class="back-link" href="../">← Documentation</a>
         </div>
       </aside>
@@ -157,7 +158,7 @@
                 <h2>Your account</h2>
                 <p class="auth-copy">You are signed in. Your account identity comes from your connected provider.</p>
                 <div class="account-context"><small>SIGNED IN AS</small><strong id="auth-session-name">Account</strong><span id="auth-session-details">Provider</span></div>
-                <div class="auth-session-actions"><button type="button" class="primary-button" data-view="account">Account details <span>→</span></button><button type="button" class="outline-button auth-signout" id="auth-signout">Sign out</button></div>
+                <div class="auth-session-actions"><button type="button" class="primary-button" data-view="account">Account details <span>→</span></button><button type="button" class="outline-button auth-signout" id="auth-signout" data-action="sign-out">Sign out</button></div>
               </div>
             </section>
           </div>
