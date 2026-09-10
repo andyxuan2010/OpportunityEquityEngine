@@ -1029,3 +1029,14 @@ html[data-theme="dark"] .next-step { border-left-color: var(--line); }
   #view-dashboard .welcome-row .outline-button { min-width: 160px; min-height: 54px; }
   #dashboard-date { white-space: normal; }
 }
+
+/* Use meaningful visual context in opportunity cards and detail views. */
+.card-visual.has-image,
+.detail-hero-visual.has-image { background: #dceef3; }
+.card-visual.has-image::after,
+.detail-hero-visual.has-image::after { background: linear-gradient(90deg, rgba(7, 18, 37, .08), rgba(255, 255, 255, .1)); }
+.card-visual.has-image img,
+.detail-hero-visual.has-image img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.card-visual.has-image img { filter: saturate(.88) contrast(.96); }
+.detail-hero-visual.has-image img { position: absolute; inset: 0; filter: saturate(.88) contrast(.96); }
+.detail-hero-visual.has-image span { display: none; }
