@@ -10,7 +10,18 @@ const opportunities = [
   { id: "open-house", title: "University Open House Planning Sprint", organization: "OEE Demo Team", category: "scholarship", categoryLabel: "University planning", icon: "⌂", tone: "purple", location: "Online", locations: ["Online", "Montreal"], interests: ["University", "Design", "Leadership"], minGrade: 10, maxGrade: 12, cost: 0, deadline: "2026-10-28", deadlineLabel: "Oct 28, 2026", description: "A lightweight planning sprint for comparing programs, preparing questions, and making a realistic campus-visit plan.", action: "Compare two programs", sourceUrl: "https://www.educanada.ca/index.aspx", applicationUrl: "https://www.educanada.ca/index.aspx", verifiedAt: "Sep 24, 2026", status: "approved" }
 ];
 
-const interestOptions = ["AI", "Medicine", "Research", "Coding", "Design", "Environment", "Leadership", "University"];
+const interestOptions = ["AI", "Medicine", "Research", "Coding", "Design", "Environment", "Leadership", "University", "Finance"];
+const opportunityCategoryOptions = [
+  { value: "all", label: "ALL" },
+  { value: "scholarship", label: "Scholarships" },
+  { value: "competition", label: "Competitions" },
+  { value: "research", label: "Research Programs" },
+  { value: "volunteering", label: "Volunteering" },
+  { value: "summer", label: "Summer Programs" },
+  { value: "university-preparation", label: "University-Preparation" },
+  { value: "job", label: "Jobs" },
+  { value: "event", label: "Events" }
+];
 const opportunityImages = {
   competition: "./assets/opportunities/competition-v2.png",
   research: "./assets/opportunities/research.png",
@@ -18,7 +29,7 @@ const opportunityImages = {
   scholarship: "./assets/opportunities/research.png",
   volunteering: "./assets/opportunities/competition.png"
 };
-const emptyProfile = { grade: null, location: "", interests: [], budget: null };
+const emptyProfile = { categories: [], grade: null, ageRange: "", educationLevel: "", experienceLevel: "", interests: [], location: "", delivery: "", transportation: "", language: "", accessibility: "", budget: null };
 const reviewDefaults = Object.fromEntries(opportunities.filter((item) => item.status === "needs-review").map((item) => [item.id, "needs-review"]));
 let currentUser = null;
 let profile = { ...emptyProfile };
@@ -31,7 +42,7 @@ function load(key, fallback) {
 }
 function normalizeProfile(value) {
   if (!value || typeof value !== "object") return { ...emptyProfile };
-  return { ...emptyProfile, grade: value.grade ?? null, location: value.location || "", interests: Array.isArray(value.interests) ? value.interests : [], budget: value.budget ?? null };
+  return { ...emptyProfile, categories: Array.isArray(value.categories) ? value.categories : [], grade: value.grade ?? null, ageRange: value.ageRange || "", educationLevel: value.educationLevel || "", experienceLevel: value.experienceLevel || "", interests: Array.isArray(value.interests) ? value.interests : [], location: value.location || "", delivery: value.delivery || "", transportation: value.transportation || "", language: value.language || "", accessibility: value.accessibility || "", budget: value.budget ?? null };
 }
 function accountStorageKey(key) { return `oee-account-v2:${currentUser?.subject || "guest"}:${key}`; }
 function loadAccountState() {
@@ -49,12 +60,16 @@ function reviewStatus(opportunity) { return reviews[opportunity.id] || opportuni
 function isPendingReview(opportunity) { return ["needs-review", "verification-requested"].includes(reviewStatus(opportunity)); }
 
 function matchOpportunity(opportunity) {
-  if (profile.grade === null || !profile.location || !profile.interests.length || profile.budget === null) return { eligible: false, score: 0, reason: "Complete your matching preferences to see recommendations." };
+  if (!isProfileComplete(profile)) return { eligible: false, score: 0, reason: "Complete all four profile steps to see recommendations." };
   const grade = Number(profile.grade); const budget = Number(profile.budget);
+  const categoryFit = profile.categories.includes("all") || profile.categories.includes(opportunity.category);
   const gradeFit = grade >= opportunity.minGrade && grade <= opportunity.maxGrade;
   const locationFit = opportunity.locations.includes(profile.location) || opportunity.locations.includes("Online") || profile.location === "Online";
+  const onlineAvailable = opportunity.locations.includes("Online");
+  const formatFit = profile.delivery === "any" || (profile.delivery === "online" && onlineAvailable) || (profile.delivery === "in-person" && opportunity.locations.some((location) => location !== "Online"));
+  const transportationFit = profile.transportation !== "online-only" || onlineAvailable;
   const budgetFit = opportunity.cost <= budget;
-  if (!gradeFit || !locationFit || !budgetFit) return { eligible: false, score: 0, reason: "Outside your current grade, location, or budget filters." };
+  if (!categoryFit || !gradeFit || !locationFit || !formatFit || !transportationFit || !budgetFit) return { eligible: false, score: 0, reason: "Outside your selected category, student profile, access, or budget preferences." };
   const matches = opportunity.interests.filter((interest) => profile.interests.includes(interest));
   let score = 52 + Math.round((matches.length / Math.max(profile.interests.length, 1)) * 30) + 8 + 5 + 5;
   score = Math.min(99, score);
@@ -68,6 +83,7 @@ function matchOpportunity(opportunity) {
     : `This is a useful adjacent option because it can help you explore ${opportunityInterests} while building related experience. It is open to ${gradeRange}, ${locationText}, and ${budgetText}, making it a practical way to broaden your options.`;
   return { eligible: true, score, reason };
 }
+function isProfileComplete(value) { return value.categories.length > 0 && value.grade !== null && value.ageRange && value.educationLevel && value.experienceLevel && value.interests.length > 0 && value.location && value.delivery && value.transportation && value.language && value.accessibility && value.budget !== null; }
 function sortedMatches(items = opportunities) { return items.map((item) => ({ item, match: matchOpportunity(item) })).filter(({ match }) => match.eligible).sort((a, b) => b.match.score - a.match.score || a.item.title.localeCompare(b.item.title)); }
 function icon(item) { return `<span class="opportunity-icon ${escapeHtml(item.tone)}">${escapeHtml(item.icon)}</span>`; }
 function opportunityImage(item) { return opportunityImages[item.category] || null; }
@@ -127,10 +143,46 @@ document.addEventListener("click", (event) => { const target = event.target inst
 function profileFormMarkup(includeButton = true) {
   return `<div class="account-context"><small>ACCOUNT</small><strong>${escapeHtml(currentUser?.name || currentUser?.email || "Sign in with a provider first")}</strong></div><div class="form-row"><label>Grade<select name="grade">${[9, 10, 11, 12].map((grade) => `<option value="${grade}" ${Number(profile.grade) === grade ? "selected" : ""}>Grade ${grade}</option>`).join("")}</select></label><label>Location<select name="location"><option value="">Choose a location</option>${["Montreal", "Quebec", "Toronto", "Online"].map((location) => `<option ${profile.location === location ? "selected" : ""}>${location}</option>`).join("")}</select></label></div><fieldset><legend>Interests</legend><div class="interest-options">${interestOptions.map((interest) => `<label class="interest-chip"><input type="checkbox" name="interests" value="${interest}" ${profile.interests.includes(interest) ? "checked" : ""}><span>${interest}</span></label>`).join("")}</div></fieldset><label>Maximum budget<select name="budget"><option value="">Choose a budget</option>${[0, 300, 500, 1000].map((budget) => `<option value="${budget}" ${Number(profile.budget) === budget ? "selected" : ""}>${budget === 0 ? "Free only" : `Up to $${budget.toLocaleString()}`}</option>`).join("")}</select></label>${includeButton ? `<button class="primary-button" type="submit">Update recommendations <span>→</span></button><p class="form-note">Only your matching preferences are saved in this browser.</p>` : `<button class="primary-button" type="submit">Save preferences <span>→</span></button>`}`;
 }
+let activeProfileStep = 1;
+function profileFromForm(form) {
+  const data = new FormData(form);
+  return normalizeProfile({
+    categories: data.getAll("categories"),
+    grade: data.get("grade") === "" ? null : Number(data.get("grade")),
+    ageRange: String(data.get("ageRange") || ""),
+    educationLevel: String(data.get("educationLevel") || ""),
+    experienceLevel: String(data.get("experienceLevel") || ""),
+    interests: data.getAll("interests"),
+    location: String(data.get("location") || ""),
+    delivery: String(data.get("delivery") || ""),
+    transportation: String(data.get("transportation") || ""),
+    language: String(data.get("language") || ""),
+    accessibility: String(data.get("accessibility") || ""),
+    budget: data.get("budget") === "" ? null : Number(data.get("budget"))
+  });
+}
+function profileStepComplete(form, step) {
+  const data = new FormData(form);
+  if (step === 1) return data.getAll("categories").length > 0;
+  if (step === 2) return data.get("grade") && data.get("ageRange") && data.get("educationLevel") && data.get("experienceLevel");
+  if (step === 3) return data.getAll("interests").length > 0;
+  return data.get("location") && data.get("delivery") && data.get("transportation") && data.get("language") && data.get("accessibility") && data.get("budget") !== "";
+}
+function setProfileStep(step) {
+  activeProfileStep = Math.min(4, Math.max(1, Number(step)));
+  document.querySelectorAll("[data-profile-panel]").forEach((panel) => panel.classList.toggle("active", Number(panel.dataset.profilePanel) === activeProfileStep));
+  document.querySelectorAll("[data-profile-step]").forEach((button) => button.classList.toggle("current", Number(button.dataset.profileStep) === activeProfileStep));
+  const labels = ["Opportunity types", "Student profile", "Topic interests", "Access preferences"];
+  document.querySelector("#profile-step-label").textContent = `Step ${activeProfileStep} of 4 · ${labels[activeProfileStep - 1]}`;
+}
 function renderProfile() {
-  const form = document.querySelector("#profile-form"); form.querySelector('[name="grade"]').value = profile.grade ?? ""; form.querySelector('[name="location"]').value = profile.location; form.querySelector('[name="budget"]').value = profile.budget ?? "";
-  const interestOptionsNode = document.querySelector("#interest-options"); interestOptionsNode.innerHTML = interestOptions.map((interest) => `<label class="interest-chip"><input type="checkbox" name="interests" value="${interest}" ${profile.interests.includes(interest) ? "checked" : ""}><span>${interest}</span></label>`).join("");
-  document.querySelectorAll("#interest-options input").forEach((input) => { input.checked = profile.interests.includes(input.value); });
+  const form = document.querySelector("#profile-form");
+  const categoryOptionsNode = document.querySelector("#category-options");
+  categoryOptionsNode.innerHTML = opportunityCategoryOptions.map((category) => `<label><input type="checkbox" name="categories" value="${category.value}" ${profile.categories.includes(category.value) ? "checked" : ""}><span>${category.label}</span></label>`).join("");
+  const interestOptionsNode = document.querySelector("#interest-options");
+  interestOptionsNode.innerHTML = interestOptions.map((interest) => `<label><input type="checkbox" name="interests" value="${interest}" ${profile.interests.includes(interest) ? "checked" : ""}><span>${interest}</span></label>`).join("");
+  ["grade", "ageRange", "educationLevel", "experienceLevel", "location", "delivery", "transportation", "language", "accessibility", "budget"].forEach((name) => { const field = form.querySelector(`[name="${name}"]`); if (field) field.value = profile[name] ?? ""; });
+  setProfileStep(1);
 }
 function renderAdmin() {
   const queue = opportunities.filter(isPendingReview); document.querySelector("#admin-large-number").textContent = String(queue.length).padStart(2, "0");
@@ -174,11 +226,14 @@ function toggleSaved(id) { saved = isSaved(id) ? saved.filter((savedId) => saved
 function openDetails(id) { const item = getOpportunity(id); if (!item) return; const match = matchOpportunity(item); document.querySelector("#detail-content").innerHTML = `<div class="detail-heading"><div>${icon(item)}<div><span class="category-label">${escapeHtml(item.categoryLabel)}</span><h2 id="detail-title">${escapeHtml(item.title)}</h2><p>${escapeHtml(item.organization)} · ${escapeHtml(item.location)}</p></div></div><span class="fit-score large">${match.score}<small>% fit</small></span></div><div class="detail-facts"><span><small>GRADE</small>${item.minGrade}–${item.maxGrade}</span><span><small>LOCATION</small>${escapeHtml(item.location)}</span><span><small>COST</small>${escapeHtml(formatCost(item.cost))}</span><span><small>DEADLINE</small>${escapeHtml(item.deadlineLabel)}</span></div><section class="detail-section highlight"><p class="eyebrow">WHY THIS MATCHES</p><p>${escapeHtml(match.reason)} ${escapeHtml(item.action)} is a clear next step.</p></section><section class="detail-section"><p class="eyebrow">OVERVIEW</p><p>${escapeHtml(item.description)}</p></section><section class="detail-section evidence"><p class="eyebrow">SOURCE EVIDENCE</p><p>Sample record reviewed ${escapeHtml(item.verifiedAt)}. Confirm current requirements and dates on the official source before applying.</p><a href="${escapeHtml(item.sourceUrl)}" target="_blank" rel="noopener">Open official source ↗</a></section><div class="detail-actions"><button class="primary-button" data-save-id="${item.id}">${isSaved(item.id) ? "♥ Saved" : "♡ Save opportunity"}</button><a class="outline-button" href="${escapeHtml(item.applicationUrl)}" target="_blank" rel="noopener">View application ↗</a></div>`; document.querySelector("#detail-modal").hidden = false; }
 function closeModals() { document.querySelectorAll(".modal-backdrop").forEach((modal) => { modal.hidden = true; }); }
 function showToast(message) { const toast = document.querySelector("#toast"); toast.textContent = message; toast.classList.add("show"); clearTimeout(showToast.timer); showToast.timer = setTimeout(() => toast.classList.remove("show"), 2600); }
-function openProfileModal() { document.querySelector("#quick-profile-form").innerHTML = profileFormMarkup(false); document.querySelector("#profile-modal").hidden = false; }
-function handleProfileSubmit(form) { if (!currentUser) { showView("auth"); showToast("Sign in before saving your profile"); return; } const data = new FormData(form); const interests = data.getAll("interests"); if (!data.get("grade") || !data.get("location") || data.get("budget") === "" || !interests.length) { showToast("Complete your preferences first"); return; } profile = { grade: Number(data.get("grade")), location: String(data.get("location")), interests, budget: Number(data.get("budget")) }; persistAccount("profile", profile); closeModals(); updateProfileCopy(); showToast("Profile updated — recommendations refreshed"); showView("dashboard"); }
+function openProfileModal() { showView("profile"); }
+function handleProfileSubmit(form) { if (!currentUser) { showView("auth"); showToast("Sign in before saving your profile"); return; } const nextProfile = profileFromForm(form); if (!isProfileComplete(nextProfile)) { const firstIncomplete = [1, 2, 3, 4].find((step) => !profileStepComplete(form, step)) || 1; setProfileStep(firstIncomplete); showToast("Complete each profile step before continuing"); return; } profile = nextProfile; persistAccount("profile", profile); closeModals(); updateProfileCopy(); showToast("Profile updated — recommendations refreshed"); showView("dashboard"); }
 
 document.addEventListener("click", (event) => {
   const target = event.target instanceof Element ? event.target : null; if (!target) return;
+  const profileStepButton = target.closest("[data-profile-step]"); if (profileStepButton) { setProfileStep(profileStepButton.dataset.profileStep); return; }
+  const profileNextButton = target.closest("[data-profile-next]"); if (profileNextButton) { const form = document.querySelector("#profile-form"); if (!profileStepComplete(form, activeProfileStep)) { showToast("Complete this step before continuing"); return; } setProfileStep(profileNextButton.dataset.profileNext); return; }
+  const profilePreviousButton = target.closest("[data-profile-prev]"); if (profilePreviousButton) { setProfileStep(profilePreviousButton.dataset.profilePrev); return; }
   const viewButton = target.closest("[data-view]"); if (viewButton) { event.preventDefault(); showView(viewButton.dataset.view); return; }
   const action = target.closest("[data-action]"); if (action?.dataset.action === "toggle-theme") { const next = document.documentElement.dataset.theme === "light" ? "dark" : "light"; document.documentElement.dataset.theme = next; persist("oee-theme", next); } if (action?.dataset.action === "edit-profile") openProfileModal(); if (action?.dataset.action === "close-modal") closeModals();
   const taskButton = target.closest(".mark-done"); if (taskButton) { const row = taskButton.closest(".saved-timeline-card"); row?.classList.toggle("is-complete"); taskButton.textContent = row?.classList.contains("is-complete") ? "Marked done" : "Mark as done"; return; }

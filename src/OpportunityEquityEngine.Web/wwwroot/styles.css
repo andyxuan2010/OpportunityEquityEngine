@@ -1026,6 +1026,15 @@ html[data-theme="dark"] .next-step { border-left-color: var(--line); }
 #view-profile .onboarding-layout { min-height: 0; align-items: start; }
 #view-profile .onboarding-story { min-height: 610px; padding-top: 20px; }
 #view-profile .onboarding-panel { align-self: start; margin-top: 0; }
+.stepper button { width: 35px; height: 35px; display: grid; place-items: center; padding: 0; border: 0; border-radius: 50%; color: var(--muted); background: #edf1f5; cursor: pointer; font: inherit; font-weight: 800; }
+.stepper button.current { color: #fff; background: var(--teal); box-shadow: 0 5px 12px rgba(19, 142, 150, .24); }
+.stepper button:hover { color: var(--teal); }
+.profile-step { display: none; gap: 18px; }
+.profile-step.active { display: grid; }
+.step-help { margin: -2px 0 2px; color: var(--muted); font-size: 11px; font-weight: 500; line-height: 1.5; }
+.category-options label { flex: 1 1 44%; min-width: 145px; }
+.step-actions { display: flex; align-items: center; justify-content: space-between; gap: 10px; padding-top: 3px; }
+.step-actions .primary-button { margin-left: auto; }
 .profile-mini { grid-template-columns: minmax(0, 1fr) 28px; }
 .profile-mini-identity { min-width: 0; display: grid; grid-template-columns: 35px minmax(0, 1fr); align-items: center; gap: 9px; padding: 0; border: 0; color: inherit; background: transparent; cursor: pointer; text-align: left; }
 .profile-mini-identity:hover strong { color: var(--blue); }
