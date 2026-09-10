@@ -61,10 +61,11 @@ jobs:
           name: opportunity-equity-engine-app
           path: ${{ runner.temp }}/publish
 
-      - name: Sign in to Azure with workload identity federation
+      - name: Sign in to Azure with service principal credentials
         uses: azure/login@v2
         with:
           client-id: ${{ secrets.AZURE_CLIENT_ID }}
+          client-secret: ${{ secrets.AZURE_CLIENT_SECRET }}
           tenant-id: ${{ secrets.AZURE_TENANT_ID }}
           subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
 
