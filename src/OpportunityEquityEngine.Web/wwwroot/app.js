@@ -58,7 +58,14 @@ function matchOpportunity(opportunity) {
   const matches = opportunity.interests.filter((interest) => profile.interests.includes(interest));
   let score = 52 + Math.round((matches.length / Math.max(profile.interests.length, 1)) * 30) + 8 + 5 + 5;
   score = Math.min(99, score);
-  const reason = matches.length ? `Strong fit for ${matches.slice(0, 2).join(" and ")}.` : "A useful adjacent option for your current profile.";
+  const matchedInterests = matches.slice(0, 2).join(" and ");
+  const opportunityInterests = opportunity.interests.slice(0, 2).join(" and ");
+  const gradeRange = `grades ${opportunity.minGrade}–${opportunity.maxGrade}`;
+  const locationText = opportunity.locations.includes("Online") ? "offers an online option" : `is available in ${opportunity.location}`;
+  const budgetText = opportunity.cost === 0 ? `has no program fee and stays within your maximum budget of $${budget}` : `costs $${opportunity.cost} and stays within your maximum budget of $${budget}`;
+  const reason = matches.length
+    ? `Your interest in ${matchedInterests} is directly reflected in this opportunity. It is open to ${gradeRange}, ${locationText}, and ${budgetText}, so it fits the preferences you shared.`
+    : `This is a useful adjacent option because it can help you explore ${opportunityInterests} while building related experience. It is open to ${gradeRange}, ${locationText}, and ${budgetText}, making it a practical way to broaden your options.`;
   return { eligible: true, score, reason };
 }
 function sortedMatches(items = opportunities) { return items.map((item) => ({ item, match: matchOpportunity(item) })).filter(({ match }) => match.eligible).sort((a, b) => b.match.score - a.match.score || a.item.title.localeCompare(b.item.title)); }
