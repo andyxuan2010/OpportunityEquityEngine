@@ -10,6 +10,18 @@ const opportunities = [
   { id: "open-house", title: "University Open House Planning Sprint", organization: "OEE Demo Team", category: "scholarship", categoryLabel: "University planning", icon: "⌂", tone: "purple", location: "Online", locations: ["Online", "Montreal"], interests: ["University", "Design", "Leadership"], minGrade: 10, maxGrade: 12, cost: 0, deadline: "2026-10-28", deadlineLabel: "Oct 28, 2026", description: "A lightweight planning sprint for comparing programs, preparing questions, and making a realistic campus-visit plan.", action: "Compare two programs", sourceUrl: "https://www.educanada.ca/index.aspx", applicationUrl: "https://www.educanada.ca/index.aspx", verifiedAt: "Sep 24, 2026", status: "approved" }
 ];
 
+const opportunityIntros = {
+  "ai-design": "Work with a small team to identify a real student problem, explore how AI can help, and prototype a thoughtful solution. Practice research, design, collaboration, and presentation skills in a supportive challenge.",
+  biomed: "Learn how biomedical researchers ask questions, review evidence, and communicate findings. Work through a mentored project that connects medicine, science, and technology to real health challenges.",
+  mcgill: "Explore entrance scholarship pathways and build a realistic university funding plan. Review eligibility, important dates, and application steps so you can prepare early and make informed choices.",
+  ocean: "Explore ocean action, build community, and turn an environmental concern into a local project. Gain practical experience in teamwork, leadership, research, and communicating positive change.",
+  cemc: "Practice mathematical problem solving through structured contests designed to stretch your thinking. Build confidence, compare strategies, and turn each challenge into evidence of your curiosity and persistence.",
+  "ai-studio": "Learn core AI ideas through creative prototyping, guided feedback, and presentation. Develop a project from an early concept into a clearer solution while working with peers and mentors.",
+  "learning-code": "Start with accessible coding activities and build a small digital project from the ground up. Learn through guided practice, community support, and a welcoming path for students who are new to technology.",
+  climate: "Turn a climate concern into a focused action plan with peers, evidence, and a practical first experiment. Explore environmental leadership while learning how research can support community change.",
+  "open-house": "Compare university programs, prepare thoughtful questions, and make a realistic campus-visit plan. Use this planning sprint to connect your interests with possible study paths and next steps.",
+};
+
 const interestOptions = ["AI", "Medicine", "Research", "Coding", "Design", "Environment", "Leadership", "University", "Finance", "Technology", "Science", "Mathematics", "Business", "Entrepreneurship", "Health & Wellness", "Arts & Culture", "Communication", "Social Impact", "Career Development"];
 const opportunityCategoryOptions = [
   { value: "scholarship", label: "Scholarships" },
@@ -94,6 +106,7 @@ function persist(key, value) { try { localStorage.setItem(key, JSON.stringify(va
 function escapeHtml(value) { return String(value ?? "").replace(/[&<>\"']/g, (character) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", "\"": "&quot;", "'": "&#39;" }[character])); }
 function formatCost(cost) { return cost === 0 ? "Free" : `$${cost}`; }
 function getOpportunity(id) { return opportunities.find((item) => item.id === id); }
+function opportunityIntro(item) { return opportunityIntros[item.id] || item.description; }
 function isSaved(id) { return saved.includes(id); }
 function reviewStatus(opportunity) { return reviews[opportunity.id] || opportunity.status; }
 function isPendingReview(opportunity) { return ["needs-review", "verification-requested"].includes(reviewStatus(opportunity)); }
@@ -133,7 +146,7 @@ function opportunityCard(item, match) {
   const savedState = isSaved(item.id);
   const image = opportunityImage(item);
   const visual = image ? `<img src="${image}" alt="" loading="lazy">` : `<span>${escapeHtml(item.icon)}</span>`;
-  return `<article class="opportunity-card"><div class="card-heading"><div class="card-visual ${escapeHtml(item.tone)}${image ? " has-image" : ""}" aria-hidden="true">${visual}</div><span class="fit-score">${match.score}<small>% fit</small></span></div><div class="card-top"><div class="card-identity">${icon(item)}<div><span class="category-label">${escapeHtml(item.categoryLabel)}</span><h3>${escapeHtml(item.title)}</h3><p>${escapeHtml(item.organization)} · ${escapeHtml(item.location)}</p></div></div></div><p class="card-description">${escapeHtml(item.description)}</p><div class="card-facts"><span><b>◷</b>${escapeHtml(item.deadlineLabel)}</span><span><b>◈</b>${escapeHtml(formatCost(item.cost))}</span></div><section class="card-match-reason"><strong>Why this matches</strong><p>${escapeHtml(match.reason)}</p></section><div class="card-actions"><button class="text-link card-detail-button" data-detail-id="${item.id}">View details <span>↗</span></button><button class="save-button ${savedState ? "is-saved" : ""}" data-save-id="${item.id}" aria-label="${savedState ? "Remove" : "Save"} ${escapeHtml(item.title)}">${savedState ? "♥ Saved" : "♡ Save"}</button></div></article>`;
+  return `<article class="opportunity-card"><div class="card-heading"><div class="card-visual ${escapeHtml(item.tone)}${image ? " has-image" : ""}" aria-hidden="true">${visual}</div><span class="fit-score">${match.score}<small>% fit</small></span></div><div class="card-top"><div class="card-identity">${icon(item)}<div><span class="category-label">${escapeHtml(item.categoryLabel)}</span><h3>${escapeHtml(item.title)}</h3><p>${escapeHtml(item.organization)} · ${escapeHtml(item.location)}</p></div></div></div><p class="card-description">${escapeHtml(opportunityIntro(item))}</p><div class="card-facts"><span><b>◷</b>${escapeHtml(item.deadlineLabel)}</span><span><b>◈</b>${escapeHtml(formatCost(item.cost))}</span></div><section class="card-match-reason"><strong>Why this matches</strong><p>${escapeHtml(match.reason)}</p></section><div class="card-actions"><button class="text-link card-detail-button" data-detail-id="${item.id}">View details <span>↗</span></button><button class="save-button ${savedState ? "is-saved" : ""}" data-save-id="${item.id}" aria-label="${savedState ? "Remove" : "Save"} ${escapeHtml(item.title)}">${savedState ? "♥ Saved" : "♡ Save"}</button></div></article>`;
 }
 function compactOpportunity(item, match) { return `<div class="deadline-item"><div>${icon(item)}<div><strong>${escapeHtml(item.title)}</strong><small>${escapeHtml(item.deadlineLabel)} · ${escapeHtml(item.organization)}</small></div></div><span class="mini-score">${match.score}%</span></div>`; }
 function emptyState(title, copy, view, label) { return `<div class="empty-state"><span class="how-icon">◎</span><h3>${title}</h3><p>${copy}</p><button class="outline-button" data-view="${view}">${label} <span>→</span></button></div>`; }
