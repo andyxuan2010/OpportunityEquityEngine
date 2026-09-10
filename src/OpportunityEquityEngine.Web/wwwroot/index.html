@@ -17,7 +17,7 @@
         </a>
 
         <div class="profile-mini">
-          <button class="profile-mini-identity" type="button" data-view="profile" aria-label="Open my profile"><div class="avatar" id="sidebar-avatar">?</div><span><strong id="sidebar-name">Sign in to continue</strong><small id="sidebar-profile">No account connected</small></span></button>
+          <button class="profile-mini-identity" type="button" data-view="account" aria-label="Open account details"><div class="avatar" id="sidebar-avatar">?</div><span><strong id="sidebar-name">Sign in to continue</strong><small id="sidebar-profile">No account connected</small></span></button>
           <button class="icon-button" data-action="edit-profile" aria-label="Edit profile">✎</button>
         </div>
 
@@ -26,6 +26,7 @@
           <button class="nav-item" data-view="explore"><span>⌕</span> Find opportunities</button>
           <button class="nav-item" data-view="saved"><span>♡</span> Saved <b class="nav-count" id="saved-count">0</b></button>
           <button class="nav-item" data-view="profile"><span>◉</span> My interests</button>
+          <button class="nav-item" data-view="account"><span>◎</span> Account details</button>
           <button class="nav-item" data-view="resources"><span>▤</span> Resources</button>
           <button class="nav-item" data-view="admin"><span>✓</span> Review queue <b class="nav-count orange" id="review-count">3</b></button>
         </nav>
@@ -44,7 +45,7 @@
             <nav class="top-nav" aria-label="Top navigation"><a href="./">Home</a><button data-view="explore">Explore</button><button data-view="saved">Saved</button><button data-view="resources">Resources</button></nav>
             <span class="demo-pill"><span></span> Prototype mode</span>
             <button class="icon-button top-theme" data-action="toggle-theme" aria-label="Toggle appearance">◐</button>
-            <button class="top-avatar" data-view="auth" aria-label="Open account">?</button>
+            <button class="top-avatar" data-view="account" aria-label="Open account details">?</button>
           </div>
         </header>
 
@@ -57,6 +58,8 @@
             </div>
             <button class="outline-button" data-action="edit-profile">Edit profile <span>→</span></button>
           </div>
+
+          <section class="account-setup-banner" id="account-setup-banner" hidden><span class="account-setup-icon">◎</span><div><strong>Complete your account details</strong><p>Add optional contact and school information so your account is ready when you return.</p></div><button class="outline-button compact" data-view="account">Add details <span>→</span></button><button class="text-button" data-action="skip-account-setup">Skip for now</button></section>
 
           <button class="profile-strip profile-link" type="button" data-view="profile" aria-label="Open matching profile">
             <div class="profile-strip-main"><span class="spark-icon">✦</span><div><small>YOUR MATCHING PROFILE</small><strong id="dashboard-profile">Complete your profile to personalize recommendations.</strong></div></div>
@@ -112,6 +115,11 @@
           </div>
         </section>
 
+        <section class="view" id="view-account" data-label="Account details">
+          <div class="page-intro"><div><p class="eyebrow">ACCOUNT DETAILS</p><h1>Keep your account up to date.</h1><p class="lead">Your account information is separate from your opportunity-matching profile and can be completed whenever you are ready.</p></div><span class="large-number">◎</span></div>
+          <div class="account-layout"><form id="account-form" class="panel account-form"><div class="account-form-heading"><div><h2>Personal information</h2><p>Quick sign-up is always available. You can update these details later.</p></div><span class="account-status" id="account-status">OPTIONAL</span></div><div class="form-row"><label>Name<input name="name" type="text" autocomplete="name" placeholder="Your name"></label><label>Phone number<input name="phone" type="tel" autocomplete="tel" placeholder="Your phone number"></label></div><label>Email<input name="email" type="email" autocomplete="email" readonly></label><label>Address<input name="address" type="text" autocomplete="street-address" placeholder="Your address"></label><div class="form-row"><label>Language preference<select name="language"><option value="">Choose a language</option><option>English</option><option>French</option><option>English and French</option><option>Other</option></select></label><label>School<input name="school" type="text" autocomplete="organization" placeholder="Your school"></label></div><label>Grade<select name="grade"><option value="">Choose a grade</option><option value="9">Grade 9</option><option value="10">Grade 10</option><option value="11">Grade 11</option><option value="12">Grade 12</option></select></label><label>Password<input type="text" value="Managed by Google" readonly aria-describedby="account-password-help"><small id="account-password-help" class="account-field-help">This site never collects or stores your Google password.</small></label><div class="step-actions"><button class="outline-button" type="button" data-action="skip-account-setup">Skip for now</button><button class="primary-button" type="submit">Save account details <span>→</span></button></div></form><aside class="panel account-info-panel"><span class="how-icon">◎</span><p class="eyebrow">ACCOUNT VS PROFILE</p><h2>Two kinds of information, one clear experience.</h2><p>Account details help you manage your identity and contact information. My profile contains the preferences used to match you with scholarships, competitions, research programs, volunteering, jobs, events, and more.</p><div class="account-info-divider"></div><strong>Your privacy matters</strong><p>Only the information needed for your account and matching experience is saved for this signed-in account.</p></aside></div>
+        </section>
+
         <section class="view" id="view-resources" data-label="Resources">
           <div class="page-intro resources-intro"><div><p class="eyebrow">PLAN · APPLY · GROW</p><h1>More opportunities. A brighter tomorrow.</h1><p class="lead">Learn how the Opportunity Equity Engine turns scattered information into a clearer, more equitable path.</p></div><span class="large-number">09</span></div>
           <div class="resource-hero"><div><span class="resource-icon">✦</span><p class="eyebrow">THE PROBLEM WE’RE SOLVING</p><h2>Good opportunities should be easier to find.</h2><p>Students often search across websites, PDFs, announcements, and word of mouth. This experience brings the important details together so a student can compare, understand, and act.</p></div><div class="path-illustration" aria-hidden="true"><span class="path-sun"></span><span class="path-mountain mountain-a"></span><span class="path-mountain mountain-b"></span><span class="path-road"></span><b>DISCOVER</b><b>UNDERSTAND</b><b>ACT</b></div></div>
@@ -149,7 +157,7 @@
                 <h2>Your account</h2>
                 <p class="auth-copy">You are signed in. Your account identity comes from your connected provider.</p>
                 <div class="account-context"><small>SIGNED IN AS</small><strong id="auth-session-name">Account</strong><span id="auth-session-details">Provider</span></div>
-                <button type="button" class="outline-button auth-signout" id="auth-signout">Sign out</button>
+                <div class="auth-session-actions"><button type="button" class="primary-button" data-view="account">Account details <span>→</span></button><button type="button" class="outline-button auth-signout" id="auth-signout">Sign out</button></div>
               </div>
             </section>
           </div>

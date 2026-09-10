@@ -30,9 +30,11 @@ const opportunityImages = {
   volunteering: "./assets/opportunities/competition.png"
 };
 const emptyProfile = { categories: [], grade: null, ageRange: "", educationLevel: "", experienceLevel: "", interests: [], location: "", delivery: "", transportation: "", language: "", accessibility: "", budget: null };
+const emptyAccountDetails = { name: "", phone: "", address: "", email: "", language: "", grade: "", school: "", onboardingStatus: "pending" };
 const reviewDefaults = Object.fromEntries(opportunities.filter((item) => item.status === "needs-review").map((item) => [item.id, "needs-review"]));
 let currentUser = null;
 let profile = { ...emptyProfile };
+let accountDetails = { ...emptyAccountDetails };
 let saved = [];
 let reviews = load("oee-reviews", reviewDefaults);
 let activeView = "dashboard";
@@ -44,9 +46,14 @@ function normalizeProfile(value) {
   if (!value || typeof value !== "object") return { ...emptyProfile };
   return { ...emptyProfile, categories: Array.isArray(value.categories) ? value.categories : [], grade: value.grade ?? null, ageRange: value.ageRange || "", educationLevel: value.educationLevel || "", experienceLevel: value.experienceLevel || "", interests: Array.isArray(value.interests) ? value.interests : [], location: value.location || "", delivery: value.delivery || "", transportation: value.transportation || "", language: value.language || "", accessibility: value.accessibility || "", budget: value.budget ?? null };
 }
+function normalizeAccountDetails(value) {
+  if (!value || typeof value !== "object") return { ...emptyAccountDetails, name: currentUser?.name || "", email: currentUser?.email || "" };
+  return { ...emptyAccountDetails, name: value.name || currentUser?.name || "", phone: value.phone || "", address: value.address || "", email: currentUser?.email || value.email || "", language: value.language || "", grade: value.grade || "", school: value.school || "", onboardingStatus: value.onboardingStatus || "pending" };
+}
 function accountStorageKey(key) { return `oee-account-v2:${currentUser?.subject || "guest"}:${key}`; }
 function loadAccountState() {
   profile = normalizeProfile(load(accountStorageKey("profile"), emptyProfile));
+  accountDetails = normalizeAccountDetails(load(accountStorageKey("account"), null));
   saved = load(accountStorageKey("saved"), []);
   if (!Array.isArray(saved)) saved = [];
 }
@@ -126,6 +133,7 @@ async function refreshAuthSession() {
       if (activeView === "auth") showView("dashboard");
       if (activeView === "dashboard") renderDashboard();
       if (activeView === "profile") renderProfile();
+      if (activeView === "account") renderAccountDetails();
       showToast(`Signed in with ${currentUser.provider || "your account"}`);
     } else {
       showView("auth");
@@ -184,23 +192,50 @@ function renderProfile() {
   ["grade", "ageRange", "educationLevel", "experienceLevel", "location", "delivery", "transportation", "language", "accessibility", "budget"].forEach((name) => { const field = form.querySelector(`[name="${name}"]`); if (field) field.value = profile[name] ?? ""; });
   setProfileStep(1);
 }
+function renderAccountDetails() {
+  const form = document.querySelector("#account-form");
+  if (!form) return;
+  ["name", "phone", "email", "address", "language", "school", "grade"].forEach((name) => { const field = form.querySelector(`[name="${name}"]`); if (field) field.value = accountDetails[name] ?? ""; });
+  const status = document.querySelector("#account-status");
+  if (status) status.textContent = accountDetails.onboardingStatus === "completed" ? "SAVED" : "OPTIONAL";
+}
+function handleAccountSubmit(form) {
+  if (!currentUser) { showView("auth"); showToast("Sign in before editing your account"); return; }
+  const data = new FormData(form);
+  accountDetails = normalizeAccountDetails({ name: String(data.get("name") || ""), phone: String(data.get("phone") || ""), address: String(data.get("address") || ""), email: currentUser.email || String(data.get("email") || ""), language: String(data.get("language") || ""), grade: String(data.get("grade") || ""), school: String(data.get("school") || ""), onboardingStatus: "completed" });
+  persistAccount("account", accountDetails);
+  updateAccountIdentity();
+  showToast("Account details saved");
+  showView("dashboard");
+}
+function skipAccountSetup() {
+  if (!currentUser) { showView("auth"); return; }
+  accountDetails = normalizeAccountDetails({ ...accountDetails, onboardingStatus: "skipped" });
+  persistAccount("account", accountDetails);
+  updateAccountIdentity();
+  showToast("You can complete your account details later");
+  showView("dashboard");
+}
 function renderAdmin() {
   const queue = opportunities.filter(isPendingReview); document.querySelector("#admin-large-number").textContent = String(queue.length).padStart(2, "0");
   document.querySelector("#review-list").innerHTML = queue.length ? queue.map((item) => `<article class="review-row"><div class="review-identity">${icon(item)}<div><strong>${escapeHtml(item.title)}</strong><small>${escapeHtml(item.organization)} · ${escapeHtml(item.verifiedAt)}</small></div></div><span class="status-badge">${reviewStatus(item) === "verification-requested" ? "Verification requested" : "Needs review"}</span><a class="text-link" href="${escapeHtml(item.sourceUrl)}" target="_blank" rel="noopener">Check source ↗</a><div class="review-actions"><button class="outline-button compact" data-review-action="request" data-review-id="${item.id}">Request verification</button><button class="primary-button compact" data-review-action="approve" data-review-id="${item.id}">Approve</button></div></article>`).join("") : emptyState("Queue is clear", "All demo records have a review decision.", "explore", "Browse opportunities");
 }
 function updateAccountIdentity() {
-  const displayName = currentUser?.name || currentUser?.email || "Sign in to continue";
+  const displayName = accountDetails.name || currentUser?.name || currentUser?.email || "Sign in to continue";
   const initials = currentUser ? displayName.split(/\s+/).map((part) => part[0]).join("").slice(0, 2).toUpperCase() : "?";
   document.body.classList.toggle("guest-mode", !currentUser);
   document.querySelector("#auth-guest-panel").hidden = Boolean(currentUser);
   document.querySelector("#auth-session-panel").hidden = !currentUser;
   document.querySelector("#sidebar-avatar").textContent = initials;
   document.querySelector("#sidebar-name").textContent = displayName;
-  document.querySelector("#sidebar-profile").textContent = currentUser ? "My profile" : "No account connected";
+  document.querySelector("#sidebar-profile").textContent = currentUser ? "My account" : "No account connected";
   document.querySelector(".top-avatar").textContent = initials;
   document.querySelector("#auth-session-name").textContent = displayName;
   document.querySelector("#auth-session-details").textContent = currentUser ? `${currentUser.provider || "Connected provider"}${currentUser.email ? ` · ${currentUser.email}` : ""}` : "";
   document.querySelector("#dashboard-welcome").innerHTML = currentUser ? `Welcome, <span>${escapeHtml(displayName)}</span>.` : "Welcome to your opportunity workspace.";
+  const accountBanner = document.querySelector("#account-setup-banner");
+  if (accountBanner) accountBanner.hidden = !currentUser || accountDetails.onboardingStatus !== "pending";
+  if (currentUser && document.querySelector("#account-form")) renderAccountDetails();
 }
 function updateDashboardDateTime() {
   const dateNode = document.querySelector("#dashboard-date");
@@ -220,7 +255,7 @@ function updateProfileCopy() {
 function showView(view) {
   if (!currentUser && view !== "auth") view = "auth";
   activeView = view; document.querySelectorAll(".view").forEach((section) => section.classList.toggle("active", section.id === `view-${view}`)); document.querySelectorAll(".nav-item").forEach((button) => button.classList.toggle("active", button.dataset.view === view)); const section = document.querySelector(`#view-${view}`); document.querySelector("#page-label").textContent = section.dataset.label;
-  if (view === "dashboard") renderDashboard(); if (view === "explore") renderExplore(); if (view === "saved") renderSaved(); if (view === "profile") renderProfile(); if (view === "admin") renderAdmin(); window.scrollTo({ top: 0, behavior: "smooth" });
+  if (view === "dashboard") renderDashboard(); if (view === "explore") renderExplore(); if (view === "saved") renderSaved(); if (view === "profile") renderProfile(); if (view === "account") renderAccountDetails(); if (view === "admin") renderAdmin(); window.scrollTo({ top: 0, behavior: "smooth" });
 }
 function toggleSaved(id) { saved = isSaved(id) ? saved.filter((savedId) => savedId !== id) : [id, ...saved]; persistAccount("saved", saved); updateProfileCopy(); showToast(isSaved(id) ? "Saved to your shortlist" : "Removed from your shortlist"); if (activeView === "dashboard") renderDashboard(); if (activeView === "explore") renderExplore(); if (activeView === "saved") renderSaved(); }
 function openDetails(id) { const item = getOpportunity(id); if (!item) return; const match = matchOpportunity(item); document.querySelector("#detail-content").innerHTML = `<div class="detail-heading"><div>${icon(item)}<div><span class="category-label">${escapeHtml(item.categoryLabel)}</span><h2 id="detail-title">${escapeHtml(item.title)}</h2><p>${escapeHtml(item.organization)} · ${escapeHtml(item.location)}</p></div></div><span class="fit-score large">${match.score}<small>% fit</small></span></div><div class="detail-facts"><span><small>GRADE</small>${item.minGrade}–${item.maxGrade}</span><span><small>LOCATION</small>${escapeHtml(item.location)}</span><span><small>COST</small>${escapeHtml(formatCost(item.cost))}</span><span><small>DEADLINE</small>${escapeHtml(item.deadlineLabel)}</span></div><section class="detail-section highlight"><p class="eyebrow">WHY THIS MATCHES</p><p>${escapeHtml(match.reason)} ${escapeHtml(item.action)} is a clear next step.</p></section><section class="detail-section"><p class="eyebrow">OVERVIEW</p><p>${escapeHtml(item.description)}</p></section><section class="detail-section evidence"><p class="eyebrow">SOURCE EVIDENCE</p><p>Sample record reviewed ${escapeHtml(item.verifiedAt)}. Confirm current requirements and dates on the official source before applying.</p><a href="${escapeHtml(item.sourceUrl)}" target="_blank" rel="noopener">Open official source ↗</a></section><div class="detail-actions"><button class="primary-button" data-save-id="${item.id}">${isSaved(item.id) ? "♥ Saved" : "♡ Save opportunity"}</button><a class="outline-button" href="${escapeHtml(item.applicationUrl)}" target="_blank" rel="noopener">View application ↗</a></div>`; document.querySelector("#detail-modal").hidden = false; }
@@ -235,13 +270,14 @@ document.addEventListener("click", (event) => {
   const profileNextButton = target.closest("[data-profile-next]"); if (profileNextButton) { const form = document.querySelector("#profile-form"); if (!profileStepComplete(form, activeProfileStep)) { showToast("Complete this step before continuing"); return; } setProfileStep(profileNextButton.dataset.profileNext); return; }
   const profilePreviousButton = target.closest("[data-profile-prev]"); if (profilePreviousButton) { setProfileStep(profilePreviousButton.dataset.profilePrev); return; }
   const viewButton = target.closest("[data-view]"); if (viewButton) { event.preventDefault(); showView(viewButton.dataset.view); return; }
-  const action = target.closest("[data-action]"); if (action?.dataset.action === "toggle-theme") { const next = document.documentElement.dataset.theme === "light" ? "dark" : "light"; document.documentElement.dataset.theme = next; persist("oee-theme", next); } if (action?.dataset.action === "edit-profile") openProfileModal(); if (action?.dataset.action === "close-modal") closeModals();
+  const action = target.closest("[data-action]"); if (action?.dataset.action === "toggle-theme") { const next = document.documentElement.dataset.theme === "light" ? "dark" : "light"; document.documentElement.dataset.theme = next; persist("oee-theme", next); } if (action?.dataset.action === "edit-profile") openProfileModal(); if (action?.dataset.action === "skip-account-setup") skipAccountSetup(); if (action?.dataset.action === "close-modal") closeModals();
   const taskButton = target.closest(".mark-done"); if (taskButton) { const row = taskButton.closest(".saved-timeline-card"); row?.classList.toggle("is-complete"); taskButton.textContent = row?.classList.contains("is-complete") ? "Marked done" : "Mark as done"; return; }
   const detail = target.closest("[data-detail-id]"); if (detail) openDetails(detail.dataset.detailId);
   const saveButton = target.closest("[data-save-id]"); if (saveButton) { event.stopPropagation(); toggleSaved(saveButton.dataset.saveId); if (!document.querySelector("#detail-modal").hidden) openDetails(saveButton.dataset.saveId); }
   const reviewButton = target.closest("[data-review-action]"); if (reviewButton) { reviews[reviewButton.dataset.reviewId] = reviewButton.dataset.reviewAction === "approve" ? "approved" : "verification-requested"; persist("oee-reviews", reviews); renderAdmin(); updateProfileCopy(); showToast(reviewButton.dataset.reviewAction === "approve" ? "Record approved" : "Verification requested"); }
 });
 document.querySelector("#profile-form").addEventListener("submit", (event) => { event.preventDefault(); handleProfileSubmit(event.currentTarget); });
+document.querySelector("#account-form").addEventListener("submit", (event) => { event.preventDefault(); handleAccountSubmit(event.currentTarget); });
 document.querySelector("#quick-profile-form").addEventListener("submit", (event) => { event.preventDefault(); handleProfileSubmit(event.currentTarget); });
 document.querySelector("#search-input").addEventListener("input", renderExplore); document.querySelector("#category-filter").addEventListener("change", renderExplore); document.querySelector("#budget-filter").addEventListener("change", renderExplore);
 document.querySelector("#clear-filters").addEventListener("click", () => { document.querySelector("#search-input").value = ""; document.querySelector("#category-filter").value = "all"; document.querySelector("#budget-filter").value = "all"; renderExplore(); });
