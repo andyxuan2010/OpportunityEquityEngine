@@ -10,9 +10,8 @@ const opportunities = [
   { id: "open-house", title: "University Open House Planning Sprint", organization: "OEE Demo Team", category: "scholarship", categoryLabel: "University planning", icon: "⌂", tone: "purple", location: "Online", locations: ["Online", "Montreal"], interests: ["University", "Design", "Leadership"], minGrade: 10, maxGrade: 12, cost: 0, deadline: "2026-10-28", deadlineLabel: "Oct 28, 2026", description: "A lightweight planning sprint for comparing programs, preparing questions, and making a realistic campus-visit plan.", action: "Compare two programs", sourceUrl: "https://www.educanada.ca/index.aspx", applicationUrl: "https://www.educanada.ca/index.aspx", verifiedAt: "Sep 24, 2026", status: "approved" }
 ];
 
-const interestOptions = ["AI", "Medicine", "Research", "Coding", "Design", "Environment", "Leadership", "University", "Finance"];
+const interestOptions = ["AI", "Medicine", "Research", "Coding", "Design", "Environment", "Leadership", "University", "Finance", "Technology", "Science", "Mathematics", "Business", "Entrepreneurship", "Health & Wellness", "Arts & Culture", "Communication", "Social Impact", "Career Development"];
 const opportunityCategoryOptions = [
-  { value: "all", label: "ALL" },
   { value: "scholarship", label: "Scholarships" },
   { value: "competition", label: "Competitions" },
   { value: "research", label: "Research Programs" },
@@ -20,7 +19,8 @@ const opportunityCategoryOptions = [
   { value: "summer", label: "Summer Programs" },
   { value: "university-preparation", label: "University-Preparation" },
   { value: "job", label: "Jobs" },
-  { value: "event", label: "Events" }
+  { value: "event", label: "Events" },
+  { value: "all", label: "ALL" }
 ];
 const opportunityImages = {
   competition: "./assets/opportunities/competition-v2.png",
@@ -29,7 +29,9 @@ const opportunityImages = {
   scholarship: "./assets/opportunities/research.png",
   volunteering: "./assets/opportunities/competition.png"
 };
-const emptyProfile = { categories: [], grade: null, ageRange: "", educationLevel: "", experienceLevel: "", interests: [], location: "", delivery: "", transportation: "", language: "", accessibility: "", budget: null };
+const defaultCategoryValues = opportunityCategoryOptions.filter((option) => option.value !== "all").map((option) => option.value);
+const defaultInterestValues = [...interestOptions];
+const emptyProfile = { categories: ["all", ...defaultCategoryValues], grade: null, interests: ["all", ...defaultInterestValues], location: "Montreal", delivery: "any", transportation: "city", language: "English", accessibility: "No specific needs", budget: 0 };
 const emptyAccountDetails = { name: "", phone: "", address: "", email: "", language: "", grade: "", school: "", onboardingStatus: "pending" };
 const reviewDefaults = Object.fromEntries(opportunities.filter((item) => item.status === "needs-review").map((item) => [item.id, "needs-review"]));
 let currentUser = null;
@@ -43,8 +45,10 @@ function load(key, fallback) {
   try { const value = JSON.parse(localStorage.getItem(key)); return value ?? fallback; } catch { return fallback; }
 }
 function normalizeProfile(value) {
-  if (!value || typeof value !== "object") return { ...emptyProfile };
-  return { ...emptyProfile, categories: Array.isArray(value.categories) ? value.categories : [], grade: value.grade ?? null, ageRange: value.ageRange || "", educationLevel: value.educationLevel || "", experienceLevel: value.experienceLevel || "", interests: Array.isArray(value.interests) ? value.interests : [], location: value.location || "", delivery: value.delivery || "", transportation: value.transportation || "", language: value.language || "", accessibility: value.accessibility || "", budget: value.budget ?? null };
+  if (!value || typeof value !== "object") return { ...emptyProfile, categories: [...emptyProfile.categories], interests: [...emptyProfile.interests] };
+  const categories = Array.isArray(value.categories) && value.categories.length ? value.categories : [...emptyProfile.categories];
+  const interests = Array.isArray(value.interests) && value.interests.length ? value.interests : [...emptyProfile.interests];
+  return { ...emptyProfile, categories: categories.includes("all") ? ["all", ...defaultCategoryValues] : categories, grade: value.grade ?? null, interests: interests.includes("all") ? ["all", ...defaultInterestValues] : interests, location: value.location || emptyProfile.location, delivery: value.delivery || emptyProfile.delivery, transportation: value.transportation || emptyProfile.transportation, language: value.language || emptyProfile.language, accessibility: value.accessibility || emptyProfile.accessibility, budget: value.budget ?? emptyProfile.budget };
 }
 function normalizeAccountDetails(value) {
   if (!value || typeof value !== "object") return { ...emptyAccountDetails, name: currentUser?.name || "", email: currentUser?.email || "" };
@@ -68,17 +72,18 @@ function isPendingReview(opportunity) { return ["needs-review", "verification-re
 
 function matchOpportunity(opportunity) {
   if (!isProfileComplete(profile)) return { eligible: false, score: 0, reason: "Complete all four profile steps to see recommendations." };
-  const grade = Number(profile.grade); const budget = Number(profile.budget);
+  const grade = gradeValue(profile.grade); const budget = Number(profile.budget);
   const categoryFit = profile.categories.includes("all") || profile.categories.includes(opportunity.category);
-  const gradeFit = grade >= opportunity.minGrade && grade <= opportunity.maxGrade;
+  const gradeFit = profile.grade === "other" || (grade !== null && grade >= opportunity.minGrade && grade <= opportunity.maxGrade);
   const locationFit = opportunity.locations.includes(profile.location) || opportunity.locations.includes("Online") || profile.location === "Online";
   const onlineAvailable = opportunity.locations.includes("Online");
   const formatFit = profile.delivery === "any" || (profile.delivery === "online" && onlineAvailable) || (profile.delivery === "in-person" && opportunity.locations.some((location) => location !== "Online"));
   const transportationFit = profile.transportation !== "online-only" || onlineAvailable;
   const budgetFit = opportunity.cost <= budget;
   if (!categoryFit || !gradeFit || !locationFit || !formatFit || !transportationFit || !budgetFit) return { eligible: false, score: 0, reason: "Outside your selected category, student profile, access, or budget preferences." };
-  const matches = opportunity.interests.filter((interest) => profile.interests.includes(interest));
-  let score = 52 + Math.round((matches.length / Math.max(profile.interests.length, 1)) * 30) + 8 + 5 + 5;
+  const selectedInterests = profile.interests.filter((interest) => interest !== "all");
+  const matches = opportunity.interests.filter((interest) => profile.interests.includes("all") || profile.interests.includes(interest));
+  let score = 52 + Math.round((matches.length / Math.max(selectedInterests.length, 1)) * 30) + 8 + 5 + 5;
   score = Math.min(99, score);
   const matchedInterests = matches.slice(0, 2).join(" and ");
   const opportunityInterests = opportunity.interests.slice(0, 2).join(" and ");
@@ -90,7 +95,9 @@ function matchOpportunity(opportunity) {
     : `This is a useful adjacent option because it can help you explore ${opportunityInterests} while building related experience. It is open to ${gradeRange}, ${locationText}, and ${budgetText}, making it a practical way to broaden your options.`;
   return { eligible: true, score, reason };
 }
-function isProfileComplete(value) { return value.categories.length > 0 && value.grade !== null && value.ageRange && value.educationLevel && value.experienceLevel && value.interests.length > 0 && value.location && value.delivery && value.transportation && value.language && value.accessibility && value.budget !== null; }
+function gradeValue(value) { const values = { "below-9": 8, "9": 9, "10": 10, "11": 11, "cegep1": 13, "cegep2": 14, "university-plus": 15 }; return Object.prototype.hasOwnProperty.call(values, String(value)) ? values[String(value)] : null; }
+function gradeLabel(value) { const labels = { "below-9": "Below Grade 9", "9": "Grade 9", "10": "Grade 10", "11": "Grade 11", "cegep1": "CEGEP 1", "cegep2": "CEGEP 2", "university-plus": "University or higher", other: "Other" }; return labels[String(value)] || String(value || "Not specified"); }
+function isProfileComplete(value) { return value.categories.length > 0 && value.grade !== null && value.grade !== "" && value.interests.length > 0 && value.location && value.delivery && value.transportation && value.language && value.accessibility && value.budget !== null; }
 function sortedMatches(items = opportunities) { return items.map((item) => ({ item, match: matchOpportunity(item) })).filter(({ match }) => match.eligible).sort((a, b) => b.match.score - a.match.score || a.item.title.localeCompare(b.item.title)); }
 function icon(item) { return `<span class="opportunity-icon ${escapeHtml(item.tone)}">${escapeHtml(item.icon)}</span>`; }
 function opportunityImage(item) { return opportunityImages[item.category] || null; }
@@ -147,19 +154,27 @@ async function refreshAuthSession() {
   }
 }
 document.addEventListener("click", (event) => { const target = event.target instanceof Element ? event.target : null; if (!target) return; const provider = target.closest("[data-auth-provider]"); if (provider) { beginFederatedLogin(provider.dataset.authProvider); } const signout = target.closest("#auth-signout"); if (signout) { window.location.assign("/.auth/logout?post_logout_redirect_uri=/"); } });
+document.addEventListener("change", (event) => {
+  const input = event.target instanceof HTMLInputElement ? event.target : null;
+  if (!input || !["categories", "interests"].includes(input.name)) return;
+  const group = input.name === "categories" ? "#category-options" : "#interest-options";
+  const options = [...document.querySelectorAll(`${group} input[name="${input.name}"]`)];
+  const allInput = options.find((option) => option.value === "all");
+  const individualInputs = options.filter((option) => option.value !== "all");
+  if (input.value === "all") individualInputs.forEach((option) => { option.checked = input.checked; });
+  else if (allInput) allInput.checked = individualInputs.every((option) => option.checked);
+});
 
 function profileFormMarkup(includeButton = true) {
-  return `<div class="account-context"><small>ACCOUNT</small><strong>${escapeHtml(currentUser?.name || currentUser?.email || "Sign in with a provider first")}</strong></div><div class="form-row"><label>Grade<select name="grade">${[9, 10, 11, 12].map((grade) => `<option value="${grade}" ${Number(profile.grade) === grade ? "selected" : ""}>Grade ${grade}</option>`).join("")}</select></label><label>Location<select name="location"><option value="">Choose a location</option>${["Montreal", "Quebec", "Toronto", "Online"].map((location) => `<option ${profile.location === location ? "selected" : ""}>${location}</option>`).join("")}</select></label></div><fieldset><legend>Interests</legend><div class="interest-options">${interestOptions.map((interest) => `<label class="interest-chip"><input type="checkbox" name="interests" value="${interest}" ${profile.interests.includes(interest) ? "checked" : ""}><span>${interest}</span></label>`).join("")}</div></fieldset><label>Maximum budget<select name="budget"><option value="">Choose a budget</option>${[0, 300, 500, 1000].map((budget) => `<option value="${budget}" ${Number(profile.budget) === budget ? "selected" : ""}>${budget === 0 ? "Free only" : `Up to $${budget.toLocaleString()}`}</option>`).join("")}</select></label>${includeButton ? `<button class="primary-button" type="submit">Update recommendations <span>→</span></button><p class="form-note">Only your matching preferences are saved in this browser.</p>` : `<button class="primary-button" type="submit">Save preferences <span>→</span></button>`}`;
+  const gradeOptions = [{ value: "below-9", label: "Below Grade 9" }, { value: "9", label: "Grade 9" }, { value: "10", label: "Grade 10" }, { value: "11", label: "Grade 11" }, { value: "cegep1", label: "CEGEP 1" }, { value: "cegep2", label: "CEGEP 2" }, { value: "university-plus", label: "University or higher" }, { value: "other", label: "Other" }];
+  return `<div class="account-context"><small>ACCOUNT</small><strong>${escapeHtml(currentUser?.name || currentUser?.email || "Sign in with a provider first")}</strong></div><div class="form-row"><label>Grade<select name="grade">${gradeOptions.map((grade) => `<option value="${grade.value}" ${String(profile.grade) === grade.value ? "selected" : ""}>${grade.label}</option>`).join("")}</select></label><label>Location<select name="location"><option value="">Choose a location</option>${["Montreal", "Quebec", "Toronto", "Online"].map((location) => `<option ${profile.location === location ? "selected" : ""}>${location}</option>`).join("")}</select></label></div><fieldset><legend>Interests</legend><div class="interest-options">${interestOptions.map((interest) => `<label class="interest-chip"><input type="checkbox" name="interests" value="${interest}" ${profile.interests.includes("all") || profile.interests.includes(interest) ? "checked" : ""}><span>${interest}</span></label>`).join("")}<label class="interest-chip"><input type="checkbox" name="interests" value="all" ${profile.interests.includes("all") ? "checked" : ""}><span>ALL</span></label></div></fieldset><label>Maximum budget<select name="budget"><option value="">Choose a budget</option>${[0, 300, 500, 1000].map((budget) => `<option value="${budget}" ${Number(profile.budget) === budget ? "selected" : ""}>${budget === 0 ? "Free only" : `Up to $${budget.toLocaleString()}`}</option>`).join("")}</select></label>${includeButton ? `<button class="primary-button" type="submit">Update recommendations <span>→</span></button><p class="form-note">Only your matching preferences are saved in this browser.</p>` : `<button class="primary-button" type="submit">Save preferences <span>→</span></button>`}`;
 }
 let activeProfileStep = 1;
 function profileFromForm(form) {
   const data = new FormData(form);
   return normalizeProfile({
     categories: data.getAll("categories"),
-    grade: data.get("grade") === "" ? null : Number(data.get("grade")),
-    ageRange: String(data.get("ageRange") || ""),
-    educationLevel: String(data.get("educationLevel") || ""),
-    experienceLevel: String(data.get("experienceLevel") || ""),
+    grade: String(data.get("grade") || ""),
     interests: data.getAll("interests"),
     location: String(data.get("location") || ""),
     delivery: String(data.get("delivery") || ""),
@@ -172,7 +187,7 @@ function profileFromForm(form) {
 function profileStepComplete(form, step) {
   const data = new FormData(form);
   if (step === 1) return data.getAll("categories").length > 0;
-  if (step === 2) return data.get("grade") && data.get("ageRange") && data.get("educationLevel") && data.get("experienceLevel");
+  if (step === 2) return Boolean(data.get("grade"));
   if (step === 3) return data.getAll("interests").length > 0;
   return data.get("location") && data.get("delivery") && data.get("transportation") && data.get("language") && data.get("accessibility") && data.get("budget") !== "";
 }
@@ -186,10 +201,10 @@ function setProfileStep(step) {
 function renderProfile() {
   const form = document.querySelector("#profile-form");
   const categoryOptionsNode = document.querySelector("#category-options");
-  categoryOptionsNode.innerHTML = opportunityCategoryOptions.map((category) => `<label><input type="checkbox" name="categories" value="${category.value}" ${profile.categories.includes(category.value) ? "checked" : ""}><span>${category.label}</span></label>`).join("");
+  categoryOptionsNode.innerHTML = opportunityCategoryOptions.map((category) => `<label><input type="checkbox" name="categories" value="${category.value}" ${profile.categories.includes("all") || profile.categories.includes(category.value) ? "checked" : ""}><span>${category.label}</span></label>`).join("");
   const interestOptionsNode = document.querySelector("#interest-options");
-  interestOptionsNode.innerHTML = interestOptions.map((interest) => `<label><input type="checkbox" name="interests" value="${interest}" ${profile.interests.includes(interest) ? "checked" : ""}><span>${interest}</span></label>`).join("");
-  ["grade", "ageRange", "educationLevel", "experienceLevel", "location", "delivery", "transportation", "language", "accessibility", "budget"].forEach((name) => { const field = form.querySelector(`[name="${name}"]`); if (field) field.value = profile[name] ?? ""; });
+  interestOptionsNode.innerHTML = `${interestOptions.map((interest) => `<label><input type="checkbox" name="interests" value="${interest}" ${profile.interests.includes("all") || profile.interests.includes(interest) ? "checked" : ""}><span>${interest}</span></label>`).join("")}<label><input type="checkbox" name="interests" value="all" ${profile.interests.includes("all") ? "checked" : ""}><span>ALL</span></label>`;
+  ["grade", "location", "delivery", "transportation", "language", "accessibility", "budget"].forEach((name) => { const field = form.querySelector(`[name="${name}"]`); if (field) field.value = profile[name] ?? ""; });
   setProfileStep(1);
 }
 function renderAccountDetails() {
@@ -247,9 +262,9 @@ function updateDashboardDateTime() {
 }
 function updateProfileCopy() {
   const hasPreferences = profile.grade !== null && profile.location && profile.interests.length && profile.budget !== null;
-  const summary = hasPreferences ? `Grade ${profile.grade} · ${profile.location} · ${profile.interests.slice(0, 2).join(" + ")}` : "Complete your profile to personalize recommendations.";
+  const summary = hasPreferences ? `${gradeLabel(profile.grade)} · ${profile.location} · ${profile.interests.includes("all") ? "All topics" : profile.interests.slice(0, 2).join(" + ")}` : "Complete your profile to personalize recommendations.";
   document.querySelector("#dashboard-profile").textContent = summary;
-  document.querySelector("#dashboard-tags").innerHTML = hasPreferences ? `<span>Under ${formatCost(profile.budget)}</span><span>${profile.interests.length} interests</span>` : "<span>No preferences yet</span>";
+  document.querySelector("#dashboard-tags").innerHTML = hasPreferences ? `<span>Under ${formatCost(profile.budget)}</span><span>${profile.interests.includes("all") ? "All topics" : `${profile.interests.length} interests`}</span>` : "<span>No preferences yet</span>";
   document.querySelector("#saved-count").textContent = saved.length; document.querySelector("#review-count").textContent = opportunities.filter(isPendingReview).length;
 }
 function showView(view) {
@@ -306,10 +321,10 @@ function openDetails(id) {
   const item = getOpportunity(id); if (!item) return; const match = matchOpportunity(item); const savedState = isSaved(item.id);
   const interestText = item.interests.slice(0, 3).join(" · ");
   const location = profile.location || item.location;
-  const grade = profile.grade || item.minGrade;
+  const grade = profile.grade ? gradeLabel(profile.grade) : `Grade ${item.minGrade}`;
   const image = opportunityImage(item);
   const heroVisual = image ? `<img src="${image}" alt="" loading="lazy">` : `<span>${escapeHtml(item.icon)}</span>`;
-  document.querySelector("#detail-content").innerHTML = `<div class="detail-back-row"><button class="detail-back" type="button" data-action="close-modal">← Back to results</button></div><div class="detail-intro"><div class="detail-heading"><div><span class="category-label">${escapeHtml(item.categoryLabel)} · ${escapeHtml(interestText)}</span><h2 id="detail-title">${escapeHtml(item.title)}</h2><p>${escapeHtml(item.organization)} · ${escapeHtml(item.location)}</p><div class="detail-meta-line"><span>⌖ ${escapeHtml(item.location)} or online</span><span>▣ ${escapeHtml(item.categoryLabel)}</span><span>♙ Grades ${item.minGrade}–${item.maxGrade}</span></div></div></div><div class="detail-score-ring large ${escapeHtml(item.tone)}"><strong>${match.score}</strong><small>/100<br>match</small></div></div><div class="detail-feature-grid"><div class="detail-hero-visual ${escapeHtml(item.tone)}${image ? " has-image" : ""}">${heroVisual}<small>EXPLORE<br>CONTRIBUTE<br>GROW</small></div><div class="detail-side-stack"><aside class="match-panel"><p class="eyebrow">WHY THIS MATCHES YOU</p><h3>${match.score}% fit for your profile</h3><ul><li><span>✓</span> Grade ${escapeHtml(String(grade))} eligible</li><li><span>✓</span> ${escapeHtml(location)} or online</li><li><span>✓</span> ${escapeHtml(item.interests[0])} interest</li><li><span>✓</span> Within your budget</li></ul></aside><section class="detail-ai-panel"><h3><span>ⓘ</span> How your match works</h3><p>We compare the opportunity details with your profile, including location, interests, eligibility, and budget, to explain why it may be a useful fit. This is guidance, not a guarantee of acceptance.</p></section><div class="detail-actions"><button class="primary-button" data-save-id="${item.id}">${savedState ? "♥ Saved" : "♡ Save opportunity"}</button><a class="outline-button" href="${escapeHtml(item.applicationUrl)}" target="_blank" rel="noopener">Open application ↗</a></div></div></div><div class="detail-card-grid"><section class="detail-info-card"><h3><span>▧</span>Overview</h3><p>${escapeHtml(item.description)} You’ll get a practical way to learn, contribute, and connect the experience to your next step.</p></section><section class="detail-info-card"><h3><span>☷</span>What you’ll do</h3><ul class="detail-bullets"><li>Work on a focused project with guidance and feedback.</li><li>Build evidence of what you learned and contributed.</li><li>Share a clear next step with your team or mentor.</li></ul></section><section class="detail-info-card"><h3><span>♧</span>Eligibility</h3><ul class="detail-bullets"><li>Grades ${item.minGrade}–${item.maxGrade}</li><li>Interest in ${escapeHtml(item.interests.slice(0, 2).join(" and "))}</li><li>Open to students in ${escapeHtml(item.location)} or online</li><li>No prior experience required</li></ul></section><section class="detail-info-card"><h3><span>▣</span>Deadline</h3><strong>${escapeHtml(item.deadlineLabel)}</strong><p>Confirm the current deadline and requirements on the official source.</p></section><section class="detail-info-card"><h3><span>◇</span>Cost</h3><strong>${escapeHtml(formatCost(item.cost))}</strong><p>Review any travel or participation costs before applying.</p></section><section class="detail-info-card source-card"><h3><span>↗</span>Source & more information</h3><strong class="source-status">● Source information</strong><p>Record reviewed ${escapeHtml(item.verifiedAt)}. Confirm current details before applying.</p><a href="${escapeHtml(item.sourceUrl)}" target="_blank" rel="noopener">View source →</a></section></div>`;
+  document.querySelector("#detail-content").innerHTML = `<div class="detail-back-row"><button class="detail-back" type="button" data-action="close-modal">← Back to results</button></div><div class="detail-intro"><div class="detail-heading"><div><span class="category-label">${escapeHtml(item.categoryLabel)} · ${escapeHtml(interestText)}</span><h2 id="detail-title">${escapeHtml(item.title)}</h2><p>${escapeHtml(item.organization)} · ${escapeHtml(item.location)}</p><div class="detail-meta-line"><span>⌖ ${escapeHtml(item.location)} or online</span><span>▣ ${escapeHtml(item.categoryLabel)}</span><span>♙ Grades ${item.minGrade}–${item.maxGrade}</span></div></div></div><div class="detail-score-ring large ${escapeHtml(item.tone)}"><strong>${match.score}</strong><small>/100<br>match</small></div></div><div class="detail-feature-grid"><div class="detail-hero-visual ${escapeHtml(item.tone)}${image ? " has-image" : ""}">${heroVisual}<small>EXPLORE<br>CONTRIBUTE<br>GROW</small></div><div class="detail-side-stack"><aside class="match-panel"><p class="eyebrow">WHY THIS MATCHES YOU</p><h3>${match.score}% fit for your profile</h3><ul><li><span>✓</span> ${escapeHtml(String(grade))} eligible</li><li><span>✓</span> ${escapeHtml(location)} or online</li><li><span>✓</span> ${escapeHtml(item.interests[0])} interest</li><li><span>✓</span> Within your budget</li></ul></aside><section class="detail-ai-panel"><h3><span>ⓘ</span> How your match works</h3><p>We compare the opportunity details with your profile, including location, interests, eligibility, and budget, to explain why it may be a useful fit. This is guidance, not a guarantee of acceptance.</p></section><div class="detail-actions"><button class="primary-button" data-save-id="${item.id}">${savedState ? "♥ Saved" : "♡ Save opportunity"}</button><a class="outline-button" href="${escapeHtml(item.applicationUrl)}" target="_blank" rel="noopener">Open application ↗</a></div></div></div><div class="detail-card-grid"><section class="detail-info-card"><h3><span>▧</span>Overview</h3><p>${escapeHtml(item.description)} You’ll get a practical way to learn, contribute, and connect the experience to your next step.</p></section><section class="detail-info-card"><h3><span>☷</span>What you’ll do</h3><ul class="detail-bullets"><li>Work on a focused project with guidance and feedback.</li><li>Build evidence of what you learned and contributed.</li><li>Share a clear next step with your team or mentor.</li></ul></section><section class="detail-info-card"><h3><span>♧</span>Eligibility</h3><ul class="detail-bullets"><li>Grades ${item.minGrade}–${item.maxGrade}</li><li>Interest in ${escapeHtml(item.interests.slice(0, 2).join(" and "))}</li><li>Open to students in ${escapeHtml(item.location)} or online</li><li>No prior experience required</li></ul></section><section class="detail-info-card"><h3><span>▣</span>Deadline</h3><strong>${escapeHtml(item.deadlineLabel)}</strong><p>Confirm the current deadline and requirements on the official source.</p></section><section class="detail-info-card"><h3><span>◇</span>Cost</h3><strong>${escapeHtml(formatCost(item.cost))}</strong><p>Review any travel or participation costs before applying.</p></section><section class="detail-info-card source-card"><h3><span>↗</span>Source & more information</h3><strong class="source-status">● Source information</strong><p>Record reviewed ${escapeHtml(item.verifiedAt)}. Confirm current details before applying.</p><a href="${escapeHtml(item.sourceUrl)}" target="_blank" rel="noopener">View source →</a></section></div>`;
   document.querySelector("#detail-modal").hidden = false;
 }
 
