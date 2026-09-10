@@ -137,6 +137,8 @@ function updateProfileCopy() {
   const summary = hasPreferences ? `Grade ${profile.grade} · ${profile.location} · ${profile.interests.slice(0, 2).join(" + ")}` : "Complete your profile to personalize recommendations.";
   document.querySelector("#dashboard-profile").textContent = summary;
   document.querySelector("#dashboard-tags").innerHTML = hasPreferences ? `<span>Under ${formatCost(profile.budget)}</span><span>${profile.interests.length} interests</span>` : "<span>No preferences yet</span>";
+  const profileSetupLink = document.querySelector("#profile-setup-link");
+  if (profileSetupLink) profileSetupLink.innerHTML = `${hasPreferences ? "Edit profile" : "Set up profile"} <span>→</span>`;
   document.querySelector("#saved-count").textContent = saved.length; document.querySelector("#review-count").textContent = opportunities.filter(isPendingReview).length;
 }
 function showView(view) {
