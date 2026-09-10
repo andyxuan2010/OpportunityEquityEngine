@@ -40,6 +40,34 @@ let accountDetails = { ...emptyAccountDetails };
 let saved = [];
 let reviews = load("oee-reviews", reviewDefaults);
 let activeView = "dashboard";
+const languageTranslations = {
+  fr: {
+    "My Dashboard": "Mon tableau de bord", "Find opportunities": "Trouver des occasions", "Saved": "Enregistrés", "My interests": "Mes intérêts", "Account details": "Détails du compte", Resources: "Ressources", "Review queue": "File de révision", "Sign in to continue": "Connectez-vous pour continuer", "No account connected": "Aucun compte connecté", "Demo data": "Données de démonstration", "Guidance, not a guarantee.": "Conseils, sans garantie.", Appearance: "Apparence", "← Documentation": "← Documentation", Home: "Accueil", Explore: "Explorer", Prototype: "Prototype", "Prototype mode": "Mode prototype", Dashboard: "Tableau de bord", Account: "Compte", "Saved opportunities": "Occasions enregistrées", "Review queue": "File de révision", "Welcome to your opportunity workspace.": "Bienvenue dans votre espace d’occasions.", "Explore. Learn. Apply. A brighter future is within reach.": "Explorez. Apprenez. Postulez. Un avenir meilleur est à portée de main.", "Edit profile": "Modifier le profil", "Complete your account details": "Complétez les détails de votre compte", "Add details": "Ajouter des détails", "Skip for now": "Ignorer pour l’instant", "YOUR MATCHING PROFILE": "VOTRE PROFIL DE CORRESPONDANCE", "Complete your profile to personalize recommendations.": "Complétez votre profil pour personnaliser vos recommandations.", "Your interests and preferences shape the opportunities we show you.": "Vos intérêts et préférences influencent les occasions que nous vous présentons.", "No preferences yet": "Aucune préférence pour l’instant", "START EXPLORING": "COMMENCEZ À EXPLORER", "Find opportunities that fit you": "Trouvez des occasions qui vous conviennent", "Search programs, internships, scholarships and more...": "Rechercher des programmes, des stages, des bourses et plus encore...", Search: "Rechercher", "Different backgrounds.": "Différents parcours.", "Brighter futures.": "Des avenirs plus brillants.", "Opportunities for everyone.": "Des occasions pour tous.", "PERSONALIZED FOR YOU": "PERSONNALISÉ POUR VOUS", "Recommended for you": "Recommandé pour vous", "View all": "Voir tout", "KEEP MOVING": "CONTINUEZ À AVANCER", "Next deadlines": "Prochaines échéances", "YOUR NEXT STEP": "VOTRE PROCHAINE ÉTAPE", "Turn a match into momentum.": "Transformez une correspondance en élan.", "Explore the library": "Explorer la bibliothèque", Discover: "Découvrir", Understand: "Comprendre", Act: "Agir", "OPPORTUNITY LIBRARY": "BIBLIOTHÈQUE D’OCCASIONS", "Explore what could be next.": "Explorez la suite.", "All categories": "Toutes les catégories", "Any budget": "Tout budget", "Free only": "Gratuit seulement", "Under $300": "Moins de 300 $", Clear: "Effacer", "Sorted by fit for your profile": "Triées selon votre profil", "PLAN · APPLY · GROW": "PLANIFIER · POSTULER · PROGRESSER", "My saved opportunities": "Mes occasions enregistrées", "Stay organized, take action, and never miss a deadline.": "Restez organisé, passez à l’action et ne manquez aucune échéance.", "Find a match": "Trouver une correspondance", "Nothing saved yet": "Rien d’enregistré pour l’instant", "Explore the library and save an opportunity to see it here.": "Explorez la bibliothèque et enregistrez une occasion pour la voir ici.", "PERSONALIZED OPPORTUNITIES": "OCCASIONS PERSONNALISÉES", "Let’s find": "Trouvons", opportunities: "des occasions", "for you.": "pour vous.", "Personalized opportunities. A brighter tomorrow.": "Des occasions personnalisées. Un avenir meilleur.", "Your interests. More possibilities.": "Vos intérêts. Plus de possibilités.", "Student profile": "Profil étudiant", "What types of opportunities interest you?": "Quels types d’occasions vous intéressent?", "Choose one or more categories, or select All to see every type.": "Choisissez une ou plusieurs catégories, ou sélectionnez Tout pour voir tous les types.", Continue: "Continuer", Back: "Retour", "What topics interest you?": "Quels sujets vous intéressent?", "Select the subjects and themes you would like to explore.": "Sélectionnez les sujets et thèmes que vous souhaitez explorer.", "Access preferences": "Préférences d’accès", "We have added practical defaults. You can change any of them before saving.": "Nous avons ajouté des choix pratiques par défaut. Vous pouvez les modifier avant d’enregistrer.", "Account details": "Détails du compte", "Keep your account up to date.": "Gardez votre compte à jour.", "Your account information is separate from your opportunity-matching profile and can be completed whenever you are ready.": "Les informations de votre compte sont distinctes de votre profil de correspondance et peuvent être complétées quand vous le souhaitez.", "Personal information": "Informations personnelles", "Quick sign-up is always available. You can update these details later.": "L’inscription rapide est toujours disponible. Vous pourrez modifier ces détails plus tard.", "Save account details": "Enregistrer les détails du compte", "ACCOUNT VS PROFILE": "COMPTE ET PROFIL", "Two kinds of information, one clear experience.": "Deux types d’informations, une expérience claire.", "Your privacy matters": "Votre vie privée compte", "WELCOME": "BIENVENUE", "Sign up or log in to continue.": "Inscrivez-vous ou connectez-vous pour continuer.", "Create your free opportunity workspace or return to your profile with your Google account.": "Créez gratuitement votre espace d’occasions ou retrouvez votre profil avec votre compte Google.", "Continue with Google": "Continuer avec Google", "ACTIVE SESSION": "SESSION ACTIVE", "Your account": "Votre compte", "You are signed in. Your account identity comes from your connected provider.": "Vous êtes connecté. Votre identité provient de votre fournisseur connecté.", "Sign out": "Se déconnecter", "Search opportunities, fields, or locations...": "Rechercher des occasions, des domaines ou des lieux...", "No specific needs": "Aucun besoin particulier", "Online or in-person": "En ligne ou en personne", "Within my city": "Dans ma ville", English: "Anglais", French: "Français", "Other": "Autre", "Other / not listed": "Autre / non répertorié", "Step 1 of 4 · Opportunity types": "Étape 1 sur 4 · Types d’occasions", "Step 2 of 4 · Student profile": "Étape 2 sur 4 · Profil étudiant", "Step 3 of 4 · Topic interests": "Étape 3 sur 4 · Sujets d’intérêt", "Step 4 of 4 · Access preferences": "Étape 4 sur 4 · Préférences d’accès"
+  }
+};
+let currentLanguage = load("oee-language", "en");
+if (!["en", "fr"].includes(currentLanguage)) currentLanguage = "en";
+const originalTextNodes = new WeakMap();
+function translationKey(value) { return String(value || "").replace(/\s+/g, " ").trim(); }
+function translatePage(language = currentLanguage) {
+  currentLanguage = ["en", "fr"].includes(language) ? language : "en";
+  document.documentElement.lang = currentLanguage;
+  const dictionary = languageTranslations[currentLanguage] || {};
+  const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
+  const nodes = [];
+  while (walker.nextNode()) nodes.push(walker.currentNode);
+  nodes.forEach((node) => {
+    if (node.parentElement?.closest("script,style,#language-selector")) return;
+    const source = originalTextNodes.get(node) || translationKey(node.nodeValue);
+    originalTextNodes.set(node, source);
+    const translated = dictionary[source] || source;
+    const leading = node.nodeValue.match(/^\s*/)?.[0] || "";
+    const trailing = node.nodeValue.match(/\s*$/)?.[0] || "";
+    node.nodeValue = `${leading}${translated}${trailing}`;
+  });
+  const selector = document.querySelector("#language-selector");
+  if (selector) selector.value = currentLanguage;
+}
 
 function load(key, fallback) {
   try { const value = JSON.parse(localStorage.getItem(key)); return value ?? fallback; } catch { return fallback; }
@@ -144,12 +172,14 @@ async function refreshAuthSession() {
     } else {
       showView("auth");
     }
+    translatePage(currentLanguage);
   } catch (_) {
     currentUser = null;
     loadAccountState();
     updateAccountIdentity();
     document.querySelector("#quick-profile-form").innerHTML = profileFormMarkup(false);
     showView("auth");
+    translatePage(currentLanguage);
   }
 }
 document.addEventListener("click", (event) => { const target = event.target instanceof Element ? event.target : null; if (!target) return; const provider = target.closest("[data-auth-provider]"); if (provider) { beginFederatedLogin(provider.dataset.authProvider); } const signout = target.closest("#auth-signout"); if (signout) { window.location.assign("/.auth/logout?post_logout_redirect_uri=/"); } });
@@ -194,7 +224,7 @@ function setProfileStep(step) {
   activeProfileStep = Math.min(4, Math.max(1, Number(step)));
   document.querySelectorAll("[data-profile-panel]").forEach((panel) => panel.classList.toggle("active", Number(panel.dataset.profilePanel) === activeProfileStep));
   document.querySelectorAll("[data-profile-step]").forEach((button) => button.classList.toggle("current", Number(button.dataset.profileStep) === activeProfileStep));
-  const labels = ["Opportunity types", "Student profile", "Topic interests", "Access preferences"];
+  const labels = currentLanguage === "fr" ? ["Types d’occasions", "Profil étudiant", "Sujets d’intérêt", "Préférences d’accès"] : ["Opportunity types", "Student profile", "Topic interests", "Access preferences"];
   document.querySelector("#profile-step-label").textContent = `Step ${activeProfileStep} of 4 · ${labels[activeProfileStep - 1]}`;
 }
 function renderProfile() {
@@ -268,8 +298,8 @@ function updateProfileCopy() {
 }
 function showView(view) {
   if (!currentUser && view !== "auth") view = "auth";
-  activeView = view; document.querySelectorAll(".view").forEach((section) => section.classList.toggle("active", section.id === `view-${view}`)); document.querySelectorAll(".nav-item").forEach((button) => button.classList.toggle("active", button.dataset.view === view)); const section = document.querySelector(`#view-${view}`); document.querySelector("#page-label").textContent = section.dataset.label;
-  if (view === "dashboard") renderDashboard(); if (view === "explore") renderExplore(); if (view === "saved") renderSaved(); if (view === "profile") renderProfile(); if (view === "account") renderAccountDetails(); if (view === "admin") renderAdmin(); window.scrollTo({ top: 0, behavior: "smooth" });
+  activeView = view; document.querySelectorAll(".view").forEach((section) => section.classList.toggle("active", section.id === `view-${view}`)); document.querySelectorAll(".nav-item").forEach((button) => button.classList.toggle("active", button.dataset.view === view)); const section = document.querySelector(`#view-${view}`); document.querySelector("#page-label").textContent = (languageTranslations[currentLanguage] || {})[section.dataset.label] || section.dataset.label;
+  if (view === "dashboard") renderDashboard(); if (view === "explore") renderExplore(); if (view === "saved") renderSaved(); if (view === "profile") renderProfile(); if (view === "account") renderAccountDetails(); if (view === "admin") renderAdmin(); window.scrollTo({ top: 0, behavior: "smooth" }); translatePage(currentLanguage);
 }
 function toggleSaved(id) { saved = isSaved(id) ? saved.filter((savedId) => savedId !== id) : [id, ...saved]; persistAccount("saved", saved); updateProfileCopy(); showToast(isSaved(id) ? "Saved to your shortlist" : "Removed from your shortlist"); if (activeView === "dashboard") renderDashboard(); if (activeView === "explore") renderExplore(); if (activeView === "saved") renderSaved(); }
 function openDetails(id) { const item = getOpportunity(id); if (!item) return; const match = matchOpportunity(item); document.querySelector("#detail-content").innerHTML = `<div class="detail-heading"><div>${icon(item)}<div><span class="category-label">${escapeHtml(item.categoryLabel)}</span><h2 id="detail-title">${escapeHtml(item.title)}</h2><p>${escapeHtml(item.organization)} · ${escapeHtml(item.location)}</p></div></div><span class="fit-score large">${match.score}<small>% fit</small></span></div><div class="detail-facts"><span><small>GRADE</small>${item.minGrade}–${item.maxGrade}</span><span><small>LOCATION</small>${escapeHtml(item.location)}</span><span><small>COST</small>${escapeHtml(formatCost(item.cost))}</span><span><small>DEADLINE</small>${escapeHtml(item.deadlineLabel)}</span></div><section class="detail-section highlight"><p class="eyebrow">WHY THIS MATCHES</p><p>${escapeHtml(match.reason)} ${escapeHtml(item.action)} is a clear next step.</p></section><section class="detail-section"><p class="eyebrow">OVERVIEW</p><p>${escapeHtml(item.description)}</p></section><section class="detail-section evidence"><p class="eyebrow">SOURCE EVIDENCE</p><p>Sample record reviewed ${escapeHtml(item.verifiedAt)}. Confirm current requirements and dates on the official source before applying.</p><a href="${escapeHtml(item.sourceUrl)}" target="_blank" rel="noopener">Open official source ↗</a></section><div class="detail-actions"><button class="primary-button" data-save-id="${item.id}">${isSaved(item.id) ? "♥ Saved" : "♡ Save opportunity"}</button><a class="outline-button" href="${escapeHtml(item.applicationUrl)}" target="_blank" rel="noopener">View application ↗</a></div>`; document.querySelector("#detail-modal").hidden = false; }
@@ -293,10 +323,11 @@ document.addEventListener("click", (event) => {
 document.querySelector("#profile-form").addEventListener("submit", (event) => { event.preventDefault(); handleProfileSubmit(event.currentTarget); });
 document.querySelector("#account-form").addEventListener("submit", (event) => { event.preventDefault(); handleAccountSubmit(event.currentTarget); });
 document.querySelector("#quick-profile-form").addEventListener("submit", (event) => { event.preventDefault(); handleProfileSubmit(event.currentTarget); });
+document.querySelector("#language-selector").addEventListener("change", (event) => { currentLanguage = event.currentTarget.value; persist("oee-language", currentLanguage); if (activeView === "profile") renderProfile(); translatePage(currentLanguage); });
 document.querySelector("#search-input").addEventListener("input", renderExplore); document.querySelector("#category-filter").addEventListener("change", renderExplore); document.querySelector("#budget-filter").addEventListener("change", renderExplore);
 document.querySelector("#clear-filters").addEventListener("click", () => { document.querySelector("#search-input").value = ""; document.querySelector("#category-filter").value = "all"; document.querySelector("#budget-filter").value = "all"; renderExplore(); });
 document.addEventListener("keydown", (event) => { if (event.key === "Escape") closeModals(); });
-document.documentElement.dataset.theme = load("oee-theme", "light"); loadAccountState(); document.querySelector("#quick-profile-form").innerHTML = profileFormMarkup(false); updateProfileCopy(); updateAccountIdentity(); showView("auth");
+document.documentElement.dataset.theme = load("oee-theme", "light"); loadAccountState(); document.querySelector("#quick-profile-form").innerHTML = profileFormMarkup(false); updateProfileCopy(); updateAccountIdentity(); showView("auth"); translatePage(currentLanguage);
 updateDashboardDateTime(); window.setInterval(updateDashboardDateTime, 60000);
 refreshAuthSession();
 
