@@ -4,6 +4,18 @@ variable "subscription_id" {
   default     = ""
 }
 
+variable "features" {
+  description = "Optional reference-style feature switches. App Registration is gated by enable_app_services and enable_app_registration_for_appservice."
+  type        = map(bool)
+  default     = {}
+}
+
+variable "enable_app_services" {
+  description = "Reference-style provision gate for App Service workloads."
+  type        = bool
+  default     = true
+}
+
 variable "location" {
   description = "Azure region for the resource group and App Service resources."
   type        = string
@@ -88,6 +100,88 @@ variable "health_check_eviction_time_in_min" {
     condition     = var.health_check_eviction_time_in_min >= 2 && var.health_check_eviction_time_in_min <= 10
     error_message = "health_check_eviction_time_in_min must be between 2 and 10 minutes."
   }
+}
+
+variable "enable_app_registration_for_appservice" {
+  description = "Whether to create an Entra app registration and service principal for the App Service."
+  type        = bool
+  default     = true
+}
+
+variable "app_service_auth_mode" {
+  description = "Authentication mode for the App Service app registration: none, easy_auth, msal, or both."
+  type        = string
+  default     = "both"
+
+  validation {
+    condition     = contains(["none", "easy_auth", "msal", "both"], var.app_service_auth_mode)
+    error_message = "app_service_auth_mode must be one of: none, easy_auth, msal, or both."
+  }
+}
+
+variable "app_service_allow_anonymous" {
+  description = "Whether Easy Auth allows anonymous requests."
+  type        = bool
+  default     = true
+}
+
+variable "app_service_unauthenticated_action" {
+  description = "Action for unauthenticated requests when Easy Auth is enabled."
+  type        = string
+  default     = "AllowAnonymous"
+
+  validation {
+    condition = contains([
+      "RedirectToLoginPage",
+      "AllowAnonymous",
+      "Return401",
+      "Return403",
+      ""
+    ], var.app_service_unauthenticated_action)
+    error_message = "app_service_unauthenticated_action must be one of RedirectToLoginPage, AllowAnonymous, Return401, Return403, or empty."
+  }
+}
+
+variable "app_registration_name" {
+  description = "Optional app registration name override."
+  type        = string
+  default     = ""
+}
+
+variable "app_registration_display_name" {
+  description = "Optional display name override for the App Service app registration."
+  type        = string
+  default     = null
+}
+
+variable "app_registration_web_redirect_uris" {
+  description = "Optional explicit web redirect URIs. When empty, the App Service callback URI is generated."
+  type        = list(string)
+  default     = []
+}
+
+variable "app_registration_create_client_secret" {
+  description = "Whether to create a client secret for the app registration."
+  type        = bool
+  default     = true
+}
+
+variable "app_registration_key_vault_id" {
+  description = "Optional existing Key Vault resource ID where the generated app registration secret is stored."
+  type        = string
+  default     = null
+}
+
+variable "app_registration_federated_identity_credentials" {
+  description = "Optional federated identity credentials for the app registration, using the reference module schema."
+  type = map(object({
+    display_name = string
+    issuer       = string
+    subject      = string
+    audiences    = optional(list(string), ["api://AzureADTokenExchange"])
+    description  = optional(string)
+  }))
+  default = {}
 }
 
 variable "enable_easy_auth" {

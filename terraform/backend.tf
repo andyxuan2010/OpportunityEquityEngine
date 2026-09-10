@@ -3,7 +3,7 @@ terraform {
   required_providers {
     azurerm = {
       source  = "hashicorp/azurerm"
-      version = ">= 4.0"
+      version = ">= 4.0, < 5.0"
     }
     azapi = {
       source = "Azure/azapi"
@@ -11,6 +11,14 @@ terraform {
     random = {
       source  = "hashicorp/random"
       version = "~>3.0"
+    }
+    azuread = {
+      source  = "hashicorp/azuread"
+      version = ">= 3.0, < 4.0"
+    }
+    time = {
+      source  = "hashicorp/time"
+      version = ">= 0.13, < 1.0"
     }
   }
   backend "azurerm" {
@@ -33,6 +41,12 @@ provider "azurerm" {
   subscription_id = "1ec5edd4-5654-4246-8027-b29ef63b3393"
   features {}
 }
+
+provider "azuread" {
+  tenant_id = "d5b038fb-4b39-41cc-8a10-fba75212180b"
+}
+
+provider "time" {}
 
 provider "azurerm" {
   subscription_id = "1ec5edd4-5654-4246-8027-b29ef63b3393"

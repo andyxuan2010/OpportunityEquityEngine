@@ -8,6 +8,16 @@ app_service_plan_sku_name = "F1"
 dotnet_version            = "10.0"
 always_on                = false
 enable_easy_auth         = false
+enable_app_services      = true
+enable_app_registration_for_appservice = true
+app_service_auth_mode    = "both"
+app_service_allow_anonymous = true
+app_service_unauthenticated_action = "AllowAnonymous"
+app_registration_name    = ""
+app_registration_display_name = null
+app_registration_web_redirect_uris = []
+app_registration_create_client_secret = true
+app_registration_key_vault_id = null
 
 # App Service names are globally constrained for the hostname. Set an explicit
 # unique value before applying if the generated name is already in use.
@@ -28,3 +38,8 @@ app_settings = {
 #   GOOGLE_CLIENT_SECRET = "@Microsoft.KeyVault(SecretUri=https://<vault>.vault.azure.net/secrets/<secret>/)"
 #   FACEBOOK_APP_SECRET  = "@Microsoft.KeyVault(SecretUri=https://<vault>.vault.azure.net/secrets/<secret>/)"
 # }
+
+# The Entra App Registration is provisioned only when both
+# enable_app_services and enable_app_registration_for_appservice are true.
+# When enabled, the generated Easy Auth callback is:
+# https://<app-service-name>.azurewebsites.net/.auth/login/aad/callback

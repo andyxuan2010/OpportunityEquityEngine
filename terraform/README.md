@@ -53,9 +53,13 @@ Configure these secrets in the GitHub `opportunity-dev` environment:
 - `AZURE_TENANT_ID`: Microsoft Entra tenant ID
 - `AZURE_SUBSCRIPTION_ID`: Azure subscription ID
 
-## OAuth and application settings
+## App Registration, OAuth, and provision gates
 
-The App Service is prepared for the existing ASP.NET Core authentication flow with non-secret settings such as `AAD_TENANT_ID`, `AAD_REDIRECT_PATH`, and `AAD_SCOPES`. Configure `AAD_CLIENT_ID`, `AAD_CLIENT_SECRET`, Google/Facebook client values, and any application secret through App Service settings, Key Vault references, or CI/CD secret variables. Never put those values in Git or a Terraform example file.
+The Terraform uses the public [`azure-template` `appregistration` module](https://github.com/andyxuan2010/azure-template/tree/main/modules/appregistration). The Entra App Registration and service principal are created only when both `enable_app_services` and `enable_app_registration_for_appservice` are true. The `features` map can override either gate using the same reference-style names.
+
+When enabled, the configuration generates the App Service callback `/.auth/login/aad/callback`, configures App Service Easy Auth, writes the generated client ID to `AAD_CLIENT_ID`, and optionally creates a client secret. Prefer setting `app_registration_key_vault_id` so the module stores the generated secret in Key Vault. Never put provider secrets in Git or a Terraform example file.
+
+Google and Facebook Easy Auth remain separately configured through their provider client IDs and secure App Service secret settings. The Entra App Registration does not create Google or Facebook OAuth applications.
 
 The production callback URL is:
 
