@@ -852,10 +852,11 @@ html[data-theme="dark"] .card-match-reason { border-top-color: var(--line); }
 }
 
 /* Keep the restored matching setup page easy to reach from the dashboard. */
-.profile-setup-link { align-self: center; }
+.profile-strip.profile-link { width: 100%; cursor: pointer; font: inherit; text-align: left; }
+.profile-strip.profile-link:hover { border-color: #b8dfe3; background: #eef9fa; }
+.profile-strip.profile-link:focus-visible { outline-offset: -3px; }
 .onboarding-form .form-row { grid-template-columns: 1fr; }
 @media (max-width: 760px) {
-  .profile-setup-link { align-self: flex-start; }
 }
 
 /* Opportunity details: reference-style match summary and structured information cards. */

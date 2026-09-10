@@ -6,7 +6,7 @@
     <meta name="theme-color" content="#f4f8fc">
     <meta name="description" content="A student-centered opportunity matching demo.">
     <title>Opportunity Equity Engine · Student demo</title>
-    <link rel="stylesheet" href="/styles.css?v=dashboard-welcome-20260910">
+    <link rel="stylesheet" href="/styles.css?v=profile-strip-20260910">
   </head>
   <body>
     <div class="app-shell">
@@ -58,12 +58,11 @@
             <button class="outline-button" data-action="edit-profile">Edit profile <span>→</span></button>
           </div>
 
-          <div class="profile-strip">
+          <button class="profile-strip profile-link" type="button" data-view="profile" aria-label="Open matching profile">
             <div class="profile-strip-main"><span class="spark-icon">✦</span><div><small>YOUR MATCHING PROFILE</small><strong id="dashboard-profile">Complete your profile to personalize recommendations.</strong></div></div>
             <div class="profile-quote">Your interests and preferences shape the opportunities we show you.</div>
             <div class="profile-tags" id="dashboard-tags"><span>No preferences yet</span></div>
-            <button class="outline-button compact profile-setup-link" id="profile-setup-link" data-view="profile">Set up profile <span>→</span></button>
-          </div>
+          </button>
 
           <div class="dashboard-search-grid">
             <section class="dashboard-search-panel"><p class="eyebrow">START EXPLORING</p><h2>Find opportunities that fit you</h2><button class="dashboard-search-box" data-view="explore"><span>⌕</span><span>Search programs, internships, scholarships and more...</span><b>Search</b></button></section>
@@ -164,6 +163,6 @@
     <div class="modal-backdrop" id="detail-modal" hidden><div class="modal detail-modal" role="dialog" aria-modal="true" aria-labelledby="detail-title"><button class="modal-close" data-action="close-modal" aria-label="Close">×</button><div id="detail-content"></div></div></div>
     <div class="modal-backdrop" id="profile-modal" hidden><div class="modal profile-modal" role="dialog" aria-modal="true" aria-labelledby="profile-modal-title"><button class="modal-close" data-action="close-modal" aria-label="Close">×</button><p class="eyebrow">QUICK SETUP</p><h2 id="profile-modal-title">Tune your recommendations.</h2><p>Tell us a little about what fits. You can edit this anytime.</p><form id="quick-profile-form" class="profile-form"></form></div></div>
     <div class="toast" id="toast" role="status" aria-live="polite"></div>
-    <script src="/app.js?v=dashboard-welcome-20260910"></script>
+    <script src="/app.js?v=profile-strip-20260910"></script>
   </body>
 </html>
