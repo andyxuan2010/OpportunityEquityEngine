@@ -128,13 +128,13 @@ variable "app_service_auth_mode" {
 variable "app_service_allow_anonymous" {
   description = "Whether Easy Auth allows anonymous requests."
   type        = bool
-  default     = true
+  default     = false
 }
 
 variable "app_service_unauthenticated_action" {
   description = "Action for unauthenticated requests when Easy Auth is enabled."
   type        = string
-  default     = "AllowAnonymous"
+  default     = "RedirectToLoginPage"
 
   validation {
     condition = contains([
