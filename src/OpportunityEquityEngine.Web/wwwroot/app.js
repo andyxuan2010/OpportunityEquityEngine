@@ -126,7 +126,7 @@ function updateAccountIdentity() {
   document.querySelector("#auth-session-panel").hidden = !currentUser;
   document.querySelector("#sidebar-avatar").textContent = initials;
   document.querySelector("#sidebar-name").textContent = displayName;
-  document.querySelector("#sidebar-profile").textContent = currentUser ? `${currentUser.provider || "Account"}${currentUser.email ? ` · ${currentUser.email}` : ""}` : "No account connected";
+  document.querySelector("#sidebar-profile").textContent = currentUser ? "My profile" : "No account connected";
   document.querySelector(".top-avatar").textContent = initials;
   document.querySelector("#auth-session-name").textContent = displayName;
   document.querySelector("#auth-session-details").textContent = currentUser ? `${currentUser.provider || "Connected provider"}${currentUser.email ? ` · ${currentUser.email}` : ""}` : "";
