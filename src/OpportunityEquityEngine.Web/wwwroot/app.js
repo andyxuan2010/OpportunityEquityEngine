@@ -130,7 +130,15 @@ function updateAccountIdentity() {
   document.querySelector(".top-avatar").textContent = initials;
   document.querySelector("#auth-session-name").textContent = displayName;
   document.querySelector("#auth-session-details").textContent = currentUser ? `${currentUser.provider || "Connected provider"}${currentUser.email ? ` · ${currentUser.email}` : ""}` : "";
-  document.querySelector("#dashboard-welcome").textContent = currentUser ? `Welcome, ${displayName}.` : "Welcome to your opportunity workspace.";
+  document.querySelector("#dashboard-welcome").innerHTML = currentUser ? `Welcome, <span>${escapeHtml(displayName)}</span>.` : "Welcome to your opportunity workspace.";
+}
+function updateDashboardDateTime() {
+  const dateNode = document.querySelector("#dashboard-date");
+  if (!dateNode) return;
+  const now = new Date();
+  const date = new Intl.DateTimeFormat(undefined, { weekday: "long", month: "long", day: "numeric", year: "numeric" }).format(now).toUpperCase();
+  const time = new Intl.DateTimeFormat(undefined, { hour: "numeric", minute: "2-digit", timeZoneName: "short" }).format(now);
+  dateNode.textContent = `${date} · ${time}`;
 }
 function updateProfileCopy() {
   const hasPreferences = profile.grade !== null && profile.location && profile.interests.length && profile.budget !== null;
@@ -167,6 +175,7 @@ document.querySelector("#search-input").addEventListener("input", renderExplore)
 document.querySelector("#clear-filters").addEventListener("click", () => { document.querySelector("#search-input").value = ""; document.querySelector("#category-filter").value = "all"; document.querySelector("#budget-filter").value = "all"; renderExplore(); });
 document.addEventListener("keydown", (event) => { if (event.key === "Escape") closeModals(); });
 document.documentElement.dataset.theme = load("oee-theme", "light"); loadAccountState(); document.querySelector("#quick-profile-form").innerHTML = profileFormMarkup(false); updateProfileCopy(); showView("dashboard");
+updateDashboardDateTime(); window.setInterval(updateDashboardDateTime, 60000);
 refreshAuthSession();
 
 /* Reference-inspired list, detail, and matching surfaces. */

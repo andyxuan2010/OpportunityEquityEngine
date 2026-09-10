@@ -6,7 +6,7 @@
     <meta name="theme-color" content="#f4f8fc">
     <meta name="description" content="A student-centered opportunity matching demo.">
     <title>Opportunity Equity Engine · Student demo</title>
-    <link rel="stylesheet" href="/styles.css?v=profile-link-20260910">
+    <link rel="stylesheet" href="/styles.css?v=dashboard-welcome-20260910">
   </head>
   <body>
     <div class="app-shell">
@@ -51,7 +51,7 @@
         <section class="view active" id="view-dashboard" data-label="Dashboard">
           <div class="welcome-row">
             <div>
-              <p class="eyebrow">TUESDAY · OCTOBER 8, 2026</p>
+              <p class="eyebrow" id="dashboard-date" aria-live="polite">Loading local date and time…</p>
               <h1 id="dashboard-welcome">Welcome to your opportunity workspace.</h1>
               <p class="lead">Explore. Learn. Apply. A brighter future is within reach.</p>
             </div>
@@ -164,6 +164,6 @@
     <div class="modal-backdrop" id="detail-modal" hidden><div class="modal detail-modal" role="dialog" aria-modal="true" aria-labelledby="detail-title"><button class="modal-close" data-action="close-modal" aria-label="Close">×</button><div id="detail-content"></div></div></div>
     <div class="modal-backdrop" id="profile-modal" hidden><div class="modal profile-modal" role="dialog" aria-modal="true" aria-labelledby="profile-modal-title"><button class="modal-close" data-action="close-modal" aria-label="Close">×</button><p class="eyebrow">QUICK SETUP</p><h2 id="profile-modal-title">Tune your recommendations.</h2><p>Tell us a little about what fits. You can edit this anytime.</p><form id="quick-profile-form" class="profile-form"></form></div></div>
     <div class="toast" id="toast" role="status" aria-live="polite"></div>
-    <script src="/app.js?v=profile-link-20260910"></script>
+    <script src="/app.js?v=dashboard-welcome-20260910"></script>
   </body>
 </html>
