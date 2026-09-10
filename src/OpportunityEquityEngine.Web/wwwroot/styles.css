@@ -810,3 +810,43 @@ html[data-theme="light"] .admin-banner { border-color: #eee4c8; background: #fcf
 html[data-theme="light"] .modal-backdrop { background: rgba(36, 67, 86, .16); }
 html[data-theme="light"] .modal { border-color: #e2ebef; background: #f9fcfd; box-shadow: 0 22px 55px rgba(42, 78, 113, .12); }
 html[data-theme="light"] .result-fact, html[data-theme="light"] .profile-quote { border-color: #e5edef; }
+
+/* Recommended cards: compact reference layout with a thumbnail, fit badge, and clear next action. */
+.recommendation-grid { align-items: stretch; gap: 18px; }
+.opportunity-card { min-height: 0; height: 100%; padding: 14px; border-radius: 18px; background: var(--surface); }
+.opportunity-card:hover { transform: translateY(-2px); }
+.card-heading { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: start; gap: 12px; }
+.card-visual { height: 88px; min-width: 0; border-radius: 12px; }
+.card-visual::after { width: 104px; height: 40px; left: 12%; bottom: -13px; }
+.card-visual span { width: 46px; height: 46px; font-size: 20px; }
+.fit-score { min-width: 76px; padding: 10px 8px; border-radius: 10px; color: #765900; background: #ffe9a6; font-size: 22px; line-height: .9; }
+.fit-score small { margin-top: 5px; color: #8d6b08; font-size: 8px; letter-spacing: .02em; }
+.card-top { margin-top: 13px; }
+.card-identity { gap: 9px; }
+.opportunity-icon { width: 34px; height: 34px; flex-basis: 34px; border-radius: 9px 4px 9px 4px; font-size: 15px; }
+.category-label { font-size: 8px; }
+.card-identity h3 { margin: 3px 0 4px; font-size: 16px; line-height: 1.14; }
+.card-identity p { font-size: 9px; }
+.card-description { min-height: 50px; margin: 12px 0 13px; font-size: 11px; line-height: 1.45; }
+.card-facts { gap: 15px; margin-top: auto; padding-top: 12px; font-size: 10px; }
+.card-facts span { display: inline-flex; align-items: center; gap: 5px; }
+.card-facts b { color: var(--teal); font-size: 12px; font-weight: 800; }
+.card-match-reason { min-height: 76px; margin-top: 12px; padding-top: 11px; border-top: 1px solid #e6edf1; }
+.card-match-reason strong { display: block; color: var(--ink); font-size: 11px; }
+.card-match-reason p { margin: 3px 0 0; color: var(--muted); font-size: 10px; line-height: 1.45; }
+.card-actions { margin-top: 12px; gap: 9px; }
+.card-detail-button { width: 100%; display: inline-flex; align-items: center; justify-content: center; gap: 6px; padding: 10px 12px; border-radius: 9px; color: #fff; background: var(--teal); font-size: 11px; }
+.card-detail-button:hover { color: #fff; background: #0b7079; }
+.card-detail-button span { color: inherit; font-size: 13px; }
+.card-actions .save-button { min-width: 58px; padding: 6px 0; color: var(--muted); font-size: 11px; white-space: nowrap; }
+.card-actions .save-button.is-saved { color: #c5860b; }
+html[data-theme="light"] .card-match-reason { border-top-color: #e5edef; }
+html[data-theme="dark"] .card-match-reason { border-top-color: var(--line); }
+
+@media (max-width: 1050px) {
+  .recommendation-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .recommendation-grid .opportunity-card:last-child { grid-column: auto; }
+}
+@media (max-width: 760px) {
+  .recommendation-grid { grid-template-columns: 1fr; }
+}
