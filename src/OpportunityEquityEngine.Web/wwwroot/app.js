@@ -141,7 +141,6 @@ async function refreshAuthSession() {
       if (activeView === "dashboard") renderDashboard();
       if (activeView === "profile") renderProfile();
       if (activeView === "account") renderAccountDetails();
-      showToast(`Signed in with ${currentUser.provider || "your account"}`);
     } else {
       showView("auth");
     }
