@@ -16,12 +16,21 @@ locals {
   effective_app_service_auth_mode                   = local.effective_enable_app_registration_for_appservice ? (var.app_service_auth_mode == "none" ? "msal" : var.app_service_auth_mode) : "none"
   app_registration_generated_redirect_uri_hostnames = length(var.app_registration_web_redirect_uris) > 0 ? [] : [local.app_service_default_hostname]
 
+  google_client_secret_key_vault_parts = split("/", trim(var.google_client_secret_key_vault_id, "/"))
+  google_client_secret_key_vault_name  = length(local.google_client_secret_key_vault_parts) > 7 ? local.google_client_secret_key_vault_parts[7] : ""
+  google_client_secret_key_vault_rg    = length(local.google_client_secret_key_vault_parts) > 3 ? local.google_client_secret_key_vault_parts[3] : ""
+  google_client_secret_reference       = trimspace(var.google_client_secret_key_vault_id) != "" ? "@Microsoft.KeyVault(SecretUri=${data.azurerm_key_vault.google[0].vault_uri}secrets/${var.google_client_secret_name}/)" : ""
+  google_auth_configured               = trimspace(var.google_client_id) != "" && local.google_client_secret_reference != ""
+
   effective_app_settings = merge(
     {
       ASPNETCORE_ENVIRONMENT         = var.environment == "prod" ? "Production" : "Development"
       SCM_DO_BUILD_DURING_DEPLOYMENT = "false"
     },
-    var.app_settings
+    var.app_settings,
+    local.google_client_secret_reference != "" ? {
+      (var.google_client_secret_setting_name) = local.google_client_secret_reference
+    } : {}
   )
 
   common_tags = merge(
@@ -32,6 +41,12 @@ locals {
       Runtime     = "ASP.NET Core"
     }
   )
+}
+
+data "azurerm_key_vault" "google" {
+  count               = trimspace(var.google_client_secret_key_vault_id) != "" ? 1 : 0
+  name                = local.google_client_secret_key_vault_name
+  resource_group_name = local.google_client_secret_key_vault_rg
 }
 
 resource "azurerm_resource_group" "this" {
@@ -123,7 +138,7 @@ resource "azurerm_linux_web_app" "this" {
       }
 
       dynamic "google_v2" {
-        for_each = var.google_client_id != "" ? [var.google_client_id] : []
+        for_each = local.google_auth_configured ? [var.google_client_id] : []
 
         content {
           client_id                  = google_v2.value
@@ -149,4 +164,24 @@ resource "azurerm_linux_web_app" "this" {
   }
 
   tags = local.common_tags
+}
+
+resource "azurerm_key_vault_secret" "google_client_secret" {
+  count = trimspace(var.google_client_secret_key_vault_id) != "" && trimspace(var.GOOGLE_CLIENT_SECRET) != "" ? 1 : 0
+
+  name         = var.google_client_secret_name
+  value        = var.GOOGLE_CLIENT_SECRET
+  key_vault_id = var.google_client_secret_key_vault_id
+  content_type = "Google OAuth client secret"
+
+  tags = local.common_tags
+}
+
+resource "azurerm_role_assignment" "app_service_key_vault_secrets_user" {
+  count = trimspace(var.google_client_secret_key_vault_id) != "" ? 1 : 0
+
+  scope                            = var.google_client_secret_key_vault_id
+  role_definition_name             = "Key Vault Secrets User"
+  principal_id                     = azurerm_linux_web_app.this.identity[0].principal_id
+  skip_service_principal_aad_check = true
 }

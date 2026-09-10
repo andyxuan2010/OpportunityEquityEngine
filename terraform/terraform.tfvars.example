@@ -37,13 +37,18 @@ app_settings = {
   AAD_SCOPES        = "User.Read"
 }
 
-# Set enable_easy_auth = true and provide the provider IDs when the OAuth apps
-# are registered. The client secret settings should contain Key Vault
-# references or be managed through secure App Service configuration.
-# google_client_id = "your-google-web-client-id"
+# Google OAuth values are intentionally read from Terraform environment variables
+# instead of being committed to this file:
+# $env:TF_VAR_google_client_id = "your-client-id.apps.googleusercontent.com"
+# $env:TF_VAR_GOOGLE_CLIENT_SECRET = "your-google-client-secret"
+# google_client_secret_key_vault_id = "/subscriptions/<subscription-id>/resourceGroups/<resource-group>/providers/Microsoft.KeyVault/vaults/<vault-name>"
+# google_client_secret_name = "GOOGLE-CLIENT-SECRET"
+# The Google callback to register in Google Cloud is:
+# https://<app-service-name>.azurewebsites.net/.auth/login/google/callback
+#
+# Facebook remains separately configured when its credentials are available:
 # facebook_app_id  = "your-facebook-app-id"
 # app_settings = {
-#   GOOGLE_CLIENT_SECRET = "@Microsoft.KeyVault(SecretUri=https://<vault>.vault.azure.net/secrets/<secret>/)"
 #   FACEBOOK_APP_SECRET  = "@Microsoft.KeyVault(SecretUri=https://<vault>.vault.azure.net/secrets/<secret>/)"
 # }
 

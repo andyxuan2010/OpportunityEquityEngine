@@ -11,15 +11,23 @@ const opportunities = [
 ];
 
 const interestOptions = ["AI", "Medicine", "Research", "Coding", "Design", "Environment", "Leadership", "University"];
-const defaultProfile = { name: "Alex Morgan", grade: 11, location: "Montreal", interests: ["AI", "Medicine"], budget: 300 };
+const emptyProfile = { grade: null, location: "", interests: [], budget: null };
 const reviewDefaults = Object.fromEntries(opportunities.filter((item) => item.status === "needs-review").map((item) => [item.id, "needs-review"]));
-let profile = load("oee-profile", defaultProfile);
-let saved = load("oee-saved", ["ai-design", "biomed", "ocean"]);
+let profile = normalizeProfile(load("oee-profile", emptyProfile));
+let saved = load("oee-saved", []);
+if (Array.isArray(saved) && saved.length === 3 && ["ai-design", "biomed", "ocean"].every((id) => saved.includes(id))) saved = [];
 let reviews = load("oee-reviews", reviewDefaults);
+let currentUser = null;
 let activeView = "dashboard";
 
 function load(key, fallback) {
   try { const value = JSON.parse(localStorage.getItem(key)); return value ?? fallback; } catch { return fallback; }
+}
+function normalizeProfile(value) {
+  if (!value || typeof value !== "object") return { ...emptyProfile };
+  const legacyDemoProfile = value.name === "Alex Morgan" && Number(value.grade) === 11 && value.location === "Montreal" && Array.isArray(value.interests) && value.interests.join("|") === "AI|Medicine" && Number(value.budget) === 300;
+  if (legacyDemoProfile) return { ...emptyProfile };
+  return { ...emptyProfile, grade: value.grade ?? null, location: value.location || "", interests: Array.isArray(value.interests) ? value.interests : [], budget: value.budget ?? null };
 }
 function persist(key, value) { try { localStorage.setItem(key, JSON.stringify(value)); } catch {} }
 function escapeHtml(value) { return String(value ?? "").replace(/[&<>\"']/g, (character) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", "\"": "&quot;", "'": "&#39;" }[character])); }
@@ -30,6 +38,7 @@ function reviewStatus(opportunity) { return reviews[opportunity.id] || opportuni
 function isPendingReview(opportunity) { return ["needs-review", "verification-requested"].includes(reviewStatus(opportunity)); }
 
 function matchOpportunity(opportunity) {
+  if (profile.grade === null || !profile.location || !profile.interests.length || profile.budget === null) return { eligible: false, score: 0, reason: "Complete your matching preferences to see recommendations." };
   const grade = Number(profile.grade); const budget = Number(profile.budget);
   const gradeFit = grade >= opportunity.minGrade && grade <= opportunity.maxGrade;
   const locationFit = opportunity.locations.includes(profile.location) || opportunity.locations.includes("Online") || profile.location === "Online";
@@ -52,7 +61,7 @@ function emptyState(title, copy, view, label) { return `<div class="empty-state"
 
 function renderDashboard() {
   const matches = sortedMatches();
-  document.querySelector("#recommendation-list").innerHTML = matches.slice(0, 3).map(({ item, match }) => opportunityCard(item, match)).join("") || emptyState("No matches yet", "Update your profile to see opportunities.", "profile", "Tune my profile");
+  document.querySelector("#recommendation-list").innerHTML = matches.slice(0, 3).map(({ item, match }) => opportunityCard(item, match)).join("") || emptyState("Set your preferences first", "Choose your grade, location, interests, and budget to see recommendations.", "profile", "Set preferences");
   const savedItems = saved.map(getOpportunity).filter(Boolean).map((item) => ({ item, match: matchOpportunity(item) }));
   const deadlines = savedItems.length ? savedItems.slice(0, 3) : matches.filter(({ item }) => item.deadline).slice(0, 3);
   document.querySelector("#deadline-list").innerHTML = deadlines.length ? deadlines.map(({ item, match }) => compactOpportunity(item, match)).join("") : `<p class="empty-copy">Save an opportunity to keep its next deadline close.</p>`;
@@ -70,10 +79,6 @@ function renderSaved() {
   document.querySelector("#saved-list").innerHTML = items.length ? items.map((item) => `<article class="saved-card"><div class="saved-card-main">${icon(item)}<div><span class="category-label">${escapeHtml(item.categoryLabel)}</span><h3>${escapeHtml(item.title)}</h3><p>${escapeHtml(item.description)}</p></div></div><div class="saved-meta"><span>◷ ${escapeHtml(item.deadlineLabel)}</span><span>◈ ${escapeHtml(formatCost(item.cost))}</span></div><div class="next-step"><small>NEXT ACTION</small><strong>${escapeHtml(item.action)}</strong><button class="text-link" data-detail-id="${item.id}">Open details ↗</button></div><button class="save-button is-saved" data-save-id="${item.id}">♥ Saved</button></article>`).join("") : emptyState("Build your shortlist", "The best shortlist is small enough to act on.", "explore", "Explore opportunities");
 }
 
-let authMode = "login";
-function setAuthMode(mode) {
-  authMode = mode; const register = mode === "register"; const nameField = document.querySelector("#auth-name-field"); nameField.hidden = !register; document.querySelector("#auth-eyebrow").textContent = register ? "START YOUR PATH" : "WELCOME BACK"; document.querySelector("#auth-title").textContent = register ? "Create your opportunity workspace" : "Log in to your workspace"; document.querySelector("#auth-copy").textContent = register ? "Save your profile and return to your next steps from any device." : "Use your email or a connected identity provider to continue."; document.querySelector("#auth-submit").innerHTML = register ? "Create account <span>→</span>" : "Log in <span>→</span>"; document.querySelectorAll(".auth-tab").forEach((tab) => { const active = tab.dataset.authMode === mode; tab.classList.toggle("active", active); tab.setAttribute("aria-selected", String(active)); });
-}
 function beginFederatedLogin(provider) {
   const returnPath = `${window.location.pathname}${window.location.search}`;
   window.location.assign(`/.auth/login/${encodeURIComponent(provider)}?post_login_redirect_uri=${encodeURIComponent(returnPath)}`);
@@ -83,26 +88,21 @@ async function refreshAuthSession() {
     const response = await fetch("/api/auth/session", { credentials: "same-origin", headers: { Accept: "application/json" } });
     if (!response.ok) return;
     const session = await response.json();
-    const user = session.authenticated ? session.user : null;
-    const displayName = user?.name || user?.email || "Student";
-    const profileLabel = user?.email ? `${user.email} · Signed in` : "Signed in";
-    document.querySelector("#sidebar-name").textContent = displayName;
-    document.querySelector("#sidebar-profile").textContent = profileLabel;
-    document.querySelector(".top-avatar").textContent = displayName.split(/\s+/).map((part) => part[0]).join("").slice(0, 2).toUpperCase();
-    document.querySelector("#auth-signout").hidden = !user;
-    if (user) showToast(`Signed in with ${user.provider || "your account"}`);
+    currentUser = session.authenticated ? session.user : null;
+    updateAccountIdentity();
+    if (currentUser) showToast(`Signed in with ${currentUser.provider || "your account"}`);
   } catch (_) {
-    // The static demo remains usable when the API host is not available.
+    currentUser = null;
+    updateAccountIdentity();
   }
 }
-document.addEventListener("click", (event) => { const tab = event.target.closest("[data-auth-mode]"); if (tab) setAuthMode(tab.dataset.authMode); const provider = event.target.closest("[data-auth-provider]"); if (provider) { beginFederatedLogin(provider.dataset.authProvider); } const signout = event.target.closest("#auth-signout"); if (signout) { window.location.assign("/.auth/logout?post_logout_redirect_uri=/"); } });
-document.querySelector("#auth-form").addEventListener("submit", (event) => { event.preventDefault(); const data = new FormData(event.currentTarget); const email = String(data.get("email") || "").trim(); const name = String(data.get("name") || "").trim(); if (!email) return; const account = { name: name || profile.name || "Student", email, provider: "email" }; persist("oee-account", account); profile = { ...profile, name: account.name }; persist("oee-profile", profile); closeModals(); updateProfileCopy(); showToast(authMode === "register" ? "Account created in demo mode" : "Logged in in demo mode"); showView("dashboard"); });
+document.addEventListener("click", (event) => { const provider = event.target.closest("[data-auth-provider]"); if (provider) { beginFederatedLogin(provider.dataset.authProvider); } const signout = event.target.closest("#auth-signout"); if (signout) { window.location.assign("/.auth/logout?post_logout_redirect_uri=/"); } });
 
 function profileFormMarkup(includeButton = true) {
-  return `<label>Name<input name="name" value="${escapeHtml(profile.name)}" required></label><div class="form-row"><label>Grade<select name="grade">${[9, 10, 11, 12].map((grade) => `<option value="${grade}" ${Number(profile.grade) === grade ? "selected" : ""}>Grade ${grade}</option>`).join("")}</select></label><label>Location<select name="location">${["Montreal", "Quebec", "Toronto", "Online"].map((location) => `<option ${profile.location === location ? "selected" : ""}>${location}</option>`).join("")}</select></label></div><fieldset><legend>Interests</legend><div class="interest-options">${interestOptions.map((interest) => `<label class="interest-chip"><input type="checkbox" name="interests" value="${interest}" ${profile.interests.includes(interest) ? "checked" : ""}><span>${interest}</span></label>`).join("")}</div></fieldset><label>Maximum budget<select name="budget">${[0, 300, 500, 1000].map((budget) => `<option value="${budget}" ${Number(profile.budget) === budget ? "selected" : ""}>${budget === 0 ? "Free only" : `Up to $${budget.toLocaleString()}`}</option>`).join("")}</select></label>${includeButton ? `<button class="primary-button" type="submit">Update recommendations <span>→</span></button><p class="form-note">No grades, immigration status, or financial details are needed for this prototype.</p>` : `<button class="primary-button" type="submit">Save profile <span>→</span></button>`}`;
+  return `<div class="account-context"><small>ACCOUNT</small><strong>${escapeHtml(currentUser?.name || currentUser?.email || "Sign in with a provider first")}</strong></div><div class="form-row"><label>Grade<select name="grade">${[9, 10, 11, 12].map((grade) => `<option value="${grade}" ${Number(profile.grade) === grade ? "selected" : ""}>Grade ${grade}</option>`).join("")}</select></label><label>Location<select name="location"><option value="">Choose a location</option>${["Montreal", "Quebec", "Toronto", "Online"].map((location) => `<option ${profile.location === location ? "selected" : ""}>${location}</option>`).join("")}</select></label></div><fieldset><legend>Interests</legend><div class="interest-options">${interestOptions.map((interest) => `<label class="interest-chip"><input type="checkbox" name="interests" value="${interest}" ${profile.interests.includes(interest) ? "checked" : ""}><span>${interest}</span></label>`).join("")}</div></fieldset><label>Maximum budget<select name="budget"><option value="">Choose a budget</option>${[0, 300, 500, 1000].map((budget) => `<option value="${budget}" ${Number(profile.budget) === budget ? "selected" : ""}>${budget === 0 ? "Free only" : `Up to $${budget.toLocaleString()}`}</option>`).join("")}</select></label>${includeButton ? `<button class="primary-button" type="submit">Update recommendations <span>→</span></button><p class="form-note">Only your matching preferences are saved in this browser.</p>` : `<button class="primary-button" type="submit">Save preferences <span>→</span></button>`}`;
 }
 function renderProfile() {
-  const form = document.querySelector("#profile-form"); form.querySelector('[name="name"]').value = profile.name; form.querySelector('[name="grade"]').value = profile.grade; form.querySelector('[name="location"]').value = profile.location; form.querySelector('[name="budget"]').value = profile.budget;
+  const form = document.querySelector("#profile-form"); form.querySelector('[name="grade"]').value = profile.grade ?? ""; form.querySelector('[name="location"]').value = profile.location; form.querySelector('[name="budget"]').value = profile.budget ?? "";
   const interestOptionsNode = document.querySelector("#interest-options"); interestOptionsNode.innerHTML = interestOptions.map((interest) => `<label class="interest-chip"><input type="checkbox" name="interests" value="${interest}" ${profile.interests.includes(interest) ? "checked" : ""}><span>${interest}</span></label>`).join("");
   document.querySelectorAll("#interest-options input").forEach((input) => { input.checked = profile.interests.includes(input.value); });
 }
@@ -110,8 +110,25 @@ function renderAdmin() {
   const queue = opportunities.filter(isPendingReview); document.querySelector("#admin-large-number").textContent = String(queue.length).padStart(2, "0");
   document.querySelector("#review-list").innerHTML = queue.length ? queue.map((item) => `<article class="review-row"><div class="review-identity">${icon(item)}<div><strong>${escapeHtml(item.title)}</strong><small>${escapeHtml(item.organization)} · ${escapeHtml(item.verifiedAt)}</small></div></div><span class="status-badge">${reviewStatus(item) === "verification-requested" ? "Verification requested" : "Needs review"}</span><a class="text-link" href="${escapeHtml(item.sourceUrl)}" target="_blank" rel="noopener">Check source ↗</a><div class="review-actions"><button class="outline-button compact" data-review-action="request" data-review-id="${item.id}">Request verification</button><button class="primary-button compact" data-review-action="approve" data-review-id="${item.id}">Approve</button></div></article>`).join("") : emptyState("Queue is clear", "All demo records have a review decision.", "explore", "Browse opportunities");
 }
+function updateAccountIdentity() {
+  const displayName = currentUser?.name || currentUser?.email || "Sign in to continue";
+  const initials = currentUser ? displayName.split(/\s+/).map((part) => part[0]).join("").slice(0, 2).toUpperCase() : "?";
+  document.querySelector("#auth-guest-panel").hidden = Boolean(currentUser);
+  document.querySelector("#auth-session-panel").hidden = !currentUser;
+  document.querySelector("#sidebar-avatar").textContent = initials;
+  document.querySelector("#sidebar-name").textContent = displayName;
+  document.querySelector("#sidebar-profile").textContent = currentUser ? `${currentUser.provider || "Account"}${currentUser.email ? ` · ${currentUser.email}` : ""}` : "No account connected";
+  document.querySelector(".top-avatar").textContent = initials;
+  document.querySelector("#auth-session-name").textContent = displayName;
+  document.querySelector("#auth-session-details").textContent = currentUser ? `${currentUser.provider || "Connected provider"}${currentUser.email ? ` · ${currentUser.email}` : ""}` : "";
+  document.querySelector("#dashboard-welcome").textContent = currentUser ? `Welcome, ${displayName}.` : "Welcome to your opportunity workspace.";
+}
 function updateProfileCopy() {
-  const summary = `Grade ${profile.grade} · ${profile.location} · ${profile.interests.slice(0, 2).join(" + ")}`; document.querySelector("#sidebar-name").textContent = profile.name; document.querySelector("#sidebar-profile").textContent = `Grade ${profile.grade} · ${profile.location}`; document.querySelector("#dashboard-profile").textContent = summary; document.querySelector("#dashboard-tags").innerHTML = `<span>Under ${formatCost(profile.budget)}</span><span>${profile.interests.length} interests</span>`; document.querySelector("#saved-count").textContent = saved.length; document.querySelector("#review-count").textContent = opportunities.filter(isPendingReview).length;
+  const hasPreferences = profile.grade !== null && profile.location && profile.interests.length && profile.budget !== null;
+  const summary = hasPreferences ? `Grade ${profile.grade} · ${profile.location} · ${profile.interests.slice(0, 2).join(" + ")}` : "Complete your profile to personalize recommendations.";
+  document.querySelector("#dashboard-profile").textContent = summary;
+  document.querySelector("#dashboard-tags").innerHTML = hasPreferences ? `<span>Under ${formatCost(profile.budget)}</span><span>${profile.interests.length} interests</span>` : "<span>No preferences yet</span>";
+  document.querySelector("#saved-count").textContent = saved.length; document.querySelector("#review-count").textContent = opportunities.filter(isPendingReview).length;
 }
 function showView(view) {
   activeView = view; document.querySelectorAll(".view").forEach((section) => section.classList.toggle("active", section.id === `view-${view}`)); document.querySelectorAll(".nav-item").forEach((button) => button.classList.toggle("active", button.dataset.view === view)); const section = document.querySelector(`#view-${view}`); document.querySelector("#page-label").textContent = section.dataset.label;
@@ -122,7 +139,7 @@ function openDetails(id) { const item = getOpportunity(id); if (!item) return; c
 function closeModals() { document.querySelectorAll(".modal-backdrop").forEach((modal) => { modal.hidden = true; }); }
 function showToast(message) { const toast = document.querySelector("#toast"); toast.textContent = message; toast.classList.add("show"); clearTimeout(showToast.timer); showToast.timer = setTimeout(() => toast.classList.remove("show"), 2600); }
 function openProfileModal() { document.querySelector("#quick-profile-form").innerHTML = profileFormMarkup(false); document.querySelector("#profile-modal").hidden = false; }
-function handleProfileSubmit(form) { const data = new FormData(form); const interests = data.getAll("interests"); if (!interests.length) { showToast("Choose at least one interest"); return; } profile = { name: String(data.get("name")).trim() || "Student", grade: Number(data.get("grade")), location: String(data.get("location")), interests, budget: Number(data.get("budget")) }; persist("oee-profile", profile); closeModals(); updateProfileCopy(); showToast("Profile updated — recommendations refreshed"); showView("dashboard"); }
+function handleProfileSubmit(form) { const data = new FormData(form); const interests = data.getAll("interests"); if (!data.get("grade") || !data.get("location") || data.get("budget") === "" || !interests.length) { showToast("Complete your preferences first"); return; } profile = { grade: Number(data.get("grade")), location: String(data.get("location")), interests, budget: Number(data.get("budget")) }; persist("oee-profile", profile); closeModals(); updateProfileCopy(); showToast("Profile updated — recommendations refreshed"); showView("dashboard"); }
 
 document.addEventListener("click", (event) => {
   const viewButton = event.target.closest("[data-view]"); if (viewButton) { event.preventDefault(); showView(viewButton.dataset.view); return; }

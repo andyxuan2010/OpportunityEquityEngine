@@ -752,6 +752,9 @@ html[data-theme="dark"] .detail-section.highlight { border-color: rgba(98, 217, 
 .auth-trust strong { color: var(--ink); font-size: 13px; }
 .auth-trust p { margin: 3px 0 0; color: var(--muted); font-size: 10px; line-height: 1.5; }
 .auth-card { width: 100%; max-width: 560px; justify-self: end; padding: 36px 42px; border-radius: 22px; background: #fff; box-shadow: 0 18px 46px rgba(42, 78, 113, .1); }
+.account-context { display: grid; gap: 4px; margin: 20px 0; padding: 12px 14px; border: 1px solid var(--line); border-radius: 11px; background: var(--surface-2); }
+.account-context small { color: var(--teal); font-size: 9px; font-weight: 850; letter-spacing: .12em; }
+.account-context strong { overflow: hidden; color: var(--ink); font-size: 13px; text-overflow: ellipsis; white-space: nowrap; }
 .auth-tabs { display: grid; grid-template-columns: 1fr 1fr; gap: 5px; margin-bottom: 31px; padding: 4px; border-radius: 12px; background: #edf5f7; }
 .auth-tab { padding: 10px; border: 0; border-radius: 9px; color: var(--muted); background: transparent; cursor: pointer; font-size: 12px; font-weight: 850; }
 .auth-tab.active { color: var(--teal); background: #fff; box-shadow: 0 3px 8px rgba(42, 78, 113, .08); }

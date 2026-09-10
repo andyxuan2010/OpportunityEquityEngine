@@ -78,6 +78,25 @@ When enabled, the configuration generates the App Service callback `/.auth/login
 
 Google and Facebook Easy Auth remain separately configured through their provider client IDs and secure App Service secret settings. The Entra App Registration does not create Google or Facebook OAuth applications.
 
+For Google, provide both values through environment variables rather than a
+committed tfvars file:
+
+```powershell
+$env:TF_VAR_google_client_id = "your-client-id.apps.googleusercontent.com"
+$env:TF_VAR_GOOGLE_CLIENT_SECRET = "your-google-client-secret"
+```
+
+Terraform uploads the secret to the configured Key Vault, grants the App
+Service managed identity the `Key Vault Secrets User` role, and adds a Key Vault
+reference to the `GOOGLE_CLIENT_SECRET` App Service setting. The Google Easy
+Auth provider then uses that setting. The secret is still present in Terraform
+state because Terraform manages the Key Vault secret, so protect the remote
+state and plan files. The Google Cloud OAuth client must allow:
+
+```text
+https://<app-service-name>.azurewebsites.net/.auth/login/google/callback
+```
+
 The production callback URL is:
 
 ```text

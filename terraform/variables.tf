@@ -197,13 +197,32 @@ variable "enable_easy_auth" {
 }
 
 variable "google_client_id" {
-  description = "Google OAuth web client ID for App Service Easy Auth."
+  description = "Google OAuth web client ID for App Service Easy Auth. Set through TF_VAR_google_client_id rather than committing it to a tfvars file."
   type        = string
   default     = ""
 }
 
+variable "GOOGLE_CLIENT_SECRET" {
+  description = "Google OAuth client secret to upload to the configured Key Vault. Set through TF_VAR_GOOGLE_CLIENT_SECRET and never commit it to a tfvars file."
+  type        = string
+  sensitive   = true
+  default     = ""
+}
+
+variable "google_client_secret_key_vault_id" {
+  description = "Existing Key Vault resource ID where the Google OAuth client secret is stored."
+  type        = string
+  default     = ""
+}
+
+variable "google_client_secret_name" {
+  description = "Key Vault secret name for the Google OAuth client secret."
+  type        = string
+  default     = "GOOGLE-CLIENT-SECRET"
+}
+
 variable "google_client_secret_setting_name" {
-  description = "App Service setting name containing the Google OAuth client secret, preferably a Key Vault reference."
+  description = "App Service setting name containing the Key Vault reference for the Google OAuth client secret."
   type        = string
   default     = "GOOGLE_CLIENT_SECRET"
 }

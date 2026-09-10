@@ -17,8 +17,8 @@
         </a>
 
         <div class="profile-mini">
-          <div class="avatar">AM</div>
-          <div><strong id="sidebar-name">Alex Morgan</strong><span id="sidebar-profile">Grade 11 · Montreal</span></div>
+          <div class="avatar" id="sidebar-avatar">?</div>
+          <div><strong id="sidebar-name">Sign in to continue</strong><span id="sidebar-profile">No account connected</span></div>
           <button class="icon-button" data-action="edit-profile" aria-label="Edit profile">✎</button>
         </div>
 
@@ -45,7 +45,7 @@
             <nav class="top-nav" aria-label="Top navigation"><a href="./">Home</a><button data-view="explore">Explore</button><button data-view="saved">Saved</button><button data-view="resources">Resources</button></nav>
             <span class="demo-pill"><span></span> Prototype mode</span>
             <button class="icon-button top-theme" data-action="toggle-theme" aria-label="Toggle appearance">◐</button>
-            <button class="top-avatar" data-view="auth" aria-label="Open account">AM</button>
+            <button class="top-avatar" data-view="auth" aria-label="Open account">?</button>
           </div>
         </header>
 
@@ -53,16 +53,16 @@
           <div class="welcome-row">
             <div>
               <p class="eyebrow">TUESDAY · OCTOBER 8, 2026</p>
-              <h1>Good to see you back!</h1>
+              <h1 id="dashboard-welcome">Welcome to your opportunity workspace.</h1>
               <p class="lead">Explore. Learn. Apply. A brighter future is within reach.</p>
             </div>
             <button class="outline-button" data-action="edit-profile">Edit profile <span>→</span></button>
           </div>
 
           <div class="profile-strip">
-            <div class="profile-strip-main"><span class="spark-icon">✦</span><div><small>YOUR MATCHING PROFILE</small><strong id="dashboard-profile">Grade 11 · Montreal · AI + Medicine</strong></div></div>
-            <div class="profile-quote">“I want to use technology to improve people’s lives.”</div>
-            <div class="profile-tags" id="dashboard-tags"><span>Under $300</span><span>Weekends</span></div>
+            <div class="profile-strip-main"><span class="spark-icon">✦</span><div><small>YOUR MATCHING PROFILE</small><strong id="dashboard-profile">Complete your profile to personalize recommendations.</strong></div></div>
+            <div class="profile-quote">Your interests and preferences shape the opportunities we show you.</div>
+            <div class="profile-tags" id="dashboard-tags"><span>No preferences yet</span></div>
           </div>
 
           <div class="dashboard-search-grid">
@@ -104,13 +104,12 @@
               <div class="stepper" aria-label="Profile setup progress"><span class="current">1</span><i></i><span>2</span><i></i><span>3</span><i></i><span>4</span></div>
               <p class="step-label">Step 1 of 4</p>
               <form id="profile-form" class="profile-form onboarding-form">
-                <label>Name<input name="name" required></label>
                 <fieldset><legend>What are you interested in?</legend><div class="interest-options" id="interest-options"></div></fieldset>
                 <div class="form-row"><label>Where are you located?<select name="location"><option>Montreal</option><option>Quebec</option><option>Toronto</option><option>Online</option></select></label><label>What grade are you in?<select name="grade"><option value="9">Grade 9</option><option value="10">Grade 10</option><option value="11">Grade 11</option><option value="12">Grade 12</option></select></label></div>
                 <label>What is your maximum budget?<select name="budget"><option value="0">Free only</option><option value="300">Up to $300</option><option value="500">Up to $500</option><option value="1000">Up to $1,000</option></select></label>
                 <div class="privacy-note"><span>▣</span><div><strong>Your privacy matters</strong><p>We only use the information needed to match you with relevant opportunities.</p></div></div>
                 <button class="primary-button onboarding-submit" type="submit">See my opportunities <span>→</span></button>
-                <p class="form-note">Your profile stays in this browser for this demo.</p>
+                <p class="form-note">Your matching preferences are saved in this browser.</p>
               </form>
             </section>
           </div>
@@ -140,20 +139,20 @@
               <div class="auth-trust"><span>✓</span><div><strong>Your choices stay yours</strong><p>We use account information to keep your opportunity workspace available. This demo never stores passwords.</p></div></div>
             </section>
             <section class="panel auth-card">
-              <div class="auth-tabs" role="tablist" aria-label="Account access"><button class="auth-tab active" data-auth-mode="login" role="tab" aria-selected="true">Log in</button><button class="auth-tab" data-auth-mode="register" role="tab" aria-selected="false">Create account</button></div>
-              <p class="eyebrow" id="auth-eyebrow">WELCOME BACK</p>
-              <h2 id="auth-title">Log in to your workspace</h2>
-              <p class="auth-copy" id="auth-copy">Use your email or a connected identity provider to continue.</p>
-              <form id="auth-form" class="auth-form">
-                <label id="auth-name-field" hidden>Full name<input name="name" autocomplete="name" placeholder="Alex Morgan"></label>
-                <label>Email address<input name="email" type="email" autocomplete="email" required placeholder="you@example.com"></label>
-                <label>Password<input name="password" type="password" autocomplete="current-password" required placeholder="••••••••"></label>
-                <button class="primary-button auth-submit" type="submit" id="auth-submit">Log in <span>→</span></button>
-              </form>
-              <div class="auth-divider"><span>or continue with</span></div>
-              <div class="provider-grid"><button type="button" class="provider-button" data-auth-provider="google"><span class="provider-g">G</span> Google / Gmail</button><button type="button" class="provider-button" data-auth-provider="facebook"><span class="provider-f">f</span> Facebook</button><button type="button" class="provider-button" data-auth-provider="aad"><span class="provider-m">▦</span> Microsoft</button></div>
-              <button type="button" class="outline-button auth-signout" id="auth-signout" hidden>Sign out</button>
-              <p class="auth-config-note">Google and Facebook sign-in use Azure App Service Authentication. Provider credentials are kept in secure App Service configuration.</p>
+              <div id="auth-guest-panel">
+                <p class="eyebrow">ACCOUNT ACCESS</p>
+                <h2>Use your account to continue.</h2>
+                <p class="auth-copy">Sign in with Google, Facebook, or Microsoft. Your name and email come from the identity provider.</p>
+                <div class="provider-grid"><button type="button" class="provider-button" data-auth-provider="google"><span class="provider-g">G</span> Google / Gmail</button><button type="button" class="provider-button" data-auth-provider="facebook"><span class="provider-f">f</span> Facebook</button><button type="button" class="provider-button" data-auth-provider="aad"><span class="provider-m">▦</span> Microsoft</button></div>
+                <p class="auth-config-note">Authentication is handled by Azure App Service Authentication. This site never asks for or stores your provider password.</p>
+              </div>
+              <div id="auth-session-panel" hidden>
+                <p class="eyebrow">ACTIVE SESSION</p>
+                <h2>Your account</h2>
+                <p class="auth-copy">You are signed in. Your account identity comes from your connected provider.</p>
+                <div class="account-context"><small>SIGNED IN AS</small><strong id="auth-session-name">Account</strong><span id="auth-session-details">Provider</span></div>
+                <button type="button" class="outline-button auth-signout" id="auth-signout">Sign out</button>
+              </div>
             </section>
           </div>
         </section>
