@@ -106,14 +106,20 @@ async function refreshAuthSession() {
     loadAccountState();
     updateAccountIdentity();
     document.querySelector("#quick-profile-form").innerHTML = profileFormMarkup(false);
-    if (activeView === "dashboard") renderDashboard();
-    if (activeView === "profile") renderProfile();
-    if (currentUser) showToast(`Signed in with ${currentUser.provider || "your account"}`);
+    if (currentUser) {
+      if (activeView === "auth") showView("dashboard");
+      if (activeView === "dashboard") renderDashboard();
+      if (activeView === "profile") renderProfile();
+      showToast(`Signed in with ${currentUser.provider || "your account"}`);
+    } else {
+      showView("auth");
+    }
   } catch (_) {
     currentUser = null;
     loadAccountState();
     updateAccountIdentity();
     document.querySelector("#quick-profile-form").innerHTML = profileFormMarkup(false);
+    showView("auth");
   }
 }
 document.addEventListener("click", (event) => { const target = event.target instanceof Element ? event.target : null; if (!target) return; const provider = target.closest("[data-auth-provider]"); if (provider) { beginFederatedLogin(provider.dataset.authProvider); } const signout = target.closest("#auth-signout"); if (signout) { window.location.assign("/.auth/logout?post_logout_redirect_uri=/"); } });
@@ -133,6 +139,7 @@ function renderAdmin() {
 function updateAccountIdentity() {
   const displayName = currentUser?.name || currentUser?.email || "Sign in to continue";
   const initials = currentUser ? displayName.split(/\s+/).map((part) => part[0]).join("").slice(0, 2).toUpperCase() : "?";
+  document.body.classList.toggle("guest-mode", !currentUser);
   document.querySelector("#auth-guest-panel").hidden = Boolean(currentUser);
   document.querySelector("#auth-session-panel").hidden = !currentUser;
   document.querySelector("#sidebar-avatar").textContent = initials;
@@ -159,6 +166,7 @@ function updateProfileCopy() {
   document.querySelector("#saved-count").textContent = saved.length; document.querySelector("#review-count").textContent = opportunities.filter(isPendingReview).length;
 }
 function showView(view) {
+  if (!currentUser && view !== "auth") view = "auth";
   activeView = view; document.querySelectorAll(".view").forEach((section) => section.classList.toggle("active", section.id === `view-${view}`)); document.querySelectorAll(".nav-item").forEach((button) => button.classList.toggle("active", button.dataset.view === view)); const section = document.querySelector(`#view-${view}`); document.querySelector("#page-label").textContent = section.dataset.label;
   if (view === "dashboard") renderDashboard(); if (view === "explore") renderExplore(); if (view === "saved") renderSaved(); if (view === "profile") renderProfile(); if (view === "admin") renderAdmin(); window.scrollTo({ top: 0, behavior: "smooth" });
 }
@@ -183,7 +191,7 @@ document.querySelector("#quick-profile-form").addEventListener("submit", (event)
 document.querySelector("#search-input").addEventListener("input", renderExplore); document.querySelector("#category-filter").addEventListener("change", renderExplore); document.querySelector("#budget-filter").addEventListener("change", renderExplore);
 document.querySelector("#clear-filters").addEventListener("click", () => { document.querySelector("#search-input").value = ""; document.querySelector("#category-filter").value = "all"; document.querySelector("#budget-filter").value = "all"; renderExplore(); });
 document.addEventListener("keydown", (event) => { if (event.key === "Escape") closeModals(); });
-document.documentElement.dataset.theme = load("oee-theme", "light"); loadAccountState(); document.querySelector("#quick-profile-form").innerHTML = profileFormMarkup(false); updateProfileCopy(); showView("dashboard");
+document.documentElement.dataset.theme = load("oee-theme", "light"); loadAccountState(); document.querySelector("#quick-profile-form").innerHTML = profileFormMarkup(false); updateProfileCopy(); updateAccountIdentity(); showView("auth");
 updateDashboardDateTime(); window.setInterval(updateDashboardDateTime, 60000);
 refreshAuthSession();
 

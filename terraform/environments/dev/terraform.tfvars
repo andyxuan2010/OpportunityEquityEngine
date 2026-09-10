@@ -615,8 +615,8 @@ app_service_plan_autoscale_scale_down_increment     = 1
 
 enable_app_registration_for_appservice = true
 app_service_auth_mode                  = "both"
-app_service_allow_anonymous            = false
-app_service_unauthenticated_action     = "RedirectToLoginPage"
+app_service_allow_anonymous            = true
+app_service_unauthenticated_action     = "AllowAnonymous"
 app_registration_display_name          = null
 app_registration_web_redirect_uris     = []
 app_registration_create_client_secret  = true

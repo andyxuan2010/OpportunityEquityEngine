@@ -48,7 +48,7 @@
           </div>
         </header>
 
-        <section class="view active" id="view-dashboard" data-label="Dashboard">
+        <section class="view" id="view-dashboard" data-label="Dashboard">
           <div class="welcome-row">
             <div>
               <p class="eyebrow" id="dashboard-date" aria-live="polite">Loading local date and time…</p>
@@ -128,22 +128,23 @@
           <div class="review-table" id="review-list"></div>
         </section>
 
-        <section class="view" id="view-auth" data-label="Account">
+        <section class="view active" id="view-auth" data-label="Account">
           <div class="auth-layout">
             <section class="auth-story">
-              <p class="eyebrow">YOUR OPPORTUNITY EQUITY ENGINE</p>
-              <h1>Keep your path moving.</h1>
-              <p class="lead">Create one account to save opportunities, track next steps, and return to your matching profile from any device.</p>
+              <p class="eyebrow">OPPORTUNITY EQUITY ENGINE</p>
+              <h1>Find a clearer path to opportunity.</h1>
+              <p class="lead">Bring scholarships, competitions, research, volunteering, and other opportunities into one place—then understand what may fit you and what to do next.</p>
+              <figure class="auth-hero-figure"><img src="./assets/auth/opportunity-journey.png" alt="Students moving from scattered opportunity information to a clearer digital path"></figure>
               <div class="auth-path" aria-hidden="true"><span>Discover</span><i>→</i><span>Understand</span><i>→</i><span>Act</span></div>
               <div class="auth-trust"><span>✓</span><div><strong>Your choices stay yours</strong><p>We use account information to keep your opportunity workspace available. This demo never stores passwords.</p></div></div>
             </section>
             <section class="panel auth-card">
               <div id="auth-guest-panel">
-                <p class="eyebrow">ACCOUNT ACCESS</p>
-                <h2>Use your account to continue.</h2>
-                <p class="auth-copy">Sign in with Google, Facebook, or Microsoft. Your name and email come from the identity provider.</p>
-                <div class="provider-grid"><button type="button" class="provider-button" data-auth-provider="google"><span class="provider-g">G</span> Google / Gmail</button><button type="button" class="provider-button" data-auth-provider="facebook"><span class="provider-f">f</span> Facebook</button><button type="button" class="provider-button" data-auth-provider="aad"><span class="provider-m">▦</span> Microsoft</button></div>
-                <p class="auth-config-note">Authentication is handled by Azure App Service Authentication. This site never asks for or stores your provider password.</p>
+                <p class="eyebrow">WELCOME</p>
+                <h2>Sign up or log in to continue.</h2>
+                <p class="auth-copy">Create your free opportunity workspace or return to your profile with your Google account.</p>
+                <div class="provider-grid"><button type="button" class="provider-button provider-button-google" data-auth-provider="google"><span class="provider-g">G</span> Continue with Google</button></div>
+                <p class="auth-config-note">Google securely handles sign-up and login. Your password is never shared with this site.</p>
               </div>
               <div id="auth-session-panel" hidden>
                 <p class="eyebrow">ACTIVE SESSION</p>
