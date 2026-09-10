@@ -437,7 +437,7 @@ h2 { color: var(--ink); }
 .card-visual.yellow { background: linear-gradient(135deg, #fff8d8, #f8dda0); }
 .card-visual.yellow span { color: #725800; background: #f0bb38; }
 .card-top { align-items: flex-start; margin-top: 14px; }
-.opportunity-icon { width: 30px; height: 30px; flex-basis: 30px; border-radius: 9px 4px 9px 4px; font-size: 14px; }
+.opportunity-icon { width: 30px; height: 30px; flex-basis: 30px; border-radius: 9px 4px 9px 4px; font-size: 14px; white-space: nowrap; }
 .category-label { color: var(--teal); }
 .card-identity { gap: 8px; }
 .card-identity h3 { color: var(--ink); font-size: 15px; }
