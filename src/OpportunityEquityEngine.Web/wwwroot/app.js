@@ -74,7 +74,28 @@ let authMode = "login";
 function setAuthMode(mode) {
   authMode = mode; const register = mode === "register"; const nameField = document.querySelector("#auth-name-field"); nameField.hidden = !register; document.querySelector("#auth-eyebrow").textContent = register ? "START YOUR PATH" : "WELCOME BACK"; document.querySelector("#auth-title").textContent = register ? "Create your opportunity workspace" : "Log in to your workspace"; document.querySelector("#auth-copy").textContent = register ? "Save your profile and return to your next steps from any device." : "Use your email or a connected identity provider to continue."; document.querySelector("#auth-submit").innerHTML = register ? "Create account <span>→</span>" : "Log in <span>→</span>"; document.querySelectorAll(".auth-tab").forEach((tab) => { const active = tab.dataset.authMode === mode; tab.classList.toggle("active", active); tab.setAttribute("aria-selected", String(active)); });
 }
-document.addEventListener("click", (event) => { const tab = event.target.closest("[data-auth-mode]"); if (tab) setAuthMode(tab.dataset.authMode); const provider = event.target.closest("[data-auth-provider]"); if (provider) showToast(`${provider.dataset.authProvider} federation is ready for OAuth configuration.`); });
+function beginFederatedLogin(provider) {
+  const returnPath = `${window.location.pathname}${window.location.search}`;
+  window.location.assign(`/.auth/login/${encodeURIComponent(provider)}?post_login_redirect_uri=${encodeURIComponent(returnPath)}`);
+}
+async function refreshAuthSession() {
+  try {
+    const response = await fetch("/api/auth/session", { credentials: "same-origin", headers: { Accept: "application/json" } });
+    if (!response.ok) return;
+    const session = await response.json();
+    const user = session.authenticated ? session.user : null;
+    const displayName = user?.name || user?.email || "Student";
+    const profileLabel = user?.email ? `${user.email} · Signed in` : "Signed in";
+    document.querySelector("#sidebar-name").textContent = displayName;
+    document.querySelector("#sidebar-profile").textContent = profileLabel;
+    document.querySelector(".top-avatar").textContent = displayName.split(/\s+/).map((part) => part[0]).join("").slice(0, 2).toUpperCase();
+    document.querySelector("#auth-signout").hidden = !user;
+    if (user) showToast(`Signed in with ${user.provider || "your account"}`);
+  } catch (_) {
+    // The static demo remains usable when the API host is not available.
+  }
+}
+document.addEventListener("click", (event) => { const tab = event.target.closest("[data-auth-mode]"); if (tab) setAuthMode(tab.dataset.authMode); const provider = event.target.closest("[data-auth-provider]"); if (provider) { beginFederatedLogin(provider.dataset.authProvider); } const signout = event.target.closest("#auth-signout"); if (signout) { window.location.assign("/.auth/logout?post_logout_redirect_uri=/"); } });
 document.querySelector("#auth-form").addEventListener("submit", (event) => { event.preventDefault(); const data = new FormData(event.currentTarget); const email = String(data.get("email") || "").trim(); const name = String(data.get("name") || "").trim(); if (!email) return; const account = { name: name || profile.name || "Student", email, provider: "email" }; persist("oee-account", account); profile = { ...profile, name: account.name }; persist("oee-profile", profile); closeModals(); updateProfileCopy(); showToast(authMode === "register" ? "Account created in demo mode" : "Logged in in demo mode"); showView("dashboard"); });
 
 function profileFormMarkup(includeButton = true) {
@@ -116,6 +137,7 @@ document.querySelector("#search-input").addEventListener("input", renderExplore)
 document.querySelector("#clear-filters").addEventListener("click", () => { document.querySelector("#search-input").value = ""; document.querySelector("#category-filter").value = "all"; document.querySelector("#budget-filter").value = "all"; renderExplore(); });
 document.addEventListener("keydown", (event) => { if (event.key === "Escape") closeModals(); });
 document.documentElement.dataset.theme = load("oee-theme", "light"); document.querySelector("#quick-profile-form").innerHTML = profileFormMarkup(false); updateProfileCopy(); showView("dashboard");
+refreshAuthSession();
 
 /* Reference-inspired list, detail, and matching surfaces. */
 function resultOpportunityCard(item, match) {

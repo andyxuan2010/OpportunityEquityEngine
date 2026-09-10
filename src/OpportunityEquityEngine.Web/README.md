@@ -2,7 +2,7 @@
 
 This is a self-contained, static front-end prototype for the student experience described in the architecture and demo-deliverables documents.
 
-Open `index.html` through the published site at [`/OpportunityEquityEngine/demo/`](https://andyxuan.ca/OpportunityEquityEngine/demo/), or run it locally with any static file server. It uses demo records and browser `localStorage` for the profile, saved opportunities, review decisions, and appearance preference; it does not require a backend or API key.
+The frontend is served by the ASP.NET Core host at the App Service root, or run it locally with any static file server. It uses demo records and browser `localStorage` for the profile, saved opportunities, review decisions, and appearance preference; it does not require a backend or API key.
 
 The prototype includes:
 

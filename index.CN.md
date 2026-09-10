@@ -7,7 +7,7 @@ translation_zh: /index.CN.md
 translation_fr: /index.FR.md
 ---
 
-<p class="demo-callout"><strong>可运行的前端演示：</strong> <a href="demo/">打开学生工作区 ↗</a></p>
+<p class="demo-callout"><strong>可运行的前端演示：</strong> <a href="https://app-opportunity-dev.azurewebsites.net/">打开学生工作区 ↗</a></p>
 
 {% comment %}
 ## 探索文档库

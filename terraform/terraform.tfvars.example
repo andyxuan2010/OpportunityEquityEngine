@@ -4,9 +4,10 @@
 location                 = "canadacentral"
 environment              = "dev"
 workload                 = "opportunity"
-app_service_plan_sku_name = "B1"
-dotnet_version            = "8.0"
+app_service_plan_sku_name = "F1"
+dotnet_version            = "10.0"
 always_on                = false
+enable_easy_auth         = false
 
 # App Service names are globally constrained for the hostname. Set an explicit
 # unique value before applying if the generated name is already in use.
@@ -17,3 +18,13 @@ app_settings = {
   AAD_REDIRECT_PATH = "/auth/callback"
   AAD_SCOPES        = "User.Read"
 }
+
+# Set enable_easy_auth = true and provide the provider IDs when the OAuth apps
+# are registered. The client secret settings should contain Key Vault
+# references or be managed through secure App Service configuration.
+# google_client_id = "your-google-web-client-id"
+# facebook_app_id  = "your-facebook-app-id"
+# app_settings = {
+#   GOOGLE_CLIENT_SECRET = "@Microsoft.KeyVault(SecretUri=https://<vault>.vault.azure.net/secrets/<secret>/)"
+#   FACEBOOK_APP_SECRET  = "@Microsoft.KeyVault(SecretUri=https://<vault>.vault.azure.net/secrets/<secret>/)"
+# }

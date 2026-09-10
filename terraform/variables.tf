@@ -51,15 +51,15 @@ variable "app_service_name" {
 }
 
 variable "app_service_plan_sku_name" {
-  description = "App Service Plan SKU. B1 is a low-cost starting point; use P1v3 or higher for production workloads."
+  description = "App Service Plan SKU. F1 is the free tier for testing and learning; use B1 or higher for production workloads."
   type        = string
-  default     = "B1"
+  default     = "F1"
 }
 
 variable "dotnet_version" {
   description = "ASP.NET Core runtime version exposed by the Linux App Service application stack."
   type        = string
-  default     = "8.0"
+  default     = "10.0"
 
   validation {
     condition     = contains(["8.0", "9.0", "10.0"], var.dotnet_version)
@@ -77,6 +77,47 @@ variable "health_check_path" {
   description = "HTTP path App Service uses to check application health."
   type        = string
   default     = "/health"
+}
+
+variable "health_check_eviction_time_in_min" {
+  description = "Minutes an unhealthy instance remains in the load balancer before eviction."
+  type        = number
+  default     = 5
+
+  validation {
+    condition     = var.health_check_eviction_time_in_min >= 2 && var.health_check_eviction_time_in_min <= 10
+    error_message = "health_check_eviction_time_in_min must be between 2 and 10 minutes."
+  }
+}
+
+variable "enable_easy_auth" {
+  description = "Enable Azure App Service Easy Auth. Provider-specific client IDs must also be supplied before enabling."
+  type        = bool
+  default     = false
+}
+
+variable "google_client_id" {
+  description = "Google OAuth web client ID for App Service Easy Auth."
+  type        = string
+  default     = ""
+}
+
+variable "google_client_secret_setting_name" {
+  description = "App Service setting name containing the Google OAuth client secret, preferably a Key Vault reference."
+  type        = string
+  default     = "GOOGLE_CLIENT_SECRET"
+}
+
+variable "facebook_app_id" {
+  description = "Facebook OAuth app ID for App Service Easy Auth."
+  type        = string
+  default     = ""
+}
+
+variable "facebook_app_secret_setting_name" {
+  description = "App Service setting name containing the Facebook OAuth app secret, preferably a Key Vault reference."
+  type        = string
+  default     = "FACEBOOK_APP_SECRET"
 }
 
 variable "app_settings" {

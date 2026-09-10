@@ -4,7 +4,7 @@ This Terraform configuration provisions the Azure hosting shell for the ASP.NET 
 
 - Resource group
 - Linux App Service Plan
-- Linux App Service with the .NET application stack
+- Linux App Service with the .NET 10 application stack
 - System-assigned managed identity
 - HTTPS-only access and TLS 1.2 minimum
 - `/health` health check
@@ -45,7 +45,13 @@ terraform plan -out=tfplan
 terraform apply tfplan
 ```
 
-Terraform provisions the App Service but does not publish the application package. Deploy the published ASP.NET Core output as a ZIP with the repository's CI/CD workflow or Azure App Service deployment tooling.
+Terraform provisions the App Service but does not publish the application package. The repository workflow at `.github/workflows/deploy-opportunity-appservice.yml` builds and deploys the published ASP.NET Core output after the required Azure OIDC secrets are configured.
+
+Configure these secrets in the GitHub `opportunity-dev` environment:
+
+- `AZURE_CLIENT_ID`: application ID of the federated deployment identity
+- `AZURE_TENANT_ID`: Microsoft Entra tenant ID
+- `AZURE_SUBSCRIPTION_ID`: Azure subscription ID
 
 ## OAuth and application settings
 

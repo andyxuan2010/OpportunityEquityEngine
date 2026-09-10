@@ -151,8 +151,9 @@
                 <button class="primary-button auth-submit" type="submit" id="auth-submit">Log in <span>→</span></button>
               </form>
               <div class="auth-divider"><span>or continue with</span></div>
-              <div class="provider-grid"><button type="button" class="provider-button" data-auth-provider="Google / Gmail"><span class="provider-g">G</span> Google / Gmail</button><button type="button" class="provider-button" data-auth-provider="Facebook"><span class="provider-f">f</span> Facebook</button><button type="button" class="provider-button" data-auth-provider="Microsoft"><span class="provider-m">▦</span> Microsoft</button></div>
-              <p class="auth-config-note">Federated sign-in is shown in prototype mode. Configure OAuth client IDs and callback URLs before enabling production access.</p>
+              <div class="provider-grid"><button type="button" class="provider-button" data-auth-provider="google"><span class="provider-g">G</span> Google / Gmail</button><button type="button" class="provider-button" data-auth-provider="facebook"><span class="provider-f">f</span> Facebook</button><button type="button" class="provider-button" data-auth-provider="microsoft"><span class="provider-m">▦</span> Microsoft</button></div>
+              <button type="button" class="outline-button auth-signout" id="auth-signout" hidden>Sign out</button>
+              <p class="auth-config-note">Google and Facebook sign-in use Azure App Service Authentication. Provider credentials are kept in secure App Service configuration.</p>
             </section>
           </div>
         </section>

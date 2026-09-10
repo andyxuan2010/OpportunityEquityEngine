@@ -7,7 +7,7 @@ translation_zh: /index.CN.md
 translation_fr: /index.FR.md
 ---
 
-<p class="demo-callout"><strong>Working front-end demo:</strong> <a href="demo/">Open the student workspace ↗</a></p>
+<p class="demo-callout"><strong>Working front-end demo:</strong> <a href="https://app-opportunity-dev.azurewebsites.net/">Open the student workspace ↗</a></p>
 
 {% comment %}
 ## Explore the library

@@ -4,6 +4,8 @@
 *.tfplan
 terraform/terraform.tfvars
 terraform/*.tfvars.json
+**/bin/
+**/obj/
 
 credentials
 
