@@ -148,9 +148,17 @@
               <div id="auth-guest-panel">
                 <p class="eyebrow">WELCOME</p>
                 <h2>Sign up or log in to continue.</h2>
-                <p class="auth-copy">Create your free opportunity workspace or return to your profile with your Google account.</p>
-                <div class="provider-grid"><button type="button" class="provider-button provider-button-google" data-auth-provider="google"><span class="provider-g">G</span> Continue with Google</button></div>
-                <p class="auth-config-note">Google securely handles sign-up and login. Your password is never shared with this site.</p>
+                <p class="auth-copy">Create your free opportunity workspace or return to your profile with a connected account.</p>
+                <div class="provider-grid">
+                  <button type="button" class="provider-button provider-button-google" data-auth-provider="google"><span class="provider-g">G</span> Continue with Google</button>
+                  <div class="provider-grid-secondary">
+                    <button type="button" class="provider-button" data-auth-provider="aad"><span class="provider-m">⊞</span> Microsoft</button>
+                    <button type="button" class="provider-button" data-auth-provider="facebook"><span class="provider-f">f</span> Facebook</button>
+                    <button type="button" class="provider-button" data-auth-provider="github"><span class="provider-gh">◆</span> GitHub</button>
+                    <button type="button" class="provider-button provider-button-disabled" disabled aria-label="Instagram sign-in coming soon"><span class="provider-instagram">◎</span> Instagram <small>Coming soon</small></button>
+                  </div>
+                </div>
+                <p class="auth-config-note">Choose a connected provider. Provider credentials must be enabled in App Service Easy Auth; Instagram is reserved for a future custom integration.</p>
               </div>
               <div id="auth-session-panel" hidden>
                 <p class="eyebrow">ACTIVE SESSION</p>
