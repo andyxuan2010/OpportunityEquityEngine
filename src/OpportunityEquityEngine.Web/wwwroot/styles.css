@@ -900,6 +900,13 @@ html[data-theme="dark"] .card-match-reason { border-top-color: var(--line); }
 }
 
 /* Opportunity details: reference-style match summary and structured information cards. */
+.detail-view { padding-top: 24px; }
+.detail-view #detail-page-content { min-width: 0; }
+.detail-view .detail-back-row { padding-top: 0; }
+.detail-view .detail-intro { padding-top: 16px; }
+.detail-view .detail-feature-grid { align-items: stretch; }
+.detail-view .detail-hero-visual { min-height: 280px; }
+.detail-view .detail-info-card { min-height: 170px; }
 .detail-modal { width: min(1160px, 100%); max-height: min(900px, 94vh); overflow: auto; }
 .detail-back-row { padding: 22px 35px 0; }
 .detail-back { padding: 0; border: 0; color: var(--teal); background: transparent; cursor: pointer; font-size: 12px; font-weight: 800; }
