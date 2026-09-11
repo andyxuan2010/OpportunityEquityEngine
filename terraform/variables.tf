@@ -239,6 +239,30 @@ variable "facebook_app_secret_setting_name" {
   default     = "FACEBOOK_APP_SECRET"
 }
 
+variable "apple_client_id" {
+  description = "Apple Services ID for Sign in with Apple. Set through secure deployment configuration."
+  type        = string
+  default     = ""
+}
+
+variable "apple_client_secret_setting_name" {
+  description = "App Service setting name containing the Sign in with Apple client secret, preferably a Key Vault reference."
+  type        = string
+  default     = "APPLE_CLIENT_SECRET"
+}
+
+variable "x_consumer_key" {
+  description = "X/Twitter OAuth 1.0a consumer key for App Service Easy Auth. Set through secure deployment configuration."
+  type        = string
+  default     = ""
+}
+
+variable "x_consumer_secret_setting_name" {
+  description = "App Service setting name containing the X/Twitter OAuth 1.0a consumer secret, preferably a Key Vault reference."
+  type        = string
+  default     = "X_CONSUMER_SECRET"
+}
+
 variable "app_settings" {
   description = "Additional non-secret App Service settings. OAuth credentials must be supplied through secure deployment configuration."
   type        = map(string)

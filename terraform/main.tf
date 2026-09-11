@@ -21,6 +21,8 @@ locals {
   google_client_secret_key_vault_rg    = length(local.google_client_secret_key_vault_parts) > 3 ? local.google_client_secret_key_vault_parts[3] : ""
   google_client_secret_reference       = trimspace(var.google_client_secret_key_vault_id) != "" ? "@Microsoft.KeyVault(SecretUri=${data.azurerm_key_vault.google[0].vault_uri}secrets/${var.google_client_secret_name}/)" : ""
   google_auth_configured               = trimspace(var.google_client_id) != "" && local.google_client_secret_reference != ""
+  apple_auth_configured                = trimspace(var.apple_client_id) != ""
+  x_auth_configured                    = trimspace(var.x_consumer_key) != ""
 
   effective_app_settings = merge(
     {
@@ -154,6 +156,24 @@ resource "azurerm_linux_web_app" "this" {
           app_id                  = facebook_v2.value
           app_secret_setting_name = var.facebook_app_secret_setting_name
           login_scopes            = ["email", "public_profile"]
+        }
+      }
+
+      dynamic "apple_v2" {
+        for_each = local.apple_auth_configured ? [var.apple_client_id] : []
+
+        content {
+          client_id                  = apple_v2.value
+          client_secret_setting_name = var.apple_client_secret_setting_name
+        }
+      }
+
+      dynamic "twitter_v2" {
+        for_each = local.x_auth_configured ? [var.x_consumer_key] : []
+
+        content {
+          consumer_key                 = twitter_v2.value
+          consumer_secret_setting_name = var.x_consumer_secret_setting_name
         }
       }
 

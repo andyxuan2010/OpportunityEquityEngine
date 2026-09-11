@@ -799,10 +799,13 @@ html[data-theme="dark"] .detail-section.highlight { border-color: rgba(98, 217, 
 .provider-button { min-height: 56px; display: flex; align-items: center; justify-content: center; gap: 11px; padding: 14px 16px; border: 1px solid #dce8ef; border-radius: 13px; color: var(--ink); background: #fff; cursor: pointer; font-size: 12px; font-weight: 800; }
 .provider-button:hover { border-color: var(--teal); background: #f1fbfb; }
 .provider-button > span { width: 24px; height: 24px; display: grid; place-items: center; border-radius: 7px; font-size: 15px; font-weight: 900; }
+.provider-button > span svg { width: 15px; height: 15px; display: block; fill: currentColor; }
 .provider-g { color: #4285f4; background: #edf4ff; }
 .provider-f { color: #fff; background: #1877f2; font-family: Arial, sans-serif; }
 .provider-m { color: #2474ce; background: #edf5ff; }
 .provider-gh { color: #fff; background: #273444; font-size: 10px !important; }
+.provider-apple { color: #111820; background: #f0f3f6; }
+.provider-x { color: #fff; background: #111820; }
 .provider-instagram { color: #fff; background: linear-gradient(135deg, #f5a623, #d62976 55%, #4f5bd5); }
 .provider-button small { color: var(--faint); font-size: 8px; font-weight: 600; }
 .provider-button-disabled { cursor: not-allowed; opacity: .55; }

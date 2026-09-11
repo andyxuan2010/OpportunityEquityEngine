@@ -52,6 +52,20 @@ app_settings = {
 #   FACEBOOK_APP_SECRET  = "@Microsoft.KeyVault(SecretUri=https://<vault>.vault.azure.net/secrets/<secret>/)"
 # }
 
+# Apple and X/Twitter are optional Easy Auth providers. Add the matching
+# client/consumer IDs and keep their secrets in Key Vault-backed app settings:
+# apple_client_id                  = "com.example.opportunity.web"
+# apple_client_secret_setting_name = "APPLE_CLIENT_SECRET"
+# x_consumer_key                   = "your-x-consumer-key"
+# x_consumer_secret_setting_name   = "X_CONSUMER_SECRET"
+# app_settings = {
+#   APPLE_CLIENT_SECRET = "@Microsoft.KeyVault(SecretUri=https://<vault>.vault.azure.net/secrets/<secret>/)"
+#   X_CONSUMER_SECRET   = "@Microsoft.KeyVault(SecretUri=https://<vault>.vault.azure.net/secrets/<secret>/)"
+# }
+# The provider callbacks are:
+# https://<app-service-name>.azurewebsites.net/.auth/login/apple/callback
+# https://<app-service-name>.azurewebsites.net/.auth/login/x/callback
+
 # The Entra App Registration is provisioned only when both
 # enable_app_services and enable_app_registration_for_appservice are true.
 # When enabled, the generated Easy Auth callback is:
