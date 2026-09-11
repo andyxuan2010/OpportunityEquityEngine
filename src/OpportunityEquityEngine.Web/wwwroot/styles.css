@@ -1130,3 +1130,84 @@ html[data-theme="dark"] .profile-mini { border-color: #294965; background: linea
 .card-visual.has-image img { filter: saturate(.88) contrast(.96); }
 .detail-hero-visual.has-image img { position: absolute; inset: 0; filter: saturate(.88) contrast(.96); }
 .detail-hero-visual.has-image span { display: none; }
+
+/* Softer cloud surfaces: keep hierarchy readable without hard color jumps. */
+html[data-theme="light"] body {
+  --bg: #f8fbfc;
+  --surface: #fcfefe;
+  --surface-2: #f5fafb;
+  --surface-3: #eef6f8;
+  --line: #e5eef1;
+  --ink: #193451;
+  --muted: #70839a;
+  --faint: #9aaabd;
+  --teal: #3b9ea2;
+  --blue: #4f98bb;
+  --shadow: 0 10px 25px rgba(42, 78, 113, .045);
+  background: linear-gradient(145deg, #fcfefe, #f7fbfc);
+}
+html[data-theme="light"] .app-shell { background: linear-gradient(145deg, #fcfefe, #f5fafb); }
+html[data-theme="light"] .topbar,
+html[data-theme="light"] .sidebar { border-color: #e5eef1; background: rgba(252, 254, 254, .9); }
+html[data-theme="light"] .profile-mini,
+html[data-theme="light"] .opportunity-card,
+html[data-theme="light"] .panel,
+html[data-theme="light"] .result-card,
+html[data-theme="light"] .saved-card,
+html[data-theme="light"] .review-row,
+html[data-theme="light"] .resource-card,
+html[data-theme="light"] .auth-card,
+html[data-theme="light"] .onboarding-panel {
+  border-color: #e5eef1;
+  background: #fbfdfd;
+  box-shadow: 0 8px 22px rgba(42, 78, 113, .035);
+}
+html[data-theme="light"] .profile-mini { background: #f7fbfb; }
+html[data-theme="light"] .dashboard-search-panel,
+html[data-theme="light"] .mission-card,
+html[data-theme="light"] .journey-panel { border-color: #e3eef0; background: #f1f8f9; }
+html[data-theme="light"] .outline-button { border-color: #deeaed; color: #438e96; background: #fbfdfd; }
+html[data-theme="light"] .primary-button { color: #fff; background: #3e9da1; box-shadow: 0 7px 16px rgba(59, 158, 162, .12); }
+html[data-theme="light"] .primary-button:hover { background: #348b90; }
+html[data-theme="light"] .card-visual.blue { background: linear-gradient(135deg, #e5f3f7, #b9dfea); }
+html[data-theme="light"] .card-visual.teal { background: linear-gradient(135deg, #e8f6f1, #b7dfd5); }
+html[data-theme="light"] .card-visual.orange,
+html[data-theme="light"] .card-visual.yellow { background: linear-gradient(135deg, #fff7df, #f5e2aa); }
+html[data-theme="light"] .card-visual.purple { background: linear-gradient(135deg, #f2effb, #d9d1f1); }
+html[data-theme="light"] .fit-score { color: #876f24; background: #fff2c9; }
+html[data-theme="light"] .fit-score small { color: #9b8641; }
+html[data-theme="light"] .card-facts,
+html[data-theme="light"] .card-match-reason { border-color: #e9f0f2; }
+
+html[data-theme="dark"] body {
+  --bg: #102131;
+  --surface: #172b3d;
+  --surface-2: #1b3346;
+  --surface-3: #234155;
+  --line: #355164;
+  --ink: #edf4f7;
+  --muted: #b0c0c9;
+  --faint: #8fa5b1;
+  --teal: #62c5c0;
+  --blue: #79b7d7;
+  --shadow: 0 14px 32px rgba(3, 17, 29, .16);
+  background: linear-gradient(145deg, #142738, #102131);
+}
+html[data-theme="dark"] .app-shell { background: linear-gradient(145deg, #172d40, #102131); }
+html[data-theme="dark"] .sidebar,
+html[data-theme="dark"] .topbar { background: rgba(20, 39, 55, .92); }
+html[data-theme="dark"] .profile-mini,
+html[data-theme="dark"] .opportunity-card,
+html[data-theme="dark"] .panel,
+html[data-theme="dark"] .result-card,
+html[data-theme="dark"] .saved-card,
+html[data-theme="dark"] .review-row,
+html[data-theme="dark"] .modal,
+html[data-theme="dark"] .filter-bar select,
+html[data-theme="dark"] .search-field,
+html[data-theme="dark"] .profile-form input,
+html[data-theme="dark"] .profile-form select { border-color: #355164; background: #172b3d; }
+html[data-theme="dark"] .profile-strip,
+html[data-theme="dark"] .outline-button,
+html[data-theme="dark"] .top-theme,
+html[data-theme="dark"] .dashboard-search-box { border-color: #355164; background: #1a3042; }
