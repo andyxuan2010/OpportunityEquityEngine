@@ -396,7 +396,8 @@ body { color: var(--ink); background: var(--bg); }
 .language-picker { display: inline-flex; align-items: center; }
 .language-picker select { min-width: 45px; padding: 7px 20px 7px 8px; border: 1px solid var(--line); border-radius: 8px; color: var(--muted); background: var(--surface); cursor: pointer; font-size: 9px; font-weight: 850; }
 .language-picker select:focus { border-color: var(--teal); outline: 0; box-shadow: 0 0 0 3px rgba(19, 142, 150, .1); }
-.sidebar-logout { display: inline-flex; align-items: center; gap: 8px; margin-top: 12px; padding: 8px 0; border: 0; color: var(--muted); background: transparent; cursor: pointer; font-size: 10px; font-weight: 800; }
+.sidebar-doc-link { margin-top: -12px; }
+.sidebar-logout { margin-top: 4px; }
 .sidebar-logout:hover { color: #d66565; }
 html[data-theme="light"] .sidebar-logout:hover { color: #b64e55; }
 .view { padding: 42px 0 35px; }
@@ -1066,7 +1067,7 @@ html[data-theme="dark"] .next-step { border-left-color: var(--line); }
 .account-password-note strong { color: var(--ink); font-size: 12px; }
 .account-password-note span { color: var(--muted); font-size: 10px; line-height: 1.45; }
 .account-field-help { display: block; margin-top: 5px; color: var(--muted); font-size: 10px; font-weight: 500; line-height: 1.4; }
-.account-info-panel { display: flex; flex-direction: column; justify-content: center; background: linear-gradient(145deg, #eaf8f8, #f9fcfd); }
+.account-info-panel { display: flex; flex-direction: column; justify-content: flex-start; background: linear-gradient(145deg, #eaf8f8, #f9fcfd); }
 .account-info-panel .how-icon { margin-bottom: 22px; }
 .account-info-panel h2 { max-width: 320px; margin-bottom: 12px; font-size: 27px; }
 .account-info-panel p:not(.eyebrow) { color: var(--muted); font-size: 12px; line-height: 1.6; }
