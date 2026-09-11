@@ -794,11 +794,11 @@ html[data-theme="dark"] .detail-section.highlight { border-color: rgba(98, 217, 
 .auth-submit { width: 100%; margin-top: 5px; padding: 14px; border-radius: 22px; font-size: 13px; }
 .auth-divider { display: flex; align-items: center; gap: 10px; margin: 25px 0 14px; color: var(--faint); font-size: 10px; }
 .auth-divider::before, .auth-divider::after { content: ""; flex: 1; height: 1px; background: #e3ebef; }
-.provider-grid { display: grid; gap: 8px; }
-.provider-grid-secondary { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
-.provider-button { display: flex; align-items: center; justify-content: center; gap: 9px; padding: 10px; border: 1px solid #dce8ef; border-radius: 10px; color: var(--ink); background: #fff; cursor: pointer; font-size: 11px; font-weight: 800; }
+.provider-grid { display: grid; gap: 12px; }
+.provider-grid-secondary { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.provider-button { min-height: 56px; display: flex; align-items: center; justify-content: center; gap: 11px; padding: 14px 16px; border: 1px solid #dce8ef; border-radius: 13px; color: var(--ink); background: #fff; cursor: pointer; font-size: 12px; font-weight: 800; }
 .provider-button:hover { border-color: var(--teal); background: #f1fbfb; }
-.provider-button > span { width: 20px; height: 20px; display: grid; place-items: center; border-radius: 5px; font-size: 13px; font-weight: 900; }
+.provider-button > span { width: 24px; height: 24px; display: grid; place-items: center; border-radius: 7px; font-size: 15px; font-weight: 900; }
 .provider-g { color: #4285f4; background: #edf4ff; }
 .provider-f { color: #fff; background: #1877f2; font-family: Arial, sans-serif; }
 .provider-m { color: #2474ce; background: #edf5ff; }
@@ -808,7 +808,7 @@ html[data-theme="dark"] .detail-section.highlight { border-color: rgba(98, 217, 
 .provider-button-disabled { cursor: not-allowed; opacity: .55; }
 .provider-button-disabled:hover { border-color: #dce8ef; background: #fff; }
 .auth-config-note { margin: 18px 0 0; color: var(--faint); font-size: 9px; line-height: 1.5; text-align: center; }
-.provider-button-google { min-height: 48px; font-size: 13px; }
+.provider-button-google { min-height: 62px; font-size: 14px; }
 .guest-mode { background: #f5fafb; }
 .guest-mode .app-shell { display: block; min-height: 100vh; background: linear-gradient(135deg, #f5fbfc, #fff); }
 .guest-mode .sidebar, .guest-mode .topbar, .guest-mode .app-footer { display: none; }
