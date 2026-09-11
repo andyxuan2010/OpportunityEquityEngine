@@ -6,7 +6,7 @@
     <meta name="theme-color" content="#f4f8fc">
     <meta name="description" content="A student-centered opportunity matching demo.">
     <title>Opportunity Equity Engine · Student demo</title>
-    <link rel="stylesheet" href="./styles.css?v=detail-page-20260910-r3" onerror="this.onerror=null;this.href='/styles.css?v=detail-page-20260910-r3'">
+    <link rel="stylesheet" href="./styles.css?v=auth-space-20260911-r1" onerror="this.onerror=null;this.href='/styles.css?v=auth-space-20260911-r1'">
   </head>
   <body>
     <div class="app-shell">
@@ -148,7 +148,13 @@
               <div class="auth-path" aria-hidden="true"><span>Discover</span><i>→</i><span>Understand</span><i>→</i><span>Act</span></div>
               <div class="auth-trust"><span>✓</span><div><strong>Your choices stay yours</strong><p>We use account information to keep your opportunity workspace available. This demo never stores passwords.</p></div></div>
             </section>
-            <section class="panel auth-card">
+            <div class="auth-side">
+              <section class="auth-welcome-spotlight" aria-label="How the Opportunity Equity Engine helps">
+                <div class="auth-welcome-mark">✦</div>
+                <div class="auth-welcome-copy"><p class="eyebrow">A CLEARER START</p><h2>Find what could be next.</h2><p>Save your interests once, then discover opportunities that are easier to compare and act on.</p></div>
+                <div class="auth-welcome-path" aria-hidden="true"><span>Discover</span><i>→</i><span>Understand</span><i>→</i><span>Act</span></div>
+              </section>
+              <section class="panel auth-card">
               <div id="auth-guest-panel">
                 <p class="eyebrow">WELCOME</p>
                 <h2>Sign up or log in to continue.</h2>
@@ -171,7 +177,8 @@
                 <div class="account-context"><small>SIGNED IN AS</small><strong id="auth-session-name">Account</strong><span id="auth-session-details">Provider</span></div>
                 <div class="auth-session-actions"><button type="button" class="primary-button" data-view="account">Account details <span>→</span></button><button type="button" class="outline-button auth-signout" id="auth-signout" data-action="sign-out">Sign out</button></div>
               </div>
-            </section>
+              </section>
+            </div>
           </div>
         </section>
 
@@ -181,6 +188,6 @@
 
     <div class="modal-backdrop" id="profile-modal" hidden><div class="modal profile-modal" role="dialog" aria-modal="true" aria-labelledby="profile-modal-title"><button class="modal-close" data-action="close-modal" aria-label="Close">×</button><p class="eyebrow">QUICK SETUP</p><h2 id="profile-modal-title">Tune your recommendations.</h2><p>Tell us a little about what fits. You can edit this anytime.</p><form id="quick-profile-form" class="profile-form"></form></div></div>
     <div class="toast" id="toast" role="status" aria-live="polite"></div>
-    <script src="./app.js?v=detail-page-20260910-r2" onerror="this.onerror=null;this.src='/app.js?v=detail-page-20260910-r2'"></script>
+    <script src="./app.js?v=auth-space-20260911-r1" onerror="this.onerror=null;this.src='/app.js?v=auth-space-20260911-r1'"></script>
   </body>
 </html>
