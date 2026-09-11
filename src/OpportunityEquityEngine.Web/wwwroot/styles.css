@@ -815,7 +815,8 @@ html[data-theme="dark"] .detail-section.highlight { border-color: rgba(98, 217, 
 .guest-mode .main-content { max-width: none; padding: 0; }
 .guest-mode #view-auth { min-height: 100vh; padding: clamp(24px, 5vw, 72px); }
 .guest-mode .auth-layout { width: min(1320px, 100%); min-height: calc(100vh - 2 * clamp(24px, 5vw, 72px)); margin: 0 auto; grid-template-columns: minmax(0, 1.15fr) minmax(360px, .65fr); gap: clamp(28px, 5vw, 86px); }
-.guest-mode .auth-side { max-width: 500px; }
+.guest-mode .auth-layout { align-items: start; }
+.guest-mode .auth-side { max-width: 500px; align-self: start; }
 .guest-mode .auth-story { padding: 0; background: transparent; }
 .guest-mode .auth-story h1 { max-width: 720px; font-size: clamp(42px, 5vw, 72px); }
 .guest-mode .auth-story .lead { max-width: 690px; }
