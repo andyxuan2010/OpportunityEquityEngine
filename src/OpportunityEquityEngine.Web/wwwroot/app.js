@@ -364,7 +364,10 @@ document.addEventListener("click", (event) => {
   const viewButton = target.closest("[data-view]"); if (viewButton) { event.preventDefault(); showView(viewButton.dataset.view); return; }
   const action = target.closest("[data-action]"); if (action?.dataset.action === "toggle-theme") { const next = document.documentElement.dataset.theme === "light" ? "dark" : "light"; document.documentElement.dataset.theme = next; persist("oee-theme", next); } if (action?.dataset.action === "edit-profile") openProfileModal(); if (action?.dataset.action === "skip-account-setup") skipAccountSetup(); if (action?.dataset.action === "close-modal") closeModals();
   const taskButton = target.closest(".mark-done"); if (taskButton) { const row = taskButton.closest(".saved-timeline-card"); row?.classList.toggle("is-complete"); taskButton.textContent = row?.classList.contains("is-complete") ? "Marked done" : "Mark as done"; return; }
-  const detail = target.closest("[data-detail-id]"); if (detail) openDetails(detail.dataset.detailId);
+  const card = target.closest(".opportunity-card, .result-card");
+  const detail = target.closest("[data-detail-id]") || card?.querySelector("[data-detail-id]");
+  const interactive = target.closest("button, a, input, select, label");
+  if (detail && (!interactive || target.closest("[data-detail-id]"))) { event.preventDefault(); openDetails(detail.dataset.detailId); return; }
   const saveButton = target.closest("[data-save-id]"); if (saveButton) { event.stopPropagation(); toggleSaved(saveButton.dataset.saveId); }
   const reviewButton = target.closest("[data-review-action]"); if (reviewButton) { reviews[reviewButton.dataset.reviewId] = reviewButton.dataset.reviewAction === "approve" ? "approved" : "verification-requested"; persist("oee-reviews", reviews); renderAdmin(); updateProfileCopy(); showToast(reviewButton.dataset.reviewAction === "approve" ? "Record approved" : "Verification requested"); }
 });
@@ -374,7 +377,7 @@ document.querySelector("#quick-profile-form").addEventListener("submit", (event)
 document.querySelector("#language-selector").addEventListener("change", (event) => { currentLanguage = event.currentTarget.value; persist("oee-language", currentLanguage); if (activeView === "profile") renderProfile(); translatePage(currentLanguage); });
 document.querySelector("#search-input").addEventListener("input", renderExplore); document.querySelector("#category-filter").addEventListener("change", renderExplore); document.querySelector("#budget-filter").addEventListener("change", renderExplore);
 document.querySelector("#clear-filters").addEventListener("click", () => { document.querySelector("#search-input").value = ""; document.querySelector("#category-filter").value = "all"; document.querySelector("#budget-filter").value = "all"; renderExplore(); });
-document.addEventListener("keydown", (event) => { if (event.key === "Escape") closeModals(); });
+document.addEventListener("keydown", (event) => { if (event.key === "Escape") closeModals(); const card = event.target instanceof Element ? event.target.closest(".opportunity-card, .result-card") : null; if (card && (event.key === "Enter" || event.key === " ") && event.target === card) { event.preventDefault(); const detail = card.querySelector("[data-detail-id]"); if (detail) openDetails(detail.dataset.detailId); } });
 document.documentElement.dataset.theme = load("oee-theme", "light"); loadAccountState(); document.querySelector("#quick-profile-form").innerHTML = profileFormMarkup(false); updateProfileCopy(); updateAccountIdentity(); showView("auth"); translatePage(currentLanguage);
 updateDashboardDateTime(); window.setInterval(updateDashboardDateTime, 60000);
 refreshAuthSession();
